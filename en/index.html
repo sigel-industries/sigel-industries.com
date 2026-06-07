@@ -51,6 +51,8 @@
   <div class="site-noise" aria-hidden="true"></div>
   <div class="site-glow" aria-hidden="true"></div>
   <div class="site-grid" aria-hidden="true"></div>
+  <div class="site-orb site-orb-a" aria-hidden="true"></div>
+  <div class="site-orb site-orb-b" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
 
   <header class="site-header">
@@ -63,11 +65,12 @@
       </a>
 
       <nav class="nav" aria-label="Main navigation">
-        <a href="#signal">Archetypes</a>
+        <a href="#archetypy">Archetypes</a>
         <a href="#reseni">Solutions</a>
-        <a href="#system">System</a>
-        <a href="#report">Report</a>
+        <a href="#audit">Audit</a>
         <a href="#agentury">For agencies</a>
+        <a href="#report">Report</a>
+        <a href="#data">Data</a>
         <a href="#order">Order</a>
       </nav>
 
@@ -87,16 +90,15 @@
   </header>
 
   <main id="top">
-    <section class="hero section cinematic-hero" id="hero">
-      <div class="hero-aurora" aria-hidden="true"></div>
-      <div class="hero-mesh" aria-hidden="true"></div>
+    <section class="hero section hero-cinematic" id="hero">
+      <div class="hero-bg-frame" aria-hidden="true"></div>
 
-      <div class="container hero-stage">
+      <div class="container hero-layout">
         <div class="hero-copy reveal">
           <p class="eyebrow">Website audit · brand archetype · customer archetypes</p>
 
           <h1>
-            Understand the website,<br>
+            Understand the website,
             brand and customer first.
             <span>Only then do marketing.</span>
           </h1>
@@ -111,44 +113,40 @@
             <a href="../docs/demo-report.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Open demo report</a>
           </div>
 
-          <div class="hero-proof" aria-label="Main benefits">
+          <div class="hero-meta" aria-label="Main outputs">
             <span>Visual PDF report</span>
             <span>Human-reviewed output</span>
             <span>Brand and customer archetypes</span>
           </div>
         </div>
 
-        <div class="hero-product reveal">
-          <aside class="audit-object interactive-card" aria-label="Audit output preview">
-            <div class="object-topline">
-              <span>Audit Snapshot</span>
-              <strong>BETA</strong>
+        <div class="hero-visual reveal">
+          <div class="cockpit-stack" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </div>
+
+          <aside class="audit-cockpit interactive-card" aria-label="Audit output preview">
+            <div class="cockpit-header">
+              <div>
+                <span class="snapshot-kicker">Audit Snapshot</span>
+                <h2>sigel-industries.github.io</h2>
+              </div>
+              <span class="snapshot-badge">BETA</span>
             </div>
 
-            <div class="object-domain">
-              <span>Analysed website</span>
-              <strong>sigel-industries.github.io</strong>
-            </div>
-
-            <div class="object-main">
-              <div class="score-ring" aria-label="Audit score 94 out of 100">
-                <svg viewBox="0 0 160 160" aria-hidden="true">
-                  <circle class="ring-track" cx="80" cy="80" r="67"></circle>
-                  <circle class="ring-progress" cx="80" cy="80" r="67"></circle>
-                </svg>
-                <div>
-                  <strong>94</strong>
-                  <span>/100</span>
-                </div>
+            <div class="cockpit-main">
+              <div class="score-dial">
+                <strong>94</strong>
+                <span>audit score</span>
               </div>
 
-              <div class="object-verdict">
-                <span>System verdict</span>
+              <div class="cockpit-summary">
                 <p>Strong technical foundation. The main work lies in brand archetype, communication and priorities.</p>
               </div>
             </div>
 
-            <div class="object-metrics">
+            <div class="snapshot-metrics">
               <div class="metric">
                 <div class="metric-top">
                   <span>SEO</span>
@@ -182,7 +180,7 @@
               </div>
             </div>
 
-            <div class="object-priorities">
+            <div class="priority-panel">
               <div class="priority-title">
                 <span>Top priority</span>
                 <strong>First steps</strong>
@@ -192,36 +190,23 @@
                 <li>
                   <span>01</span>
                   <p>Clarify the brand archetype, offer and next step.</p>
-                  <em>impact: high</em>
                 </li>
                 <li>
                   <span>02</span>
                   <p>Check the mobile path, CTA and key decision points.</p>
-                  <em>impact: high</em>
                 </li>
                 <li>
                   <span>03</span>
                   <p>Strengthen proof elements and communication hierarchy.</p>
-                  <em>impact: medium</em>
                 </li>
               </ol>
             </div>
+
+            <div class="cockpit-footer">
+              <span>Output: visual PDF report</span>
+              <a href="#report">View structure</a>
+            </div>
           </aside>
-
-          <div class="floating-chip chip-one">
-            <span>Brand signal</span>
-            <strong>82%</strong>
-          </div>
-
-          <div class="floating-chip chip-two">
-            <span>Conversion risk</span>
-            <strong>medium</strong>
-          </div>
-
-          <div class="floating-chip chip-three">
-            <span>Output</span>
-            <strong>PDF report</strong>
-          </div>
         </div>
       </div>
     </section>
@@ -229,33 +214,29 @@
     <section class="results-strip" aria-label="Audit parameters">
       <div class="container results-grid reveal">
         <div class="result-item">
-          <i aria-hidden="true">24</i>
           <span>24 h</span>
           <p>delivery on business days after payment is processed</p>
         </div>
 
         <div class="result-item">
-          <i aria-hidden="true">9+</i>
           <span>9+</span>
           <p>audit areas: technical state, SEO, UX, brand, archetypes, customers, trust and priorities</p>
         </div>
 
         <div class="result-item">
-          <i aria-hidden="true">PDF</i>
           <span>PDF</span>
           <p>a visual report instead of a raw automated export</p>
         </div>
 
         <div class="result-item">
-          <i aria-hidden="true">✓</i>
           <span>Review</span>
           <p>automated output with human review</p>
         </div>
       </div>
     </section>
 
-    <section id="signal" class="section signal-section page-section" data-section="01">
-      <div class="container signal-layout">
+    <section id="archetypy" class="section archetype-section page-section" data-section="01">
+      <div class="container split-layout">
         <div class="section-heading reveal">
           <p class="section-label">The main difference</p>
           <h2>Technical checks show whether the website works. Archetypes show how the brand feels and who it can reach.</h2>
@@ -265,57 +246,41 @@
           </p>
         </div>
 
-        <div class="signal-system reveal interactive-card">
-          <div class="signal-system-head">
-            <span>SIGEL Signal Layers</span>
-            <strong>Website → Brand → Customer → Communication</strong>
-          </div>
+        <div class="feature-list reveal">
+          <article class="feature-row interactive-card">
+            <span>01</span>
+            <div>
+              <h3>Brand archetype</h3>
+              <p>
+                How the company feels, what role it takes in communication and whether the tone matches what it actually offers.
+              </p>
+              <button class="text-link modal-open" type="button" data-modal="modal-brand-archetype">Learn more</button>
+            </div>
+          </article>
 
-          <div class="signal-layer-grid">
-            <article class="signal-layer">
-              <div class="layer-visual radar-visual" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
-              <div>
-                <span class="card-index">01</span>
-                <h3>Brand archetype</h3>
-                <p>
-                  How the company feels, what role it takes in communication and whether the tone matches what it actually offers.
-                </p>
-                <button class="text-link modal-open" type="button" data-modal="modal-brand-archetype">Learn more</button>
-              </div>
-            </article>
+          <article class="feature-row interactive-card">
+            <span>02</span>
+            <div>
+              <h3>Customer archetypes</h3>
+              <p>
+                Which types of potential customers the brand can reach, what motivates them, what they fear
+                and what they need to hear to trust the offer.
+              </p>
+              <button class="text-link modal-open" type="button" data-modal="modal-customer-archetypes">Learn more</button>
+            </div>
+          </article>
 
-            <article class="signal-layer">
-              <div class="layer-visual cluster-visual" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span>
-              </div>
-              <div>
-                <span class="card-index">02</span>
-                <h3>Customer archetypes</h3>
-                <p>
-                  Which types of potential customers the brand can reach, what motivates them, what they fear
-                  and what they need to hear to trust the offer.
-                </p>
-                <button class="text-link modal-open" type="button" data-modal="modal-customer-archetypes">Learn more</button>
-              </div>
-            </article>
-
-            <article class="signal-layer">
-              <div class="layer-visual wave-visual" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span><span></span>
-              </div>
-              <div>
-                <span class="card-index">03</span>
-                <h3>Communication recommendations</h3>
-                <p>
-                  How to adjust texts, CTAs, argumentation and proof elements so the website speaks more precisely
-                  to people most likely to buy or enquire.
-                </p>
-                <button class="text-link modal-open" type="button" data-modal="modal-communication-playbook">Learn more</button>
-              </div>
-            </article>
-          </div>
+          <article class="feature-row interactive-card">
+            <span>03</span>
+            <div>
+              <h3>Communication recommendations</h3>
+              <p>
+                How to adjust texts, CTAs, argumentation and proof elements so the website speaks more precisely
+                to people most likely to buy or enquire.
+              </p>
+              <button class="text-link modal-open" type="button" data-modal="modal-communication-playbook">Learn more</button>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -332,50 +297,44 @@
           </p>
         </div>
 
-        <div class="problem-board reveal">
-          <article class="problem-card problem-card-large interactive-card">
-            <span class="risk-tag violet">core diagnosis</span>
-            <strong>01</strong>
+        <div class="solution-list reveal">
+          <article class="solution-row interactive-card">
+            <span>01</span>
             <h3>Too few enquiries from the website</h3>
             <p>The audit shows where offer clarity, trust, CTA or the main visitor path are breaking down.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-low-leads">What it solves</button>
           </article>
 
-          <article class="problem-card interactive-card">
-            <span class="risk-tag cyan">trust gap</span>
-            <strong>02</strong>
+          <article class="solution-row interactive-card">
+            <span>02</span>
             <h3>Marketing is running, but results are weak</h3>
             <p>Before increasing budget, it makes sense to check whether the website can actually persuade visitors.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-weak-marketing">What it solves</button>
           </article>
 
-          <article class="problem-card interactive-card">
-            <span class="risk-tag orange">strategy mismatch</span>
-            <strong>03</strong>
+          <article class="solution-row interactive-card">
+            <span>03</span>
             <h3>Redesign without a clear brief</h3>
             <p>The audit helps define what the new website should improve: not only visuals, but structure, trust and communication.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-redesign">What it solves</button>
           </article>
 
-          <article class="problem-card interactive-card">
-            <span class="risk-tag red">conversion leak</span>
-            <strong>04</strong>
+          <article class="solution-row interactive-card">
+            <span>04</span>
             <h3>The offer is good, but people do not understand it</h3>
             <p>Sigel clarifies how the company feels, whom it addresses and how to formulate the offer for different customer archetypes.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-unclear-offer">What it solves</button>
           </article>
 
-          <article class="problem-card interactive-card">
-            <span class="risk-tag orange">strategy mismatch</span>
-            <strong>05</strong>
+          <article class="solution-row interactive-card">
+            <span>05</span>
             <h3>The business is stagnating or losing momentum</h3>
             <p>The audit checks whether the website still matches what the company offers, sells and wants to represent.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-stagnation">What it solves</button>
           </article>
 
-          <article class="problem-card interactive-card">
-            <span class="risk-tag violet">agency input</span>
-            <strong>06</strong>
+          <article class="solution-row interactive-card">
+            <span>06</span>
             <h3>An agency needs a fast diagnostic input</h3>
             <p>External diagnostics help avoid starting from zero before consulting, redesign, SEO or content strategy.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-agency-detail">How it works</button>
@@ -384,10 +343,47 @@
       </div>
     </section>
 
-    <section id="system" class="section system-section page-section" data-section="03">
-      <div class="container system-layout">
+    <section class="section problem-section page-section" data-section="03">
+      <div class="container problem-layout">
+        <div class="problem-copy reveal">
+          <p class="section-label">Market problem</p>
+          <h2>Most companies do not start marketing badly. They simply start from campaigns, not from understanding the website, brand and customer.</h2>
+          <p>
+            Advertising, performance or visibility are often solved first. But if the website does not explain the offer,
+            does not feel trustworthy or does not guide people to the next step, advertising only brings more people
+            to the same problem.
+          </p>
+        </div>
+
+        <div class="failure-panel reveal interactive-card" aria-label="Typical scenario">
+          <span class="panel-label">Typical scenario</span>
+
+          <ol>
+            <li>
+              <span>01</span>
+              <p>campaign is launched</p>
+            </li>
+            <li>
+              <span>02</span>
+              <p>visitors arrive</p>
+            </li>
+            <li>
+              <span>03</span>
+              <p>the website fails to explain value</p>
+            </li>
+            <li>
+              <span>04</span>
+              <p>the result is expensive chaos</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method-section page-section" data-section="04">
+      <div class="container">
         <div class="section-heading reveal">
-          <p class="section-label">SIGEL System</p>
+          <p class="section-label">Sigel method</p>
           <h2>Data is not enough. It needs to become decisions, interpretation and communication direction.</h2>
           <p>
             The audit is not just a list of findings. The goal is to turn data into interpretation, priorities and a practical output
@@ -395,135 +391,165 @@
           </p>
         </div>
 
-        <div class="system-board reveal interactive-card">
-          <div class="system-board-head">
-            <span>SIGEL Method Stack</span>
-            <strong>Input URL → Data → Interpretation → Archetypes → Review → PDF report</strong>
-          </div>
+        <div class="process-grid reveal">
+          <article class="process-card interactive-card">
+            <span>01</span>
+            <h3>Data</h3>
+            <p>Technical state, SEO, UX, CTA, content, communication and available website signals.</p>
+          </article>
 
-          <div class="system-flow">
-            <article>
-              <i>01</i>
-              <h3>Data</h3>
-              <p>Technical state, SEO, UX, CTA, content, communication and available website signals.</p>
-            </article>
+          <article class="process-card interactive-card">
+            <span>02</span>
+            <h3>Interpretation</h3>
+            <p>What the findings mean for trust, orientation, brand archetype and business usability.</p>
+          </article>
 
-            <article>
-              <i>02</i>
-              <h3>Interpretation</h3>
-              <p>What the findings mean for trust, orientation, brand archetype and business usability.</p>
-            </article>
+          <article class="process-card interactive-card">
+            <span>03</span>
+            <h3>Archetypes</h3>
+            <p>How the brand feels, what customer types it addresses and how to speak to them.</p>
+          </article>
 
-            <article>
-              <i>03</i>
-              <h3>Archetypes</h3>
-              <p>How the brand feels, what customer types it addresses and how to speak to them.</p>
-            </article>
+          <article class="process-card interactive-card">
+            <span>04</span>
+            <h3>Priorities</h3>
+            <p>A visual output with recommendations on what to solve first and why.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <article>
-              <i>04</i>
-              <h3>Review</h3>
-              <p>Human-reviewed output and recommendation prioritization.</p>
-            </article>
-
-            <article>
-              <i>05</i>
-              <h3>PDF Report</h3>
-              <p>A visual output with recommendations on what to solve first and why.</p>
-            </article>
-          </div>
-
-          <div class="system-layers">
-            <div>
-              <span>01</span>
-              <strong>custom algorithms</strong>
-            </div>
-            <div>
-              <span>02</span>
-              <strong>technical checks</strong>
-            </div>
-            <div>
-              <span>03</span>
-              <strong>UX / CTA heuristics</strong>
-            </div>
-            <div>
-              <span>04</span>
-              <strong>SEO and indexation</strong>
-            </div>
-            <div>
-              <span>05</span>
-              <strong>LLM interpretation</strong>
-            </div>
-            <div>
-              <span>06</span>
-              <strong>human review</strong>
-            </div>
-          </div>
+    <section class="section engine-section page-section" data-section="05">
+      <div class="container engine-layout reveal">
+        <div class="engine-copy">
+          <p class="section-label">What stands behind the report</p>
+          <h2>It is not a raw AI output. The report is created through a combination of our own system, data and review.</h2>
+          <p>
+            Sigel combines technical checks, custom evaluation logic, algorithmic processing of website signals,
+            LLM interpretation and human review of the final output. The goal is not to spit out text, but to deliver
+            a usable analytical basis for decision-making.
+          </p>
         </div>
 
-        <div class="system-context reveal">
-          <div class="failure-panel interactive-card" aria-label="Typical scenario">
-            <span class="panel-label">Typical scenario</span>
-
-            <ol>
-              <li>
-                <span>01</span>
-                <p>campaign is launched</p>
-              </li>
-              <li>
-                <span>02</span>
-                <p>visitors arrive</p>
-              </li>
-              <li>
-                <span>03</span>
-                <p>the website fails to explain value</p>
-              </li>
-              <li>
-                <span>04</span>
-                <p>the result is expensive chaos</p>
-              </li>
-            </ol>
+        <div class="system-stack interactive-card" aria-label="SIGEL system layer">
+          <div>
+            <span>01</span>
+            <strong>custom algorithms</strong>
           </div>
-
-          <div class="audit-areas interactive-card">
-            <span class="panel-label">What the audit reveals</span>
-
-            <div>
-              <strong>Technical state and performance</strong>
-              <p>Lighthouse, technical health, indexation, robots, sitemap, performance and technical limits of the website.</p>
-            </div>
-
-            <div>
-              <strong>SEO and discoverability</strong>
-              <p>Metadata, structure, titles, descriptions and signals that help the website be found.</p>
-            </div>
-
-            <div>
-              <strong>UX and CTA</strong>
-              <p>Mobile usability, orientation, CTA and obstacles in the main user path.</p>
-            </div>
-
-            <div>
-              <strong>Offer communication</strong>
-              <p>Whether the visitor quickly understands what you offer, whom you help and why they should continue.</p>
-            </div>
-
-            <div>
-              <strong>Brand and customer archetypes</strong>
-              <p>Company archetype, customer archetypes and recommendations on how to communicate the offer to different customer types.</p>
-            </div>
-
-            <div>
-              <strong>Priority roadmap</strong>
-              <p>What to solve first, what has business impact and what is only the next layer.</p>
-            </div>
+          <div>
+            <span>02</span>
+            <strong>technical checks</strong>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>UX / CTA heuristics</strong>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>SEO and indexation</strong>
+          </div>
+          <div>
+            <span>05</span>
+            <strong>LLM interpretation</strong>
+          </div>
+          <div>
+            <span>06</span>
+            <strong>human review</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="report" class="section report-section page-section" data-section="04">
-      <div class="container report-layout">
+    <section id="audit" class="section audit-section page-section" data-section="06">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Website diagnostics</p>
+          <h2>What the audit reveals</h2>
+          <p>
+            The audit does not evaluate only technical state. It also shows how the website feels, how it guides users,
+            what brand archetype it communicates and what customer archetypes it can reach.
+          </p>
+        </div>
+
+        <div class="audit-grid reveal">
+          <article class="audit-card interactive-card">
+            <span>01</span>
+            <h3>Technical state and performance</h3>
+            <p>Lighthouse, technical health, indexation, robots, sitemap, performance and technical limits of the website.</p>
+          </article>
+
+          <article class="audit-card interactive-card">
+            <span>02</span>
+            <h3>SEO and discoverability</h3>
+            <p>Metadata, structure, titles, descriptions and signals that help the website be found.</p>
+          </article>
+
+          <article class="audit-card interactive-card">
+            <span>03</span>
+            <h3>UX and CTA</h3>
+            <p>Mobile usability, orientation, CTA and obstacles in the main user path.</p>
+          </article>
+
+          <article class="audit-card interactive-card">
+            <span>04</span>
+            <h3>Offer communication</h3>
+            <p>Whether the visitor quickly understands what you offer, whom you help and why they should continue.</p>
+          </article>
+
+          <article class="audit-card interactive-card">
+            <span>05</span>
+            <h3>Brand and customer archetypes</h3>
+            <p>Company archetype, customer archetypes and recommendations on how to communicate the offer to different customer types.</p>
+          </article>
+
+          <article class="audit-card interactive-card">
+            <span>06</span>
+            <h3>Priority roadmap</h3>
+            <p>What to solve first, what has business impact and what is only the next layer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="agentury" class="section agency-section page-section" data-section="07">
+      <div class="container agency-layout reveal">
+        <div class="agency-copy">
+          <p class="section-label">For agencies</p>
+          <h2>Audit input for client websites without starting from zero.</h2>
+          <p>
+            An agency can use Sigel as an external initial diagnostic before consultation, redesign,
+            SEO adjustments, content strategy or as a basis for its own client recommendations.
+          </p>
+          <p>
+            It is not a SaaS or software rental. You send a URL, the output is prepared by the analytical system,
+            the final report is reviewed and the agency can use it further according to its own process.
+          </p>
+
+          <div class="section-actions">
+            <a href="../docs/demo-report.pdf" class="btn btn-primary btn-shine" target="_blank" rel="noopener">View demo report</a>
+            <a href="mailto:info@sigel-industries.com" class="btn btn-secondary">Discuss pilot cooperation</a>
+          </div>
+        </div>
+
+        <div class="agency-points">
+          <div class="interactive-card">
+            <strong>Fast input</strong>
+            <p>Basis for the first client conversation or internal decision-making.</p>
+          </div>
+          <div class="interactive-card">
+            <strong>Technical + communication</strong>
+            <p>Not only PageSpeed, but also offer clarity, trust, archetypes and priorities.</p>
+          </div>
+          <div class="interactive-card">
+            <strong>White-label by agreement</strong>
+            <p>The output can serve as an internal document or as a basis for your own recommendation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="report" class="section report-section page-section" data-section="08">
+      <div class="container">
         <div class="section-heading reveal">
           <p class="section-label">Output</p>
           <h2>A visual report that can be read and used.</h2>
@@ -538,7 +564,7 @@
           </div>
         </div>
 
-        <div class="report-product reveal">
+        <div class="report-showcase reveal">
           <div class="report-viewer interactive-card">
             <div class="report-toolbar">
               <span>sigel_report.pdf</span>
@@ -556,55 +582,44 @@
             </div>
 
             <div class="report-screen">
-              <aside class="report-menu" aria-hidden="true">
-                <span>Score overview</span>
-                <span>Key areas</span>
-                <span>Score trend</span>
-                <span>Comparison</span>
-              </aside>
-
-              <div class="report-main">
-                <div class="screen-score">94</div>
-
-                <div class="screen-copy">
-                  <span class="preview-label">Dashboard</span>
-                  <h3>Overall website picture</h3>
-                  <p>Area scores, main risks, strengths and recommended next steps at a glance.</p>
-                </div>
-
-                <div class="chart-line" aria-hidden="true">
-                  <svg viewBox="0 0 420 150" preserveAspectRatio="none">
-                    <path d="M0,110 C40,100 58,65 96,75 C138,88 148,44 190,52 C226,60 242,96 284,70 C322,48 340,28 420,38"></path>
-                  </svg>
-                </div>
-
-                <div class="screen-bars" aria-hidden="true">
-                  <i style="width: 82%"></i>
-                  <i style="width: 94%"></i>
-                  <i style="width: 70%"></i>
-                  <i style="width: 88%"></i>
-                </div>
+              <div class="screen-score">94</div>
+              <div class="screen-copy">
+                <span class="preview-label">Dashboard</span>
+                <h3>Overall website picture</h3>
+                <p>Area scores, main risks, strengths and recommended next steps at a glance.</p>
+              </div>
+              <div class="screen-bars" aria-hidden="true">
+                <i style="width: 82%"></i>
+                <i style="width: 94%"></i>
+                <i style="width: 70%"></i>
+                <i style="width: 88%"></i>
               </div>
             </div>
           </div>
 
           <div class="report-side">
             <article class="report-side-card interactive-card">
-              <span class="preview-label">Action recommendations</span>
-              <h3>Prioritized steps</h3>
-              <p>Specific recommendations with estimated impact and order.</p>
+              <span class="preview-label">Technical</span>
+              <h3>Performance and basics</h3>
+              <p>Lighthouse, indexation, sitemap, robots and technical signals.</p>
             </article>
 
             <article class="report-side-card interactive-card">
-              <span class="preview-label">Benchmark</span>
-              <h3>Market comparison</h3>
-              <p>Strengths and weaknesses against common website standards.</p>
+              <span class="preview-label">Communication</span>
+              <h3>Offer clarity</h3>
+              <p>Whether the website quickly explains value and guides the visitor forward.</p>
+            </article>
+
+            <article class="report-side-card interactive-card">
+              <span class="preview-label">Archetypes</span>
+              <h3>Brand and customer archetypes</h3>
+              <p>How the company feels, whom it probably addresses and what tone of communication makes sense.</p>
             </article>
 
             <article class="report-side-card interactive-card">
               <span class="preview-label">Roadmap</span>
-              <h3>30 / 60 / 90 days</h3>
-              <p>A practical plan of next steps by priority.</p>
+              <h3>30 / 60 / 90 day priorities</h3>
+              <p>What to solve now, what comes later and what has the highest business impact.</p>
             </article>
           </div>
         </div>
@@ -623,122 +638,109 @@
       </div>
     </section>
 
-    <section id="agentury" class="section agency-data-section page-section" data-section="05">
-      <div class="container agency-data-grid">
-        <div class="agency-panel reveal interactive-card">
-          <p class="section-label">For agencies</p>
-          <h2>Audit input for client websites without starting from zero.</h2>
-          <p>
-            An agency can use Sigel as an external initial diagnostic before consultation, redesign,
-            SEO adjustments, content strategy or as a basis for its own client recommendations.
-          </p>
-          <p>
-            It is not a SaaS or software rental. You send a URL, the output is prepared by the analytical system,
-            the final report is reviewed and the agency can use it further according to its own process.
-          </p>
-
-          <div class="agency-points">
-            <div>
-              <strong>Fast input</strong>
-              <p>Basis for the first client conversation or internal decision-making.</p>
-            </div>
-            <div>
-              <strong>Technical + communication</strong>
-              <p>Not only PageSpeed, but also offer clarity, trust, archetypes and priorities.</p>
-            </div>
-            <div>
-              <strong>White-label by agreement</strong>
-              <p>The output can serve as an internal document or as a basis for your own recommendation.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="data-panel reveal interactive-card">
+    <section id="data" class="section benchmark-section page-section" data-section="09">
+      <div class="container benchmark-layout reveal">
+        <div class="benchmark-copy">
           <p class="section-label">Batch benchmark</p>
           <h2>One URL is the beginning. Greater power comes from comparing an entire segment.</h2>
           <p>
             Sigel can work with a larger set of URLs as well. This makes it possible to compare entire website segments,
             track averages, market weak spots and the position of a specific website against competitors.
           </p>
+        </div>
 
-          <div class="benchmark-tags">
-            <span class="tag">segment audits</span>
-            <span class="tag">local services</span>
-            <span class="tag">B2B companies</span>
-            <span class="tag">segment benchmark</span>
-            <span class="tag">competitor comparison</span>
-            <span class="tag">market context</span>
-          </div>
+        <div class="benchmark-tags">
+          <span class="tag">segment audits</span>
+          <span class="tag">local services</span>
+          <span class="tag">B2B companies</span>
+          <span class="tag">segment benchmark</span>
+          <span class="tag">competitor comparison</span>
+          <span class="tag">market context</span>
         </div>
       </div>
     </section>
 
-    <section id="order" class="section order-section page-section" data-section="06">
-      <div class="container order-stage reveal">
-        <div class="order-copy">
-          <p class="section-label">Beta offer · order</p>
-          <h2>Order Sigel Web Audit or discuss pilot cooperation</h2>
+    <section class="section services-section page-section" data-section="10">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Further use</p>
+          <h2>Sigel is not just one audit. It is the beginning of a data-based view of the market.</h2>
+          <p>
+            Besides a single website audit, Sigel can also serve as input for agencies,
+            lead research or segment benchmarks. Scope is handled individually based on the goal.
+          </p>
+        </div>
+
+        <div class="service-grid reveal">
+          <article class="service-card interactive-card">
+            <span>01</span>
+            <h3>Web audit</h3>
+            <p>Detailed audit of one website: technical state, UX, SEO, communication, archetypes and priorities.</p>
+          </article>
+
+          <article class="service-card interactive-card">
+            <span>02</span>
+            <h3>Audit input for agencies</h3>
+            <p>External diagnostics of a client website usable for consulting, redesign or your own recommendation.</p>
+          </article>
+
+          <article class="service-card interactive-card">
+            <span>03</span>
+            <h3>Lead Research</h3>
+            <p>Finding relevant company websites and publicly available contacts for B2B sales research.</p>
+            <button class="text-link modal-open" type="button" data-modal="modal-lead-research">Learn more</button>
+          </article>
+
+          <article class="service-card interactive-card">
+            <span>04</span>
+            <h3>Segment benchmark</h3>
+            <p>Bulk comparison of websites in one segment or location. Pilot / individual scope based on need.</p>
+            <button class="text-link modal-open" type="button" data-modal="modal-batch-benchmark">Learn more</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beta" class="section beta-section page-section" data-section="11">
+      <div class="container beta-grid">
+        <div class="beta-left reveal">
+          <p class="section-label">Beta offer</p>
+          <h2>Beta audit</h2>
           <p>
             The product is in beta mode. The output is fully usable, but the report, archetype interpretation and methodology
             are still being refined based on real use and feedback from first clients and agencies.
           </p>
-          <p>
-            Send the website URL, billing details and preferred report language.
-            If you are an agency or want to process multiple websites, describe the scope in the note.
-            The audit starts after order confirmation and payment processing.
-          </p>
 
-          <ol class="order-flow">
-            <li>
+          <div class="process-mini">
+            <div class="mini-step interactive-card">
               <span>1</span>
               <p>order</p>
-            </li>
-            <li>
+            </div>
+            <div class="mini-step interactive-card">
               <span>2</span>
               <p>invoice</p>
-            </li>
-            <li>
+            </div>
+            <div class="mini-step interactive-card">
               <span>3</span>
               <p>payment</p>
-            </li>
-            <li>
+            </div>
+            <div class="mini-step interactive-card">
               <span>4</span>
               <p>PDF report</p>
-            </li>
-          </ol>
+            </div>
+          </div>
         </div>
 
-        <div class="order-card interactive-card">
+        <div class="price-card reveal interactive-card">
           <span class="price-label">Introductory price</span>
           <strong>2 490 Kč</strong>
           <span class="old-price">regular price 4 980 Kč</span>
-
-          <div class="popup-features">
-            <span>PDF report</span>
-            <span>24 h delivery</span>
-            <span>Audit / agency pilot</span>
-          </div>
-
-          <button
-            class="btn btn-primary btn-shine full tally-trigger"
-            data-tally-open="jaGlJ1"
-            data-tally-layout="modal"
-            data-tally-width="720"
-            data-tally-overlay="1"
-            data-tally-auto-close="2000"
-            type="button"
-          >
-            Open order form
-          </button>
-
-          <p class="popup-note">
-            The form opens in a secure popup without leaving the website.
-          </p>
+          <a href="#order" class="btn btn-primary btn-shine full">Order audit</a>
         </div>
       </div>
     </section>
 
-    <section class="section faq-section page-section" data-section="07">
+    <section class="section faq-section page-section" data-section="12">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-label">FAQ</p>
@@ -780,6 +782,72 @@
             <summary>Can Sigel work with multiple websites at once?</summary>
             <p>Yes, depending on scope, a segment batch benchmark or lead research can be handled. These outputs are agreed individually.</p>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="section order-section page-section" data-section="13">
+      <div class="container order-box reveal">
+        <div class="order-copy">
+          <p class="section-label">Order</p>
+          <h2>Order Sigel Web Audit or discuss pilot cooperation</h2>
+          <p>
+            Send the website URL, billing details and preferred report language.
+            If you are an agency or want to process multiple websites, describe the scope in the note.
+            The audit starts after order confirmation and payment processing.
+          </p>
+
+          <ol class="order-flow">
+            <li>
+              <span>1</span>
+              <p>order</p>
+            </li>
+            <li>
+              <span>2</span>
+              <p>invoice</p>
+            </li>
+            <li>
+              <span>3</span>
+              <p>payment</p>
+            </li>
+            <li>
+              <span>4</span>
+              <p>PDF report</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="form-popup-card interactive-card">
+          <span class="popup-badge">BETA ORDER</span>
+
+          <h3>Start audit order</h3>
+
+          <p>
+            Fill in a short form with the website URL and billing details.
+            For agency or multi-website cooperation, describe the scope in the note.
+          </p>
+
+          <div class="popup-features">
+            <span>PDF report</span>
+            <span>24 h delivery</span>
+            <span>Audit / agency pilot</span>
+          </div>
+
+          <button
+            class="btn btn-primary btn-shine full tally-trigger"
+            data-tally-open="jaGlJ1"
+            data-tally-layout="modal"
+            data-tally-width="720"
+            data-tally-overlay="1"
+            data-tally-auto-close="2000"
+            type="button"
+          >
+            Open order form
+          </button>
+
+          <p class="popup-note">
+            The form opens in a secure popup without leaving the website.
+          </p>
         </div>
       </div>
     </section>
@@ -914,6 +982,31 @@
         <a href="../docs/demo-report.pdf" class="btn btn-secondary" target="_blank" rel="noopener">View demo report</a>
       </div>
     </section>
+
+    <section class="sigel-modal" id="modal-lead-research" role="dialog" aria-modal="true" aria-labelledby="modal-lead-research-title">
+      <button class="modal-close" type="button" data-modal-close aria-label="Close window">×</button>
+      <span class="modal-kicker">Lead Research</span>
+      <h2 id="modal-lead-research-title">Finding relevant companies and public contacts.</h2>
+      <p>Additional output for B2B sales research: finding company websites in a segment, publicly available contacts and basic segmentation for further work.</p>
+      <ul>
+        <li>suitable for market mapping or acquisition preparation,</li>
+        <li>the output can follow a website audit or segment benchmark,</li>
+        <li>scope is handled individually based on market and goal.</li>
+      </ul>
+    </section>
+
+    <section class="sigel-modal" id="modal-batch-benchmark" role="dialog" aria-modal="true" aria-labelledby="modal-batch-benchmark-title">
+      <button class="modal-close" type="button" data-modal-close aria-label="Close window">×</button>
+      <span class="modal-kicker">Segment benchmark</span>
+      <h2 id="modal-batch-benchmark-title">Website comparison against the market, not just an isolated audit.</h2>
+      <p>Batch benchmark makes it possible to analyze a larger set of websites in one segment or location and show where a specific website stands against competitors.</p>
+      <ul>
+        <li>segment averages and medians,</li>
+        <li>most common weak spots of the market,</li>
+        <li>top/bottom websites by selected metrics,</li>
+        <li>arguments for deciding what to improve first.</li>
+      </ul>
+    </section>
   </div>
 
   <footer class="site-footer">
@@ -925,19 +1018,12 @@
       </div>
 
       <div class="footer-column">
-        <span>Products</span>
-        <a href="#system">Web audit</a>
-        <a href="#signal">Brand archetype</a>
-        <a href="#signal">Customer archetypes</a>
-        <a href="#report">Communication recommendations</a>
-      </div>
-
-      <div class="footer-column">
-        <span>For agencies</span>
-        <a href="#agentury">Audit input</a>
-        <a href="#agentury">Batch benchmark</a>
-        <a href="#order">Pilot cooperation</a>
-        <a href="mailto:info@sigel-industries.com">Contact</a>
+        <span>Navigation</span>
+        <a href="#archetypy">Archetypes</a>
+        <a href="#reseni">Solutions</a>
+        <a href="#audit">Audit</a>
+        <a href="#report">Report</a>
+        <a href="#order">Order</a>
       </div>
 
       <div class="footer-column">
@@ -956,7 +1042,7 @@
 
     <div class="container footer-bottom">
       <span>© 2026 SIGEL INDUSTRIES</span>
-      <span>Data. Archetypes. Results.</span>
+      <span>Web audit before marketing spend.</span>
     </div>
   </footer>
 
