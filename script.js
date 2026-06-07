@@ -117,3 +117,21 @@ if (!reduceMotion) {
 }
 
 updateActiveNav();
+
+
+/* SIGEL premium polish layer: non-invasive visual state helpers */
+document.documentElement.classList.add("sigel-js-ready");
+
+if (!reduceMotion) {
+  let pointerFrame = null;
+
+  window.addEventListener("pointermove", (event) => {
+    if (pointerFrame) return;
+
+    pointerFrame = window.requestAnimationFrame(() => {
+      document.documentElement.style.setProperty("--pointer-x", `${event.clientX}px`);
+      document.documentElement.style.setProperty("--pointer-y", `${event.clientY}px`);
+      pointerFrame = null;
+    });
+  });
+}
