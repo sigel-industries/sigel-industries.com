@@ -145,3 +145,59 @@ updateActiveNav();
     });
   });
 })();
+
+
+// SIGEL V4 art-direction helpers
+// Visual-only: scroll progress, cursor glow, premium stagger.
+(function () {
+  const root = document.documentElement;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!document.querySelector(".sigel-progress")) {
+    const progress = document.createElement("div");
+    progress.className = "sigel-progress";
+    progress.setAttribute("aria-hidden", "true");
+    document.body.appendChild(progress);
+  }
+
+  function updateScrollProgress() {
+    const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const value = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
+    root.style.setProperty("--sigel-scroll", `${value}%`);
+  }
+
+  updateScrollProgress();
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  window.addEventListener("resize", updateScrollProgress);
+
+  if (!reduceMotion && !document.querySelector(".sigel-cursor-glow")) {
+    const glow = document.createElement("div");
+    glow.className = "sigel-cursor-glow";
+    glow.setAttribute("aria-hidden", "true");
+    document.body.appendChild(glow);
+
+    let raf = null;
+    window.addEventListener("pointermove", (event) => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const x = `${event.clientX}px`;
+        const y = `${event.clientY}px`;
+        root.style.setProperty("--cursor-x", x);
+        root.style.setProperty("--cursor-y", y);
+        root.style.setProperty("--mx", `${Math.round((event.clientX / window.innerWidth) * 100)}%`);
+        root.style.setProperty("--my", `${Math.round((event.clientY / window.innerHeight) * 100)}%`);
+        raf = null;
+      });
+    }, { passive: true });
+  }
+
+  const staggerGroups = document.querySelectorAll(
+    ".signal-grid, .core-grid, .solution-grid, .feature-grid, .service-grid, .report-grid, .process-mini, .faq-list"
+  );
+
+  staggerGroups.forEach((grid) => {
+    Array.from(grid.children).forEach((item, index) => {
+      item.style.transitionDelay = `${Math.min(index * 42, 260)}ms`;
+    });
+  });
+})();
