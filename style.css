@@ -1,6 +1,6 @@
 /* =========================================================
    SIGEL INDUSTRIES
-   V17.5 Hybrid Premium UI
+   V17.6 Hybrid Premium UI
    File: style.css
    ========================================================= */
 
@@ -616,8 +616,12 @@ main {
 .engine-copy p,
 .agency-copy p,
 .benchmark-copy p,
+.extended-copy p,
 .beta-left p,
-.order-copy p {
+.order-copy p,
+.conversion-copy p,
+.method-intro p,
+.audit-map-copy p {
   max-width: 760px;
   font-size: clamp(0.98rem, 1.08vw, 1.07rem);
   line-height: 1.74;
@@ -1110,7 +1114,7 @@ main {
 }
 
 /* -----------------------------
-   08. Layout variants
+   08. Base layout variants
 ----------------------------- */
 
 .split-layout,
@@ -1155,7 +1159,9 @@ main {
 .solution-row > span,
 .process-card > span,
 .audit-card > span,
-.service-card > span {
+.service-card > span,
+.extended-card > span,
+.included-card > span {
   display: grid;
   place-items: center;
   width: 42px;
@@ -1191,177 +1197,370 @@ main {
 }
 
 /* -----------------------------
-   09. Problem / failure
+   09. Method / signal process
 ----------------------------- */
 
-.problem-section {
+.method-section {
   background:
-    radial-gradient(circle at 82% 12%, rgba(255, 96, 120, 0.052), transparent 32rem),
-    radial-gradient(circle at 16% 72%, rgba(129, 92, 255, 0.065), transparent 34rem);
+    radial-gradient(circle at 16% 8%, rgba(54, 231, 214, 0.06), transparent 28rem),
+    radial-gradient(circle at 86% 60%, rgba(129, 92, 255, 0.08), transparent 34rem);
 }
 
-.failure-panel {
-  padding: 28px;
+.method-shell {
+  display: grid;
+  gap: clamp(28px, 4vw, 46px);
+  padding: clamp(26px, 4vw, 42px);
   border: 1px solid transparent;
   border-radius: var(--radius-xl);
   background:
-    radial-gradient(circle at 82% 0%, rgba(255, 96, 120, 0.10), transparent 34%),
-    linear-gradient(180deg, rgba(12,18,35,0.90), rgba(6,10,20,0.74)) padding-box,
-    linear-gradient(135deg, rgba(129,92,255,0.38), rgba(255,96,120,0.18), rgba(255,255,255,0.07)) border-box;
+    linear-gradient(180deg, rgba(9, 14, 28, 0.78), rgba(6, 10, 20, 0.62)) padding-box,
+    linear-gradient(135deg, rgba(129,92,255,0.32), rgba(54,231,214,0.18), rgba(255,255,255,0.07)) border-box;
   box-shadow: var(--shadow-md);
 }
 
-.panel-label {
-  display: inline-block;
-  margin-bottom: 18px;
-  color: var(--cyan);
-  font-size: 0.76rem;
-  font-weight: 950;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.method-intro {
+  max-width: 940px;
 }
 
-.failure-panel ol {
-  display: grid;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.method-intro h2 {
+  margin-bottom: 16px;
 }
 
-.failure-panel li {
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  gap: 14px;
-  align-items: center;
-  min-height: 68px;
-  padding: 14px;
-  border: 1px solid var(--line-soft);
-  border-radius: 18px;
-  background: rgba(255,255,255,0.034);
-}
-
-.failure-panel li:last-child {
-  border-color: rgba(255, 96, 120, 0.28);
-  background:
-    radial-gradient(circle at 0% 0%, rgba(255, 96, 120, 0.10), transparent 40%),
-    rgba(255,255,255,0.04);
-}
-
-.failure-panel li span {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 13px;
-  color: var(--cyan);
-  background: rgba(54, 231, 214, 0.09);
-  font-size: 0.78rem;
-  font-weight: 950;
-}
-
-.failure-panel li p {
-  color: var(--text-soft);
-}
-
-/* -----------------------------
-   10. Process / engine / audit
------------------------------ */
-
-.process-grid,
-.audit-grid,
-.service-grid {
+.signal-process {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
-.audit-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.process-card,
-.audit-card,
-.service-card {
-  min-height: 230px;
-  padding: 22px;
+  gap: 0;
   border: 1px solid var(--line);
   border-radius: 28px;
+  overflow: hidden;
   background:
-    radial-gradient(circle at 80% 0%, rgba(54,231,214,0.07), transparent 36%),
-    linear-gradient(180deg, rgba(255,255,255,0.062), rgba(255,255,255,0.026));
-  box-shadow: var(--shadow-sm);
+    radial-gradient(circle at 50% 0%, rgba(54, 231, 214, 0.08), transparent 42%),
+    rgba(255,255,255,0.026);
 }
 
-.process-card > span,
-.audit-card > span,
-.service-card > span {
-  margin-bottom: 50px;
+.signal-process::before {
+  content: "";
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  top: 55px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(54, 231, 214, 0.46), rgba(129, 92, 255, 0.36), transparent);
+  opacity: 0.75;
 }
 
-.process-card h3,
-.audit-card h3,
-.service-card h3 {
+.signal-step {
+  position: relative;
+  min-height: 220px;
+  padding: 24px;
+  border-left: 1px solid var(--line-soft);
+  background: rgba(255,255,255,0.018);
+}
+
+.signal-step:first-child {
+  border-left: 0;
+}
+
+.signal-step > span {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 52px;
+  border: 1px solid rgba(54, 231, 214, 0.28);
+  border-radius: 16px;
+  color: var(--cyan);
+  background: rgba(54, 231, 214, 0.08);
+  font-size: 0.78rem;
+  font-weight: 950;
+  box-shadow: 0 0 24px rgba(54, 231, 214, 0.06);
+}
+
+.signal-step h3 {
   margin-bottom: 10px;
 }
 
-.process-card p,
-.audit-card p,
-.service-card p {
+.signal-step p {
   font-size: 0.9rem;
 }
 
-.engine-layout {
-  grid-template-columns: minmax(0, 1fr) minmax(450px, 0.9fr);
+/* -----------------------------
+   10. Engine core diagram
+----------------------------- */
+
+.engine-section {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(129, 92, 255, 0.12), transparent 35rem),
+    linear-gradient(180deg, rgba(255,255,255,0.012), transparent 50%);
 }
 
-.system-stack {
+.engine-core {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
+  gap: clamp(32px, 5vw, 68px);
+  align-items: center;
+}
+
+.engine-copy h2 {
+  margin-bottom: 16px;
+}
+
+.engine-diagram {
+  position: relative;
+  min-height: 650px;
+  padding: 28px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-xxl);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(54,231,214,0.10), transparent 28%),
+    radial-gradient(circle at 50% 50%, rgba(129,92,255,0.12), transparent 42%),
+    linear-gradient(180deg, rgba(12,18,35,0.92), rgba(6,10,20,0.76)) padding-box,
+    linear-gradient(135deg, rgba(129,92,255,0.50), rgba(54,231,214,0.25), rgba(255,255,255,0.08)) border-box;
+  box-shadow: var(--shadow-lg);
+}
+
+.engine-diagram::before,
+.engine-diagram::after {
+  content: "";
+  position: absolute;
+  inset: 13%;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.engine-diagram::after {
+  inset: 25%;
+  border-color: rgba(54,231,214,0.10);
+}
+
+.engine-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  width: 178px;
+  height: 178px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(54, 231, 214, 0.28);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(54, 231, 214, 0.14), transparent 44%),
+    rgba(9, 14, 28, 0.96);
+  box-shadow:
+    0 0 70px rgba(54,231,214,0.12),
+    0 0 0 12px rgba(255,255,255,0.018);
+}
+
+.engine-center span {
+  display: block;
+  color: var(--cyan);
+  font-size: 0.75rem;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+}
+
+.engine-center strong {
+  display: block;
+  max-width: 110px;
+  margin-top: 5px;
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.08;
+}
+
+.engine-node {
+  position: absolute;
+  z-index: 2;
+  width: min(240px, 38%);
+  min-height: 150px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(54,231,214,0.08), transparent 36%),
+    rgba(255,255,255,0.048);
+  box-shadow: var(--shadow-sm);
+}
+
+.engine-node span {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  color: var(--cyan);
+  background: rgba(54,231,214,0.09);
+  font-size: 0.72rem;
+  font-weight: 950;
+}
+
+.engine-node strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--text);
+  line-height: 1.18;
+}
+
+.engine-node p {
+  font-size: 0.82rem;
+  line-height: 1.46;
+}
+
+.node-a {
+  left: 5%;
+  top: 8%;
+}
+
+.node-b {
+  right: 5%;
+  top: 8%;
+}
+
+.node-c {
+  left: 2%;
+  top: 38%;
+}
+
+.node-d {
+  right: 2%;
+  top: 38%;
+}
+
+.node-e {
+  left: 12%;
+  bottom: 7%;
+}
+
+.node-f {
+  right: 12%;
+  bottom: 7%;
+}
+
+/* -----------------------------
+   11. Audit map
+----------------------------- */
+
+.audit-section {
+  background:
+    radial-gradient(circle at 16% 16%, rgba(54,231,214,0.055), transparent 30rem),
+    radial-gradient(circle at 80% 70%, rgba(129,92,255,0.07), transparent 34rem);
+}
+
+.audit-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
+  gap: clamp(32px, 5vw, 68px);
+  align-items: center;
+}
+
+.audit-map-copy h2 {
+  margin-bottom: 16px;
+}
+
+.audit-map {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 20px;
+  align-items: stretch;
   padding: 24px;
   border: 1px solid transparent;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-xxl);
   background:
-    radial-gradient(circle at 80% 0%, rgba(54,231,214,0.10), transparent 32%),
-    linear-gradient(180deg, rgba(12,18,35,0.90), rgba(6,10,20,0.74)) padding-box,
-    linear-gradient(135deg, rgba(129,92,255,0.44), rgba(54,231,214,0.22), rgba(255,255,255,0.07)) border-box;
-  box-shadow: var(--shadow-md);
+    radial-gradient(circle at 0% 0%, rgba(54,231,214,0.10), transparent 36%),
+    linear-gradient(180deg, rgba(12,18,35,0.92), rgba(6,10,20,0.76)) padding-box,
+    linear-gradient(135deg, rgba(129,92,255,0.44), rgba(54,231,214,0.24), rgba(255,255,255,0.08)) border-box;
+  box-shadow: var(--shadow-lg);
 }
 
-.system-stack div {
-  min-height: 108px;
-  padding: 16px;
+.audit-map-score {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100%;
+  padding: 20px;
+  border: 1px solid var(--line-soft);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(54,231,214,0.12), transparent 42%),
+    rgba(255,255,255,0.034);
+  text-align: center;
+}
+
+.audit-map-score strong {
+  display: block;
+  color: transparent;
+  background: linear-gradient(135deg, #fff, var(--cyan-2), var(--violet-2));
+  -webkit-background-clip: text;
+  font-size: clamp(5rem, 8vw, 7.2rem);
+  line-height: 0.85;
+  letter-spacing: -0.1em;
+}
+
+.audit-map-score span {
+  display: block;
+  max-width: 120px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.audit-layer-list {
+  display: grid;
+  gap: 10px;
+}
+
+.audit-layer-list article {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 13px;
+  align-items: start;
+  padding: 13px;
   border: 1px solid var(--line-soft);
   border-radius: 18px;
-  background: rgba(255,255,255,0.034);
+  background: rgba(255,255,255,0.032);
 }
 
-.system-stack span {
+.audit-layer-list article span {
   display: grid;
   place-items: center;
   width: 34px;
   height: 34px;
-  margin-bottom: 20px;
   border-radius: 12px;
   color: var(--cyan);
-  background: rgba(54, 231, 214, 0.085);
-  font-size: 0.76rem;
+  background: rgba(54, 231, 214, 0.09);
+  font-size: 0.72rem;
   font-weight: 950;
 }
 
-.system-stack strong {
-  display: block;
-  color: var(--text);
+.audit-layer-list h3 {
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.audit-layer-list p {
+  font-size: 0.84rem;
+  line-height: 1.46;
 }
 
 /* -----------------------------
-   11. Agency / benchmark / beta
+   12. Agency / extended / benchmark
 ----------------------------- */
 
 .agency-layout,
 .benchmark-layout,
-.beta-grid {
+.extended-grid,
+.beta-grid,
+.order-box,
+.conversion-band {
   padding: clamp(26px, 4vw, 42px);
   border: 1px solid transparent;
   border-radius: var(--radius-xl);
@@ -1394,10 +1593,52 @@ main {
   color: var(--text);
 }
 
-.benchmark-tags {
+.extended-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.extended-copy {
+  max-width: 980px;
+}
+
+.extended-copy h2 {
+  margin-bottom: 16px;
+}
+
+.extended-use {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.extended-card {
+  min-height: 236px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 82% 0%, rgba(54,231,214,0.07), transparent 34%),
+    rgba(255,255,255,0.034);
+}
+
+.extended-card > span {
+  margin-bottom: 42px;
+}
+
+.extended-card h3 {
+  margin-bottom: 9px;
+}
+
+.extended-card p {
+  font-size: 0.88rem;
+}
+
+.benchmark-strip {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding-top: 6px;
 }
 
 .tag,
@@ -1414,95 +1655,19 @@ main {
   backdrop-filter: blur(10px);
 }
 
-.beta-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.48fr);
-  gap: clamp(28px, 4vw, 52px);
-  align-items: stretch;
-}
-
-.beta-left h2 {
-  margin-bottom: 14px;
-}
-
-.process-mini {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-top: 26px;
-}
-
-.mini-step {
-  padding: 15px;
-  border: 1px solid var(--line-soft);
-  border-radius: 18px;
-  background: rgba(255,255,255,0.034);
-  text-align: center;
-}
-
-.mini-step span {
-  display: inline-grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  margin-bottom: 9px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--violet), var(--cyan));
-  color: white;
-  font-weight: 950;
-}
-
-.price-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 28px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background:
-    radial-gradient(circle at 80% 0%, rgba(54,231,214,0.10), transparent 36%),
-    rgba(255,255,255,0.044);
-  box-shadow: var(--shadow-sm);
-}
-
-.price-label {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--muted);
-}
-
-.price-card strong {
-  display: block;
-  margin-bottom: 4px;
-  font-size: clamp(2.9rem, 5vw, 4.5rem);
-  font-weight: 950;
-  line-height: 1;
-  letter-spacing: -0.078em;
-  background: linear-gradient(135deg, #fff, var(--cyan-2) 58%, var(--violet-2));
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.old-price {
-  display: block;
-  margin-bottom: 22px;
-  color: var(--muted-2);
-  text-decoration: line-through;
-}
-
 /* -----------------------------
-   12. Report
+   13. Report
 ----------------------------- */
 
 .report-showcase {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 1fr) 340px;
   gap: 22px;
   align-items: stretch;
 }
 
 .report-viewer {
-  min-height: 560px;
+  min-height: 580px;
   padding: clamp(20px, 3vw, 30px);
   border: 1px solid transparent;
   border-radius: var(--radius-xxl);
@@ -1570,7 +1735,7 @@ main {
 
 .report-screen {
   position: relative;
-  min-height: 400px;
+  min-height: 420px;
   overflow: hidden;
   padding: clamp(22px, 4vw, 36px);
   border: 1px solid rgba(255,255,255,0.13);
@@ -1653,27 +1818,38 @@ main {
   animation: barLoad 1.1s var(--ease) both;
 }
 
-.report-side {
+.report-included {
   display: grid;
   gap: 14px;
 }
 
-.report-side-card {
-  min-height: 160px;
-  padding: 20px;
+.included-card {
+  min-height: 132px;
+  padding: 18px;
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: 22px;
   background:
+    radial-gradient(circle at 80% 0%, rgba(54,231,214,0.06), transparent 34%),
     linear-gradient(180deg, rgba(255,255,255,0.068), rgba(255,255,255,0.03));
   box-shadow: var(--shadow-sm);
 }
 
-.report-side-card h3 {
-  margin-bottom: 10px;
+.included-card > span {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+  border-radius: 11px;
+  font-size: 0.72rem;
 }
 
-.report-side-card p {
-  font-size: 0.87rem;
+.included-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.02rem;
+}
+
+.included-card p {
+  font-size: 0.84rem;
+  line-height: 1.46;
 }
 
 .pdf-callout {
@@ -1696,7 +1872,7 @@ main {
 }
 
 /* -----------------------------
-   13. FAQ / Order
+   14. FAQ / Conversion
 ----------------------------- */
 
 .faq-list {
@@ -1737,19 +1913,21 @@ details p {
   padding: 0 21px 19px;
 }
 
-.order-box {
-  padding: clamp(28px, 5vw, 56px);
-  border: 1px solid transparent;
+.conversion-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.52fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
   border-radius: var(--radius-xxl);
   background:
-    radial-gradient(circle at 80% 0%, rgba(54,231,214,0.12), transparent 36%),
-    radial-gradient(circle at 0% 100%, rgba(129,92,255,0.14), transparent 38%),
-    linear-gradient(180deg, rgba(12,18,35,0.92), rgba(6,10,20,0.76)) padding-box,
-    linear-gradient(135deg, rgba(129,92,255,0.50), rgba(54,231,214,0.25), rgba(255,255,255,0.08)) border-box;
+    radial-gradient(circle at 82% 0%, rgba(54,231,214,0.13), transparent 36%),
+    radial-gradient(circle at 0% 100%, rgba(129,92,255,0.16), transparent 38%),
+    linear-gradient(180deg, rgba(12,18,35,0.94), rgba(6,10,20,0.78)) padding-box,
+    linear-gradient(135deg, rgba(129,92,255,0.52), rgba(54,231,214,0.27), rgba(255,255,255,0.08)) border-box;
   box-shadow: var(--shadow-lg);
 }
 
-.order-copy h2 {
+.conversion-copy h2 {
   margin-bottom: 16px;
 }
 
@@ -1787,7 +1965,7 @@ details p {
   font-size: 0.86rem;
 }
 
-.form-popup-card {
+.checkout-card {
   padding: clamp(24px, 4vw, 36px);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
@@ -1811,9 +1989,37 @@ details p {
   font-weight: 950;
 }
 
-.form-popup-card h3 {
-  margin-bottom: 12px;
-  font-size: clamp(1.35rem, 2.2vw, 2rem);
+.checkout-price {
+  margin-bottom: 18px;
+}
+
+.checkout-price span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.checkout-price strong {
+  display: block;
+  color: transparent;
+  background: linear-gradient(135deg, #fff, var(--cyan-2) 58%, var(--violet-2));
+  -webkit-background-clip: text;
+  font-size: clamp(3rem, 5vw, 4.6rem);
+  line-height: 0.9;
+  letter-spacing: -0.09em;
+}
+
+.checkout-price em {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted-2);
+  font-style: normal;
+  text-decoration: line-through;
+}
+
+.checkout-card > p {
+  font-size: 0.95rem;
 }
 
 .popup-features {
@@ -1830,7 +2036,7 @@ details p {
 }
 
 /* -----------------------------
-   14. Footer
+   15. Footer
 ----------------------------- */
 
 .site-footer {
@@ -1913,7 +2119,7 @@ details p {
 }
 
 /* -----------------------------
-   15. Modals
+   16. Modals
 ----------------------------- */
 
 .modal-layer {
@@ -2047,7 +2253,7 @@ details p {
 }
 
 /* -----------------------------
-   16. Legal page safety
+   17. Legal page safety
 ----------------------------- */
 
 .legal-page h1,
@@ -2090,7 +2296,7 @@ body:not(:has(main)) li {
 }
 
 /* -----------------------------
-   17. Animations
+   18. Animations
 ----------------------------- */
 
 @keyframes barLoad {
@@ -2133,7 +2339,7 @@ body:not(:has(main)) li {
 }
 
 /* -----------------------------
-   18. Responsive
+   19. Responsive
 ----------------------------- */
 
 @media (max-width: 1320px) {
@@ -2153,6 +2359,10 @@ body:not(:has(main)) li {
 
   .cockpit-stack {
     display: none;
+  }
+
+  .engine-node {
+    width: min(225px, 39%);
   }
 }
 
@@ -2201,7 +2411,10 @@ body:not(:has(main)) li {
   .agency-layout,
   .benchmark-layout,
   .order-box,
-  .beta-grid {
+  .beta-grid,
+  .engine-core,
+  .audit-map-layout,
+  .conversion-band {
     grid-template-columns: 1fr;
   }
 
@@ -2230,8 +2443,25 @@ body:not(:has(main)) li {
     grid-column: 2;
   }
 
+  .signal-process {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signal-process::before {
+    display: none;
+  }
+
+  .signal-step:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .signal-step:nth-child(n + 3) {
+    border-top: 1px solid var(--line-soft);
+  }
+
   .process-grid,
-  .service-grid {
+  .service-grid,
+  .extended-use {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -2239,11 +2469,47 @@ body:not(:has(main)) li {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .engine-diagram {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .engine-diagram::before,
+  .engine-diagram::after {
+    display: none;
+  }
+
+  .engine-center,
+  .engine-node {
+    position: relative;
+    inset: auto;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    width: auto;
+    min-height: 150px;
+  }
+
+  .engine-center {
+    width: auto;
+    height: auto;
+    min-height: 150px;
+    border-radius: 22px;
+  }
+
+  .audit-map {
+    max-width: 900px;
+  }
+
   .report-showcase {
     grid-template-columns: 1fr;
   }
 
-  .report-side {
+  .report-included {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -2253,6 +2519,20 @@ body:not(:has(main)) li {
 
   .footer-brand {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .audit-map {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-map-score {
+    min-height: 220px;
+  }
+
+  .audit-map-score span {
+    max-width: none;
   }
 }
 
@@ -2272,20 +2552,24 @@ body:not(:has(main)) li {
   .process-grid,
   .audit-grid,
   .service-grid,
-  .report-side,
-  .system-stack {
+  .report-included,
+  .system-stack,
+  .extended-use,
+  .engine-diagram {
     grid-template-columns: 1fr;
   }
 
   .process-card,
   .audit-card,
-  .service-card {
+  .service-card,
+  .extended-card {
     min-height: auto;
   }
 
   .process-card > span,
   .audit-card > span,
-  .service-card > span {
+  .service-card > span,
+  .extended-card > span {
     margin-bottom: 28px;
   }
 
@@ -2457,12 +2741,64 @@ body:not(:has(main)) li {
     border-bottom: 0;
   }
 
+  .method-shell,
   .agency-layout,
   .benchmark-layout,
+  .extended-grid,
   .beta-grid,
-  .order-box {
+  .order-box,
+  .conversion-band {
     padding: 22px;
     border-radius: 30px;
+  }
+
+  .signal-process {
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+  }
+
+  .signal-step {
+    min-height: auto;
+    border-left: 0;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .signal-step:first-child {
+    border-top: 0;
+  }
+
+  .signal-step > span {
+    margin-bottom: 28px;
+  }
+
+  .engine-diagram {
+    min-height: auto;
+    padding: 18px;
+    border-radius: 30px;
+  }
+
+  .engine-center,
+  .engine-node {
+    min-height: auto;
+  }
+
+  .audit-map {
+    padding: 18px;
+    border-radius: 30px;
+  }
+
+  .audit-map-score {
+    min-height: 180px;
+    border-radius: 24px;
+  }
+
+  .audit-layer-list article {
+    grid-template-columns: 38px 1fr;
+  }
+
+  .audit-layer-list article span {
+    width: 31px;
+    height: 31px;
   }
 
   .report-viewer {
@@ -2506,10 +2842,13 @@ body:not(:has(main)) li {
     grid-template-columns: 1fr;
   }
 
-  .form-popup-card,
-  .price-card {
+  .checkout-card {
     padding: 20px;
     border-radius: 28px;
+  }
+
+  .checkout-price strong {
+    font-size: 3.2rem;
   }
 
   .footer-grid {
@@ -2590,7 +2929,10 @@ body:not(:has(main)) li {
   .failure-panel,
   .system-stack,
   .report-side-card,
-  .form-popup-card {
+  .form-popup-card,
+  .engine-node,
+  .included-card,
+  .extended-card {
     padding: 18px;
   }
 
@@ -2613,7 +2955,7 @@ body:not(:has(main)) li {
 }
 
 /* -----------------------------
-   19. Motion / performance
+   20. Motion / performance
 ----------------------------- */
 
 @media (hover: none), (pointer: coarse) {
