@@ -1,6 +1,6 @@
 /* =========================================================
    SIGEL INDUSTRIES
-   V17 Premium Cinematic Interaction Layer
+   V17.5 Hybrid Interaction Layer
    File: script.js
    ========================================================= */
 
@@ -19,15 +19,19 @@
   const sections = Array.from(doc.querySelectorAll("main section[id]"));
   const revealItems = Array.from(doc.querySelectorAll(".reveal"));
   const interactiveCards = Array.from(doc.querySelectorAll(".interactive-card"));
-  const buttons = Array.from(doc.querySelectorAll(".btn, .btn-mini, .text-link, .report-tab, .nav a"));
-  const reportTabs = Array.from(doc.querySelectorAll(".report-tab"));
   const cursorDot = doc.querySelector(".cursor-dot");
+
+  const buttons = Array.from(
+    doc.querySelectorAll(".btn, .btn-mini, .text-link, .report-tab, .nav a, .card-link")
+  );
 
   const modalLayer = doc.getElementById("sigel-modal-layer");
   const modalTriggers = Array.from(doc.querySelectorAll("[data-modal]"));
   const closeTriggers = modalLayer ? Array.from(modalLayer.querySelectorAll("[data-modal-close]")) : [];
   const modals = modalLayer ? Array.from(modalLayer.querySelectorAll(".sigel-modal")) : [];
   const modalMap = new Map(modals.map((modal) => [modal.id, modal]));
+
+  const reportTabs = Array.from(doc.querySelectorAll(".report-tab"));
 
   const supportsReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
@@ -78,7 +82,7 @@
     for (const section of sections) {
       const rect = section.getBoundingClientRect();
 
-      if (rect.top <= 140 && rect.bottom >= 140) {
+      if (rect.top <= 150 && rect.bottom >= 150) {
         currentId = section.id;
         break;
       }
@@ -183,6 +187,12 @@
     link.addEventListener("click", closeMobileMenu);
   });
 
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileMenu();
+    }
+  });
+
   /* -----------------------------
      Reveal observer
   ----------------------------- */
@@ -241,7 +251,7 @@
   }
 
   /* -----------------------------
-     Ambient pointer glow + cursor dot
+     Cursor + ambient pointer glow
   ----------------------------- */
 
   function initPointerEffects() {
@@ -414,9 +424,7 @@
       textCs: "Skóre oblastí, hlavní rizika, silné stránky a doporučený další postup na první pohled.",
       textEn: "Area scores, main risks, strengths and recommended next steps at a glance.",
       score: "94",
-      bars: ["82%", "94%", "70%", "88%"],
-      menuCs: ["Přehled skóre", "Klíčové oblasti", "Vývoj skóre", "Srovnání"],
-      menuEn: ["Score overview", "Key areas", "Score trend", "Comparison"]
+      bars: ["82%", "94%", "70%", "88%"]
     },
     technika: {
       labelCs: "Technika",
@@ -426,9 +434,7 @@
       textCs: "Lighthouse, indexace, sitemap, robots a technické signály, které tvoří základ použitelného webu.",
       textEn: "Lighthouse, indexation, sitemap, robots and technical signals that form the foundation of a usable website.",
       score: "99",
-      bars: ["99%", "92%", "88%", "84%"],
-      menuCs: ["Lighthouse", "Indexace", "Robots", "Sitemap"],
-      menuEn: ["Lighthouse", "Indexation", "Robots", "Sitemap"]
+      bars: ["99%", "92%", "88%", "84%"]
     },
     komunikace: {
       labelCs: "Komunikace",
@@ -438,9 +444,7 @@
       textCs: "Jestli web rychle vysvětluje hodnotu, buduje důvěru a vede návštěvníka k dalšímu kroku.",
       textEn: "Whether the website quickly explains value, builds trust and leads the visitor to the next step.",
       score: "82",
-      bars: ["82%", "76%", "69%", "88%"],
-      menuCs: ["Hlavní sdělení", "CTA", "Důvěra", "Argumentace"],
-      menuEn: ["Main message", "CTA", "Trust", "Argumentation"]
+      bars: ["82%", "76%", "69%", "88%"]
     },
     archetypy: {
       labelCs: "Archetypy",
@@ -450,9 +454,7 @@
       textCs: "Jak firma působí, koho pravděpodobně oslovuje a jaký tón komunikace dává smysl.",
       textEn: "How the company feels, whom it probably addresses and what tone of communication makes sense.",
       score: "86",
-      bars: ["86%", "78%", "90%", "74%"],
-      menuCs: ["Archetyp značky", "Zákazníci", "Motivace", "Tón"],
-      menuEn: ["Brand archetype", "Customers", "Motivation", "Tone"]
+      bars: ["86%", "78%", "90%", "74%"]
     },
     roadmapa: {
       labelCs: "Roadmapa",
@@ -462,9 +464,7 @@
       textCs: "Co řešit teď, co potom a co má největší obchodní dopad.",
       textEn: "What to solve now, what comes later and what has the highest business impact.",
       score: "90",
-      bars: ["90%", "84%", "80%", "72%"],
-      menuCs: ["30 dní", "60 dní", "90 dní", "Dopad"],
-      menuEn: ["30 days", "60 days", "90 days", "Impact"]
+      bars: ["90%", "84%", "80%", "72%"]
     }
   };
 
@@ -476,7 +476,7 @@
     if (!element) return;
 
     element.style.animation = "none";
-    element.offsetHeight; // reflow, lebo weby sú malé pohanské oltáre
+    element.offsetHeight; // reflow, pretože CSS je malé kráľovstvo absurdity
     element.style.animation = "";
   }
 
@@ -491,8 +491,6 @@
     const titleEl = screen.querySelector(".screen-copy h3");
     const textEl = screen.querySelector(".screen-copy p");
     const bars = Array.from(screen.querySelectorAll(".screen-bars i"));
-    const menuItems = Array.from(screen.querySelectorAll(".report-menu span"));
-    const chartPath = screen.querySelector(".chart-line path");
 
     reportTabs.forEach((tab) => {
       tab.addEventListener("click", () => {
@@ -505,7 +503,6 @@
         tab.classList.add("is-active");
 
         const lang = getCurrentLanguage();
-        const menu = lang === "en" ? content.menuEn : content.menuCs;
 
         if (scoreEl) scoreEl.textContent = content.score || "94";
         if (labelEl) labelEl.textContent = lang === "en" ? content.labelEn : content.labelCs;
@@ -517,12 +514,6 @@
           bar.style.width = width;
           restartAnimation(bar);
         });
-
-        menuItems.forEach((item, index) => {
-          if (menu[index]) item.textContent = menu[index];
-        });
-
-        restartAnimation(chartPath);
       });
     });
   }
@@ -595,7 +586,7 @@
   }
 
   /* -----------------------------
-     Accessibility helper
+     Keyboard mode
   ----------------------------- */
 
   function initKeyboardMode() {
