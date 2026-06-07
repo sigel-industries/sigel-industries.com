@@ -17,36 +17,12 @@
   <title>Sigel Web Audit | Audit webu, značky a zákaznických archetypů</title>
   <meta name="description" content="Sigel Web Audit je datově-strategický audit webu, značky, komunikace a zákaznických archetypů. Ukáže technický stav, UX, SEO, archetyp značky, spotřebitelské archetypy a priority dalších kroků." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sigel-industries.com/" />
-  <link rel="alternate" hreflang="cs" href="https://sigel-industries.com/" />
-  <link rel="alternate" hreflang="sk" href="https://sigel-industries.com/" />
-  <link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/" />
-  <link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/en/" />
-
-  <script>
-    (function () {
-      var preferred = localStorage.getItem('sigelLang');
-      if (preferred === 'en') {
-        if (!window.location.pathname.startsWith('/en')) {
-          window.location.replace('/en/');
-        }
-        return;
-      }
-      if (preferred === 'cs') return;
-
-      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      var isCzSk = lang.startsWith('cs') || lang.startsWith('sk');
-
-      if (!isCzSk) {
-        window.location.replace('/en/');
-      }
-    })();
-  </script>
+  <link rel="canonical" href="https://sigel-industries.github.io/" />
 
   <meta property="og:title" content="Sigel Web Audit | Audit webu, značky a zákaznických archetypů" />
   <meta property="og:description" content="Nejdřív pochopit web, značku a zákazníka. Až potom marketing." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sigel-industries.com/" />
+  <meta property="og:url" content="https://sigel-industries.github.io/" />
   <meta property="og:site_name" content="SIGEL INDUSTRIES" />
 
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -58,6 +34,9 @@
 </head>
 
 <body>
+  <div class="sigel-cursor" aria-hidden="true"></div>
+  <div class="sigel-noise" aria-hidden="true"></div>
+  <div class="sigel-scanlines" aria-hidden="true"></div>
   <div class="page-grid" aria-hidden="true"></div>
   <div class="page-glow page-glow-a" aria-hidden="true"></div>
   <div class="page-glow page-glow-b" aria-hidden="true"></div>
@@ -80,24 +59,26 @@
         <a href="#data">Data</a>
         <a href="#order">Objednávka</a>
       </nav>
-      <div class="lang-switch" aria-label="Přepnutí jazyka">
-        <a href="/" class="is-active" onclick="localStorage.setItem('sigelLang','cs')">CZ</a>
-        <a href="/en/" onclick="localStorage.setItem('sigelLang','en')">EN</a>
-      </div>
     </div>
   </header>
 
   <main id="top">
     <section class="hero section">
+      <div class="hero-orbit" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero-system-lines" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Web audit · archetyp značky · zákaznické archetypy</p>
+          <p class="eyebrow">SIGEL Audit Engine · web · značka · zákazník</p>
 
-          <h1>Nejdřív pochopit web, značku a zákazníka. Až potom marketing.</h1>
+          <h1>Váš web už ukazuje, proč zákazník neobjednává. SIGEL to jen přečte.</h1>
 
           <p class="hero-text">
-            Sigel Web Audit ukáže technický stav webu, UX a SEO, ale také archetyp značky,
-            spotřebitelské archetypy a způsob, jak nabídku komunikovat k různým typům zákazníků.
+            Datově-strategický audit webu, značky a zákaznických archetypů. Technika, SEO, UX,
+            důvěra, komunikace a priority v jednom vizuálním PDF reportu, který nejde rovnou pohřbít ve složce „někdy“.
           </p>
 
           <div class="hero-actions">
@@ -110,6 +91,13 @@
             <span>Archetyp značky</span>
             <span>Spotřebitelské archetypy</span>
             <span>Ručně kontrolovaný výstup</span>
+          </div>
+
+          <div class="hero-diagnostics" aria-label="Diagnostické vrstvy auditu">
+            <div><strong>01</strong><span>Technical scan</span></div>
+            <div><strong>02</strong><span>UX friction</span></div>
+            <div><strong>03</strong><span>Brand signal</span></div>
+            <div><strong>04</strong><span>Customer logic</span></div>
           </div>
         </div>
 
@@ -167,6 +155,12 @@
             </div>
           </div>
 
+          <div class="snapshot-stream" aria-hidden="true">
+            <span>SCAN: CTA PATH / ACTIVE</span>
+            <span>BRAND SIGNAL / ANALYZED</span>
+            <span>ARCHETYPE MATCH / 82%</span>
+          </div>
+
           <div class="snapshot-priorities">
             <div class="priority-title">
               <span>Top priority</span>
@@ -194,6 +188,13 @@
             <a href="#report">Zobrazit strukturu</a>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="intelligence-strip" aria-label="SIGEL intelligence layer">
+      <div class="intelligence-track">
+        <span>TECHNIKA</span><i></i><span>SEO</span><i></i><span>UX FRICTION</span><i></i><span>BRAND ARCHETYPE</span><i></i><span>CUSTOMER ARCHETYPES</span><i></i><span>CONVERSION RISK</span><i></i><span>PDF REPORT</span><i></i><span>ROADMAP</span><i></i>
+        <span>TECHNIKA</span><i></i><span>SEO</span><i></i><span>UX FRICTION</span><i></i><span>BRAND ARCHETYPE</span><i></i><span>CUSTOMER ARCHETYPES</span><i></i><span>CONVERSION RISK</span><i></i><span>PDF REPORT</span><i></i><span>ROADMAP</span><i></i>
       </div>
     </section>
 

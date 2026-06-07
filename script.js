@@ -118,59 +118,62 @@ if (!reduceMotion) {
 
 updateActiveNav();
 
-// SIGEL V5 real redesign helper
-// Visual-only: cursor atmosphere, scroll progress, section pacing.
+
+// SIGEL Level 3 premium cinematic helper
+// Visual-only: mouse ambient position + soft reveal staggering.
 (function () {
   const root = document.documentElement;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const progress = document.createElement("div");
-  progress.className = "sigel-scroll-progress";
-  document.body.appendChild(progress);
-
-  function updateProgress() {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const value = max > 0 ? (window.scrollY / max) * 100 : 0;
-    progress.style.width = `${value}%`;
+  if (!reduceMotion) {
+    let raf = null;
+    window.addEventListener("pointermove", (event) => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const x = Math.round((event.clientX / window.innerWidth) * 100);
+        const y = Math.round((event.clientY / window.innerHeight) * 100);
+        root.style.setProperty("--mx", `${x}%`);
+        root.style.setProperty("--my", `${y}%`);
+        raf = null;
+      });
+    }, { passive: true });
   }
 
-  window.addEventListener("scroll", updateProgress, { passive: true });
-  window.addEventListener("resize", updateProgress);
-  updateProgress();
+  document.querySelectorAll(".feature-grid, .solution-grid, .service-grid, .signal-grid").forEach((grid) => {
+    Array.from(grid.children).forEach((item, index) => {
+      item.style.transitionDelay = `${Math.min(index * 28, 180)}ms`;
+    });
+  });
+})();
 
-  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
-    const orb = document.createElement("div");
-    orb.className = "sigel-cursor-orb";
-    document.body.appendChild(orb);
 
-    let tx = window.innerWidth / 2;
-    let ty = window.innerHeight / 4;
-    let x = tx;
-    let y = ty;
+// SIGEL REDESIGN V4 helpers: cursor glow + safer dynamic init for newly added interface pieces.
+(function () {
+  const reduceMotionV4 = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const root = document.documentElement;
+  const cursor = document.querySelector(".sigel-cursor");
 
-    document.body.classList.add("has-pointer");
-
+  if (!reduceMotionV4 && cursor) {
+    let cursorFrame = null;
     window.addEventListener("pointermove", (event) => {
-      tx = event.clientX;
-      ty = event.clientY;
-      root.style.setProperty("--mx", `${Math.round((tx / window.innerWidth) * 100)}%`);
-      root.style.setProperty("--my", `${Math.round((ty / window.innerHeight) * 100)}%`);
+      if (cursorFrame) return;
+      cursorFrame = requestAnimationFrame(() => {
+        root.style.setProperty("--cursor-x", `${event.clientX}px`);
+        root.style.setProperty("--cursor-y", `${event.clientY}px`);
+        cursorFrame = null;
+      });
     }, { passive: true });
 
-    function tick() {
-      x += (tx - x) * 0.075;
-      y += (ty - y) * 0.075;
-      orb.style.left = `${x}px`;
-      orb.style.top = `${y}px`;
-      requestAnimationFrame(tick);
-    }
+    document.addEventListener("mouseleave", () => {
+      cursor.style.opacity = "0";
+    });
 
-    tick();
+    document.addEventListener("mouseenter", () => {
+      cursor.style.opacity = "0.8";
+    });
   }
 
-  document.querySelectorAll(".signal-grid, .core-grid, .solution-grid, .feature-grid, .service-grid, .report-grid, .process-mini").forEach((grid) => {
-    Array.from(grid.children).forEach((item, index) => {
-      item.style.transitionDelay = `${Math.min(index * 45, 260)}ms`;
-    });
+  document.querySelectorAll(".hero-diagnostics div, .snapshot-stream span").forEach((item, index) => {
+    item.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
   });
 })();
