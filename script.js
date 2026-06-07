@@ -1,6 +1,6 @@
 /* =========================================================
    SIGEL INDUSTRIES
-   V16 Premium Cinematic Interaction Layer
+   V17 Premium Cinematic Interaction Layer
    File: script.js
    ========================================================= */
 
@@ -245,7 +245,7 @@
   ----------------------------- */
 
   function initPointerEffects() {
-    if (supportsReducedMotion || isTouchDevice) return;
+    if (supportsReducedMotion || isTouchDevice || !cursorDot) return;
 
     window.addEventListener(
       "pointermove",
@@ -263,10 +263,8 @@
             root.style.setProperty("--mx", `${x}%`);
             root.style.setProperty("--my", `${y}%`);
 
-            if (cursorDot) {
-              cursorDot.classList.add("is-visible");
-              cursorDot.style.transform = `translate3d(${cursorX - 7}px, ${cursorY - 7}px, 0)`;
-            }
+            cursorDot.classList.add("is-visible");
+            cursorDot.style.transform = `translate3d(${cursorX - 7}px, ${cursorY - 7}px, 0)`;
 
             pointerTicking = false;
           });
@@ -276,15 +274,11 @@
     );
 
     window.addEventListener("pointerleave", () => {
-      if (cursorDot) {
-        cursorDot.classList.remove("is-visible");
-      }
+      cursorDot.classList.remove("is-visible");
     });
 
     window.addEventListener("pointerenter", () => {
-      if (cursorDot) {
-        cursorDot.classList.add("is-visible");
-      }
+      cursorDot.classList.add("is-visible");
     });
 
     const cursorTargets = Array.from(
@@ -293,11 +287,11 @@
 
     cursorTargets.forEach((target) => {
       target.addEventListener("pointerenter", () => {
-        if (cursorDot) cursorDot.classList.add("is-active");
+        cursorDot.classList.add("is-active");
       });
 
       target.addEventListener("pointerleave", () => {
-        if (cursorDot) cursorDot.classList.remove("is-active");
+        cursorDot.classList.remove("is-active");
       });
     });
   }
@@ -482,7 +476,7 @@
     if (!element) return;
 
     element.style.animation = "none";
-    element.offsetHeight; // reflow, áno, frontend rituál, krásne absurdné
+    element.offsetHeight; // reflow, lebo weby sú malé pohanské oltáre
     element.style.animation = "";
   }
 
