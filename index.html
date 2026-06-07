@@ -17,12 +17,36 @@
   <title>Sigel Web Audit | Audit webu, značky a zákaznických archetypů</title>
   <meta name="description" content="Sigel Web Audit je datově-strategický audit webu, značky, komunikace a zákaznických archetypů. Ukáže technický stav, UX, SEO, archetyp značky, spotřebitelské archetypy a priority dalších kroků." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sigel-industries.github.io/" />
+  <link rel="canonical" href="https://sigel-industries.com/" />
+  <link rel="alternate" hreflang="cs" href="https://sigel-industries.com/" />
+  <link rel="alternate" hreflang="sk" href="https://sigel-industries.com/" />
+  <link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/en/" />
+
+  <script>
+    (function () {
+      var preferred = localStorage.getItem('sigelLang');
+      if (preferred === 'en') {
+        if (!window.location.pathname.startsWith('/en')) {
+          window.location.replace('/en/');
+        }
+        return;
+      }
+      if (preferred === 'cs') return;
+
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var isCzSk = lang.startsWith('cs') || lang.startsWith('sk');
+
+      if (!isCzSk) {
+        window.location.replace('/en/');
+      }
+    })();
+  </script>
 
   <meta property="og:title" content="Sigel Web Audit | Audit webu, značky a zákaznických archetypů" />
   <meta property="og:description" content="Nejdřív pochopit web, značku a zákazníka. Až potom marketing." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sigel-industries.github.io/" />
+  <meta property="og:url" content="https://sigel-industries.com/" />
   <meta property="og:site_name" content="SIGEL INDUSTRIES" />
 
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -56,6 +80,10 @@
         <a href="#data">Data</a>
         <a href="#order">Objednávka</a>
       </nav>
+      <div class="lang-switch" aria-label="Přepnutí jazyka">
+        <a href="/" class="is-active" onclick="localStorage.setItem('sigelLang','cs')">CZ</a>
+        <a href="/en/" onclick="localStorage.setItem('sigelLang','en')">EN</a>
+      </div>
     </div>
   </header>
 
