@@ -1,13 +1,173 @@
+/* =========================================================
+   SIGEL Web Audit — V6 interaction layer
+   Drop-in replacement for script.js
+   ========================================================= */
 
-const header=document.querySelector('.header');
-const navLinks=[...document.querySelectorAll('.nav a')];
-const sections=[...document.querySelectorAll('main section[id]')];
-const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-function activeNav(){let id='';sections.forEach(s=>{const r=s.getBoundingClientRect();if(r.top<=130&&r.bottom>=130)id=s.id});navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${id}`))}
-window.addEventListener('scroll',()=>{header&&header.classList.toggle('is-scrolled',scrollY>20);activeNav()},{passive:true});
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(!id||id==='#')return;const t=document.querySelector(id);if(!t)return;e.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})}));
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-document.querySelectorAll('.card,.console,.stack-item,.visual-panel,.form-card,.btn').forEach(el=>{el.addEventListener('pointermove',ev=>{const r=el.getBoundingClientRect();el.style.setProperty('--x',`${ev.clientX-r.left}px`);el.style.setProperty('--y',`${ev.clientY-r.top}px`)},{passive:true})});
-if(!reduce){let raf=null;window.addEventListener('pointermove',ev=>{if(raf)return;raf=requestAnimationFrame(()=>{document.documentElement.style.setProperty('--mx',`${Math.round(ev.clientX/innerWidth*100)}%`);document.documentElement.style.setProperty('--my',`${Math.round(ev.clientY/innerHeight*100)}%`);raf=null})},{passive:true});
- document.querySelectorAll('.console,.card,.visual-panel,.form-card').forEach(el=>{el.addEventListener('pointermove',ev=>{const r=el.getBoundingClientRect(),x=ev.clientX-r.left,y=ev.clientY-r.top;const rx=((y-r.height/2)/(r.height/2))*-2.2, ry=((x-r.width/2)/(r.width/2))*2.2;el.style.transform=`perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px)`},{passive:true});el.addEventListener('pointerleave',()=>el.style.transform='')});}
-activeNav();
+(function () {
+  const header = document.querySelector('.header, .site-header');
+  const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+  const sections = Array.from(document.querySelectorAll('main section[id]'));
+  const revealItems = Array.from(document.querySelectorAll('.reveal'));
+  const interactiveItems = Array.from(document.querySelectorAll('.interactive-card, .tilt-card, .card, .console, .audit-snapshot'));
+  const buttons = Array.from(document.querySelectorAll('.btn'));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
+
+  function updateHeader() {
+    if (!header) return;
+    header.classList.toggle('is-scrolled', window.scrollY > 18);
+  }
+
+  function updateActiveNav() {
+    if (!sections.length || !navLinks.length) return;
+
+    let currentId = '';
+    const anchorY = 150;
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= anchorY && rect.bottom >= anchorY) {
+        currentId = section.id;
+        break;
+      }
+    }
+
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+    });
+  }
+
+  function onScroll() {
+    updateHeader();
+    updateActiveNav();
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const targetId = link.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      event.preventDefault();
+      target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible', 'is-visible');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' });
+
+    revealItems.forEach((item, index) => {
+      if (!reduceMotion) item.style.transitionDelay = `${Math.min(index * 18, 140)}ms`;
+      revealObserver.observe(item);
+    });
+  } else {
+    revealItems.forEach((item) => item.classList.add('visible', 'is-visible'));
+  }
+
+  if (!reduceMotion) {
+    let pointerRaf = null;
+
+    window.addEventListener('pointermove', (event) => {
+      if (pointerRaf) return;
+      pointerRaf = requestAnimationFrame(() => {
+        root.style.setProperty('--mx', `${Math.round((event.clientX / window.innerWidth) * 100)}%`);
+        root.style.setProperty('--my', `${Math.round((event.clientY / window.innerHeight) * 100)}%`);
+        pointerRaf = null;
+      });
+    }, { passive: true });
+
+    interactiveItems.forEach((item) => {
+      item.addEventListener('pointermove', (event) => {
+        const rect = item.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        item.style.setProperty('--x', `${x}px`);
+        item.style.setProperty('--y', `${y}px`);
+
+        if (!item.classList.contains('tilt-card')) return;
+
+        const rotateX = ((y - rect.height / 2) / (rect.height / 2)) * -2.1;
+        const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 2.1;
+        item.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+      });
+
+      item.addEventListener('pointerleave', () => {
+        item.style.removeProperty('--x');
+        item.style.removeProperty('--y');
+        if (item.classList.contains('tilt-card')) item.style.transform = '';
+      });
+    });
+
+    buttons.forEach((button) => {
+      button.addEventListener('pointermove', (event) => {
+        const rect = button.getBoundingClientRect();
+        const x = event.clientX - rect.left - rect.width / 2;
+        const y = event.clientY - rect.top - rect.height / 2;
+        button.style.transform = `translate(${x * 0.045}px, ${y * 0.07}px)`;
+      });
+
+      button.addEventListener('pointerleave', () => {
+        button.style.transform = '';
+      });
+    });
+  }
+
+  // Modal compatibility for older SIGEL HTML builds.
+  const layer = document.getElementById('sigel-modal-layer');
+  if (layer) {
+    let activeModal = null;
+    let lastTrigger = null;
+
+    function openModal(id, trigger) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+
+      lastTrigger = trigger || null;
+      activeModal = modal;
+      layer.classList.add('is-open');
+      layer.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-opened');
+
+      document.querySelectorAll('.sigel-modal').forEach((item) => item.classList.remove('is-open'));
+      modal.classList.add('is-open');
+
+      const closeButton = modal.querySelector('[data-modal-close], .modal-close');
+      if (closeButton) closeButton.focus({ preventScroll: true });
+    }
+
+    function closeModal() {
+      if (!activeModal) return;
+
+      activeModal.classList.remove('is-open');
+      activeModal = null;
+      layer.classList.remove('is-open');
+      layer.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-opened');
+
+      if (lastTrigger) lastTrigger.focus({ preventScroll: true });
+    }
+
+    document.querySelectorAll('[data-modal]').forEach((trigger) => {
+      trigger.addEventListener('click', () => openModal(trigger.getAttribute('data-modal'), trigger));
+    });
+
+    layer.querySelectorAll('[data-modal-close], .modal-backdrop').forEach((item) => {
+      item.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && layer.classList.contains('is-open')) closeModal();
+    });
+  }
+})();
