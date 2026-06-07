@@ -100,12 +100,6 @@
 
   <main id="top">
     <section class="hero section" id="hero">
-      <div class="hero-orbit" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
       <div class="container hero-layout">
         <div class="hero-copy reveal">
           <p class="eyebrow">Web audit · archetyp značky · zákaznické archetypy</p>
@@ -120,13 +114,6 @@
           <div class="hero-actions">
             <a href="#order" class="btn btn-primary btn-shine">Objednat audit za beta cenu</a>
             <a href="docs/demo-report.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Otevřít demo report</a>
-          </div>
-
-          <div class="hero-meta" aria-label="Hlavní výhody">
-            <span>Vizuální PDF report</span>
-            <span>Archetyp značky</span>
-            <span>Spotřebitelské archetypy</span>
-            <span>Ručně kontrolovaný výstup</span>
           </div>
         </div>
 
@@ -145,17 +132,10 @@
               <span>audit skóre</span>
             </div>
 
-            <div class="radar-panel" aria-hidden="true">
-              <i></i>
-              <i></i>
-              <i></i>
-              <b></b>
+            <div class="cockpit-summary">
+              <p>Silný technický základ. Hlavní práce je v archetypu značky, komunikaci a prioritách.</p>
             </div>
           </div>
-
-          <p class="snapshot-summary">
-            Silný technický základ. Hlavní práce je v archetypu značky, komunikaci a prioritách.
-          </p>
 
           <div class="snapshot-metrics">
             <div class="metric">
@@ -221,55 +201,34 @@
       </div>
     </section>
 
-    <section class="signal-system" aria-label="Auditní vrstvy">
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>TECHNIKA</span><i></i>
-          <span>SEO</span><i></i>
-          <span>UX FRICTION</span><i></i>
-          <span>BRAND ARCHETYPE</span><i></i>
-          <span>CUSTOMER LOGIC</span><i></i>
-          <span>CONVERSION RISK</span><i></i>
-          <span>PDF REPORT</span><i></i>
-          <span>ROADMAP</span><i></i>
-          <span>TECHNIKA</span><i></i>
-          <span>SEO</span><i></i>
-          <span>UX FRICTION</span><i></i>
-          <span>BRAND ARCHETYPE</span><i></i>
-          <span>CUSTOMER LOGIC</span><i></i>
-          <span>CONVERSION RISK</span><i></i>
-          <span>PDF REPORT</span><i></i>
-          <span>ROADMAP</span><i></i>
-        </div>
-      </div>
-
-      <div class="container signal-grid reveal">
-        <div class="signal-item interactive-card">
+    <section class="results-strip" aria-label="Hlavní parametry auditu">
+      <div class="container results-grid reveal">
+        <div class="result-item">
           <span>24 h</span>
           <p>dodání v pracovních dnech od zpracované platby</p>
         </div>
 
-        <div class="signal-item interactive-card">
+        <div class="result-item">
           <span>9+</span>
           <p>oblastí auditu: technika, SEO, UX, značka, archetypy, zákazníci, důvěra a priority</p>
         </div>
 
-        <div class="signal-item interactive-card">
-          <span>Archetypy</span>
-          <p>archetyp značky a spotřebitelské archetypy jako součást výstupu</p>
-        </div>
-
-        <div class="signal-item interactive-card">
+        <div class="result-item">
           <span>PDF</span>
           <p>vizuální report místo surového automatického exportu</p>
+        </div>
+
+        <div class="result-item">
+          <span>Review</span>
+          <p>automatizovaný výstup s lidskou kontrolou</p>
         </div>
       </div>
     </section>
 
     <section id="archetypy" class="section archetype-section page-section" data-section="01">
-      <div class="container archetype-layout">
+      <div class="container split-layout">
         <div class="section-heading reveal">
-          <p class="eyebrow">Hlavní rozdíl Sigelu</p>
+          <p class="section-label">Hlavní rozdíl Sigelu</p>
           <h2>Technika ukáže, jestli web funguje. Archetypy ukážou, jak značka působí a koho dokáže oslovit.</h2>
           <p>
             Běžný audit skončí u rychlosti, SEO a chyb. Sigel jde dál: hodnotí archetyp značky,
@@ -277,59 +236,50 @@
           </p>
         </div>
 
-        <div class="constellation reveal">
-          <div class="constellation-map" aria-hidden="true">
-            <div class="constellation-core">
-              <strong>SIGEL</strong>
-              <span>audit core</span>
-            </div>
-            <i class="ring ring-a"></i>
-            <i class="ring ring-b"></i>
-            <i class="ring ring-c"></i>
-            <b class="dot dot-a"></b>
-            <b class="dot dot-b"></b>
-            <b class="dot dot-c"></b>
-          </div>
-
-          <div class="constellation-cards">
-            <article class="signal-card interactive-card">
-              <span class="card-number">01</span>
+        <div class="feature-list reveal">
+          <article class="feature-row interactive-card">
+            <span>01</span>
+            <div>
               <h3>Archetyp značky</h3>
               <p>
                 Jak firma působí, jakou roli v komunikaci zaujímá a jestli tón značky odpovídá tomu,
                 co skutečně nabízí.
               </p>
               <button class="text-link modal-open" type="button" data-modal="modal-brand-archetype">Zjistit víc</button>
-            </article>
+            </div>
+          </article>
 
-            <article class="signal-card interactive-card">
-              <span class="card-number">02</span>
+          <article class="feature-row interactive-card">
+            <span>02</span>
+            <div>
               <h3>Spotřebitelské archetypy</h3>
               <p>
                 Jaké typy potenciálních zákazníků může značka oslovovat, co je motivuje, čeho se bojí
                 a co potřebují slyšet, aby nabídce věřili.
               </p>
               <button class="text-link modal-open" type="button" data-modal="modal-customer-archetypes">Zjistit víc</button>
-            </article>
+            </div>
+          </article>
 
-            <article class="signal-card interactive-card">
-              <span class="card-number">03</span>
+          <article class="feature-row interactive-card">
+            <span>03</span>
+            <div>
               <h3>Komunikační doporučení</h3>
               <p>
                 Jak upravit texty, CTA, argumentaci a důkazové prvky tak, aby web nemluvil obecně,
                 ale přesněji k lidem, kteří mají největší šanci poptat službu nebo nakoupit.
               </p>
               <button class="text-link modal-open" type="button" data-modal="modal-communication-playbook">Zjistit víc</button>
-            </article>
-          </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="reseni" class="section solution-section page-section" data-section="02">
       <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Co SIGEL pomůže vyřešit</p>
+        <div class="section-heading wide reveal">
+          <p class="section-label">Co SIGEL pomůže vyřešit</p>
           <h2>Neprodáváme další report do složky „někdy“. Cílem je zjistit, proč web nepřináší výsledek.</h2>
           <p>
             Firmy většinou necítí problém jako „potřebuji audit“. Cítí, že web nepřináší poptávky,
@@ -338,62 +288,44 @@
           </p>
         </div>
 
-        <div class="before-after reveal">
-          <div class="compare-card before interactive-card">
-            <span>Bez auditu</span>
-            <h3>Více návštěvnosti, stejný chaos.</h3>
-            <p>Marketing přivádí lidi na web, který jim často neřekne dost jasně, proč mají pokračovat.</p>
-          </div>
-
-          <div class="compare-divider" aria-hidden="true">
-            <span>→</span>
-          </div>
-
-          <div class="compare-card after interactive-card">
-            <span>Po auditu</span>
-            <h3>Jasnější priority a obchodní směr.</h3>
-            <p>Výstup ukáže, co opravit jako první: techniku, UX, důvěru, komunikaci nebo archetyp značky.</p>
-          </div>
-        </div>
-
-        <div class="solution-grid reveal">
-          <article class="solution-card interactive-card">
-            <span class="solution-label">01</span>
+        <div class="solution-list reveal">
+          <article class="solution-row interactive-card">
+            <span>01</span>
             <h3>Málo poptávek z webu</h3>
             <p>Audit ukáže, kde se ztrácí jasnost nabídky, důvěra, CTA nebo hlavní cesta návštěvníka.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-low-leads">Co to řeší</button>
           </article>
 
-          <article class="solution-card interactive-card">
-            <span class="solution-label">02</span>
+          <article class="solution-row interactive-card">
+            <span>02</span>
             <h3>Marketing běží, ale výsledky jsou slabé</h3>
             <p>Než zvyšovat rozpočet, dává smysl zjistit, jestli web dokáže návštěvníka vůbec přesvědčit.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-weak-marketing">Co to řeší</button>
           </article>
 
-          <article class="solution-card interactive-card">
-            <span class="solution-label">03</span>
+          <article class="solution-row interactive-card">
+            <span>03</span>
             <h3>Redesign bez jasného zadání</h3>
             <p>Audit pomůže určit, co má nový web zlepšit: nejen vzhled, ale strukturu, důvěru a komunikaci.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-redesign">Co to řeší</button>
           </article>
 
-          <article class="solution-card interactive-card">
-            <span class="solution-label">04</span>
+          <article class="solution-row interactive-card">
+            <span>04</span>
             <h3>Nabídka je dobrá, ale lidé ji nechápou</h3>
             <p>Sigel zpřesní, jak firma působí, koho oslovuje a jak nabídku formulovat k různým archetypům zákazníků.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-unclear-offer">Co to řeší</button>
           </article>
 
-          <article class="solution-card interactive-card">
-            <span class="solution-label">05</span>
+          <article class="solution-row interactive-card">
+            <span>05</span>
             <h3>Biznis stagnuje nebo ztrácí tah</h3>
             <p>Audit ověří, jestli web stále odpovídá tomu, co firma nabízí, komu prodává a jak chce působit.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-stagnation">Co to řeší</button>
           </article>
 
-          <article class="solution-card interactive-card">
-            <span class="solution-label">06</span>
+          <article class="solution-row interactive-card">
+            <span>06</span>
             <h3>Agentura potřebuje rychlý podklad</h3>
             <p>Externí diagnostika pomůže nezačínat od nuly před konzultací, redesignem, SEO nebo obsahovou strategií.</p>
             <button class="btn-mini modal-open" type="button" data-modal="modal-agency-detail">Jak to funguje</button>
@@ -405,7 +337,7 @@
     <section class="section problem-section page-section" data-section="03">
       <div class="container problem-layout">
         <div class="problem-copy reveal">
-          <p class="eyebrow">Problém trhu</p>
+          <p class="section-label">Problém trhu</p>
           <h2>Většina firem nezačíná marketing špatně. Jen začíná od kampaně, ne od pochopení webu, značky a zákazníka.</h2>
           <p>
             Často se řeší až reklama, výkon nebo viditelnost. Jenže pokud web nevysvětluje nabídku,
@@ -414,31 +346,35 @@
           </p>
         </div>
 
-        <div class="failure-funnel reveal interactive-card" aria-label="Běžný scénář">
-          <div class="funnel-step">
-            <span>01</span>
-            <p>spustí se kampaň</p>
-          </div>
-          <div class="funnel-step">
-            <span>02</span>
-            <p>přijdou návštěvníci</p>
-          </div>
-          <div class="funnel-step">
-            <span>03</span>
-            <p>web nevysvětlí hodnotu</p>
-          </div>
-          <div class="funnel-step is-critical">
-            <span>04</span>
-            <p>výsledek je drahý chaos</p>
-          </div>
+        <div class="failure-panel reveal interactive-card" aria-label="Běžný scénář">
+          <span class="panel-label">Běžný scénář</span>
+
+          <ol>
+            <li>
+              <span>01</span>
+              <p>spustí se kampaň</p>
+            </li>
+            <li>
+              <span>02</span>
+              <p>přijdou návštěvníci</p>
+            </li>
+            <li>
+              <span>03</span>
+              <p>web nevysvětlí hodnotu</p>
+            </li>
+            <li>
+              <span>04</span>
+              <p>výsledek je drahý chaos</p>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
     <section class="section method-section page-section" data-section="04">
       <div class="container">
-        <div class="method-heading reveal">
-          <p class="eyebrow">Metoda Sigel</p>
+        <div class="section-heading reveal">
+          <p class="section-label">Metoda Sigel</p>
           <h2>Data nestačí. Musí z nich vzniknout rozhodnutí, interpretace a komunikační směr.</h2>
           <p>
             Audit není jen výpis nálezů. Cílem je převést data do interpretace, priorit a praktického výstupu,
@@ -446,26 +382,26 @@
           </p>
         </div>
 
-        <div class="process-spine reveal">
-          <article class="process-step interactive-card">
+        <div class="process-grid reveal">
+          <article class="process-card interactive-card">
             <span>01</span>
             <h3>Data</h3>
             <p>Technika, SEO, UX, CTA, obsah, komunikace a dostupné signály webu.</p>
           </article>
 
-          <article class="process-step interactive-card">
+          <article class="process-card interactive-card">
             <span>02</span>
             <h3>Interpretace</h3>
             <p>Co nálezy znamenají pro důvěru, orientaci, archetyp značky a obchodní použitelnost.</p>
           </article>
 
-          <article class="process-step interactive-card">
+          <article class="process-card interactive-card">
             <span>03</span>
             <h3>Archetypy</h3>
             <p>Jak značka působí, jaké zákaznické typy oslovuje a jak s nimi mluvit.</p>
           </article>
 
-          <article class="process-step interactive-card">
+          <article class="process-card interactive-card">
             <span>04</span>
             <h3>Priority</h3>
             <p>Vizuální výstup s doporučením, co řešit jako první a proč.</p>
@@ -477,7 +413,7 @@
     <section class="section engine-section page-section" data-section="05">
       <div class="container engine-layout reveal">
         <div class="engine-copy">
-          <p class="eyebrow">Co stojí za reportem</p>
+          <p class="section-label">Co stojí za reportem</p>
           <h2>Nejde o surový AI výstup. Report vzniká kombinací vlastního systému, dat a kontroly.</h2>
           <p>
             Sigel kombinuje technické kontroly, vlastní hodnoticí logiku, algoritmické zpracování webových signálů,
@@ -516,9 +452,9 @@
     </section>
 
     <section id="audit" class="section audit-section page-section" data-section="06">
-      <div class="container audit-layout">
+      <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Diagnostika webu</p>
+          <p class="section-label">Diagnostika webu</p>
           <h2>Co audit odhalí</h2>
           <p>
             Audit nehodnotí jen techniku. Ukazuje i to, jak web působí, jak vede uživatele,
@@ -526,54 +462,42 @@
           </p>
         </div>
 
-        <div class="audit-core reveal">
-          <div class="audit-orbit" aria-hidden="true">
-            <div class="audit-center">
-              <strong>SIGEL</strong>
-              <span>Audit Core</span>
-            </div>
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
+        <div class="audit-grid reveal">
+          <article class="audit-card interactive-card">
+            <span>01</span>
+            <h3>Technika a výkon</h3>
+            <p>Lighthouse, technické zdraví, indexace, robots, sitemap, výkon a technické limity webu.</p>
+          </article>
 
-          <div class="audit-layers">
-            <article class="feature-card interactive-card">
-              <span>01</span>
-              <h3>Technika a výkon</h3>
-              <p>Lighthouse, technické zdraví, indexace, robots, sitemap, výkon a technické limity webu.</p>
-            </article>
+          <article class="audit-card interactive-card">
+            <span>02</span>
+            <h3>SEO a objevitelnost</h3>
+            <p>Meta data, struktura, titulky, popisy a signály, které pomáhají webu být nalezitelný.</p>
+          </article>
 
-            <article class="feature-card interactive-card">
-              <span>02</span>
-              <h3>SEO a objevitelnost</h3>
-              <p>Meta data, struktura, titulky, popisy a signály, které pomáhají webu být nalezitelný.</p>
-            </article>
+          <article class="audit-card interactive-card">
+            <span>03</span>
+            <h3>UX a CTA</h3>
+            <p>Mobilní použitelnost, orientace, CTA a překážky v hlavní cestě uživatele.</p>
+          </article>
 
-            <article class="feature-card interactive-card">
-              <span>03</span>
-              <h3>UX a CTA</h3>
-              <p>Mobilní použitelnost, orientace, CTA a překážky v hlavní cestě uživatele.</p>
-            </article>
+          <article class="audit-card interactive-card">
+            <span>04</span>
+            <h3>Komunikace nabídky</h3>
+            <p>Jestli návštěvník rychle pochopí, co nabízíte, komu pomáháte a proč má pokračovat dál.</p>
+          </article>
 
-            <article class="feature-card interactive-card">
-              <span>04</span>
-              <h3>Komunikace nabídky</h3>
-              <p>Jestli návštěvník rychle pochopí, co nabízíte, komu pomáháte a proč má pokračovat dál.</p>
-            </article>
+          <article class="audit-card interactive-card">
+            <span>05</span>
+            <h3>Archetyp značky a zákazníků</h3>
+            <p>Archetyp firmy, spotřebitelské archetypy a doporučení, jak komunikovat nabídku k různým typům zákazníků.</p>
+          </article>
 
-            <article class="feature-card interactive-card">
-              <span>05</span>
-              <h3>Archetyp značky a zákazníků</h3>
-              <p>Archetyp firmy, spotřebitelské archetypy a doporučení, jak komunikovat nabídku k různým typům zákazníků.</p>
-            </article>
-
-            <article class="feature-card interactive-card">
-              <span>06</span>
-              <h3>Roadmapa priorit</h3>
-              <p>Co řešit jako první, co má obchodní dopad a co je až další vrstva.</p>
-            </article>
-          </div>
+          <article class="audit-card interactive-card">
+            <span>06</span>
+            <h3>Roadmapa priorit</h3>
+            <p>Co řešit jako první, co má obchodní dopad a co je až další vrstva.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -581,7 +505,7 @@
     <section id="agentury" class="section agency-section page-section" data-section="07">
       <div class="container agency-layout reveal">
         <div class="agency-copy">
-          <p class="eyebrow">Pro agentury</p>
+          <p class="section-label">Pro agentury</p>
           <h2>Auditní podklad pro klientské weby bez toho, aby agentura začínala od nuly.</h2>
           <p>
             Agentura může Sigel využít jako externí vstupní diagnostiku před konzultací, redesignem,
@@ -618,7 +542,7 @@
     <section id="report" class="section report-section page-section" data-section="08">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Výstup</p>
+          <p class="section-label">Výstup</p>
           <h2>Vizuální report, který se dá přečíst i použít.</h2>
           <p>
             Výstup kombinuje manažerský přehled, technické nálezy, komunikaci, archetyp značky,
@@ -708,21 +632,12 @@
     <section id="data" class="section benchmark-section page-section" data-section="09">
       <div class="container benchmark-layout reveal">
         <div class="benchmark-copy">
-          <p class="eyebrow">Batch benchmark</p>
+          <p class="section-label">Batch benchmark</p>
           <h2>Jedna URL je začátek. Větší síla vzniká z porovnání celého segmentu.</h2>
           <p>
             Sigel může pracovat i s větší sadou URL. Díky tomu lze porovnávat celé segmenty webů,
             sledovat průměry, slabá místa trhu a pozici konkrétního webu vůči konkurenci.
           </p>
-        </div>
-
-        <div class="market-map interactive-card" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
         </div>
 
         <div class="benchmark-tags">
@@ -739,7 +654,7 @@
     <section class="section services-section page-section" data-section="10">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Další použití</p>
+          <p class="section-label">Další použití</p>
           <h2>Sigel není jen jeden audit. Je to začátek datového pohledu na trh.</h2>
           <p>
             Vedle jednotlivého web auditu může Sigel sloužit i jako podklad pro agentury,
@@ -780,7 +695,7 @@
     <section id="beta" class="section beta-section page-section" data-section="11">
       <div class="container beta-grid">
         <div class="beta-left reveal">
-          <p class="eyebrow">Beta nabídka</p>
+          <p class="section-label">Beta nabídka</p>
           <h2>Beta audit</h2>
           <p>
             Produkt je v beta režimu. Výstup je plnohodnotný, ale report, archetypovou interpretaci a metodiku dál ladíme
@@ -819,7 +734,7 @@
     <section class="section faq-section page-section" data-section="12">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">FAQ</p>
+          <p class="section-label">FAQ</p>
           <h2>Praktické otázky</h2>
         </div>
 
@@ -865,7 +780,7 @@
     <section id="order" class="section order-section page-section" data-section="13">
       <div class="container order-box reveal">
         <div class="order-copy">
-          <p class="eyebrow">Objednávka</p>
+          <p class="section-label">Objednávka</p>
           <h2>Objednat Sigel Web Audit nebo domluvit pilotní spolupráci</h2>
           <p>
             Pošlete URL webu, fakturační údaje a preferovaný jazyk reportu.
@@ -894,8 +809,6 @@
         </div>
 
         <div class="form-popup-card interactive-card">
-          <div class="popup-glow" aria-hidden="true"></div>
-
           <span class="popup-badge">BETA OBJEDNÁVKA</span>
 
           <h3>Spustit objednávku auditu</h3>
@@ -1087,25 +1000,40 @@
     </section>
   </div>
 
-  <section class="final-rail" aria-label="Závěrečná výzva">
-    <div class="container final-rail-inner">
-      <p>Audit před marketingem. Signál před rozpočtem.</p>
-      <a href="#order" class="btn btn-primary btn-shine">Spustit audit</a>
-    </div>
-  </section>
-
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
         <strong>SIGEL INDUSTRIES</strong>
-        <p>Datově-strategický pohled na web, značku, archetypy, komunikaci a marketing.</p>
+        <p>Datově-strategický audit webu, značky, archetypů, komunikace a marketingu.</p>
+        <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a>
       </div>
 
-      <div class="footer-links">
-        <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a>
+      <div class="footer-column">
+        <span>Navigace</span>
+        <a href="#archetypy">Archetypy</a>
+        <a href="#reseni">Řešení</a>
+        <a href="#audit">Audit</a>
+        <a href="#report">Report</a>
+        <a href="#order">Objednávka</a>
+      </div>
+
+      <div class="footer-column">
+        <span>Dokumenty</span>
         <a href="obchodni-podminky.html">Obchodní podmínky</a>
         <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+        <a href="docs/demo-report.pdf" target="_blank" rel="noopener">Demo report</a>
       </div>
+
+      <div class="footer-column">
+        <span>Jazyk</span>
+        <a href="/" onclick="localStorage.setItem('sigelLang','cs')">Česky</a>
+        <a href="/en/" onclick="localStorage.setItem('sigelLang','en')">English</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 SIGEL INDUSTRIES</span>
+      <span>Web audit before marketing spend.</span>
     </div>
   </footer>
 
