@@ -1,220 +1,573 @@
-// SIGEL V13 interaction layer
-// Keeps CZ/EN routing untouched. Handles navigation, reveals, lightweight motion and fast modals.
-(() => {
-  const doc = document.documentElement;
-  const body = document.body;
-  const header = document.querySelector('.site-header');
-  const sections = Array.from(document.querySelectorAll('main section[id], main section[data-section-num]'));
-  const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
-  const revealItems = Array.from(document.querySelectorAll('.reveal'));
-  const interactiveCards = Array.from(document.querySelectorAll('.interactive-card'));
-  const tiltCards = Array.from(document.querySelectorAll('.tilt-card'));
-  const buttons = Array.from(document.querySelectorAll('.btn'));
-  const progress = document.querySelector('.sigel-progress');
-  const indicator = document.querySelector('.v10-section-indicator span, .v11-section-indicator span');
-  const indicatorLabel = document.querySelector('.v10-section-indicator b, .v11-section-indicator b');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+/* =========================================================
+   SIGEL INDUSTRIES
+   Final interaction layer
+   File: script.js
+   ========================================================= */
 
-  function currentSection() {
-    const probeY = coarsePointer ? 92 : 140;
-    let active = null;
-    for (const section of sections) {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= probeY && rect.bottom >= probeY) active = section;
-    }
-    return active;
-  }
+(function () {
+  "use strict";
 
+  const doc = document;
+  const root = doc.documentElement;
+  const body = doc.body;
+
+  const header = doc.querySelector(".site-header");
+  const progress = doc.querySelector(".site-progress");
+  const nav = doc.querySelector(".nav");
+  const menuToggle = doc.querySelector(".menu-toggle");
+  const navLinks = Array.from(doc.querySelectorAll(".nav a"));
+  const sections = Array.from(doc.querySelectorAll("main section[id]"));
+  const revealItems = Array.from(doc.querySelectorAll(".reveal"));
+  const interactiveCards = Array.from(doc.querySelectorAll(".interactive-card"));
+  const buttons = Array.from(doc.querySelectorAll(".btn"));
+  const reportTabs = Array.from(doc.querySelectorAll(".report-tab"));
+
+  const modalLayer = doc.getElementById("sigel-modal-layer");
+  const modalTriggers = Array.from(doc.querySelectorAll("[data-modal]"));
+  const closeTriggers = modalLayer ? Array.from(modalLayer.querySelectorAll("[data-modal-close]")) : [];
+  const modals = modalLayer ? Array.from(modalLayer.querySelectorAll(".sigel-modal")) : [];
+  const modalMap = new Map(modals.map((modal) => [modal.id, modal]));
+
+  const supportsReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+
+  let activeModal = null;
+  let lastModalTrigger = null;
   let scrollTicking = false;
-  function updateUi() {
-    scrollTicking = false;
-    if (header) header.classList.toggle('is-scrolled', window.scrollY > 12);
+  let pointerTicking = false;
+
+  /* -----------------------------
+     Header / progress / active nav
+  ----------------------------- */
+
+  function updateScrollState() {
+    const scrollTop = window.scrollY || doc.documentElement.scrollTop || 0;
+    const scrollHeight = doc.documentElement.scrollHeight - window.innerHeight;
+    const percentage = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+
+    if (header) {
+      header.classList.toggle("is-scrolled", scrollTop > 12);
+    }
 
     if (progress) {
-      const max = doc.scrollHeight - window.innerHeight;
-      progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+      progress.style.setProperty("--progress", `${Math.min(100, Math.max(0, percentage))}%`);
     }
 
-    const active = currentSection();
-    const id = active && active.id ? active.id : '';
-    navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
-
-    if (active && indicator) {
-      indicator.textContent = active.dataset.sectionNum || active.dataset.v12Num || active.dataset.v11Num || active.dataset.v10Num || '00';
-      if (indicatorLabel) indicatorLabel.textContent = active.dataset.sectionLabel || active.dataset.v12Label || active.dataset.v11Label || active.dataset.v10Label || 'SYS';
-    }
+    updateActiveNav();
   }
 
-  function requestUpdate() {
+  function requestScrollUpdate() {
     if (scrollTicking) return;
+
     scrollTicking = true;
-    requestAnimationFrame(updateUi);
-  }
-
-  window.addEventListener('scroll', requestUpdate, { passive: true });
-  window.addEventListener('resize', requestUpdate, { passive: true });
-
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener('click', (event) => {
-      const targetId = link.getAttribute('href');
-      if (!targetId || targetId === '#') return;
-      const target = document.querySelector(targetId);
-      if (!target) return;
-
-      event.preventDefault();
-      body.classList.remove('nav-opened');
-      const toggle = document.querySelector('.menu-toggle');
-      if (toggle) toggle.setAttribute('aria-expanded', 'false');
-
-      const offset = coarsePointer ? 74 : 88;
-      const y = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
-    });
-  });
-
-  const menuToggle = document.querySelector('.menu-toggle');
-  if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-      const open = body.classList.toggle('nav-opened');
-      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    window.requestAnimationFrame(() => {
+      updateScrollState();
+      scrollTicking = false;
     });
   }
 
-  document.addEventListener('click', (event) => {
-    if (!body.classList.contains('nav-opened')) return;
-    const nav = document.querySelector('.nav');
-    const toggle = document.querySelector('.menu-toggle');
-    if (!nav || !toggle) return;
-    if (nav.contains(event.target) || toggle.contains(event.target)) return;
-    body.classList.remove('nav-opened');
-    toggle.setAttribute('aria-expanded', 'false');
-  });
+  function updateActiveNav() {
+    if (!sections.length || !navLinks.length) return;
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+    let currentId = "";
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top <= 140 && rect.bottom >= 140) {
+        currentId = section.id;
+        break;
       }
-    }, { threshold: 0.08, rootMargin: '0px 0px -7% 0px' });
+    }
+
+    navLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      link.classList.toggle("active", Boolean(currentId && href === `#${currentId}`));
+    });
+  }
+
+  window.addEventListener("scroll", requestScrollUpdate, { passive: true });
+  window.addEventListener("resize", requestScrollUpdate, { passive: true });
+
+  /* -----------------------------
+     Smooth anchors
+  ----------------------------- */
+
+  function getHeaderOffset() {
+    const value = getComputedStyle(root).getPropertyValue("--header-h").trim();
+    const parsed = Number.parseFloat(value);
+    return Number.isFinite(parsed) ? parsed : 78;
+  }
+
+  function scrollToTarget(target) {
+    if (!target) return;
+
+    const offset = getHeaderOffset() + 18;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      behavior: supportsReducedMotion ? "auto" : "smooth"
+    });
+  }
+
+  doc.addEventListener("click", (event) => {
+    const anchor = event.target.closest('a[href^="#"]');
+    if (!anchor) return;
+
+    const href = anchor.getAttribute("href");
+    if (!href || href === "#") return;
+
+    const target = doc.querySelector(href);
+    if (!target) return;
+
+    event.preventDefault();
+
+    closeMobileMenu();
+    closeModal(false);
+    scrollToTarget(target);
+  });
+
+  /* -----------------------------
+     Mobile menu
+  ----------------------------- */
+
+  function openMobileMenu() {
+    if (!nav || !menuToggle) return;
+
+    nav.classList.add("is-open");
+    menuToggle.classList.add("is-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    body.classList.add("menu-open");
+  }
+
+  function closeMobileMenu() {
+    if (!nav || !menuToggle) return;
+
+    nav.classList.remove("is-open");
+    menuToggle.classList.remove("is-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    body.classList.remove("menu-open");
+  }
+
+  function toggleMobileMenu() {
+    if (!nav || !menuToggle) return;
+
+    if (nav.classList.contains("is-open")) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  }
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", toggleMobileMenu);
+  }
+
+  doc.addEventListener("click", (event) => {
+    if (!nav || !menuToggle || !nav.classList.contains("is-open")) return;
+
+    const clickedInsideNav = event.target.closest(".nav");
+    const clickedToggle = event.target.closest(".menu-toggle");
+
+    if (!clickedInsideNav && !clickedToggle) {
+      closeMobileMenu();
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  /* -----------------------------
+     Reveal observer
+  ----------------------------- */
+
+  function initReveal() {
+    if (!revealItems.length) return;
+
+    if (supportsReducedMotion || !("IntersectionObserver" in window)) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        root: null,
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
 
     revealItems.forEach((item, index) => {
-      item.style.transitionDelay = coarsePointer ? '0ms' : `${Math.min((index % 3) * 34, 100)}ms`;
+      item.style.transitionDelay = `${Math.min(index * 18, 160)}ms`;
       observer.observe(item);
     });
-  } else {
-    revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 
-  // Decorative motion only on desktop. Mobile gets speed and dignity.
-  if (!reduceMotion && !coarsePointer) {
-    let pointerTicking = false;
-    window.addEventListener('pointermove', (event) => {
-      if (pointerTicking) return;
-      pointerTicking = true;
-      requestAnimationFrame(() => {
-        doc.style.setProperty('--mx', `${Math.round((event.clientX / window.innerWidth) * 100)}%`);
-        doc.style.setProperty('--my', `${Math.round((event.clientY / window.innerHeight) * 100)}%`);
-        pointerTicking = false;
-      });
-    }, { passive: true });
+  /* -----------------------------
+     Interactive card glow
+  ----------------------------- */
+
+  function initInteractiveCards() {
+    if (isTouchDevice || !interactiveCards.length) return;
 
     interactiveCards.forEach((card) => {
-      card.addEventListener('pointermove', (event) => {
-        const rect = card.getBoundingClientRect();
-        card.style.setProperty('--x', `${event.clientX - rect.left}px`);
-        card.style.setProperty('--y', `${event.clientY - rect.top}px`);
-      }, { passive: true });
-    });
+      card.addEventListener(
+        "pointermove",
+        (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
 
-    tiltCards.forEach((card) => {
-      card.addEventListener('pointermove', (event) => {
-        const rect = card.getBoundingClientRect();
-        const rx = ((event.clientY - rect.top - rect.height / 2) / (rect.height / 2)) * -1.35;
-        const ry = ((event.clientX - rect.left - rect.width / 2) / (rect.width / 2)) * 1.35;
-        card.style.transform = `perspective(1100px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-2px)`;
-      }, { passive: true });
-      card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+          card.style.setProperty("--x", `${x}px`);
+          card.style.setProperty("--y", `${y}px`);
+        },
+        { passive: true }
+      );
     });
+  }
+
+  /* -----------------------------
+     Ambient pointer glow
+  ----------------------------- */
+
+  function initPointerGlow() {
+    if (supportsReducedMotion || isTouchDevice) return;
+
+    window.addEventListener(
+      "pointermove",
+      (event) => {
+        if (pointerTicking) return;
+
+        pointerTicking = true;
+
+        window.requestAnimationFrame(() => {
+          const x = Math.round((event.clientX / window.innerWidth) * 100);
+          const y = Math.round((event.clientY / window.innerHeight) * 100);
+
+          root.style.setProperty("--mx", `${x}%`);
+          root.style.setProperty("--my", `${y}%`);
+
+          pointerTicking = false;
+        });
+      },
+      { passive: true }
+    );
+  }
+
+  /* -----------------------------
+     Soft magnetic buttons
+  ----------------------------- */
+
+  function initMagneticButtons() {
+    if (supportsReducedMotion || isTouchDevice || !buttons.length) return;
 
     buttons.forEach((button) => {
-      button.addEventListener('pointermove', (event) => {
-        const rect = button.getBoundingClientRect();
-        const x = event.clientX - rect.left - rect.width / 2;
-        const y = event.clientY - rect.top - rect.height / 2;
-        button.style.transform = `translate(${x * 0.025}px, ${y * 0.035}px)`;
-      }, { passive: true });
-      button.addEventListener('pointerleave', () => { button.style.transform = ''; });
+      button.addEventListener(
+        "pointermove",
+        (event) => {
+          const rect = button.getBoundingClientRect();
+          const x = event.clientX - rect.left - rect.width / 2;
+          const y = event.clientY - rect.top - rect.height / 2;
+
+          button.style.transform = `translate(${x * 0.055}px, ${y * 0.075}px)`;
+        },
+        { passive: true }
+      );
+
+      button.addEventListener("pointerleave", () => {
+        button.style.transform = "";
+      });
     });
   }
 
-  // Lightweight report tabs: visual state only, no heavy DOM animation.
-  document.querySelectorAll('.report-tabs').forEach((tabs) => {
-    tabs.addEventListener('click', (event) => {
-      const btn = event.target.closest('.report-tab');
-      if (!btn) return;
-      tabs.querySelectorAll('.report-tab').forEach((item) => item.classList.remove('is-active'));
-      btn.classList.add('is-active');
-    });
-  });
-
-  // Fast modal controller. Replaces previous inline script, avoids heavy mobile blur.
-  const modalLayer = document.getElementById('sigel-modal-layer');
-  let activeModal = null;
-  let lastTrigger = null;
+  /* -----------------------------
+     Modals
+  ----------------------------- */
 
   function openModal(id, trigger) {
-    if (!modalLayer) return;
-    const modal = document.getElementById(id);
+    if (!modalLayer || !id) return;
+
+    const modal = modalMap.get(id);
     if (!modal) return;
-    lastTrigger = trigger || null;
+
+    lastModalTrigger = trigger || null;
     activeModal = modal;
 
-    modalLayer.classList.add('is-open');
-    modalLayer.setAttribute('aria-hidden', 'false');
-    document.querySelectorAll('.sigel-modal.is-open').forEach((item) => item.classList.remove('is-open'));
-    modal.classList.add('is-open');
-    body.classList.add('modal-opened');
-
-    const close = modal.querySelector('[data-modal-close]');
-    if (close && !coarsePointer) close.focus({ preventScroll: true });
-  }
-
-  function closeModal() {
-    if (!modalLayer || !activeModal) return;
-    activeModal.classList.remove('is-open');
-    activeModal = null;
-    modalLayer.classList.remove('is-open');
-    modalLayer.setAttribute('aria-hidden', 'true');
-    body.classList.remove('modal-opened');
-    if (lastTrigger && !coarsePointer) lastTrigger.focus({ preventScroll: true });
-  }
-
-  document.querySelectorAll('[data-modal]').forEach((trigger) => {
-    trigger.addEventListener('click', (event) => {
-      event.preventDefault();
-      openModal(trigger.getAttribute('data-modal'), trigger);
+    modals.forEach((item) => {
+      item.classList.toggle("is-open", item === modal);
     });
-  });
 
-  if (modalLayer) {
-    modalLayer.querySelectorAll('[data-modal-close]').forEach((item) => item.addEventListener('click', closeModal));
-    modalLayer.addEventListener('click', (event) => {
-      if (event.target.classList.contains('modal-backdrop')) closeModal();
-    });
-  }
+    modalLayer.classList.add("is-open");
+    modalLayer.setAttribute("aria-hidden", "false");
+    body.classList.add("modal-opened");
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      if (activeModal) closeModal();
-      if (body.classList.contains('nav-opened')) {
-        body.classList.remove('nav-opened');
-        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
-      }
+    const closeButton = modal.querySelector("[data-modal-close]");
+
+    if (closeButton) {
+      window.requestAnimationFrame(() => {
+        closeButton.focus({ preventScroll: true });
+      });
     }
-  });
+  }
 
-  updateUi();
+  function closeModal(restoreFocus = true) {
+    if (!modalLayer || !activeModal) return;
+
+    activeModal.classList.remove("is-open");
+    activeModal = null;
+
+    modalLayer.classList.remove("is-open");
+    modalLayer.setAttribute("aria-hidden", "true");
+    body.classList.remove("modal-opened");
+
+    if (restoreFocus && lastModalTrigger) {
+      window.requestAnimationFrame(() => {
+        lastModalTrigger.focus({ preventScroll: true });
+        lastModalTrigger = null;
+      });
+    } else {
+      lastModalTrigger = null;
+    }
+  }
+
+  function initModals() {
+    if (!modalLayer || !modalTriggers.length) return;
+
+    modalTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", (event) => {
+        event.preventDefault();
+        const id = trigger.getAttribute("data-modal");
+        openModal(id, trigger);
+      });
+    });
+
+    closeTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        closeModal(true);
+      });
+    });
+
+    modalLayer.addEventListener("click", (event) => {
+      const clickedBackdrop = event.target.classList.contains("modal-backdrop");
+      if (clickedBackdrop) closeModal(true);
+    });
+
+    doc.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && activeModal) {
+        closeModal(true);
+      }
+    });
+  }
+
+  /* -----------------------------
+     Report tabs
+  ----------------------------- */
+
+  const reportContent = {
+    dashboard: {
+      label: "Dashboard",
+      titleCs: "Celkový obraz webu",
+      titleEn: "Overall website picture",
+      textCs: "Skóre oblastí, hlavní rizika, silné stránky a doporučený další postup na první pohled.",
+      textEn: "Area scores, main risks, strengths and recommended next steps at a glance.",
+      score: "94",
+      bars: ["82%", "94%", "70%", "88%"]
+    },
+    technika: {
+      labelCs: "Technika",
+      labelEn: "Technical",
+      titleCs: "Výkon a technické základy",
+      titleEn: "Performance and technical basics",
+      textCs: "Lighthouse, indexace, sitemap, robots a technické signály, které tvoří základ použitelného webu.",
+      textEn: "Lighthouse, indexation, sitemap, robots and technical signals that form the foundation of a usable website.",
+      score: "99",
+      bars: ["99%", "92%", "88%", "84%"]
+    },
+    komunikace: {
+      labelCs: "Komunikace",
+      labelEn: "Communication",
+      titleCs: "Jasnost nabídky",
+      titleEn: "Offer clarity",
+      textCs: "Jestli web rychle vysvětluje hodnotu, buduje důvěru a vede návštěvníka k dalšímu kroku.",
+      textEn: "Whether the website quickly explains value, builds trust and leads the visitor to the next step.",
+      score: "82",
+      bars: ["82%", "76%", "69%", "88%"]
+    },
+    archetypy: {
+      labelCs: "Archetypy",
+      labelEn: "Archetypes",
+      titleCs: "Značka a zákaznické typy",
+      titleEn: "Brand and customer types",
+      textCs: "Jak firma působí, koho pravděpodobně oslovuje a jaký tón komunikace dává smysl.",
+      textEn: "How the company feels, whom it probably addresses and what tone of communication makes sense.",
+      score: "86",
+      bars: ["86%", "78%", "90%", "74%"]
+    },
+    roadmapa: {
+      labelCs: "Roadmapa",
+      labelEn: "Roadmap",
+      titleCs: "Priority 30 / 60 / 90 dní",
+      titleEn: "30 / 60 / 90 day priorities",
+      textCs: "Co řešit teď, co potom a co má největší obchodní dopad.",
+      textEn: "What to solve now, what comes later and what has the highest business impact.",
+      score: "90",
+      bars: ["90%", "84%", "80%", "72%"]
+    }
+  };
+
+  function getCurrentLanguage() {
+    return doc.documentElement.lang === "en" ? "en" : "cs";
+  }
+
+  function initReportTabs() {
+    if (!reportTabs.length) return;
+
+    const screen = doc.querySelector(".report-screen");
+    if (!screen) return;
+
+    const scoreEl = screen.querySelector(".screen-score");
+    const labelEl = screen.querySelector(".preview-label");
+    const titleEl = screen.querySelector(".screen-copy h3");
+    const textEl = screen.querySelector(".screen-copy p");
+    const bars = Array.from(screen.querySelectorAll(".screen-bars i"));
+
+    reportTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const key = tab.getAttribute("data-report-tab");
+        const content = reportContent[key];
+
+        if (!content) return;
+
+        reportTabs.forEach((item) => item.classList.remove("is-active"));
+        tab.classList.add("is-active");
+
+        const lang = getCurrentLanguage();
+
+        if (scoreEl) scoreEl.textContent = content.score || "94";
+
+        if (labelEl) {
+          labelEl.textContent =
+            lang === "en"
+              ? content.labelEn || content.label || "Dashboard"
+              : content.labelCs || content.label || "Dashboard";
+        }
+
+        if (titleEl) {
+          titleEl.textContent = lang === "en" ? content.titleEn : content.titleCs;
+        }
+
+        if (textEl) {
+          textEl.textContent = lang === "en" ? content.textEn : content.textCs;
+        }
+
+        bars.forEach((bar, index) => {
+          const width = content.bars[index] || "70%";
+          bar.style.width = width;
+          bar.style.animation = "none";
+
+          window.requestAnimationFrame(() => {
+            bar.style.animation = "";
+          });
+        });
+      });
+    });
+  }
+
+  /* -----------------------------
+     Details UX
+  ----------------------------- */
+
+  function initDetails() {
+    const detailsItems = Array.from(doc.querySelectorAll("details"));
+    if (!detailsItems.length) return;
+
+    detailsItems.forEach((details) => {
+      details.addEventListener("toggle", () => {
+        if (!details.open) return;
+
+        detailsItems.forEach((other) => {
+          if (other !== details && other.closest(".faq-list") === details.closest(".faq-list")) {
+            other.open = false;
+          }
+        });
+      });
+    });
+  }
+
+  /* -----------------------------
+     Language persistence helpers
+  ----------------------------- */
+
+  function initLanguagePersistence() {
+    const langLinks = Array.from(doc.querySelectorAll(".lang-switch a"));
+
+    langLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        const text = (link.textContent || "").trim().toLowerCase();
+
+        if (text === "cz" || text === "cs") {
+          localStorage.setItem("sigelLang", "cs");
+        }
+
+        if (text === "en") {
+          localStorage.setItem("sigelLang", "en");
+        }
+      });
+    });
+  }
+
+  /* -----------------------------
+     Tally helper fallback
+  ----------------------------- */
+
+  function initTallyFallback() {
+    const tallyButtons = Array.from(doc.querySelectorAll("[data-tally-open]"));
+    if (!tallyButtons.length) return;
+
+    tallyButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const tallyId = button.getAttribute("data-tally-open");
+
+        window.setTimeout(() => {
+          const hasTally = typeof window.Tally !== "undefined";
+          if (hasTally || !tallyId) return;
+
+          window.open(`https://tally.so/r/${tallyId}`, "_blank", "noopener,noreferrer");
+        }, 500);
+      });
+    });
+  }
+
+  /* -----------------------------
+     Init
+  ----------------------------- */
+
+  function init() {
+    updateScrollState();
+    initReveal();
+    initInteractiveCards();
+    initPointerGlow();
+    initMagneticButtons();
+    initModals();
+    initReportTabs();
+    initDetails();
+    initLanguagePersistence();
+    initTallyFallback();
+  }
+
+  if (doc.readyState === "loading") {
+    doc.addEventListener("DOMContentLoaded", init, { once: true });
+  } else {
+    init();
+  }
 })();
