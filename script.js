@@ -1,6 +1,6 @@
 /* =========================================================
    SIGEL INDUSTRIES
-   Final interaction layer
+   Clean premium interaction layer
    File: script.js
    ========================================================= */
 
@@ -60,6 +60,7 @@
     if (scrollTicking) return;
 
     scrollTicking = true;
+
     window.requestAnimationFrame(() => {
       updateScrollState();
       scrollTicking = false;
@@ -96,13 +97,13 @@
   function getHeaderOffset() {
     const value = getComputedStyle(root).getPropertyValue("--header-h").trim();
     const parsed = Number.parseFloat(value);
-    return Number.isFinite(parsed) ? parsed : 78;
+    return Number.isFinite(parsed) ? parsed : 76;
   }
 
   function scrollToTarget(target) {
     if (!target) return;
 
-    const offset = getHeaderOffset() + 18;
+    const offset = getHeaderOffset() + 16;
     const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
 
     window.scrollTo({
@@ -208,7 +209,7 @@
     );
 
     revealItems.forEach((item, index) => {
-      item.style.transitionDelay = `${Math.min(index * 18, 160)}ms`;
+      item.style.transitionDelay = `${Math.min(index * 14, 120)}ms`;
       observer.observe(item);
     });
   }
@@ -279,7 +280,7 @@
           const x = event.clientX - rect.left - rect.width / 2;
           const y = event.clientY - rect.top - rect.height / 2;
 
-          button.style.transform = `translate(${x * 0.055}px, ${y * 0.075}px)`;
+          button.style.transform = `translate(${x * 0.045}px, ${y * 0.06}px)`;
         },
         { passive: true }
       );
@@ -375,7 +376,8 @@
 
   const reportContent = {
     dashboard: {
-      label: "Dashboard",
+      labelCs: "Dashboard",
+      labelEn: "Dashboard",
       titleCs: "Celkový obraz webu",
       titleEn: "Overall website picture",
       textCs: "Skóre oblastí, hlavní rizika, silné stránky a doporučený další postup na první pohled.",
@@ -454,21 +456,9 @@
         const lang = getCurrentLanguage();
 
         if (scoreEl) scoreEl.textContent = content.score || "94";
-
-        if (labelEl) {
-          labelEl.textContent =
-            lang === "en"
-              ? content.labelEn || content.label || "Dashboard"
-              : content.labelCs || content.label || "Dashboard";
-        }
-
-        if (titleEl) {
-          titleEl.textContent = lang === "en" ? content.titleEn : content.titleCs;
-        }
-
-        if (textEl) {
-          textEl.textContent = lang === "en" ? content.textEn : content.textCs;
-        }
+        if (labelEl) labelEl.textContent = lang === "en" ? content.labelEn : content.labelCs;
+        if (titleEl) titleEl.textContent = lang === "en" ? content.titleEn : content.titleCs;
+        if (textEl) textEl.textContent = lang === "en" ? content.textEn : content.textCs;
 
         bars.forEach((bar, index) => {
           const width = content.bars[index] || "70%";
@@ -484,7 +474,7 @@
   }
 
   /* -----------------------------
-     Details UX
+     FAQ details
   ----------------------------- */
 
   function initDetails() {
@@ -496,7 +486,9 @@
         if (!details.open) return;
 
         detailsItems.forEach((other) => {
-          if (other !== details && other.closest(".faq-list") === details.closest(".faq-list")) {
+          const sameList = other.closest(".faq-list") === details.closest(".faq-list");
+
+          if (other !== details && sameList) {
             other.open = false;
           }
         });
@@ -505,21 +497,21 @@
   }
 
   /* -----------------------------
-     Language persistence helpers
+     Language persistence
   ----------------------------- */
 
   function initLanguagePersistence() {
-    const langLinks = Array.from(doc.querySelectorAll(".lang-switch a"));
+    const langLinks = Array.from(doc.querySelectorAll(".lang-switch a, .footer-column a"));
 
     langLinks.forEach((link) => {
       link.addEventListener("click", () => {
         const text = (link.textContent || "").trim().toLowerCase();
 
-        if (text === "cz" || text === "cs") {
+        if (text === "cz" || text === "cs" || text === "česky") {
           localStorage.setItem("sigelLang", "cs");
         }
 
-        if (text === "en") {
+        if (text === "en" || text === "english") {
           localStorage.setItem("sigelLang", "en");
         }
       });
@@ -527,7 +519,7 @@
   }
 
   /* -----------------------------
-     Tally helper fallback
+     Tally fallback
   ----------------------------- */
 
   function initTallyFallback() {
