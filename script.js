@@ -1,6 +1,6 @@
 /* =========================================================
    SIGEL INDUSTRIES
-   V17.5 Hybrid Interaction Layer
+   V17.6 Hybrid Interaction Layer
    File: script.js
    ========================================================= */
 
@@ -21,19 +21,25 @@
   const interactiveCards = Array.from(doc.querySelectorAll(".interactive-card"));
   const cursorDot = doc.querySelector(".cursor-dot");
 
-  const buttons = Array.from(
-    doc.querySelectorAll(".btn, .btn-mini, .text-link, .report-tab, .nav a, .card-link")
+  const hoverTargets = Array.from(
+    doc.querySelectorAll(
+      "a, button, summary, .interactive-card, .report-tab, .btn, .btn-mini, .text-link"
+    )
+  );
+
+  const magneticTargets = Array.from(
+    doc.querySelectorAll(".btn, .btn-mini, .text-link, .report-tab, .nav a")
   );
 
   const modalLayer = doc.getElementById("sigel-modal-layer");
   const modalTriggers = Array.from(doc.querySelectorAll("[data-modal]"));
-  const closeTriggers = modalLayer ? Array.from(modalLayer.querySelectorAll("[data-modal-close]")) : [];
   const modals = modalLayer ? Array.from(modalLayer.querySelectorAll(".sigel-modal")) : [];
+  const closeTriggers = modalLayer ? Array.from(modalLayer.querySelectorAll("[data-modal-close]")) : [];
   const modalMap = new Map(modals.map((modal) => [modal.id, modal]));
 
   const reportTabs = Array.from(doc.querySelectorAll(".report-tab"));
 
-  const supportsReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
   let activeModal = null;
@@ -44,20 +50,50 @@
   let cursorY = -100;
 
   /* -----------------------------
-     Header / progress / active nav
+     Utilities
+  ----------------------------- */
+
+  function getCurrentLanguage() {
+    return doc.documentElement.lang === "en" ? "en" : "cs";
+  }
+
+  function getHeaderOffset() {
+    const raw = getComputedStyle(root).getPropertyValue("--header-h").trim();
+    const parsed = Number.parseFloat(raw);
+    return Number.isFinite(parsed) ? parsed : 76;
+  }
+
+  function restartAnimation(element) {
+    if (!element) return;
+
+    element.style.animation = "none";
+    element.offsetHeight; // reflow, lebo CSS potrebuje občas malý rituál
+    element.style.animation = "";
+  }
+
+  function safeFocus(element) {
+    if (!element || typeof element.focus !== "function") return;
+
+    window.requestAnimationFrame(() => {
+      element.focus({ preventScroll: true });
+    });
+  }
+
+  /* -----------------------------
+     Header, progress, active nav
   ----------------------------- */
 
   function updateScrollState() {
     const scrollTop = window.scrollY || doc.documentElement.scrollTop || 0;
     const scrollHeight = doc.documentElement.scrollHeight - window.innerHeight;
-    const percentage = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    const progressValue = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
 
     if (header) {
       header.classList.toggle("is-scrolled", scrollTop > 12);
     }
 
     if (progress) {
-      progress.style.setProperty("--progress", `${Math.min(100, Math.max(0, percentage))}%`);
+      progress.style.setProperty("--progress", `${Math.min(100, Math.max(0, progressValue))}%`);
     }
 
     updateActiveNav();
@@ -101,12 +137,6 @@
      Smooth anchors
   ----------------------------- */
 
-  function getHeaderOffset() {
-    const value = getComputedStyle(root).getPropertyValue("--header-h").trim();
-    const parsed = Number.parseFloat(value);
-    return Number.isFinite(parsed) ? parsed : 76;
-  }
-
   function scrollToTarget(target) {
     if (!target) return;
 
@@ -115,7 +145,7 @@
 
     window.scrollTo({
       top: Math.max(0, targetTop),
-      behavior: supportsReducedMotion ? "auto" : "smooth"
+      behavior: prefersReducedMotion ? "auto" : "smooth"
     });
   }
 
@@ -187,12 +217,6 @@
     link.addEventListener("click", closeMobileMenu);
   });
 
-  window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMobileMenu();
-    }
-  });
-
   /* -----------------------------
      Reveal observer
   ----------------------------- */
@@ -200,7 +224,7 @@
   function initReveal() {
     if (!revealItems.length) return;
 
-    if (supportsReducedMotion || !("IntersectionObserver" in window)) {
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
       revealItems.forEach((item) => item.classList.add("is-visible"));
       return;
     }
@@ -222,7 +246,7 @@
     );
 
     revealItems.forEach((item, index) => {
-      item.style.transitionDelay = `${Math.min(index * 14, 120)}ms`;
+      item.style.transitionDelay = `${Math.min(index * 12, 120)}ms`;
       observer.observe(item);
     });
   }
@@ -251,11 +275,11 @@
   }
 
   /* -----------------------------
-     Cursor + ambient pointer glow
+     Cursor and ambient pointer glow
   ----------------------------- */
 
   function initPointerEffects() {
-    if (supportsReducedMotion || isTouchDevice || !cursorDot) return;
+    if (prefersReducedMotion || isTouchDevice || !cursorDot) return;
 
     window.addEventListener(
       "pointermove",
@@ -263,22 +287,22 @@
         cursorX = event.clientX;
         cursorY = event.clientY;
 
-        if (!pointerTicking) {
-          pointerTicking = true;
+        if (pointerTicking) return;
 
-          window.requestAnimationFrame(() => {
-            const x = Math.round((cursorX / window.innerWidth) * 100);
-            const y = Math.round((cursorY / window.innerHeight) * 100);
+        pointerTicking = true;
 
-            root.style.setProperty("--mx", `${x}%`);
-            root.style.setProperty("--my", `${y}%`);
+        window.requestAnimationFrame(() => {
+          const x = Math.round((cursorX / window.innerWidth) * 100);
+          const y = Math.round((cursorY / window.innerHeight) * 100);
 
-            cursorDot.classList.add("is-visible");
-            cursorDot.style.transform = `translate3d(${cursorX - 7}px, ${cursorY - 7}px, 0)`;
+          root.style.setProperty("--mx", `${x}%`);
+          root.style.setProperty("--my", `${y}%`);
 
-            pointerTicking = false;
-          });
-        }
+          cursorDot.classList.add("is-visible");
+          cursorDot.style.transform = `translate3d(${cursorX - 7}px, ${cursorY - 7}px, 0)`;
+
+          pointerTicking = false;
+        });
       },
       { passive: true }
     );
@@ -291,11 +315,7 @@
       cursorDot.classList.add("is-visible");
     });
 
-    const cursorTargets = Array.from(
-      doc.querySelectorAll("a, button, summary, .interactive-card, .report-tab")
-    );
-
-    cursorTargets.forEach((target) => {
+    hoverTargets.forEach((target) => {
       target.addEventListener("pointerenter", () => {
         cursorDot.classList.add("is-active");
       });
@@ -311,23 +331,23 @@
   ----------------------------- */
 
   function initMagneticButtons() {
-    if (supportsReducedMotion || isTouchDevice || !buttons.length) return;
+    if (prefersReducedMotion || isTouchDevice || !magneticTargets.length) return;
 
-    buttons.forEach((button) => {
-      button.addEventListener(
+    magneticTargets.forEach((target) => {
+      target.addEventListener(
         "pointermove",
         (event) => {
-          const rect = button.getBoundingClientRect();
+          const rect = target.getBoundingClientRect();
           const x = event.clientX - rect.left - rect.width / 2;
           const y = event.clientY - rect.top - rect.height / 2;
 
-          button.style.transform = `translate(${x * 0.045}px, ${y * 0.06}px)`;
+          target.style.transform = `translate(${x * 0.045}px, ${y * 0.06}px)`;
         },
         { passive: true }
       );
 
-      button.addEventListener("pointerleave", () => {
-        button.style.transform = "";
+      target.addEventListener("pointerleave", () => {
+        target.style.transform = "";
       });
     });
   }
@@ -342,6 +362,8 @@
     const modal = modalMap.get(id);
     if (!modal) return;
 
+    closeMobileMenu();
+
     lastModalTrigger = trigger || null;
     activeModal = modal;
 
@@ -354,12 +376,7 @@
     body.classList.add("modal-opened");
 
     const closeButton = modal.querySelector("[data-modal-close]");
-
-    if (closeButton) {
-      window.requestAnimationFrame(() => {
-        closeButton.focus({ preventScroll: true });
-      });
-    }
+    safeFocus(closeButton);
   }
 
   function closeModal(restoreFocus = true) {
@@ -373,13 +390,10 @@
     body.classList.remove("modal-opened");
 
     if (restoreFocus && lastModalTrigger) {
-      window.requestAnimationFrame(() => {
-        lastModalTrigger.focus({ preventScroll: true });
-        lastModalTrigger = null;
-      });
-    } else {
-      lastModalTrigger = null;
+      safeFocus(lastModalTrigger);
     }
+
+    lastModalTrigger = null;
   }
 
   function initModals() {
@@ -388,6 +402,7 @@
     modalTriggers.forEach((trigger) => {
       trigger.addEventListener("click", (event) => {
         event.preventDefault();
+
         const id = trigger.getAttribute("data-modal");
         openModal(id, trigger);
       });
@@ -400,12 +415,7 @@
     });
 
     modalLayer.addEventListener("click", (event) => {
-      const clickedBackdrop = event.target.classList.contains("modal-backdrop");
-      if (clickedBackdrop) closeModal(true);
-    });
-
-    doc.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && activeModal) {
+      if (event.target.classList.contains("modal-backdrop")) {
         closeModal(true);
       }
     });
@@ -468,18 +478,6 @@
     }
   };
 
-  function getCurrentLanguage() {
-    return doc.documentElement.lang === "en" ? "en" : "cs";
-  }
-
-  function restartAnimation(element) {
-    if (!element) return;
-
-    element.style.animation = "none";
-    element.offsetHeight; // reflow, pretože CSS je malé kráľovstvo absurdity
-    element.style.animation = "";
-  }
-
   function initReportTabs() {
     if (!reportTabs.length) return;
 
@@ -504,14 +502,13 @@
 
         const lang = getCurrentLanguage();
 
-        if (scoreEl) scoreEl.textContent = content.score || "94";
+        if (scoreEl) scoreEl.textContent = content.score;
         if (labelEl) labelEl.textContent = lang === "en" ? content.labelEn : content.labelCs;
         if (titleEl) titleEl.textContent = lang === "en" ? content.titleEn : content.titleCs;
         if (textEl) textEl.textContent = lang === "en" ? content.textEn : content.textCs;
 
         bars.forEach((bar, index) => {
-          const width = content.bars[index] || "70%";
-          bar.style.width = width;
+          bar.style.width = content.bars[index] || "70%";
           restartAnimation(bar);
         });
       });
@@ -519,7 +516,7 @@
   }
 
   /* -----------------------------
-     FAQ details
+     FAQ behavior
   ----------------------------- */
 
   function initDetails() {
@@ -530,10 +527,10 @@
       details.addEventListener("toggle", () => {
         if (!details.open) return;
 
-        detailsItems.forEach((other) => {
-          const sameList = other.closest(".faq-list") === details.closest(".faq-list");
+        const parent = details.closest(".faq-list");
 
-          if (other !== details && sameList) {
+        detailsItems.forEach((other) => {
+          if (other !== details && other.closest(".faq-list") === parent) {
             other.open = false;
           }
         });
@@ -546,17 +543,20 @@
   ----------------------------- */
 
   function initLanguagePersistence() {
-    const langLinks = Array.from(doc.querySelectorAll(".lang-switch a, .footer-column a"));
+    const languageLinks = Array.from(
+      doc.querySelectorAll(".lang-switch a, .footer-column a[href='/'], .footer-column a[href='/en/']")
+    );
 
-    langLinks.forEach((link) => {
+    languageLinks.forEach((link) => {
       link.addEventListener("click", () => {
         const text = (link.textContent || "").trim().toLowerCase();
+        const href = link.getAttribute("href") || "";
 
-        if (text === "cz" || text === "cs" || text === "česky") {
+        if (text === "cz" || text === "cs" || text === "česky" || href === "/") {
           localStorage.setItem("sigelLang", "cs");
         }
 
-        if (text === "en" || text === "english") {
+        if (text === "en" || text === "english" || href === "/en/") {
           localStorage.setItem("sigelLang", "en");
         }
       });
@@ -580,19 +580,27 @@
           if (hasTally || !tallyId) return;
 
           window.open(`https://tally.so/r/${tallyId}`, "_blank", "noopener,noreferrer");
-        }, 500);
+        }, 550);
       });
     });
   }
 
   /* -----------------------------
-     Keyboard mode
+     Keyboard accessibility
   ----------------------------- */
 
   function initKeyboardMode() {
     doc.addEventListener("keydown", (event) => {
       if (event.key === "Tab") {
         body.classList.add("keyboard-mode");
+      }
+
+      if (event.key === "Escape") {
+        closeMobileMenu();
+
+        if (activeModal) {
+          closeModal(true);
+        }
       }
     });
 
@@ -602,11 +610,43 @@
   }
 
   /* -----------------------------
+     Basic focus trap for modal
+  ----------------------------- */
+
+  function initModalFocusTrap() {
+    if (!modalLayer) return;
+
+    doc.addEventListener("keydown", (event) => {
+      if (event.key !== "Tab" || !activeModal) return;
+
+      const focusable = Array.from(
+        activeModal.querySelectorAll(
+          'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter((item) => !item.hasAttribute("disabled") && item.offsetParent !== null);
+
+      if (!focusable.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && doc.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && doc.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+  }
+
+  /* -----------------------------
      Init
   ----------------------------- */
 
   function init() {
     updateScrollState();
+
     initReveal();
     initInteractiveCards();
     initPointerEffects();
@@ -617,6 +657,7 @@
     initLanguagePersistence();
     initTallyFallback();
     initKeyboardMode();
+    initModalFocusTrap();
   }
 
   if (doc.readyState === "loading") {
