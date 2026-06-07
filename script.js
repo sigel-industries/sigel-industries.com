@@ -119,19 +119,29 @@ if (!reduceMotion) {
 updateActiveNav();
 
 
-/* SIGEL premium polish layer: non-invasive visual state helpers */
-document.documentElement.classList.add("sigel-js-ready");
+// SIGEL Level 3 premium cinematic helper
+// Visual-only: mouse ambient position + soft reveal staggering.
+(function () {
+  const root = document.documentElement;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (!reduceMotion) {
-  let pointerFrame = null;
+  if (!reduceMotion) {
+    let raf = null;
+    window.addEventListener("pointermove", (event) => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const x = Math.round((event.clientX / window.innerWidth) * 100);
+        const y = Math.round((event.clientY / window.innerHeight) * 100);
+        root.style.setProperty("--mx", `${x}%`);
+        root.style.setProperty("--my", `${y}%`);
+        raf = null;
+      });
+    }, { passive: true });
+  }
 
-  window.addEventListener("pointermove", (event) => {
-    if (pointerFrame) return;
-
-    pointerFrame = window.requestAnimationFrame(() => {
-      document.documentElement.style.setProperty("--pointer-x", `${event.clientX}px`);
-      document.documentElement.style.setProperty("--pointer-y", `${event.clientY}px`);
-      pointerFrame = null;
+  document.querySelectorAll(".feature-grid, .solution-grid, .service-grid, .signal-grid").forEach((grid) => {
+    Array.from(grid.children).forEach((item, index) => {
+      item.style.transitionDelay = `${Math.min(index * 28, 180)}ms`;
     });
   });
-}
+})();
