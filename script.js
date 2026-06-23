@@ -86,36 +86,47 @@
     requestAnimationFrame(tick);
   }
 
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
+  function revealNow(el) {
+    if (!el) return;
+    el.classList.add('visible');
+    if (el.classList.contains('hero-visual') && !countedScore) {
+      countedScore = true;
+      setTimeout(() => countUp(scoreEl, 94, 1200), 160);
+    }
+    if (el.id === 'flow' || el.id === 'reportWrap') el.classList.add('visible');
+  }
 
-      if (entry.target.classList.contains('hero-visual') && !countedScore) {
-        countedScore = true;
-        setTimeout(() => countUp(scoreEl, 94, 1200), 160);
-      }
+  const revealTargets = $$('.reveal, #flow, #reportWrap');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        revealNow(entry.target);
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-      if (entry.target.id === 'flow') entry.target.classList.add('visible');
-      if (entry.target.id === 'reportWrap') entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  $$('.reveal, #flow, #reportWrap').forEach((el) => revealObserver.observe(el));
+    revealTargets.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealTargets.forEach(revealNow);
+  }
 
   const diagList = $('#diagList');
   if (diagList) {
-    const diagObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        $$('.diag-row', entry.target).forEach((row, i) => {
-          setTimeout(() => row.classList.add('visible'), i * 80);
+    if ('IntersectionObserver' in window) {
+      const diagObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          $$('.diag-row', entry.target).forEach((row, i) => {
+            setTimeout(() => row.classList.add('visible'), i * 80);
+          });
+          diagObserver.unobserve(entry.target);
         });
-        diagObserver.unobserve(entry.target);
-      });
-    }, { threshold: 0.1 });
-    diagObserver.observe(diagList);
+      }, { threshold: 0.1 });
+      diagObserver.observe(diagList);
+    } else {
+      $$('.diag-row', diagList).forEach((row) => row.classList.add('visible'));
+    }
   }
 
   // Report tabs
@@ -522,9 +533,11 @@
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const formId = btn.getAttribute('data-tally-open') || 'jaGlJ1';
+      const requestedWidth = Number(btn.getAttribute('data-tally-width') || 720);
+      const safePopupWidth = Math.max(300, Math.min(requestedWidth, Math.max(300, window.innerWidth - 28)));
       const options = {
         layout: btn.getAttribute('data-tally-layout') || 'modal',
-        width: Number(btn.getAttribute('data-tally-width') || 720),
+        width: window.innerWidth <= 760 ? safePopupWidth : requestedWidth,
         emoji: { text: btn.getAttribute('data-tally-emoji-text') || '👋', animation: btn.getAttribute('data-tally-emoji-animation') || 'wave' }
       };
       loadTally(() => {
