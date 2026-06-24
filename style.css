@@ -2534,14 +2534,6 @@ section,
   }
 }
 
-/* Best-effort sizing for the external Tally popup iframe on phones. */
-@media (max-width: 760px) {
-  iframe[src*="tally.so"],
-  iframe[src*="tally.so/r/"] {
-    max-width: calc(100vw - 20px) !important;
-    max-height: calc(100dvh - 56px) !important;
-  }
-}
 
 /* =========================================================
    HERO CARD DESKTOP OFFSET FIX
@@ -2612,4 +2604,132 @@ section,
     align-items: center !important;
     justify-content: center !important;
   }
+}
+
+
+/* Native SIGEL order modal */
+.sigel-order-modal { position: fixed; inset: 0; z-index: 460; display: none; align-items: center; justify-content: center; padding: 20px; }
+.sigel-order-modal.is-open { display: flex; }
+.sigel-order-backdrop { position: absolute; inset: 0; background: radial-gradient(circle at 62% 28%, rgba(86,230,255,.16), transparent 30%), rgba(2,5,13,.78); backdrop-filter: blur(18px); }
+.sigel-order-dialog { position: relative; width: min(900px, 100%); max-height: min(92vh, 940px); overflow: auto; border: 1px solid rgba(122,137,163,.20); border-radius: 22px; background: radial-gradient(circle at 76% 8%, rgba(86,230,255,.10), transparent 34%), linear-gradient(180deg, rgba(11,14,24,.985), rgba(6,8,15,.985)); box-shadow: 0 30px 90px rgba(0,0,0,.72), inset 0 1px 0 rgba(255,255,255,.04); padding: clamp(22px, 4vw, 42px); scrollbar-width: thin; scrollbar-color: rgba(86,230,255,.52) rgba(255,255,255,.045); scroll-behavior: smooth; }
+.sigel-order-dialog::-webkit-scrollbar { width: 10px; }
+.sigel-order-dialog::-webkit-scrollbar-track { background: rgba(255,255,255,.035); border-radius: 999px; margin: 24px 0; }
+.sigel-order-dialog::-webkit-scrollbar-thumb { background: linear-gradient(180deg, rgba(86,230,255,.78), rgba(159,124,255,.66)); border: 2px solid rgba(7,10,21,.92); border-radius: 999px; box-shadow: 0 0 18px rgba(86,230,255,.24); }
+.sigel-order-dialog::before { content: ""; position: absolute; inset: 1px; pointer-events: none; border-radius: 21px; background: linear-gradient(120deg, rgba(86,230,255,.18), transparent 24%, rgba(255,191,77,.12) 54%, rgba(159,124,255,.14), transparent); mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); padding: 1px; -webkit-mask-composite: xor; mask-composite: exclude; }
+.sigel-order-close { position: absolute; top: 18px; right: 18px; width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(148,163,184,.18); color: rgba(248,251,255,.92); background: rgba(255,255,255,.06); font-size: 26px; cursor: pointer; z-index: 3; }
+.sigel-order-brand { display: flex; align-items: center; gap: 11px; margin: 0 56px 22px 0; color: rgba(248,251,255,.80); }
+.sigel-order-brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; font-weight: 950; color: #06111a; background: linear-gradient(135deg, #58e4ff, #8e7cff 56%, #ff63c8); box-shadow: 0 0 26px rgba(86,230,255,.22); }
+.sigel-order-brand-name, .sigel-order-brand-module, .sigel-order-eyebrow, .sigel-summary-item span, .sigel-field label { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+.sigel-order-brand-name { letter-spacing: .14em; font-size: 12px; font-weight: 850; }
+.sigel-order-brand-line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(86,230,255,.22), rgba(255,255,255,.04)); }
+.sigel-order-brand-module { letter-spacing: .14em; color: rgba(86,230,255,.78); font-size: 11px; font-weight: 800; }
+.sigel-order-progress { display: flex; align-items: center; gap: 10px; width: min(360px, calc(100% - 64px)); margin-bottom: 28px; opacity: .92; }
+.sigel-order-dot { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 999px; color: rgba(226,232,240,.52); border: 1px solid rgba(86,230,255,.19); background: rgba(255,255,255,.035); font-size: 12px; font-weight: 850; }
+.sigel-order-dot.is-active, .sigel-order-dot.is-done { color: #06111a; background: linear-gradient(135deg, #57e6ff, #8b7cff); box-shadow: 0 0 26px rgba(86,230,255,.20); }
+.sigel-order-line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(86,230,255,.35), rgba(159,124,255,.20)); }
+.sigel-order-view { display: none; }
+.sigel-order-view.is-active { display: block; }
+.sigel-order-head { max-width: 690px; }
+.sigel-order-head h2, .sigel-success-state h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(34px, 5vw, 58px); font-weight: 500; letter-spacing: -.055em; line-height: .98; color: var(--text); }
+.sigel-order-head p:not(.sigel-order-eyebrow), .sigel-success-state p:not(.sigel-order-eyebrow) { color: rgba(226,232,240,.68); line-height: 1.65; }
+.sigel-order-eyebrow { color: #42e6dc; letter-spacing: .18em; text-transform: uppercase; font-size: 12px; font-weight: 850; }
+.sigel-order-pricebar { display: flex; justify-content: space-between; gap: 18px; align-items: center; margin: 24px 0; padding: 16px 18px; border: 1px solid rgba(86,230,255,.18); border-radius: 18px; background: linear-gradient(90deg, rgba(86,230,255,.08), rgba(159,124,255,.045) 55%, rgba(255,191,77,.045)); }
+.sigel-order-pricebar span { color: rgba(226,232,240,.52); }
+.sigel-order-pricebar strong { font-family: Georgia, "Times New Roman", serif; font-size: 24px; font-weight: 600; letter-spacing: -.04em; }
+.sigel-order-form { display: grid; gap: 16px; }
+.sigel-customer-type { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.sigel-type-card { position: relative; display: grid; gap: 5px; padding: 15px 16px; border: 1px solid rgba(148,163,184,.16); border-radius: 18px; background: rgba(255,255,255,.032); cursor: pointer; transition: border-color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease; }
+.sigel-type-card:hover { transform: translateY(-1px); border-color: rgba(86,230,255,.35); }
+.sigel-type-card.is-active { border-color: rgba(86,230,255,.55); background: radial-gradient(circle at 12% 0%, rgba(86,230,255,.12), transparent 42%), rgba(86,230,255,.055); box-shadow: 0 0 30px rgba(86,230,255,.08); }
+.sigel-type-card input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.sigel-type-card span { font-weight: 850; color: var(--text); letter-spacing: -.01em; }
+.sigel-type-card small { color: rgba(226,232,240,.52); line-height: 1.4; }
+.sigel-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.sigel-field label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 850; letter-spacing: .02em; color: rgba(248,251,255,.78); }
+.sigel-field input, .sigel-field textarea, .sigel-field select { width: 100%; border: 1px solid rgba(130,145,175,.20); border-radius: 13px; background: rgba(2,4,10,.72); color: var(--text); padding: 14px 15px; font: inherit; outline: none; transition: border-color .2s ease, box-shadow .2s ease, background .2s ease; }
+.sigel-field textarea { resize: vertical; min-height: 86px; }
+.sigel-field input:focus, .sigel-field textarea:focus, .sigel-field select:focus { border-color: rgba(86,230,255,.72); box-shadow: 0 0 0 1px rgba(86,230,255,.14), 0 0 28px rgba(86,230,255,.07); background: rgba(2,6,18,.78); }
+.sigel-field-hint { color: rgba(86,230,255,.54); font-size: 12px; margin: 7px 0 0; }
+.sigel-field-error { min-height: 17px; margin: 6px 0 0; color: #ff748d; font-size: 12px; }
+.sigel-consent-box { display: grid; gap: 10px; }
+.sigel-consent-row { display: flex; gap: 12px; align-items: flex-start; padding: 14px; border-radius: 16px; background: rgba(255,255,255,.045); color: rgba(226,232,240,.72); line-height: 1.45; }
+.sigel-consent-row input { width: auto; margin-top: 4px; }
+.sigel-consent-row a { display: inline-block; margin-left: 6px; color: #56e6ff; text-decoration: none; border-bottom: 1px solid rgba(86,230,255,.32); }
+.sigel-company-only.is-hidden { display: none; }
+.sigel-hp-field { position: absolute; left: -9999px; opacity: 0; }
+.sigel-order-status { display: none; padding: 14px 16px; border-radius: 16px; line-height: 1.5; }
+.sigel-order-status.is-ok { display: block; color: #dcfff0; background: rgba(103,247,177,.10); border: 1px solid rgba(103,247,177,.22); }
+.sigel-order-status.is-bad { display: block; color: #ffe3e8; background: rgba(255,116,141,.10); border: 1px solid rgba(255,116,141,.22); }
+.sigel-order-footer { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
+.sigel-order-footer p { color: rgba(226,232,240,.52); font-size: 13px; margin: 0; }
+.sigel-two-actions { justify-content: flex-end; }
+.sigel-summary-card { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 24px 0 16px; }
+.sigel-summary-item { min-width: 0; padding: 14px 15px; border: 1px solid rgba(148,163,184,.15); border-radius: 16px; background: rgba(255,255,255,.032); }
+.sigel-summary-item.is-wide { grid-column: 1 / -1; }
+.sigel-summary-item span { display: block; margin-bottom: 6px; color: rgba(86,230,255,.68); font-size: 12px; text-transform: uppercase; letter-spacing: .10em; font-weight: 800; }
+.sigel-summary-item strong { display: block; color: var(--text); overflow-wrap: anywhere; line-height: 1.45; }
+.sigel-summary-item[data-summary-key="customerType"] strong { color: #56e6ff; }
+.sigel-process-note { margin: 18px 0 22px; padding: 18px; border: 1px solid rgba(255,191,77,.20); border-radius: 22px; background: radial-gradient(circle at 8% 0%, rgba(255,191,77,.10), transparent 34%), rgba(255,255,255,.032); }
+.sigel-process-note strong { display: block; margin-bottom: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 22px; color: #ffbf4d; }
+.sigel-process-note p { color: rgba(226,232,240,.72); line-height: 1.65; margin: 0; }
+.sigel-success-state { text-align: center; max-width: 680px; margin: 0 auto; padding: 18px 0 6px; }
+.sigel-success-orb { display: grid; place-items: center; width: 70px; height: 70px; margin: 0 auto 18px; border-radius: 18px; color: #031018; font-size: 34px; font-weight: 900; background: linear-gradient(135deg, #56e6ff, #8d7cff 56%, #ff62c4); box-shadow: 0 0 44px rgba(86,230,255,.22); }
+.sigel-done-meta { margin: 20px auto; padding: 16px; border: 1px solid rgba(148,163,184,.16); border-radius: 18px; background: rgba(255,255,255,.032); color: rgba(226,232,240,.72); text-align: left; }
+@media (max-width: 820px) { .sigel-order-modal { align-items: flex-end; padding: 10px; } .sigel-order-dialog { border-radius: 28px; max-height: 94vh; padding: 24px 18px; } .sigel-order-dialog::-webkit-scrollbar { width: 6px; } .sigel-form-grid, .sigel-summary-card, .sigel-customer-type { grid-template-columns: 1fr; gap: 12px; } .sigel-order-pricebar { align-items: flex-start; flex-direction: column; } .sigel-order-footer .btn { width: 100%; } .sigel-two-actions { flex-direction: column-reverse; } .sigel-order-progress { width: calc(100% - 52px); } .sigel-order-brand { margin-right: 48px; gap: 9px; } .sigel-order-brand-line, .sigel-order-brand-module { display: none; } .sigel-order-brand-name { font-size: 11px; } .sigel-order-head h2, .sigel-success-state h2 { font-size: clamp(34px, 11vw, 48px); } }
+
+/* Hotfix: keep SIGEL INDUSTRIES readable in mobile header.
+   Previous mobile overrides clipped the brand text too aggressively. */
+@media (max-width: 760px) {
+  .site-header .header-inner {
+    gap: 8px;
+  }
+
+  .site-header .brand {
+    min-width: 0;
+    flex: 1 1 auto;
+    max-width: calc(100% - 112px);
+  }
+
+  .site-header .brand-text {
+    max-width: none !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+    font-size: 10.2px !important;
+    letter-spacing: .075em !important;
+  }
+
+  .site-header .header-actions {
+    flex: 0 0 auto;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header .brand-text {
+    display: none !important;
+  }
+}
+
+
+/* HOTFIX: order modal uses the real SIGEL site logo, not the temporary fake gradient mark. */
+.sigel-order-brand .sigel-order-brand-mark {
+  display: grid !important;
+  place-items: center !important;
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+.sigel-order-brand .sigel-order-brand-logo {
+  display: block !important;
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+  border-radius: 10px !important;
 }

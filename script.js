@@ -503,49 +503,379 @@
     if (e.key === 'Escape' && modal && !modal.hidden) closeInfoModal();
   });
 
-  // Tally modal, lazy-loaded
-  let tallyLoading = false;
-  function loadTally(callback) {
-    if (window.Tally) {
-      callback?.();
-      return;
+
+  // Native SIGEL order modal, Google Apps Script backend
+  const orderEndpoint = 'https://script.google.com/macros/s/AKfycbxrIL5pXrGT4VLBhlCN6ynTDEw07G7V6D_xzMvUH83aju6bZg6vY0Ahcl2ifzebtzDE/exec';
+  const orderStorageKey = 'sigel_order_form_backup_v1';
+  const orderModal = $('#orderModal');
+  const orderForm = $('#orderForm');
+  const orderFormStatus = $('#orderStatus');
+  const orderSummaryStatus = $('#summaryStatus');
+  const orderSummaryCard = $('#summaryCard');
+  const orderDoneMeta = $('#doneMeta');
+  let orderActiveLang = lang === 'en' ? 'en' : 'cs';
+  let pendingOrderPayload = null;
+
+  const orderCopy = {
+    cs: {
+      eyebrow: 'SIGEL Web Intelligence Audit',
+      title: 'Objednávka Sigel Web Audit',
+      lead: 'Vyplňte údaje pro objednávku. Před odesláním ještě uvidíte souhrn ke kontrole.',
+      priceLabel: 'Start cena',
+      price: '2 490 Kč',
+      customerCompany: 'Firma / podnikatel',
+      customerCompanyHint: 'Pro fakturaci na firmu nebo IČO.',
+      customerPerson: 'Fyzická osoba',
+      customerPersonHint: 'Bez IČO, jen kontaktní a fakturační údaje.',
+      companyLabelPerson: 'Jméno objednatele',
+      websiteLabel: 'URL webu k auditu',
+      websiteHint: 'Stačí zadat doménu, https:// doplníme automaticky.',
+      companyLabel: 'Název firmy / objednatele',
+      contactLabel: 'Kontaktní osoba',
+      icoLabel: 'IČO (volitelné)',
+      dicLabel: 'DIČ',
+      billingLabel: 'Fakturační adresa',
+      emailLabel: 'E-mail pro doručení faktury a reportu',
+      phoneLabel: 'Telefon',
+      reportLangLabel: 'Jazyk reportu',
+      currencyLabel: 'Měna objednávky',
+      noteLabel: 'Poznámka k auditu (volitelné)',
+      termsConsent: 'Souhlasím s obchodními podmínkami služby Sigel Web Audit.',
+      privacyConsent: 'Beru na vědomí informace o zpracování osobních údajů.',
+      continue: 'Pokračovat na souhrn',
+      secureNote: 'Objednávka bude odeslána do systému SIGEL.',
+      summaryEyebrow: 'Kontrola objednávky',
+      summaryTitle: 'Souhrn před odesláním',
+      summaryLead: 'Zkontrolujte údaje. Po potvrzení se vytvoří objednávka a přijde vám faktura.',
+      afterSubmitTitle: 'Co bude následovat',
+      afterSubmitText: 'Po odeslání objednávky vám brzy dorazí faktura. Po zaplacení a připsání platby začne zpracování auditu a následně obdržíte PDF report na uvedený e-mail.',
+      back: 'Zpět upravit',
+      submitOrder: 'Objednat nyní za START cenu 2 490 Kč',
+      doneEyebrow: 'Objednávka přijata',
+      doneTitle: 'Hotovo. Objednávka je v systému.',
+      doneText: 'Objednávka byla přijata. Brzy vám dorazí faktura a po připsání platby můžete očekávat zpracování a zaslání web auditu.',
+      closeDone: 'Zavřít',
+      newOrder: 'Nová objednávka',
+      websiteError: 'Zadejte platnou URL webu.',
+      emailError: 'Zadejte platný e-mail.',
+      requiredError: 'Toto pole je povinné.',
+      icoError: 'Pokud IČO vyplníte jen čísly, má mít 8 číslic.',
+      phoneError: 'Telefon nevypadá jako platný telefon.',
+      consentsError: 'Je potřeba potvrdit obchodní podmínky i zpracování osobních údajů.',
+      sending: 'Odesílám objednávku…',
+      sendError: 'Odeslání se nepodařilo. Zkuste to prosím znovu nebo napište e-mailem.',
+      closeLabel: 'Zavřít formulář',
+      summaryLabels: { customerType:'Typ objednatele', website:'Web', company:'Firma / objednatel', ico:'IČO', dic:'DIČ', contactPerson:'Kontaktní osoba', email:'E-mail', phone:'Telefon', billing:'Fakturační adresa', reportLanguage:'Jazyk reportu', price:'Cena', note:'Poznámka' }
+    },
+    en: {
+      eyebrow: 'SIGEL Web Intelligence Audit',
+      title: 'Sigel Web Audit Order',
+      lead: 'Fill in the order details. You will see a summary before submitting.',
+      priceLabel: 'Start price',
+      price: '€99',
+      customerCompany: 'Company / entrepreneur',
+      customerCompanyHint: 'For company billing or company ID.',
+      customerPerson: 'Individual',
+      customerPersonHint: 'No company ID, only contact and billing details.',
+      companyLabelPerson: 'Order name',
+      websiteLabel: 'Website URL to audit',
+      websiteHint: 'You can enter just the domain. We will add https:// automatically.',
+      companyLabel: 'Company / order name',
+      contactLabel: 'Contact person',
+      icoLabel: 'Company ID (optional)',
+      dicLabel: 'VAT ID',
+      billingLabel: 'Billing address',
+      emailLabel: 'Email for invoice and report delivery',
+      phoneLabel: 'Phone',
+      reportLangLabel: 'Report language',
+      currencyLabel: 'Order currency',
+      noteLabel: 'Audit note (optional)',
+      termsConsent: 'I agree with the Sigel Web Audit Terms and Conditions.',
+      privacyConsent: 'I acknowledge the information about personal data processing.',
+      continue: 'Continue to summary',
+      secureNote: 'The order will be sent to the SIGEL system.',
+      summaryEyebrow: 'Order check',
+      summaryTitle: 'Summary before submission',
+      summaryLead: 'Check the details. Confirming this creates the order and you will receive an invoice.',
+      afterSubmitTitle: 'What happens next',
+      afterSubmitText: 'After submitting the order, you will receive an invoice shortly. Once the payment is received, the audit processing starts and the PDF report will be sent to the email provided.',
+      back: 'Back to edit',
+      submitOrder: 'Order now for the START price €99',
+      doneEyebrow: 'Order received',
+      doneTitle: 'Done. The order is in the system.',
+      doneText: 'The order has been received. You will receive an invoice shortly. Once the payment is received, you can expect the web audit to be processed and sent to you.',
+      closeDone: 'Close',
+      newOrder: 'New order',
+      websiteError: 'Enter a valid website URL.',
+      emailError: 'Enter a valid email address.',
+      requiredError: 'This field is required.',
+      icoError: 'If provided as Czech-style digits, the company ID should have 8 digits.',
+      phoneError: 'This phone number does not look valid.',
+      consentsError: 'You need to confirm both Terms and Privacy information.',
+      sending: 'Sending order…',
+      sendError: 'Sending failed. Try again or contact us by email.',
+      closeLabel: 'Close form',
+      summaryLabels: { customerType:'Customer type', website:'Website', company:'Company / order name', ico:'Company ID', dic:'VAT ID', contactPerson:'Contact person', email:'Email', phone:'Phone', billing:'Billing address', reportLanguage:'Report language', price:'Price', note:'Note' }
     }
-    if (tallyLoading) {
-      setTimeout(() => loadTally(callback), 250);
-      return;
+  };
+
+  function orderT(key) {
+    return orderCopy[orderActiveLang]?.[key] || orderCopy.cs[key] || key;
+  }
+  function orderLabels() { return orderCopy[orderActiveLang].summaryLabels; }
+  function orderEsc(value) {
+    return String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;');
+  }
+  function updateOrderLegalLinks() {
+    const terms = $('[data-legal-link="terms"]', orderModal);
+    const privacy = $('[data-legal-link="privacy"]', orderModal);
+    if (orderActiveLang === 'en') {
+      if (terms) { terms.href = '/en/terms.html'; terms.textContent = 'Terms and Conditions'; }
+      if (privacy) { privacy.href = '/en/privacy-policy.html'; privacy.textContent = 'Privacy Policy'; }
+    } else {
+      if (terms) { terms.href = '/obchodni-podminky.html'; terms.textContent = 'Obchodní podmínky'; }
+      if (privacy) { privacy.href = '/ochrana-osobnich-udaju.html'; privacy.textContent = 'Ochrana osobních údajů'; }
     }
-    tallyLoading = true;
-    const script = doc.createElement('script');
-    script.src = 'https://tally.so/widgets/embed.js';
-    script.async = true;
-    script.onload = () => {
-      tallyLoading = false;
-      callback?.();
+  }
+  function getOrderCustomerType() {
+    const selected = orderForm?.querySelector('input[name="customerType"]:checked');
+    return selected ? selected.value : 'company';
+  }
+  function updateOrderCustomerTypeUI() {
+    const type = getOrderCustomerType();
+    $$('[data-type-card]', orderModal).forEach((card) => card.classList.toggle('is-active', card.dataset.typeCard === type));
+    $$('.sigel-company-only', orderModal).forEach((el) => el.classList.toggle('is-hidden', type === 'person'));
+    const companyLabel = $('#companyFieldLabel', orderModal);
+    const companyInput = $('#orderCompany', orderModal);
+    if (type === 'person') {
+      if (companyLabel) companyLabel.textContent = orderT('companyLabelPerson');
+      if (companyInput) companyInput.placeholder = orderActiveLang === 'en' ? 'Name and surname' : 'Jméno a příjmení';
+    } else {
+      if (companyLabel) companyLabel.textContent = orderT('companyLabel');
+      if (companyInput) companyInput.placeholder = orderActiveLang === 'en' ? 'Company name' : 'Název firmy';
+    }
+  }
+  function applyOrderLanguage(nextLang) {
+    orderActiveLang = nextLang === 'en' ? 'en' : 'cs';
+    $$('[data-i18n]', orderModal).forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      el.textContent = orderT(key);
+    });
+    $('.sigel-order-close', orderModal)?.setAttribute('aria-label', orderT('closeLabel'));
+    $('#orderWebsite', orderModal).placeholder = orderActiveLang === 'en' ? 'example.com' : 'sigel-industries.com';
+    $('#orderEmail', orderModal).placeholder = orderActiveLang === 'en' ? 'contact@company.com' : 'kontakt@firma.cz';
+    $('#orderContactPerson', orderModal).placeholder = orderActiveLang === 'en' ? 'Name and surname' : 'Jméno a příjmení';
+    $('#orderIco', orderModal).placeholder = orderActiveLang === 'en' ? 'optional' : 'volitelné';
+    $('#orderDic', orderModal).placeholder = orderActiveLang === 'en' ? 'VAT ID / optional' : 'CZ12345678 / volitelné';
+    $('#orderBilling', orderModal).placeholder = orderActiveLang === 'en' ? 'Company name, street, city, ZIP, country...' : 'Název, ulice, město, PSČ, stát...';
+    $('#orderPhone', orderModal).placeholder = '+420 777 000 000';
+    $('#orderNote', orderModal).placeholder = orderActiveLang === 'en' ? 'Anything important before the audit?' : 'Co je dobré vědět před auditem?';
+    const currency = $('#orderCurrency', orderModal);
+    if (currency) currency.value = orderActiveLang === 'en' ? 'EUR' : 'CZK';
+    const price = orderActiveLang === 'en' ? '€99' : '2 490 Kč';
+    $('[data-i18n="price"]', orderModal).textContent = price;
+    $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the START price ${price}` : `Objednat nyní za START cenu ${price}`;
+    updateOrderCustomerTypeUI();
+    updateOrderLegalLinks();
+  }
+  function setOrderStep(step) {
+    $$('.sigel-order-view', orderModal).forEach((el) => el.classList.toggle('is-active', el.dataset.view === step));
+    const order = ['form','summary','done'];
+    const activeIndex = order.indexOf(step);
+    $$('.sigel-order-dot', orderModal).forEach((dot) => {
+      const dotIndex = order.indexOf(dot.dataset.stepDot);
+      dot.classList.toggle('is-active', dot.dataset.stepDot === step);
+      dot.classList.toggle('is-done', dotIndex < activeIndex);
+    });
+    $('.sigel-order-dialog', orderModal).scrollTop = 0;
+  }
+  function clearOrderErrors() { $$('[data-error-for]', orderModal).forEach((el) => el.textContent = ''); }
+  function setOrderError(name, message) {
+    const el = $(`[data-error-for="${name}"]`, orderModal);
+    if (el) el.textContent = message;
+  }
+  function clearOrderStatuses() {
+    [orderFormStatus, orderSummaryStatus].forEach((box) => { if (box) { box.className = 'sigel-order-status'; box.textContent = ''; } });
+  }
+  function showOrderStatus(box, type, message) {
+    if (!box) return;
+    box.className = `sigel-order-status ${type === 'ok' ? 'is-ok' : 'is-bad'}`;
+    box.textContent = message;
+  }
+  function normalizeOrderWebsite(value) {
+    const raw = String(value || '').trim();
+    if (!raw) return '';
+    if (/\s/.test(raw)) return raw;
+    if (/^https?:\/\//i.test(raw)) return raw;
+    return `https://${raw}`;
+  }
+  function validateOrderUrl(value) {
+    try {
+      const url = new URL(normalizeOrderWebsite(value));
+      return (url.protocol === 'http:' || url.protocol === 'https:') && url.hostname.includes('.') && /^[a-z0-9.-]+$/i.test(url.hostname);
+    } catch { return false; }
+  }
+  function validOrderEmail(value) {
+    const v = String(value || '').trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return false;
+    const tld = v.split('.').pop().toLowerCase();
+    return tld.length >= 2 && tld.length <= 6;
+  }
+  function validOrderPhone(value) {
+    const v = String(value || '').trim();
+    if (!v) return true;
+    return /^[+()0-9\s.-]{7,22}$/.test(v);
+  }
+  function validOrderIco(value) {
+    const v = String(value || '').trim();
+    if (!v) return true;
+    if (/^\d+$/.test(v)) return /^\d{8}$/.test(v);
+    return /^[A-Za-z0-9 .\-_/]{3,32}$/.test(v);
+  }
+  function getOrderPrice(currency) { return currency === 'EUR' ? '€99' : '2 490 Kč'; }
+  function createOrderId(date) {
+    const pad = (n) => String(n).padStart(2, '0');
+    const rand = Math.random().toString(36).slice(2, 7).toUpperCase();
+    return `SIGEL-${date.getFullYear()}${pad(date.getMonth()+1)}${pad(date.getDate())}${pad(date.getHours())}${pad(date.getMinutes())}${pad(date.getSeconds())}-${rand}`;
+  }
+  function formatOrderLocalDateTime(date) {
+    return new Intl.DateTimeFormat('sv-SE', { year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false }).format(date).replace(' ', 'T');
+  }
+  function orderPayloadFromForm() {
+    const data = Object.fromEntries(new FormData(orderForm).entries());
+    const now = new Date();
+    const currency = data.currency || (orderActiveLang === 'en' ? 'EUR' : 'CZK');
+    return {
+      id: createOrderId(now),
+      createdAt: now.toISOString(),
+      createdAtUtc: now.toISOString(),
+      createdAtLocal: formatOrderLocalDateTime(now),
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'unknown',
+      timezoneOffsetMinutes: now.getTimezoneOffset(),
+      source: 'sigel-industries-web',
+      language: orderActiveLang,
+      customerType: data.customerType || 'company',
+      status: 'new_order',
+      paymentStatus: 'invoice_pending',
+      deliveryStatus: 'waiting_for_payment',
+      price: getOrderPrice(currency),
+      currency,
+      website: normalizeOrderWebsite(data.website || ''),
+      company: data.company?.trim() || '',
+      ico: data.ico?.trim() || '',
+      dic: data.dic?.trim() || '',
+      billing: data.billing?.trim() || '',
+      contactPerson: data.contactPerson?.trim() || '',
+      email: data.email?.trim() || '',
+      phone: data.phone?.trim() || '',
+      reportLanguage: data.reportLanguage || '',
+      note: data.note?.trim() || '',
+      termsConsent: Boolean(orderForm.termsConsent.checked),
+      privacyConsent: Boolean(orderForm.privacyConsent.checked),
+      website_extra: data.website_extra || ''
     };
-    script.onerror = () => {
-      tallyLoading = false;
-      window.open('https://tally.so/r/jaGlJ1', '_blank', 'noopener');
-    };
-    doc.head.appendChild(script);
+  }
+  function validateOrderForm(payload) {
+    clearOrderErrors(); clearOrderStatuses();
+    let ok = true;
+    if (payload.website_extra) return false;
+    if (!validateOrderUrl(orderForm.website.value)) { setOrderError('website', orderT('websiteError')); ok = false; }
+    if (!payload.company || payload.company.length < 2) { setOrderError('company', orderT('requiredError')); ok = false; }
+    if (payload.customerType === 'company' && payload.ico && !validOrderIco(payload.ico)) { setOrderError('ico', orderT('icoError')); ok = false; }
+    if (!payload.billing || payload.billing.length < 8) { setOrderError('billing', orderT('requiredError')); ok = false; }
+    if (!validOrderEmail(payload.email)) { setOrderError('email', orderT('emailError')); ok = false; }
+    if (!validOrderPhone(payload.phone)) { setOrderError('phone', orderT('phoneError')); ok = false; }
+    if (!payload.termsConsent || !payload.privacyConsent) { setOrderError('consents', orderT('consentsError')); ok = false; }
+    return ok;
+  }
+  function renderOrderSummary(payload) {
+    const L = orderLabels();
+    const customerTypeLabel = payload.customerType === 'person'
+      ? (orderActiveLang === 'en' ? 'Individual' : 'Fyzická osoba')
+      : (orderActiveLang === 'en' ? 'Company / entrepreneur' : 'Firma / podnikatel');
+    const fields = [
+      ['customerType', customerTypeLabel], ['website', payload.website], ['company', payload.company],
+      ['ico', payload.ico || '—'], ['dic', payload.dic || '—'], ['contactPerson', payload.contactPerson || '—'],
+      ['email', payload.email], ['phone', payload.phone || '—'], ['billing', payload.billing, true],
+      ['reportLanguage', payload.reportLanguage], ['price', `${payload.price} · ${payload.currency}`], ['note', payload.note || '—', true]
+    ];
+    orderSummaryCard.innerHTML = fields.map(([key, value, wide]) => `
+      <div class="sigel-summary-item ${wide ? 'is-wide' : ''}" data-summary-key="${orderEsc(key)}">
+        <span>${orderEsc(L[key] || key)}</span>
+        <strong>${orderEsc(value)}</strong>
+      </div>
+    `).join('');
+  }
+  function saveOrderBackup(payload) {
+    try {
+      const current = JSON.parse(localStorage.getItem(orderStorageKey) || '[]');
+      current.unshift(payload);
+      localStorage.setItem(orderStorageKey, JSON.stringify(current.slice(0, 30)));
+    } catch {}
+  }
+  function renderOrderDone(payload) {
+    orderDoneMeta.innerHTML = `<strong>${orderEsc(payload.id)}</strong><br>${orderEsc(payload.createdAtLocal)} · ${orderEsc(payload.price)} · ${orderEsc(payload.website)}<br>${orderEsc(payload.email)}`;
+  }
+  function openOrderModal(nextLang = lang) {
+    if (!orderModal || !orderForm) return;
+    const info = $('#infoModal');
+    if (info && !info.hidden) { info.hidden = true; info.setAttribute('aria-hidden','true'); }
+    applyOrderLanguage(nextLang);
+    clearOrderErrors(); clearOrderStatuses();
+    pendingOrderPayload = null;
+    orderForm.reset();
+    applyOrderLanguage(nextLang);
+    setOrderStep('form');
+    orderModal.classList.add('is-open');
+    orderModal.setAttribute('aria-hidden', 'false');
+    body.classList.add('modal-open');
+    setTimeout(() => $('#orderWebsite', orderModal)?.focus(), 40);
+  }
+  function closeOrderModal() {
+    orderModal?.classList.remove('is-open');
+    orderModal?.setAttribute('aria-hidden', 'true');
+    body.classList.remove('modal-open');
   }
 
-  $$('[data-tally-open]').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const formId = btn.getAttribute('data-tally-open') || 'jaGlJ1';
-      const requestedWidth = Number(btn.getAttribute('data-tally-width') || 720);
-      const safePopupWidth = Math.max(300, Math.min(requestedWidth, Math.max(300, window.innerWidth - 28)));
-      const options = {
-        layout: btn.getAttribute('data-tally-layout') || 'modal',
-        width: window.innerWidth <= 760 ? safePopupWidth : requestedWidth,
-        emoji: { text: btn.getAttribute('data-tally-emoji-text') || '👋', animation: btn.getAttribute('data-tally-emoji-animation') || 'wave' }
-      };
-      loadTally(() => {
-        if (window.Tally?.openPopup) window.Tally.openPopup(formId, options);
-        else window.open(`https://tally.so/r/${formId}`, '_blank', 'noopener');
-      });
+  if (orderModal && orderForm) {
+    $$('input[name="customerType"]', orderModal).forEach((radio) => radio.addEventListener('change', updateOrderCustomerTypeUI));
+    $$('[data-order-close]', orderModal).forEach((el) => el.addEventListener('click', closeOrderModal));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && orderModal.classList.contains('is-open')) closeOrderModal(); });
+    orderForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const payload = orderPayloadFromForm();
+      if (!validateOrderForm(payload)) return;
+      pendingOrderPayload = payload;
+      renderOrderSummary(payload);
+      setOrderStep('summary');
     });
-  });
+    $('#backToForm', orderModal)?.addEventListener('click', () => setOrderStep('form'));
+    $('#confirmOrder', orderModal)?.addEventListener('click', async () => {
+      if (!pendingOrderPayload) return;
+      showOrderStatus(orderSummaryStatus, 'ok', orderT('sending'));
+      try {
+        await fetch(orderEndpoint, { method: 'POST', mode: 'no-cors', body: JSON.stringify(pendingOrderPayload) });
+        saveOrderBackup(pendingOrderPayload);
+        renderOrderDone(pendingOrderPayload);
+        setOrderStep('done');
+        orderForm.reset();
+      } catch (error) {
+        console.error(error);
+        showOrderStatus(orderSummaryStatus, 'bad', orderT('sendError'));
+      }
+    });
+    $('#newOrder', orderModal)?.addEventListener('click', () => {
+      pendingOrderPayload = null;
+      clearOrderErrors(); clearOrderStatuses(); orderForm.reset(); applyOrderLanguage(orderActiveLang); setOrderStep('form');
+      setTimeout(() => $('#orderWebsite', orderModal)?.focus(), 40);
+    });
+    $('#orderCurrency', orderModal)?.addEventListener('change', (event) => {
+      const price = getOrderPrice(event.target.value);
+      $('[data-i18n="price"]', orderModal).textContent = price;
+      $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the START price ${price}` : `Objednat nyní za START cenu ${price}`;
+    });
+    $$('[data-order-open]').forEach((btn) => btn.addEventListener('click', (e) => { e.preventDefault(); openOrderModal(btn.getAttribute('data-order-lang') || lang); }));
+  }
 
   // Cookie consent + GA4 lazy load
   const cookieBar = $('#cookieBar');

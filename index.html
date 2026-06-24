@@ -68,7 +68,7 @@
             jak nabídku komunikovat k různým typům zákazníků.
           </p>
 <div class="hero-buttons reveal">
-<button class="btn btn-primary" data-tally-emoji-animation="wave" data-tally-emoji-text="👋" data-tally-layout="modal" data-tally-open="jaGlJ1" data-tally-width="720" type="button">Vyzkoušet audit za beta cenu</button>
+<button class="btn btn-primary" data-order-open type="button">Vyzkoušet audit za beta cenu</button>
 <a class="btn btn-ghost" href="docs/demo-report.pdf" rel="noopener" target="_blank">Prohlédnout ukázku reportu</a>
 </div>
 <div aria-label="Parametry služby" class="hero-meta reveal">
@@ -279,7 +279,7 @@
 <h2>Auditní podklad, <span class="italic warm-text">aniž byste začínali od nuly.</span></h2>
 <p>Agentura může Sigel využít jako externí vstupní diagnostiku před konzultací, redesignem, SEO úpravami nebo obsahovou strategií.</p>
 <div class="inline-actions">
-<button class="btn btn-primary" data-tally-layout="modal" data-tally-open="jaGlJ1" data-tally-width="720" type="button">Domluvit pilotní spolupráci</button>
+<button class="btn btn-primary" data-order-open type="button">Domluvit pilotní spolupráci</button>
 </div>
 </div>
 <div class="agency-cards reveal">
@@ -393,7 +393,7 @@
 <p class="order-sub">Vyplňte krátký formulář s URL webu a fakturačními údaji. U agenturní spolupráce doplňte rozsah do poznámky.</p>
 <p class="beta-note">Beta cena platí pro první veřejnou verzi služby. Výstup je použitelný už teď, metodika a forma reportu se ale dál ladí podle reálných auditů a zpětné vazby.</p>
 <div class="order-tags"><span>PDF report</span><span>24 h dodání</span><span>Ručně kontrolovaný</span></div>
-<button class="btn btn-primary" data-tally-layout="modal" data-tally-open="jaGlJ1" data-tally-width="720" type="button">Otevřít objednávkový formulář →</button>
+<button class="btn btn-primary" data-order-open type="button">Otevřít objednávkový formulář →</button>
 </div>
 </div>
 </section>
@@ -422,6 +422,199 @@
 <button class="btn btn-primary btn-small" data-cookie-choice="accept" type="button">Přijmout</button>
 </div>
 </div>
+
+<div class="sigel-order-modal" id="orderModal" aria-hidden="true">
+  <div class="sigel-order-backdrop" data-order-close></div>
+
+  <section class="sigel-order-dialog" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+    <button class="sigel-order-close" type="button" aria-label="Zavřít formulář" data-order-close>×</button>
+
+    <div class="sigel-order-brand">
+      <span aria-hidden="true" class="sigel-order-brand-mark"><img alt="" aria-hidden="true" class="sigel-order-brand-logo" src="sigel-mark-256.png"/></span>
+      <span class="sigel-order-brand-name">SIGEL INDUSTRIES</span>
+      <span class="sigel-order-brand-line"></span>
+      <span class="sigel-order-brand-module">ORDER MODULE</span>
+    </div>
+
+    <div class="sigel-order-progress" aria-hidden="true">
+      <span class="sigel-order-dot is-active" data-step-dot="form">1</span>
+      <span class="sigel-order-line"></span>
+      <span class="sigel-order-dot" data-step-dot="summary">2</span>
+      <span class="sigel-order-line"></span>
+      <span class="sigel-order-dot" data-step-dot="done">3</span>
+    </div>
+
+    <div class="sigel-order-view is-active" data-view="form">
+      <div class="sigel-order-head">
+        <p class="sigel-order-eyebrow" data-i18n="eyebrow">SIGEL Web Intelligence Audit</p>
+        <h2 id="orderTitle" data-i18n="title">Objednávka Sigel Web Audit</h2>
+        <p data-i18n="lead">Vyplňte údaje pro objednávku. Před odesláním ještě uvidíte souhrn ke kontrole.</p>
+      </div>
+
+      <div class="sigel-order-pricebar">
+        <span data-i18n="priceLabel">Start cena</span>
+        <strong data-i18n="price">2 490 Kč</strong>
+      </div>
+
+      <form class="sigel-order-form" id="orderForm" novalidate>
+        <input type="text" name="website_extra" class="sigel-hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <div class="sigel-customer-type" role="radiogroup" aria-label="Typ objednatele">
+          <label class="sigel-type-card is-active" data-type-card="company">
+            <input type="radio" name="customerType" value="company" checked />
+            <span data-i18n="customerCompany">Firma / podnikatel</span>
+            <small data-i18n="customerCompanyHint">Pro fakturaci na firmu nebo IČO.</small>
+          </label>
+          <label class="sigel-type-card" data-type-card="person">
+            <input type="radio" name="customerType" value="person" />
+            <span data-i18n="customerPerson">Fyzická osoba</span>
+            <small data-i18n="customerPersonHint">Bez IČO, jen kontaktní a fakturační údaje.</small>
+          </label>
+        </div>
+
+        <div class="sigel-field">
+          <label for="orderWebsite" data-i18n="websiteLabel">URL webu k auditu</label>
+          <input id="orderWebsite" name="website" type="text" inputmode="url" autocomplete="url" placeholder="sigel-industries.com" required />
+          <p class="sigel-field-hint" data-i18n="websiteHint">Stačí zadat doménu, https:// doplníme automaticky.</p>
+          <p class="sigel-field-error" data-error-for="website"></p>
+        </div>
+
+        <div class="sigel-form-grid">
+          <div class="sigel-field">
+            <label for="orderCompany" data-i18n="companyLabel" id="companyFieldLabel">Název firmy / objednatele</label>
+            <input id="orderCompany" name="company" type="text" placeholder="Název firmy" required />
+            <p class="sigel-field-error" data-error-for="company"></p>
+          </div>
+
+          <div class="sigel-field">
+            <label for="orderContactPerson" data-i18n="contactLabel">Kontaktní osoba</label>
+            <input id="orderContactPerson" name="contactPerson" type="text" placeholder="Jméno a příjmení" />
+          </div>
+        </div>
+
+        <div class="sigel-form-grid">
+          <div class="sigel-field sigel-company-only">
+            <label for="orderIco" data-i18n="icoLabel">IČO (volitelné)</label>
+            <input id="orderIco" name="ico" type="text" inputmode="numeric" placeholder="volitelné" />
+            <p class="sigel-field-error" data-error-for="ico"></p>
+          </div>
+
+          <div class="sigel-field sigel-company-only">
+            <label for="orderDic" data-i18n="dicLabel">DIČ</label>
+            <input id="orderDic" name="dic" type="text" placeholder="CZ12345678 / volitelné" />
+          </div>
+        </div>
+
+        <div class="sigel-field">
+          <label for="orderBilling" data-i18n="billingLabel">Fakturační adresa</label>
+          <textarea id="orderBilling" name="billing" rows="3" placeholder="Název, ulice, město, PSČ, stát..." required></textarea>
+          <p class="sigel-field-error" data-error-for="billing"></p>
+        </div>
+
+        <div class="sigel-form-grid">
+          <div class="sigel-field">
+            <label for="orderEmail" data-i18n="emailLabel">E-mail pro doručení faktury a reportu</label>
+            <input id="orderEmail" name="email" type="email" placeholder="kontakt@firma.cz" required />
+            <p class="sigel-field-error" data-error-for="email"></p>
+          </div>
+
+          <div class="sigel-field">
+            <label for="orderPhone" data-i18n="phoneLabel">Telefon</label>
+            <input id="orderPhone" name="phone" type="tel" inputmode="tel" placeholder="+420 777 000 000" />
+            <p class="sigel-field-error" data-error-for="phone"></p>
+          </div>
+        </div>
+
+        <div class="sigel-form-grid">
+          <div class="sigel-field">
+            <label for="orderReportLanguage" data-i18n="reportLangLabel">Jazyk reportu</label>
+            <select id="orderReportLanguage" name="reportLanguage" required>
+              <option value="CZ/SK">CZ/SK</option>
+              <option value="EN">EN</option>
+            </select>
+          </div>
+
+          <div class="sigel-field">
+            <label for="orderCurrency" data-i18n="currencyLabel">Měna objednávky</label>
+            <select id="orderCurrency" name="currency" required>
+              <option value="CZK">CZK · 2 490 Kč</option>
+              <option value="EUR">EUR · €99</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sigel-field">
+          <label for="orderNote" data-i18n="noteLabel">Poznámka k auditu (volitelné)</label>
+          <textarea id="orderNote" name="note" rows="3" placeholder="Co je dobré vědět před auditem?"></textarea>
+          <p class="sigel-field-error" data-error-for="note"></p>
+        </div>
+
+        <div class="sigel-consent-box">
+          <label class="sigel-consent-row">
+            <input id="orderTermsConsent" name="termsConsent" type="checkbox" required />
+            <span>
+              <span data-i18n="termsConsent">Souhlasím s obchodními podmínkami služby Sigel Web Audit.</span>
+              <a href="/obchodni-podminky.html" target="_blank" rel="noopener" data-legal-link="terms">Obchodní podmínky</a>
+            </span>
+          </label>
+
+          <label class="sigel-consent-row">
+            <input id="orderPrivacyConsent" name="privacyConsent" type="checkbox" required />
+            <span>
+              <span data-i18n="privacyConsent">Beru na vědomí informace o zpracování osobních údajů.</span>
+              <a href="/ochrana-osobnich-udaju.html" target="_blank" rel="noopener" data-legal-link="privacy">Ochrana osobních údajů</a>
+            </span>
+          </label>
+        </div>
+        <p class="sigel-field-error sigel-consent-error" data-error-for="consents"></p>
+
+        <div class="sigel-order-status" id="orderStatus" role="status" aria-live="polite"></div>
+
+        <div class="sigel-order-footer">
+          <button class="btn btn-primary" type="submit" data-i18n="continue">Pokračovat na souhrn</button>
+          <p data-i18n="secureNote">Objednávka bude odeslána do systému SIGEL.</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="sigel-order-view" data-view="summary">
+      <div class="sigel-order-head">
+        <p class="sigel-order-eyebrow" data-i18n="summaryEyebrow">Kontrola objednávky</p>
+        <h2 data-i18n="summaryTitle">Souhrn před odesláním</h2>
+        <p data-i18n="summaryLead">Zkontrolujte údaje. Po potvrzení se vytvoří objednávka a přijde vám faktura.</p>
+      </div>
+
+      <div class="sigel-summary-card" id="summaryCard"></div>
+
+      <div class="sigel-process-note">
+        <strong data-i18n="afterSubmitTitle">Co bude následovat</strong>
+        <p data-i18n="afterSubmitText">Po odeslání objednávky vám brzy dorazí faktura. Po zaplacení a připsání platby začne zpracování auditu a následně obdržíte PDF report na uvedený e-mail.</p>
+      </div>
+
+      <div class="sigel-order-status" id="summaryStatus" role="status" aria-live="polite"></div>
+
+      <div class="sigel-order-footer sigel-two-actions">
+        <button class="btn btn-ghost" type="button" id="backToForm" data-i18n="back">Zpět upravit</button>
+        <button class="btn btn-primary" type="button" id="confirmOrder" data-i18n="submitOrder">Objednat nyní za START cenu 2 490 Kč</button>
+      </div>
+    </div>
+
+    <div class="sigel-order-view" data-view="done">
+      <div class="sigel-success-state">
+        <div class="sigel-success-orb">✓</div>
+        <p class="sigel-order-eyebrow" data-i18n="doneEyebrow">Objednávka přijata</p>
+        <h2 data-i18n="doneTitle">Hotovo. Objednávka je v systému.</h2>
+        <p data-i18n="doneText">Objednávka byla přijata. Brzy vám dorazí faktura a po připsání platby můžete očekávat zpracování a zaslání web auditu.</p>
+        <div class="sigel-done-meta" id="doneMeta"></div>
+        <div class="sigel-order-footer sigel-two-actions">
+          <button class="btn btn-primary" type="button" data-order-close data-i18n="closeDone">Zavřít</button>
+          <button class="btn btn-ghost" type="button" id="newOrder" data-i18n="newOrder">Nová objednávka</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <div aria-hidden="true" class="sigel-modal" hidden="" id="infoModal">
 <div class="modal-backdrop" data-modal-close=""></div>
 <section aria-labelledby="modalTitle" aria-modal="true" class="modal-dialog" role="dialog">
@@ -431,7 +624,7 @@
 <p class="modal-lead" id="modalLead"></p>
 <div class="modal-grid" id="modalGrid"></div>
 <p class="modal-note" id="modalNote"></p>
-<button class="btn btn-primary modal-cta" data-tally-layout="modal" data-tally-open="jaGlJ1" data-tally-width="720" id="modalCta" type="button">Vyzkoušet audit za beta cenu</button>
+<button class="btn btn-primary modal-cta" data-order-open id="modalCta" type="button">Vyzkoušet audit za beta cenu</button>
 </section>
 </div>
 <script defer="" src="script.js"></script>
