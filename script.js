@@ -522,7 +522,7 @@
       title: 'Objednávka Sigel Web Audit',
       lead: 'Vyplňte údaje pro objednávku. Před odesláním ještě uvidíte souhrn ke kontrole.',
       priceLabel: 'Start cena',
-      price: '2 490 Kč',
+      price: '4 980 Kč',
       customerCompany: 'Firma / podnikatel',
       customerCompanyHint: 'Pro fakturaci na firmu nebo IČO.',
       customerPerson: 'Fyzická osoba',
@@ -550,7 +550,7 @@
       afterSubmitTitle: 'Co bude následovat',
       afterSubmitText: 'Po odeslání objednávky vám brzy dorazí faktura. Po zaplacení a připsání platby začne zpracování auditu a následně obdržíte PDF report na uvedený e-mail.',
       back: 'Zpět upravit',
-      submitOrder: 'Objednat nyní za START cenu 2 490 Kč',
+      submitOrder: 'Objednat nyní za START cenu 4 980 Kč',
       doneEyebrow: 'Objednávka přijata',
       doneTitle: 'Hotovo. Objednávka je v systému.',
       doneText: 'Objednávka byla přijata. Brzy vám dorazí faktura a po připsání platby můžete očekávat zpracování a zaslání web auditu.',
@@ -572,7 +572,7 @@
       title: 'Sigel Web Audit Order',
       lead: 'Fill in the order details. You will see a summary before submitting.',
       priceLabel: 'Start price',
-      price: '€99',
+      price: '€199',
       customerCompany: 'Company / entrepreneur',
       customerCompanyHint: 'For company billing or company ID.',
       customerPerson: 'Individual',
@@ -600,7 +600,7 @@
       afterSubmitTitle: 'What happens next',
       afterSubmitText: 'After submitting the order, you will receive an invoice shortly. Once the payment is received, the audit processing starts and the PDF report will be sent to the email provided.',
       back: 'Back to edit',
-      submitOrder: 'Order now for the START price €99',
+      submitOrder: 'Order now for the START price €199',
       doneEyebrow: 'Order received',
       doneTitle: 'Done. The order is in the system.',
       doneText: 'The order has been received. You will receive an invoice shortly. Once the payment is received, you can expect the web audit to be processed and sent to you.',
@@ -672,7 +672,7 @@
     $('#orderNote', orderModal).placeholder = orderActiveLang === 'en' ? 'Anything important before the audit?' : 'Co je dobré vědět před auditem?';
     const currency = $('#orderCurrency', orderModal);
     if (currency) currency.value = orderActiveLang === 'en' ? 'EUR' : 'CZK';
-    const price = orderActiveLang === 'en' ? '€99' : '2 490 Kč';
+    const price = orderActiveLang === 'en' ? '€199' : '4 980 Kč';
     $('[data-i18n="price"]', orderModal).textContent = price;
     $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the START price ${price}` : `Objednat nyní za START cenu ${price}`;
     updateOrderCustomerTypeUI();
@@ -732,7 +732,7 @@
     if (/^\d+$/.test(v)) return /^\d{8}$/.test(v);
     return /^[A-Za-z0-9 .\-_/]{3,32}$/.test(v);
   }
-  function getOrderPrice(currency) { return currency === 'EUR' ? '€99' : '2 490 Kč'; }
+  function getOrderPrice(currency) { return currency === 'EUR' ? '€199' : '4 980 Kč'; }
   function createOrderId(date) {
     const pad = (n) => String(n).padStart(2, '0');
     const rand = Math.random().toString(36).slice(2, 7).toUpperCase();
