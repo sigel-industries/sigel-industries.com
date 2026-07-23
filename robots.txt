@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sigel-industries.com/sitemap.xml/
+Sitemap: https://sigel-industries.com/sitemap.xml
