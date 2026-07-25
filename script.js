@@ -339,7 +339,7 @@
           ['Kdy dává smysl', 'Když web má návštěvnost, ale málo poptávek, objednávek nebo jasných akcí.'],
           ['Co se kontroluje', 'Jasnost nabídky, CTA, důvěryhodnost, mobilní cesta a komunikační bariéry.'],
           ['Typický výstup', 'Prioritní doporučení, která oddělí kosmetiku od míst s reálným dopadem.']
-        ], cta: 'Vyzkoušet audit za beta cenu'
+        ], cta: 'Objednat audit za 4 980 Kč'
       },
       'problem-marketing': {
         kicker: 'Co to řeší', title: 'Marketing běží, výsledky slabé',
@@ -394,14 +394,14 @@
           ['Vlastní analytická logika', 'Systém pracuje s pravidly, váhami, prioritami a scoringem, aby bylo jasné, co má reálný dopad.'],
           ['UX a komunikační heuristiky', 'Audit sleduje, kde návštěvník chápe nabídku, kde váhá a kde může ztrácet důvěru.'],
           ['Interpretační vrstva', 'Nad daty vzniká interpretace značky, zákaznických archetypů a komunikace k různým typům zákazníků.'],
-          ['Ruční kontrola v beta režimu', 'Výstup před odesláním prochází kontrolou, aby nepůsobil genericky a měl jasné priority.']
-        ], cta: 'Vyzkoušet audit za beta cenu'
+          ['Ruční kontrola výstupu', 'Každý report před odesláním prochází osobní kontrolou, aby měl jasné priority a praktický smysl.']
+        ], cta: 'Objednat audit za 4 980 Kč'
       },
       'use-web-audit': {
         kicker: 'Dostupné', title: 'Web Intelligence Audit',
         lead: 'Základní produkt SIGELu: detailní analytický audit jednoho webu před reklamou, redesignem nebo obchodním rozhodnutím.',
         items: [
-          ['Obsahuje', 'Techniku, SEO, UX, komunikaci, archetyp značky, zákaznické archetypy a roadmapu.'],
+          ['Obsahuje', 'Desktopové a mobilní Lighthouse metriky, Core Web Vitals, odkazy a CTA, přístupnost, komunikaci nabídky, AI připravenost, archetypový playbook, roadmapu a evidence data.'],
           ['Hodí se pro', 'Firmy, freelancery, menší týmy nebo projekty, které potřebují jasný diagnostický vstup.'],
           ['Výstup', 'Vizuální PDF report s prioritami a doporučeními.']
         ], cta: 'Získat Web Intelligence Audit'
@@ -435,14 +435,14 @@
       }
     },
     en: {
-      'problem-leads': { kicker:'What it solves', title:'Too few enquiries from the website', lead:'A website can be technically fine and still fail to persuade. Sigel looks for places where visitors lose clarity, trust or the next step.', items:[['When it helps','When the site has traffic but few enquiries, orders or meaningful actions.'],['What is checked','Offer clarity, CTA, trust, mobile path and communication barriers.'],['Typical output','Priorities separating cosmetic changes from things with real impact.']], cta:'Try the audit at beta price' },
+      'problem-leads': { kicker:'What it solves', title:'Too few enquiries from the website', lead:'A website can be technically fine and still fail to persuade. Sigel looks for places where visitors lose clarity, trust or the next step.', items:[['When it helps','When the site has traffic but few enquiries, orders or meaningful actions.'],['What is checked','Offer clarity, CTA, trust, mobile path and communication barriers.'],['Typical output','Priorities separating cosmetic changes from things with real impact.']], cta:'Order the audit for €199' },
       'problem-marketing': { kicker:'What it solves', title:'Marketing is running, results are weak', lead:'Before raising ad spend, it is worth checking whether the landing website can actually support a decision.', items:[['When it helps','Before advertising, during weak conversion or when campaigns send traffic without results.'],['What is checked','Landing sections, speed, CTA, proof, trust and mismatch between ads and the website.'],['Typical output','A list of barriers that may block performance before the campaign itself.']], cta:'Check the website before advertising' },
       'problem-redesign': { kicker:'What it solves', title:'Redesign without a clear brief', lead:'A redesign without diagnostics often only changes visuals. Sigel helps define what the new website should actually fix.', items:[['When it helps','Before a redesign, agency brief or decision on what to change.'],['What is checked','Structure, offer communication, trust, UX, brand archetype and decision path.'],['Typical output','A redesign input focused on function, not decoration.']], cta:'Get redesign input' },
       'problem-offer': { kicker:'What it solves', title:'The offer is good, people do not get it', lead:'Sometimes the product is not the problem. The problem is how the value is explained.', items:[['When it helps','When customers do not understand the value, price, difference or reason to continue.'],['What is checked','Offer language, proof, brand archetype and customer motivations.'],['Typical output','Recommendations for clarifying the offer for different customer types.']], cta:'Clarify website communication' },
       'problem-strategy': { kicker:'What it solves', title:'The business is losing momentum', lead:'Websites often stay in the past while the company moves on. The audit checks whether communication still fits the business direction.', items:[['When it helps','During stagnation, changed offer, new target group or before a strategic decision.'],['What is checked','Offer fit, positioning, archetype, customer segments and priority risks.'],['Typical output','A roadmap of what to change first.']], cta:'Check website strategy' },
       'problem-agency': { kicker:'What it solves', title:'Fast client input', lead:'An agency does not have to start from a blank page. Sigel can provide an external diagnostic input for consulting, redesign or strategy.', items:[['When it helps','Before a first client conversation, audit, recommendation or redesign brief.'],['What is checked','Tech, UX, communication, trust, archetypes and priorities in one input.'],['Typical output','A fast report usable as internal or client-facing input.']], cta:'Discuss pilot cooperation' },
-      'system-process': { kicker:'Inside the system', title:'How Sigel builds the output', lead:'SIGEL Web Intelligence Audit is not a pure AI text or a generic checklist. It is an analytical system that collects website signals, evaluates them through its own scoring, rules, weights and UX heuristics, and only then turns them into a readable report.', items:[['Signal collection','Technical, SEO, structure, content, CTA, trust and offer communication signals.'],['Own analytical logic','The system works with rules, weights, priorities and scoring so it is clear what has real impact.'],['UX and communication heuristics','The audit checks where visitors understand the offer, hesitate, lose trust or fail to find the next step.'],['Interpretation layer','The data is interpreted through brand, customer archetypes and communication patterns.'],['Human review in beta mode','Before delivery, the output is reviewed so it does not feel generic and has clear priorities.']], cta:'Try the audit at beta price' },
-      'use-web-audit': { kicker:'Available', title:'Web Intelligence Audit', lead:'The core SIGEL product: a detailed analytical audit of one website before advertising, redesign or a business decision.', items:[['Includes','Tech, SEO, UX, communication, brand archetype, customer archetypes and roadmap.'],['Useful for','Companies, freelancers, small teams or projects needing clear diagnostic input.'],['Output','A visual PDF report with priorities and recommendations.']], cta:'Get Web Intelligence Audit' },
+      'system-process': { kicker:'Inside the system', title:'How Sigel builds the output', lead:'SIGEL Web Intelligence Audit is not a pure AI text or a generic checklist. It is an analytical system that collects website signals, evaluates them through its own scoring, rules, weights and UX heuristics, and only then turns them into a readable report.', items:[['Signal collection','Technical, SEO, structure, content, CTA, trust and offer communication signals.'],['Own analytical logic','The system works with rules, weights, priorities and scoring so it is clear what has real impact.'],['UX and communication heuristics','The audit checks where visitors understand the offer, hesitate, lose trust or fail to find the next step.'],['Interpretation layer','The data is interpreted through brand, customer archetypes and communication patterns.'],['Human review of the output','Every report is personally reviewed before delivery so it has clear priorities and practical value.']], cta:'Order the audit for €199' },
+      'use-web-audit': { kicker:'Available', title:'Web Intelligence Audit', lead:'The core SIGEL product: a detailed analytical audit of one website before advertising, redesign or a business decision.', items:[['Includes','Desktop and mobile Lighthouse metrics, Core Web Vitals, links and CTA, accessibility, offer communication, AI readiness, an archetype playbook, roadmap and evidence data.'],['Useful for','Companies, freelancers, small teams or projects needing clear diagnostic input.'],['Output','A visual PDF report with priorities and recommendations.']], cta:'Get Web Intelligence Audit' },
       'use-agency': { kicker:'Pilot', title:'Agency input', lead:'The same diagnostic base packaged for agency use: client consultation, redesign, SEO or content strategy.', items:[['Includes','External view of the client website, priorities and input for recommendations.'],['Useful for','Agencies that want a faster starting point without full manual diagnostics from zero.'],['Output','Report or internal input by agreement.']], cta:'Discuss pilot cooperation' },
       'use-lead-research': { kicker:'Pilot', title:'Lead Research', lead:'A research layer for finding relevant company websites and public contacts in a segment, location or custom market selection.', items:[['Includes','URL collection, filtering, basic validation and contact preparation for B2B research.'],['Useful for','Sales preparation, market segmentation, prospect lists or follow-up audits.'],['Output','Structured list of websites and contacts based on the brief.']], cta:'Discuss segment selection' },
       'use-benchmark': { kicker:'In preparation', title:'Segment benchmark', lead:'Comparison of multiple websites in one industry, location or market selection. This is a layer above single audits.', items:[['Includes','Score comparison, recurring patterns, differences between players and segment signals.'],['Useful for','Market overview, internal decision-making, sales selection or strategy preparation.'],['Output','Benchmark map and a summary of key findings.']], cta:'Ask about benchmark' }
@@ -521,7 +521,7 @@
       eyebrow: 'SIGEL Web Intelligence Audit',
       title: 'Objednávka Sigel Web Audit',
       lead: 'Vyplňte údaje pro objednávku. Před odesláním ještě uvidíte souhrn ke kontrole.',
-      priceLabel: 'Start cena',
+      priceLabel: 'Startovní cena',
       price: '4 980 Kč',
       customerCompany: 'Firma / podnikatel',
       customerCompanyHint: 'Pro fakturaci na firmu nebo IČO.',
@@ -550,7 +550,7 @@
       afterSubmitTitle: 'Co bude následovat',
       afterSubmitText: 'Po odeslání objednávky vám brzy dorazí faktura. Po zaplacení a připsání platby začne zpracování auditu a následně obdržíte PDF report na uvedený e-mail.',
       back: 'Zpět upravit',
-      submitOrder: 'Objednat nyní za START cenu 4 980 Kč',
+      submitOrder: 'Objednat nyní za startovní cenu 4 980 Kč',
       doneEyebrow: 'Objednávka přijata',
       doneTitle: 'Hotovo. Objednávka je v systému.',
       doneText: 'Objednávka byla přijata. Brzy vám dorazí faktura a po připsání platby můžete očekávat zpracování a zaslání web auditu.',
@@ -571,7 +571,7 @@
       eyebrow: 'SIGEL Web Intelligence Audit',
       title: 'Sigel Web Audit Order',
       lead: 'Fill in the order details. You will see a summary before submitting.',
-      priceLabel: 'Start price',
+      priceLabel: 'Launch price',
       price: '€199',
       customerCompany: 'Company / entrepreneur',
       customerCompanyHint: 'For company billing or company ID.',
@@ -600,7 +600,7 @@
       afterSubmitTitle: 'What happens next',
       afterSubmitText: 'After submitting the order, you will receive an invoice shortly. Once the payment is received, the audit processing starts and the PDF report will be sent to the email provided.',
       back: 'Back to edit',
-      submitOrder: 'Order now for the START price €199',
+      submitOrder: 'Order now for the launch price €199',
       doneEyebrow: 'Order received',
       doneTitle: 'Done. The order is in the system.',
       doneText: 'The order has been received. You will receive an invoice shortly. Once the payment is received, you can expect the web audit to be processed and sent to you.',
@@ -674,7 +674,7 @@
     if (currency) currency.value = orderActiveLang === 'en' ? 'EUR' : 'CZK';
     const price = orderActiveLang === 'en' ? '€199' : '4 980 Kč';
     $('[data-i18n="price"]', orderModal).textContent = price;
-    $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the START price ${price}` : `Objednat nyní za START cenu ${price}`;
+    $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the launch price ${price}` : `Objednat nyní za startovní cenu ${price}`;
     updateOrderCustomerTypeUI();
     updateOrderLegalLinks();
   }
@@ -719,7 +719,7 @@
     const v = String(value || '').trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return false;
     const tld = v.split('.').pop().toLowerCase();
-    return tld.length >= 2 && tld.length <= 6;
+    return tld.length >= 2;
   }
   function validOrderPhone(value) {
     const v = String(value || '').trim();
@@ -872,7 +872,7 @@
     $('#orderCurrency', orderModal)?.addEventListener('change', (event) => {
       const price = getOrderPrice(event.target.value);
       $('[data-i18n="price"]', orderModal).textContent = price;
-      $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the START price ${price}` : `Objednat nyní za START cenu ${price}`;
+      $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the launch price ${price}` : `Objednat nyní za startovní cenu ${price}`;
     });
     $$('[data-order-open]').forEach((btn) => btn.addEventListener('click', (e) => { e.preventDefault(); openOrderModal(btn.getAttribute('data-order-lang') || lang); }));
   }

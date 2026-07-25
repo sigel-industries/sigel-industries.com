@@ -489,7 +489,7 @@ details p { max-width: 660px; padding-bottom: 20px; color: var(--ink-2); font-si
   font-size: 12.5px;
   line-height: 1.55;
 }
-.beta-note {
+.launch-note {
   max-width: 590px;
   margin: -14px auto 26px;
   color: var(--ink-3);
@@ -760,6 +760,39 @@ details p { max-width: 660px; padding-bottom: 20px; color: var(--ink-2); font-si
   color: var(--cold);
   font-family: "JetBrains Mono", monospace;
   font-size: 10px;
+}
+.audit-evidence {
+  margin-top: 24px;
+  padding: 24px 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--r3);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(77,223,200,.06), transparent 32%),
+    radial-gradient(circle at 100% 100%, rgba(126,107,255,.055), transparent 38%),
+    rgba(5,6,10,.46);
+}
+.audit-evidence-head { display: block; }
+.audit-evidence-head .tag { margin: 0; }
+.audit-evidence-head h3 {
+  margin-top: 10px;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 500;
+}
+.audit-evidence-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+.audit-evidence-grid span {
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-2);
+  background: rgba(255,255,255,.018);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: .02em;
 }
 .status-pill {
   align-self: flex-start;
@@ -2215,6 +2248,15 @@ section,
   .order-box {
     padding: 34px 18px;
     text-align: left;
+  }
+
+  .audit-evidence {
+    padding: 22px 18px;
+    border-radius: 22px;
+  }
+
+  .audit-evidence-grid span {
+    font-size: 10px;
   }
 
   .order-steps,
