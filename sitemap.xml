@@ -1,50 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <url>
-    <loc>https://sigel-industries.com/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/" />
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://sigel-industries.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/" />
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://sigel-industries.com/obchodni-podminky.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/obchodni-podminky.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/terms.html" />
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://sigel-industries.com/en/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/obchodni-podminky.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/terms.html" />
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://sigel-industries.com/ochrana-osobnich-udaju.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/ochrana-osobnich-udaju.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/privacy-policy.html" />
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://sigel-industries.com/en/privacy-policy.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/ochrana-osobnich-udaju.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/privacy-policy.html" />
-    <priority>0.3</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://sigel-industries.com/</loc><lastmod>2026-07-27</lastmod><xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/"/></url>
+  <url><loc>https://sigel-industries.com/en/</loc><lastmod>2026-07-27</lastmod><xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/"/></url>
+  <url><loc>https://sigel-industries.com/audit-webu/</loc><lastmod>2026-07-27</lastmod></url>
+  <url><loc>https://sigel-industries.com/proc-web-nekonvertuje/</loc><lastmod>2026-07-27</lastmod></url>
+  <url><loc>https://sigel-industries.com/audit-webu-pred-redesignem/</loc><lastmod>2026-07-27</lastmod></url>
+  <url><loc>https://sigel-industries.com/seo-audit-vs-komplexni-audit-webu/</loc><lastmod>2026-07-27</lastmod></url>
+  <url><loc>https://sigel-industries.com/obchodni-podminky.html</loc></url>
+  <url><loc>https://sigel-industries.com/en/terms.html</loc></url>
+  <url><loc>https://sigel-industries.com/ochrana-osobnich-udaju.html</loc></url>
+  <url><loc>https://sigel-industries.com/en/privacy-policy.html</loc></url>
 </urlset>

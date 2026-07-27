@@ -2775,3 +2775,12 @@ section,
   object-fit: contain !important;
   border-radius: 10px !important;
 }
+
+/* SEO / MOBILE LCP: above-the-fold content must be paintable without waiting for JS reveal. */
+@media (max-width: 760px) {
+  .hero .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
