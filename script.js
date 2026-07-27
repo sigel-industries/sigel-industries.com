@@ -151,6 +151,13 @@
       komunikace: { score: '82', kicker: 'Communication', title: 'Offer clarity and trust.', text: 'Evaluation of whether visitors quickly understand the offer, the reasons to buy and the next step.', items: ['Offer', 'Trust', 'CTA', 'Proof'], bars: [52,74,45,82,64,58,88,70] },
       archetypy: { score: '86', kicker: 'Archetypes', title: 'Brand and customer motivations.', text: 'Interpretation of the brand archetype and customer archetypes: who needs proof, clarity or vision.', items: ['Brand', 'Motives', 'Objections', 'Tone'], bars: [62,78,88,56,92,66,80,72] },
       roadmapa: { score: '90', kicker: 'Roadmap', title: 'What to solve first, second and later.', text: 'A priority plan separating cosmetic changes from things with real business impact.', items: ['Priority', 'Impact', 'Speed', 'Next step'], bars: [92,64,80,70,88,76,58,95] }
+    },
+    de: {
+      dashboard: { score: '94', kicker: 'Dashboard', title: 'Score, Risiken und Entscheidungsrichtung.', text: 'Der erste Teil verbindet Website-Zustand, Hauptrisiken und geschäftliche Wirkung zu einer schnellen Orientierung.', items: ['Score', 'Risiken', 'Geschäftliche Wirkung', 'Roadmap'], bars: [45,70,52,90,75,95,62,82] },
+      technika: { score: '99', kicker: 'Technik', title: 'Performance, Indexierbarkeit und technische Grenzen.', text: 'Harte Prüfung der Grundlagen: Geschwindigkeit, technischer Zustand, Metadaten, Sitemap, robots und mobile Nutzbarkeit.', items: ['Geschwindigkeit', 'Indexierung', 'Metadaten', 'Mobil'], bars: [86,98,76,92,70,88,54,78] },
+      komunikace: { score: '82', kicker: 'Kommunikation', title: 'Angebotsklarheit und Vertrauen.', text: 'Bewertung, ob Besucher das Angebot, die Kaufgründe und den nächsten Schritt schnell verstehen.', items: ['Angebot', 'Vertrauen', 'CTA', 'Belege'], bars: [52,74,45,82,64,58,88,70] },
+      archetypy: { score: '86', kicker: 'Archetypen', title: 'Marke und Kundenmotive.', text: 'Interpretation von Marken- und Kundenarchetypen: Wer benötigt Belege, Klarheit oder Vision.', items: ['Marke', 'Motive', 'Einwände', 'Ton'], bars: [62,78,88,56,92,66,80,72] },
+      roadmapa: { score: '90', kicker: 'Roadmap', title: 'Was zuerst, danach und später zu lösen ist.', text: 'Ein priorisierter Plan, der kosmetische Änderungen von Punkten mit echter geschäftlicher Wirkung trennt.', items: ['Priorität', 'Wirkung', 'Tempo', 'Nächster Schritt'], bars: [92,64,80,70,88,76,58,95] }
     }
   };
 
@@ -466,6 +473,19 @@
       'use-agency': { kicker:'Pilot', title:'Agency input', lead:'The same diagnostic base packaged for agency use: client consultation, redesign, SEO or content strategy.', items:[['Includes','External view of the client website, priorities and input for recommendations.'],['Useful for','Agencies that want a faster starting point without full manual diagnostics from zero.'],['Output','Report or internal input by agreement.']], cta:'Discuss pilot cooperation' },
       'use-lead-research': { kicker:'Pilot', title:'Lead Research', lead:'A research layer for finding relevant company websites and public contacts in a segment, location or custom market selection.', items:[['Includes','URL collection, filtering, basic validation and contact preparation for B2B research.'],['Useful for','Sales preparation, market segmentation, prospect lists or follow-up analysis.'],['Output','Structured list of websites and contacts based on the brief.']], cta:'Discuss segment selection' },
       'use-benchmark': { kicker:'In preparation', title:'Segment benchmark', lead:'Comparison of multiple websites in one industry, location or market selection. This is a layer above individual reports.', items:[['Includes','Score comparison, recurring patterns, differences between players and segment signals.'],['Useful for','Market overview, internal decision-making, sales selection or strategy preparation.'],['Output','Benchmark map and a summary of key findings.']], cta:'Ask about benchmark' }
+    },
+    de: {
+      'problem-leads': { kicker:'Was es löst', title:'Zu wenige Anfragen über die Website', lead:'Eine Website kann technisch sauber sein und trotzdem nicht überzeugen. SIGEL sucht Stellen, an denen Besucher Klarheit, Vertrauen oder den nächsten Schritt verlieren.', items:[['Wann es hilft','Wenn die Website Traffic hat, aber wenige Anfragen, Bestellungen oder sinnvolle Aktionen erzeugt.'],['Was geprüft wird','Angebotsklarheit, CTA, Vertrauen, mobiler Weg und Kommunikationsbarrieren.'],['Typischer Output','Prioritäten, die Kosmetik von Punkten mit echter Wirkung trennen.']], cta:'Web-Intelligence-Report für 199 € bestellen' },
+      'problem-marketing': { kicker:'Was es löst', title:'Marketing läuft, die Ergebnisse bleiben schwach', lead:'Bevor das Werbebudget steigt, sollte geprüft werden, ob die Landingpage eine Entscheidung überhaupt unterstützt.', items:[['Wann es hilft','Vor Werbung, bei schwacher Conversion oder wenn Kampagnen Traffic ohne Ergebnis senden.'],['Was geprüft wird','Landingbereiche, Geschwindigkeit, CTA, Belege, Vertrauen und Abweichungen zwischen Werbung und Website.'],['Typischer Output','Eine Liste von Barrieren, die Leistung schon vor der Kampagne blockieren können.']], cta:'Website vor Werbung prüfen' },
+      'problem-redesign': { kicker:'Was es löst', title:'Redesign ohne klares Briefing', lead:'Ein Redesign ohne Diagnostik verändert oft nur die Optik. SIGEL definiert, was die neue Website tatsächlich beheben soll.', items:[['Wann es hilft','Vor Redesign, Agenturbriefing oder der Entscheidung, was geändert werden soll.'],['Was geprüft wird','Struktur, Angebotskommunikation, Vertrauen, UX, Markenarchetyp und Entscheidungsweg.'],['Typischer Output','Eine Redesign-Grundlage mit Fokus auf Funktion statt Dekoration.']], cta:'Grundlage für das Redesign erhalten' },
+      'problem-offer': { kicker:'Was es löst', title:'Das Angebot ist gut, wird aber nicht verstanden', lead:'Manchmal ist nicht das Produkt das Problem, sondern die Erklärung seines Werts.', items:[['Wann es hilft','Wenn Kunden Wert, Preis, Unterschied oder Grund zum Fortfahren nicht verstehen.'],['Was geprüft wird','Angebotssprache, Belege, Markenarchetyp und Kundenmotive.'],['Typischer Output','Empfehlungen zur Präzisierung des Angebots für unterschiedliche Kundentypen.']], cta:'Website-Kommunikation präzisieren' },
+      'problem-strategy': { kicker:'Was es löst', title:'Die Website passt nicht mehr zum Unternehmen', lead:'Websites bleiben oft in der Vergangenheit, während sich das Unternehmen weiterentwickelt. SIGEL prüft, ob Kommunikation, Angebot und Zielgruppen noch zur Geschäftsrichtung passen.', items:[['Wann es hilft','Bei Stagnation, verändertem Angebot, neuer Zielgruppe oder vor einer strategischen Entscheidung.'],['Was geprüft wird','Angebotspassung, Positionierung, Archetyp, Kundensegmente und prioritäre Risiken.'],['Typischer Output','Eine Roadmap dessen, was zuerst geändert werden sollte.']], cta:'Website-Strategie prüfen' },
+      'problem-agency': { kicker:'Was es löst', title:'Schnelle Grundlage für eine Entscheidung', lead:'Inhaber, Marketingteams und Agenturen müssen nicht bei Meinungen beginnen. SIGEL liefert externe Diagnostik als Input für Beratung, Redesign, Kampagnen oder Strategie.', items:[['Wann es hilft','Vor Beratung, Empfehlungen, Kampagnen, Redesign oder der nächsten Budgetentscheidung.'],['Was geprüft wird','Technik, UX, Kommunikation, Vertrauen, Archetypen und Prioritäten in einem Input.'],['Typischer Output','Ein schneller Report als interne Entscheidungsgrundlage oder Kunden-Input.']], cta:'Pilot-Zusammenarbeit besprechen' },
+      'system-process': { kicker:'Analytischer Kern', title:'So erstellt SIGEL den Web-Intelligence-Output', lead:'SIGEL Web Intelligence ist weder reiner KI-Text noch eine generische Checkliste. Das Analysesystem sammelt Website-Signale, bewertet sie mit eigenem Scoring, Regeln, Gewichtungen und UX-Heuristiken und übersetzt sie in einen geschäftlich nutzbaren Report.', items:[['Signalerfassung','Technik, SEO, Struktur, Inhalt, CTA, Vertrauen und Angebotskommunikation.'],['Eigene Analyselogik','Regeln, Gewichtungen, Prioritäten und Scoring machen sichtbar, was echte Wirkung hat.'],['UX- und Kommunikationsheuristiken','Das System prüft, wo Besucher das Angebot verstehen, zögern, Vertrauen verlieren oder den nächsten Schritt nicht finden.'],['Interpretationsschicht','Daten werden über Marke, Kundenarchetypen und Kommunikationsmuster interpretiert.'],['Persönliche Prüfung','Jeder Report wird vor der Lieferung geprüft, damit Prioritäten klar und praktisch nutzbar sind.']], cta:'Web-Intelligence-Report für 199 € bestellen' },
+      'use-web-audit': { kicker:'Verfügbar', title:'Web-Intelligence-Report', lead:'Das Kernprodukt von SIGEL: Business Intelligence für eine konkrete Website vor Werbung, Redesign oder einer Geschäftsentscheidung.', items:[['Enthält','Lighthouse-Metriken für Desktop und Mobilgeräte, Core Web Vitals, Links und CTA, Barrierefreiheit, Angebotskommunikation, KI-Bereitschaft, Archetypen-Playbook, Roadmap und Evidenzdaten.'],['Geeignet für','Unternehmen, Freelancer, kleine Teams oder Projekte, die einen klaren diagnostischen Input benötigen.'],['Output','Visueller PDF-Report mit Prioritäten und Empfehlungen.']], cta:'Web-Intelligence-Report bestellen' },
+      'use-agency': { kicker:'Pilot', title:'Agentur-Input', lead:'Dieselbe diagnostische Basis, verpackt für Agenturnutzung: Kundenberatung, Redesign, SEO oder Content-Strategie.', items:[['Enthält','Externe Sicht auf die Kundenwebsite, Prioritäten und Input für Empfehlungen.'],['Geeignet für','Agenturen, die einen schnelleren Startpunkt ohne vollständige manuelle Diagnostik von null benötigen.'],['Output','Report oder interner Input nach Absprache.']], cta:'Pilot-Zusammenarbeit besprechen' },
+      'use-lead-research': { kicker:'Pilot', title:'Lead Research', lead:'Eine Research-Ebene zur Suche relevanter Unternehmenswebsites und öffentlicher Kontakte in Segment, Region oder individueller Marktauswahl.', items:[['Enthält','URL-Sammlung, Filterung, grundlegende Validierung und Kontaktvorbereitung für B2B-Research.'],['Geeignet für','Vertriebsvorbereitung, Marktsegmentierung, Interessentenlisten oder Folgeanalysen.'],['Output','Strukturierte Liste von Websites und Kontakten nach Briefing.']], cta:'Segmentauswahl besprechen' },
+      'use-benchmark': { kicker:'In Vorbereitung', title:'Segment-Benchmark', lead:'Vergleich mehrerer Websites in einer Branche, Region oder Marktauswahl. Diese Ebene liegt über einzelnen Reports.', items:[['Enthält','Score-Vergleich, wiederkehrende Muster, Unterschiede zwischen Marktteilnehmern und Segmentsignale.'],['Geeignet für','Marktüberblick, interne Entscheidungen, Vertriebsselektion oder Strategievorbereitung.'],['Output','Benchmark-Karte und Zusammenfassung der wichtigsten Erkenntnisse.']], cta:'Benchmark anfragen' }
     }
   };
 
@@ -488,7 +508,7 @@
     if (modalKicker) modalKicker.textContent = data.kicker || 'Detail';
     if (modalTitle) modalTitle.textContent = data.title || '';
     if (modalLead) modalLead.textContent = data.lead || '';
-    if (modalCta) modalCta.textContent = data.cta || (lang === 'en' ? 'Get the Web Intelligence report' : (lang === 'sk' ? 'Získať Web Intelligence report' : 'Získat Web Intelligence report'));
+    if (modalCta) modalCta.textContent = data.cta || (lang === 'de' ? 'Web-Intelligence-Report bestellen' : (lang === 'en' ? 'Get the Web Intelligence report' : (lang === 'sk' ? 'Získať Web Intelligence report' : 'Získat Web Intelligence report')));
     if (modalGrid) {
       modalGrid.innerHTML = (data.items || []).map(([title, text], index) => `
         <article class="${index === 0 ? 'is-featured' : ''}">
@@ -499,7 +519,7 @@
       `).join('');
     }
     if (modalNote) {
-      modalNote.textContent = data.note || (lang === 'en' ? 'Note: The report is diagnostic decision support. It does not guarantee revenue growth, search ranking improvements or campaign results.' : (lang === 'sk' ? 'Poznámka: Report je diagnostický podklad pre rozhodnutie. Negarantuje zvýšenie tržieb, pozícií vo vyhľadávaní ani výsledkov kampaní.' : 'Poznámka: Report je diagnostický podklad pro rozhodnutí. Negarantuje zvýšení tržeb, pozic ve vyhledávání ani výsledků kampaní.')); 
+      modalNote.textContent = data.note || (lang === 'de' ? 'Hinweis: Der Report ist eine diagnostische Entscheidungsgrundlage. Er garantiert weder Umsatzwachstum noch bessere Suchpositionen oder Kampagnenergebnisse.' : (lang === 'en' ? 'Note: The report is diagnostic decision support. It does not guarantee revenue growth, search ranking improvements or campaign results.' : (lang === 'sk' ? 'Poznámka: Report je diagnostický podklad pre rozhodnutie. Negarantuje zvýšenie tržieb, pozícií vo vyhľadávaní ani výsledkov kampaní.' : 'Poznámka: Report je diagnostický podklad pro rozhodnutí. Negarantuje zvýšení tržeb, pozic ve vyhledávání ani výsledků kampaní.'))); 
     }
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
@@ -533,7 +553,7 @@
   const orderSummaryStatus = $('#summaryStatus');
   const orderSummaryCard = $('#summaryCard');
   const orderDoneMeta = $('#doneMeta');
-  let orderActiveLang = ['cs', 'sk', 'en'].includes(lang) ? lang : 'cs';
+  let orderActiveLang = ['cs', 'sk', 'en', 'de'].includes(lang) ? lang : 'cs';
   let pendingOrderPayload = null;
 
   const orderCopy = {
@@ -657,6 +677,27 @@
       sendError: 'Sending failed. Try again or contact us by email.',
       closeLabel: 'Close form',
       summaryLabels: { customerType:'Customer type', website:'Website', company:'Company / order name', ico:'Company ID', dic:'VAT ID', contactPerson:'Contact person', email:'Email', phone:'Phone', billing:'Billing address', reportLanguage:'Report language', price:'Price', note:'Note' }
+    },
+    de: {
+      eyebrow: 'SIGEL Web Intelligence',
+      title: 'Web-Intelligence-Report bestellen',
+      lead: 'Füllen Sie die Bestelldaten aus. Vor dem Absenden sehen Sie eine Zusammenfassung.',
+      priceLabel: 'Einführungspreis', price: '199 €',
+      customerCompany: 'Unternehmen / Gewerbe', customerCompanyHint: 'Für die Rechnungsstellung an ein Unternehmen oder eine USt-IdNr.',
+      customerPerson: 'Privatperson', customerPersonHint: 'Ohne USt-IdNr., nur Kontakt- und Rechnungsdaten.',
+      companyLabelPerson: 'Name des Auftraggebers', websiteLabel: 'Zu analysierende Website-URL', websiteHint: 'Geben Sie einfach die Domain ein. https:// wird automatisch ergänzt.',
+      companyLabel: 'Unternehmen / Auftraggeber', contactLabel: 'Ansprechperson', icoLabel: 'Unternehmensnummer (optional)', dicLabel: 'USt-IdNr.',
+      billingLabel: 'Rechnungsadresse', emailLabel: 'E-Mail für Rechnung und Report', phoneLabel: 'Telefon', reportLangLabel: 'Reportsprache', currencyLabel: 'Bestellwährung',
+      noteLabel: 'Kontext zur Analyse (optional)', termsConsent: 'Ich stimme den AGB von SIGEL Web Intelligence zu.', privacyConsent: 'Ich habe die Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten zur Kenntnis genommen.',
+      continue: 'Weiter zur Zusammenfassung', secureNote: 'Die Bestellung wird an das SIGEL-System übermittelt.', summaryEyebrow: 'Bestellung prüfen', summaryTitle: 'Zusammenfassung vor dem Absenden',
+      summaryLead: 'Prüfen Sie Ihre Angaben. Nach der Bestätigung wird die Bestellung erstellt und eine Rechnung versendet.', afterSubmitTitle: 'Wie es weitergeht',
+      afterSubmitText: 'Nach dem Absenden erhalten Sie in Kürze eine Rechnung. Sobald die Zahlung bestätigt ist, beginnt die Website-Analyse und der PDF-Report wird an die angegebene E-Mail-Adresse gesendet.',
+      back: 'Zurück zum Bearbeiten', submitOrder: 'Jetzt zum Einführungspreis von 199 € bestellen', doneEyebrow: 'Bestellung eingegangen', doneTitle: 'Erledigt. Ihre Bestellung ist im System.',
+      doneText: 'Ihre Bestellung ist eingegangen. Sie erhalten in Kürze eine Rechnung. Nach bestätigtem Zahlungseingang beginnt die Erstellung Ihres Web-Intelligence-Reports.', closeDone: 'Schließen', newOrder: 'Neue Bestellung',
+      websiteError: 'Geben Sie eine gültige Website-URL ein.', emailError: 'Geben Sie eine gültige E-Mail-Adresse ein.', requiredError: 'Dieses Feld ist erforderlich.', icoError: 'Prüfen Sie die angegebene Unternehmensnummer.',
+      phoneError: 'Die Telefonnummer scheint nicht gültig zu sein.', consentsError: 'AGB und Datenschutzinformationen müssen bestätigt werden.', sending: 'Bestellung wird gesendet …',
+      sendError: 'Das Senden ist fehlgeschlagen. Versuchen Sie es erneut oder schreiben Sie uns per E-Mail.', closeLabel: 'Formular schließen',
+      summaryLabels: { customerType:'Kundentyp', website:'Website', company:'Unternehmen / Auftraggeber', ico:'Unternehmensnummer', dic:'USt-IdNr.', contactPerson:'Ansprechperson', email:'E-Mail', phone:'Telefon', billing:'Rechnungsadresse', reportLanguage:'Reportsprache', price:'Preis', note:'Notiz' }
     }
   };
 
@@ -670,7 +711,10 @@
   function updateOrderLegalLinks() {
     const terms = $('[data-legal-link="terms"]', orderModal);
     const privacy = $('[data-legal-link="privacy"]', orderModal);
-    if (orderActiveLang === 'en') {
+    if (orderActiveLang === 'de') {
+      if (terms) { terms.href = '/en/terms.html'; terms.textContent = 'AGB (Englisch)'; }
+      if (privacy) { privacy.href = '/en/privacy-policy.html'; privacy.textContent = 'Datenschutzerklärung (Englisch)'; }
+    } else if (orderActiveLang === 'en') {
       if (terms) { terms.href = '/en/terms.html'; terms.textContent = 'Terms and Conditions'; }
       if (privacy) { privacy.href = '/en/privacy-policy.html'; privacy.textContent = 'Privacy Policy'; }
     } else if (orderActiveLang === 'sk') {
@@ -693,14 +737,14 @@
     const companyInput = $('#orderCompany', orderModal);
     if (type === 'person') {
       if (companyLabel) companyLabel.textContent = orderT('companyLabelPerson');
-      if (companyInput) companyInput.placeholder = orderActiveLang === 'en' ? 'Name and surname' : (orderActiveLang === 'sk' ? 'Meno a priezvisko' : 'Jméno a příjmení');
+      if (companyInput) companyInput.placeholder = orderActiveLang === 'de' ? 'Vor- und Nachname' : (orderActiveLang === 'en' ? 'Name and surname' : (orderActiveLang === 'sk' ? 'Meno a priezvisko' : 'Jméno a příjmení'));
     } else {
       if (companyLabel) companyLabel.textContent = orderT('companyLabel');
-      if (companyInput) companyInput.placeholder = orderActiveLang === 'en' ? 'Company name' : (orderActiveLang === 'sk' ? 'Názov firmy' : 'Název firmy');
+      if (companyInput) companyInput.placeholder = orderActiveLang === 'de' ? 'Unternehmensname' : (orderActiveLang === 'en' ? 'Company name' : (orderActiveLang === 'sk' ? 'Názov firmy' : 'Název firmy'));
     }
   }
   function applyOrderLanguage(nextLang) {
-    orderActiveLang = ['cs', 'sk', 'en'].includes(nextLang) ? nextLang : 'cs';
+    orderActiveLang = ['cs', 'sk', 'en', 'de'].includes(nextLang) ? nextLang : 'cs';
     $$('[data-i18n]', orderModal).forEach((el) => {
       const key = el.getAttribute('data-i18n');
       el.textContent = orderT(key);
@@ -708,19 +752,20 @@
     $('.sigel-order-close', orderModal)?.setAttribute('aria-label', orderT('closeLabel'));
     const isEn = orderActiveLang === 'en';
     const isSk = orderActiveLang === 'sk';
-    $('#orderWebsite', orderModal).placeholder = isEn ? 'example.com' : 'sigel-industries.com';
-    $('#orderEmail', orderModal).placeholder = isEn ? 'contact@company.com' : (isSk ? 'kontakt@firma.sk' : 'kontakt@firma.cz');
-    $('#orderContactPerson', orderModal).placeholder = isEn ? 'Name and surname' : (isSk ? 'Meno a priezvisko' : 'Jméno a příjmení');
-    $('#orderIco', orderModal).placeholder = isEn ? 'optional' : (isSk ? 'voliteľné' : 'volitelné');
-    $('#orderDic', orderModal).placeholder = isEn ? 'VAT ID / optional' : (isSk ? 'SK1234567890 / voliteľné' : 'CZ12345678 / volitelné');
-    $('#orderBilling', orderModal).placeholder = isEn ? 'Company name, street, city, ZIP, country...' : (isSk ? 'Názov, ulica, mesto, PSČ, štát...' : 'Název, ulice, město, PSČ, stát...');
-    $('#orderPhone', orderModal).placeholder = isSk ? '+421 900 000 000' : '+420 777 000 000';
-    $('#orderNote', orderModal).placeholder = isEn ? 'Anything useful to know about the website or current situation?' : (isSk ? 'Čo je dobré vedieť o webe alebo aktuálnej situácii?' : 'Co je dobré vědět o webu nebo aktuální situaci?');
+    const isDe = orderActiveLang === 'de';
+    $('#orderWebsite', orderModal).placeholder = (isEn || isDe) ? 'example.com' : 'sigel-industries.com';
+    $('#orderEmail', orderModal).placeholder = isDe ? 'kontakt@unternehmen.de' : (isEn ? 'contact@company.com' : (isSk ? 'kontakt@firma.sk' : 'kontakt@firma.cz'));
+    $('#orderContactPerson', orderModal).placeholder = isDe ? 'Vor- und Nachname' : (isEn ? 'Name and surname' : (isSk ? 'Meno a priezvisko' : 'Jméno a příjmení'));
+    $('#orderIco', orderModal).placeholder = (isEn || isDe) ? 'optional' : (isSk ? 'voliteľné' : 'volitelné');
+    $('#orderDic', orderModal).placeholder = isDe ? 'DE123456789 / optional' : (isEn ? 'VAT ID / optional' : (isSk ? 'SK1234567890 / voliteľné' : 'CZ12345678 / volitelné'));
+    $('#orderBilling', orderModal).placeholder = isDe ? 'Name, Straße, Ort, PLZ, Land ...' : (isEn ? 'Company name, street, city, ZIP, country...' : (isSk ? 'Názov, ulica, mesto, PSČ, štát...' : 'Název, ulice, město, PSČ, stát...'));
+    $('#orderPhone', orderModal).placeholder = isDe ? '+49 30 00000000' : (isSk ? '+421 900 000 000' : '+420 777 000 000');
+    $('#orderNote', orderModal).placeholder = isDe ? 'Was sollten wir über die Website oder die aktuelle Situation wissen?' : (isEn ? 'Anything useful to know about the website or current situation?' : (isSk ? 'Čo je dobré vedieť o webe alebo aktuálnej situácii?' : 'Co je dobré vědět o webu nebo aktuální situaci?'));
     const currency = $('#orderCurrency', orderModal);
-    if (currency) currency.value = (isEn || isSk) ? 'EUR' : 'CZK';
-    const price = (isEn || isSk) ? (isSk ? '199 €' : '€199') : '4 980 Kč';
+    if (currency) currency.value = (isEn || isSk || isDe) ? 'EUR' : 'CZK';
+    const price = (isEn || isSk || isDe) ? ((isSk || isDe) ? '199 €' : '€199') : '4 980 Kč';
     $('[data-i18n="price"]', orderModal).textContent = price;
-    $('#confirmOrder', orderModal).textContent = isEn ? `Order now for the launch price ${price}` : (isSk ? `Objednať teraz za štartovaciu cenu ${price}` : `Objednat nyní za startovní cenu ${price}`);
+    $('#confirmOrder', orderModal).textContent = isDe ? `Jetzt zum Einführungspreis von ${price} bestellen` : (isEn ? `Order now for the launch price ${price}` : (isSk ? `Objednať teraz za štartovaciu cenu ${price}` : `Objednat nyní za startovní cenu ${price}`));
     updateOrderCustomerTypeUI();
     updateOrderLegalLinks();
   }
@@ -778,7 +823,7 @@
     if (/^\d+$/.test(v)) return /^\d{8}$/.test(v);
     return /^[A-Za-z0-9 .\-_/]{3,32}$/.test(v);
   }
-  function getOrderPrice(currency) { return currency === 'EUR' ? (orderActiveLang === 'sk' ? '199 €' : '€199') : '4 980 Kč'; }
+  function getOrderPrice(currency) { return currency === 'EUR' ? ((orderActiveLang === 'sk' || orderActiveLang === 'de') ? '199 €' : '€199') : '4 980 Kč'; }
   function createOrderId(date) {
     const pad = (n) => String(n).padStart(2, '0');
     const rand = Math.random().toString(36).slice(2, 7).toUpperCase();
@@ -790,7 +835,7 @@
   function orderPayloadFromForm() {
     const data = Object.fromEntries(new FormData(orderForm).entries());
     const now = new Date();
-    const currency = data.currency || ((orderActiveLang === 'en' || orderActiveLang === 'sk') ? 'EUR' : 'CZK');
+    const currency = data.currency || ((orderActiveLang === 'en' || orderActiveLang === 'sk' || orderActiveLang === 'de') ? 'EUR' : 'CZK');
     return {
       id: createOrderId(now),
       createdAt: now.toISOString(),
@@ -837,8 +882,8 @@
   function renderOrderSummary(payload) {
     const L = orderLabels();
     const customerTypeLabel = payload.customerType === 'person'
-      ? (orderActiveLang === 'en' ? 'Individual' : (orderActiveLang === 'sk' ? 'Fyzická osoba' : 'Fyzická osoba'))
-      : (orderActiveLang === 'en' ? 'Company / entrepreneur' : (orderActiveLang === 'sk' ? 'Firma / podnikateľ' : 'Firma / podnikatel')); 
+      ? (orderActiveLang === 'de' ? 'Privatperson' : (orderActiveLang === 'en' ? 'Individual' : (orderActiveLang === 'sk' ? 'Fyzická osoba' : 'Fyzická osoba')))
+      : (orderActiveLang === 'de' ? 'Unternehmen / Gewerbe' : (orderActiveLang === 'en' ? 'Company / entrepreneur' : (orderActiveLang === 'sk' ? 'Firma / podnikateľ' : 'Firma / podnikatel'))); 
     const fields = [
       ['customerType', customerTypeLabel], ['website', payload.website], ['company', payload.company],
       ['ico', payload.ico || '—'], ['dic', payload.dic || '—'], ['contactPerson', payload.contactPerson || '—'],
