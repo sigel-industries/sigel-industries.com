@@ -1,13 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://sigel-industries.com/</loc><lastmod>2026-07-27</lastmod><xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/"/></url>
-  <url><loc>https://sigel-industries.com/en/</loc><lastmod>2026-07-27</lastmod><xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/"/></url>
-  <url><loc>https://sigel-industries.com/audit-webu/</loc><lastmod>2026-07-27</lastmod></url>
-  <url><loc>https://sigel-industries.com/proc-web-nekonvertuje/</loc><lastmod>2026-07-27</lastmod></url>
-  <url><loc>https://sigel-industries.com/audit-webu-pred-redesignem/</loc><lastmod>2026-07-27</lastmod></url>
-  <url><loc>https://sigel-industries.com/seo-audit-vs-komplexni-audit-webu/</loc><lastmod>2026-07-27</lastmod></url>
-  <url><loc>https://sigel-industries.com/obchodni-podminky.html</loc></url>
-  <url><loc>https://sigel-industries.com/en/terms.html</loc></url>
-  <url><loc>https://sigel-industries.com/ochrana-osobnich-udaju.html</loc></url>
-  <url><loc>https://sigel-industries.com/en/privacy-policy.html</loc></url>
+  <url>
+    <loc>https://sigel-industries.com/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/en/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sigel-industries.com/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/audit-webu/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/audit-webu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/website-audit/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/en/website-audit/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/audit-webu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/website-audit/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/proc-web-nekonvertuje/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/proc-web-nekonvertuje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/why-website-not-converting/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/en/why-website-not-converting/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/proc-web-nekonvertuje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/why-website-not-converting/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/audit-webu-pred-redesignem/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/audit-webu-pred-redesignem/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/website-audit-before-redesign/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/en/website-audit-before-redesign/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/audit-webu-pred-redesignem/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/website-audit-before-redesign/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/seo-audit-vs-komplexni-audit-webu/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/seo-audit-vs-komplexni-audit-webu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/seo-audit-vs-website-audit/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/en/seo-audit-vs-website-audit/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/seo-audit-vs-komplexni-audit-webu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/seo-audit-vs-website-audit/"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/obchodni-podminky.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/terms.html"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/en/terms.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/terms.html"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/ochrana-osobnich-udaju.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/privacy-policy.html"/>
+  </url>
+  <url>
+    <loc>https://sigel-industries.com/en/privacy-policy.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sigel-industries.com/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sigel-industries.com/en/privacy-policy.html"/>
+  </url>
 </urlset>
