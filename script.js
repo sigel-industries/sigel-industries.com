@@ -138,6 +138,13 @@
       archetypy: { score: '86', kicker: 'Archetypy', title: 'Značka a zákaznické motivace.', text: 'Interpretace archetypu značky a zákaznických archetypů: kdo potřebuje důkaz, kdo jasnost a kdo vizi.', items: ['Značka', 'Motivace', 'Obavy', 'Tón'], bars: [62,78,88,56,92,66,80,72] },
       roadmapa: { score: '90', kicker: 'Roadmapa', title: 'Co řešit první, druhé a později.', text: 'Prioritní plán, který odděluje kosmetiku od věcí s reálným obchodním dopadem.', items: ['Priorita', 'Dopad', 'Rychlost', 'Další krok'], bars: [92,64,80,70,88,76,58,95] }
     },
+    sk: {
+      dashboard: { score: '94', kicker: 'Dashboard', title: 'Skóre, riziká a smer rozhodovania.', text: 'Prvá časť spája stav webu, hlavné riziká a obchodný dopad do jednej rýchlej orientácie.', items: ['Skóre', 'Riziká', 'Obchodný dopad', 'Roadmapa'], bars: [45,70,52,90,75,95,62,82] },
+      technika: { score: '99', kicker: 'Technika', title: 'Výkon, indexácia a technické limity.', text: 'Tvrdá kontrola základov: rýchlosť, technické zdravie, metadáta, sitemap, robots a mobilná použiteľnosť.', items: ['Rýchlosť', 'Indexácia', 'Metadáta', 'Mobil'], bars: [86,98,76,92,70,88,54,78] },
+      komunikace: { score: '82', kicker: 'Komunikácia', title: 'Jasnosť ponuky a dôvera.', text: 'Vyhodnotenie toho, či návštevník rýchlo chápe ponuku, dôvody na nákup a ďalší krok.', items: ['Ponuka', 'Dôvera', 'CTA', 'Dôkazy'], bars: [52,74,45,82,64,58,88,70] },
+      archetypy: { score: '86', kicker: 'Archetypy', title: 'Značka a zákaznícke motivácie.', text: 'Interpretácia archetypu značky a zákazníckych archetypov: kto potrebuje dôkaz, jasnosť alebo víziu.', items: ['Značka', 'Motivácie', 'Obavy', 'Tón'], bars: [62,78,88,56,92,66,80,72] },
+      roadmapa: { score: '90', kicker: 'Roadmapa', title: 'Čo riešiť ako prvé, druhé a neskôr.', text: 'Prioritný plán oddeľujúci kozmetiku od vecí s reálnym obchodným dopadom.', items: ['Priorita', 'Dopad', 'Rýchlosť', 'Ďalší krok'], bars: [92,64,80,70,88,76,58,95] }
+    },
     en: {
       dashboard: { score: '94', kicker: 'Dashboard', title: 'Score, risks and decision direction.', text: 'The first part combines website health, the main risks and business impact into one fast orientation.', items: ['Score', 'Risks', 'Business impact', 'Roadmap'], bars: [45,70,52,90,75,95,62,82] },
       technika: { score: '99', kicker: 'Technical', title: 'Performance, indexability and technical limits.', text: 'A hard check of the foundations: speed, technical health, metadata, sitemap, robots and mobile usability.', items: ['Speed', 'Indexing', 'Metadata', 'Mobile'], bars: [86,98,76,92,70,88,54,78] },
@@ -434,6 +441,19 @@
         ], cta: 'Zeptat se na benchmark'
       }
     },
+    sk: {
+      'problem-leads': { kicker:'Čo to rieši', title:'Málo dopytov z webu', lead:'Web môže byť technicky v poriadku a napriek tomu nepresviedčať. SIGEL hľadá miesta, kde návštevník stráca jasnosť, dôveru alebo ďalší krok.', items:[['Kedy pomáha','Keď má web návštevnosť, ale málo dopytov, objednávok alebo zmysluplných akcií.'],['Čo sa kontroluje','Jasnosť ponuky, CTA, dôvera, mobilná cesta a komunikačné bariéry.'],['Typický výstup','Priority oddeľujúce kozmetiku od vecí s reálnym dopadom.']], cta:'Získať Web Intelligence report za 199 €' },
+      'problem-marketing': { kicker:'Čo to rieši', title:'Marketing beží, výsledky sú slabé', lead:'Pred zvýšením rozpočtu sa oplatí overiť, či vstupný web vôbec dokáže podporiť rozhodnutie.', items:[['Kedy pomáha','Pred reklamou, pri slabej konverzii alebo keď kampane posielajú návštevnosť bez výsledku.'],['Čo sa kontroluje','Landing sekcie, rýchlosť, CTA, dôkazy, dôvera a nesúlad medzi reklamou a webom.'],['Typický výstup','Zoznam bariér, ktoré môžu brzdiť výkon ešte pred samotnou kampaňou.']], cta:'Overiť web pred reklamou' },
+      'problem-redesign': { kicker:'Čo to rieši', title:'Redizajn bez jasného zadania', lead:'Redizajn bez diagnostiky často zmení iba vzhľad. SIGEL pomôže určiť, čo má nový web skutočne opraviť.', items:[['Kedy pomáha','Pred redizajnom, zadaním pre agentúru alebo rozhodnutím, čo na webe meniť.'],['Čo sa kontroluje','Štruktúra, komunikácia ponuky, dôvera, UX, archetyp značky a rozhodovacia cesta.'],['Typický výstup','Podklad pre redizajn zameraný na funkciu, nie dekoráciu.']], cta:'Získať podklad pre redizajn' },
+      'problem-offer': { kicker:'Čo to rieši', title:'Ponuka je dobrá, ľudia jej nerozumejú', lead:'Niekedy nie je problém produkt, ale spôsob, akým sa vysvetľuje jeho hodnota.', items:[['Kedy pomáha','Keď zákazníci nerozumejú hodnote, cene, rozdielu alebo dôvodu pokračovať.'],['Čo sa kontroluje','Jazyk ponuky, dôkazy, archetyp značky a zákaznícke motivácie.'],['Typický výstup','Odporúčania na spresnenie ponuky pre rôzne typy zákazníkov.']], cta:'Spresniť komunikáciu webu' },
+      'problem-strategy': { kicker:'Čo to rieši', title:'Web už nezodpovedá firme', lead:'Web často zostane v minulosti, aj keď sa firma posunula. SIGEL overí, či komunikácia, ponuka a cieľové skupiny stále zodpovedajú realite biznisu.', items:[['Kedy pomáha','Pri stagnácii, zmene ponuky, novej cieľovke alebo pred zásadnejším obchodným rozhodnutím.'],['Čo sa kontroluje','Súlad ponuky, positioning, archetyp, zákaznícke segmenty a prioritné riziká.'],['Typický výstup','Roadmapa toho, čo zmeniť ako prvé, aby web znovu podporoval smer firmy.']], cta:'Overiť stratégiu webu' },
+      'problem-agency': { kicker:'Čo to rieši', title:'Rýchly podklad pre rozhodnutie', lead:'Majiteľ, marketingový tím ani agentúra nemusia začínať od dojmov. SIGEL dodá externú diagnostiku ako vstup do konzultácie, redizajnu, kampane alebo stratégie.', items:[['Kedy pomáha','Pred konzultáciou, návrhom úprav, kampaňou, redizajnom alebo rozhodnutím o ďalšom rozpočte.'],['Čo sa kontroluje','Technika, UX, komunikácia, dôvera, archetypy a priority v jednom podklade.'],['Typický výstup','Rýchly report použiteľný ako interný rozhodovací alebo klientsky podklad.']], cta:'Dohodnúť pilotnú spoluprácu' },
+      'system-process': { kicker:'Analytické jadro', title:'Ako SIGEL skladá Web Intelligence výstup', lead:'SIGEL Web Intelligence nie je čistý AI text ani bežný checklist. Je to analytický systém, ktorý zbiera signály z webu, vyhodnocuje ich vlastným scoringom, pravidlami, váhami a UX heuristikami a prevádza ich do obchodne použiteľného reportu.', items:[['Zber signálov','Technika, SEO, štruktúra, obsah, CTA, dôvera a komunikácia ponuky.'],['Vlastná analytická logika','Systém pracuje s pravidlami, váhami, prioritami a scoringom, aby bolo jasné, čo má reálny dopad.'],['UX a komunikačné heuristiky','Systém sleduje, kde návštevník chápe ponuku, kde váha a kde môže strácať dôveru.'],['Interpretačná vrstva','Nad dátami vzniká interpretácia značky, zákazníckych archetypov a komunikácie pre rôzne typy zákazníkov.'],['Ručná kontrola výstupu','Každý report pred odoslaním prechádza osobnou kontrolou, aby mal jasné priority a praktický zmysel.']], cta:'Získať Web Intelligence report za 199 €' },
+      'use-web-audit': { kicker:'Dostupné', title:'Web Intelligence Report', lead:'Základný produkt SIGEL: business intelligence pre jeden konkrétny web pred reklamou, redizajnom alebo obchodným rozhodnutím.', items:[['Obsahuje','Desktopové a mobilné Lighthouse metriky, Core Web Vitals, odkazy a CTA, prístupnosť, komunikáciu ponuky, AI pripravenosť, archetypový playbook, roadmapu a evidence dáta.'],['Hodí sa pre','Firmy, freelancerov, menšie tímy alebo projekty, ktoré potrebujú jasný diagnostický vstup.'],['Výstup','Vizuálny PDF report s prioritami a odporúčaniami.']], cta:'Získať Web Intelligence report' },
+      'use-agency': { kicker:'Pilotne', title:'Agentúrny podklad', lead:'Rovnaký diagnostický základ, ale pripravený pre agentúrne použitie: klientsku konzultáciu, redizajn, SEO alebo obsahovú stratégiu.', items:[['Obsahuje','Externý pohľad na klientsky web, priority a podklad pre odporúčanie.'],['Hodí sa pre','Agentúry, ktoré chcú rýchlejší vstup bez kompletnej ručnej diagnostiky od nuly.'],['Výstup','Report alebo interný podklad podľa dohody.']], cta:'Dohodnúť pilotnú spoluprácu' },
+      'use-lead-research': { kicker:'Pilotne', title:'Lead Research', lead:'Výskumná vrstva: hľadanie relevantných firemných webov a verejných kontaktov v segmente, lokalite alebo vlastnom výbere trhu.', items:[['Obsahuje','Zber URL, filtrovanie, základnú validáciu a prípravu kontaktov pre B2B výskum.'],['Hodí sa pre','Obchodnú prípravu, segmentáciu trhu, zoznam potenciálnych klientov alebo nadväzujúcu analýzu.'],['Výstup','Štruktúrovaný zoznam webov a kontaktov podľa zadania.']], cta:'Prebrať výber segmentu' },
+      'use-benchmark': { kicker:'Pripravujeme', title:'Segmentový benchmark', lead:'Porovnanie viacerých webov v jednom odvetví, lokalite alebo výbere trhu. Ide o nadväzujúcu vrstvu nad jednotlivými reportmi.', items:[['Obsahuje','Porovnanie skóre, opakujúce sa vzorce, rozdiely medzi hráčmi a segmentové signály.'],['Hodí sa pre','Prehľad trhu, interné rozhodovanie, obchodný výber alebo prípravu stratégie.'],['Výstup','Benchmarková mapa a súhrn hlavných zistení.']], cta:'Opýtať sa na benchmark' }
+    },
     en: {
       'problem-leads': { kicker:'What it solves', title:'Too few enquiries from the website', lead:'A website can be technically fine and still fail to persuade. SIGEL looks for places where visitors lose clarity, trust or the next step.', items:[['When it helps','When the site has traffic but few enquiries, orders or meaningful actions.'],['What is checked','Offer clarity, CTA, trust, mobile path and communication barriers.'],['Typical output','Priorities separating cosmetic changes from things with real impact.']], cta:'Get the Web Intelligence report for €199' },
       'problem-marketing': { kicker:'What it solves', title:'Marketing is running, results are weak', lead:'Before raising ad spend, it is worth checking whether the landing website can actually support a decision.', items:[['When it helps','Before advertising, during weak conversion or when campaigns send traffic without results.'],['What is checked','Landing sections, speed, CTA, proof, trust and mismatch between ads and the website.'],['Typical output','A list of barriers that may block performance before the campaign itself.']], cta:'Check the website before advertising' },
@@ -468,7 +488,7 @@
     if (modalKicker) modalKicker.textContent = data.kicker || 'Detail';
     if (modalTitle) modalTitle.textContent = data.title || '';
     if (modalLead) modalLead.textContent = data.lead || '';
-    if (modalCta) modalCta.textContent = data.cta || (lang === 'en' ? 'Get the Web Intelligence report' : 'Získat Web Intelligence report');
+    if (modalCta) modalCta.textContent = data.cta || (lang === 'en' ? 'Get the Web Intelligence report' : (lang === 'sk' ? 'Získať Web Intelligence report' : 'Získat Web Intelligence report'));
     if (modalGrid) {
       modalGrid.innerHTML = (data.items || []).map(([title, text], index) => `
         <article class="${index === 0 ? 'is-featured' : ''}">
@@ -479,7 +499,7 @@
       `).join('');
     }
     if (modalNote) {
-      modalNote.textContent = data.note || (lang === 'en' ? 'Note: The report is diagnostic decision support. It does not guarantee revenue growth, search ranking improvements or campaign results.' : 'Poznámka: Report je diagnostický podklad pro rozhodnutí. Negarantuje zvýšení tržeb, pozic ve vyhledávání ani výsledků kampaní.');
+      modalNote.textContent = data.note || (lang === 'en' ? 'Note: The report is diagnostic decision support. It does not guarantee revenue growth, search ranking improvements or campaign results.' : (lang === 'sk' ? 'Poznámka: Report je diagnostický podklad pre rozhodnutie. Negarantuje zvýšenie tržieb, pozícií vo vyhľadávaní ani výsledkov kampaní.' : 'Poznámka: Report je diagnostický podklad pro rozhodnutí. Negarantuje zvýšení tržeb, pozic ve vyhledávání ani výsledků kampaní.')); 
     }
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
@@ -513,7 +533,7 @@
   const orderSummaryStatus = $('#summaryStatus');
   const orderSummaryCard = $('#summaryCard');
   const orderDoneMeta = $('#doneMeta');
-  let orderActiveLang = lang === 'en' ? 'en' : 'cs';
+  let orderActiveLang = ['cs', 'sk', 'en'].includes(lang) ? lang : 'cs';
   let pendingOrderPayload = null;
 
   const orderCopy = {
@@ -566,6 +586,27 @@
       sendError: 'Odeslání se nepodařilo. Zkuste to prosím znovu nebo napište e-mailem.',
       closeLabel: 'Zavřít formulář',
       summaryLabels: { customerType:'Typ objednatele', website:'Web', company:'Firma / objednatel', ico:'IČO', dic:'DIČ', contactPerson:'Kontaktní osoba', email:'E-mail', phone:'Telefon', billing:'Fakturační adresa', reportLanguage:'Jazyk reportu', price:'Cena', note:'Poznámka' }
+    },
+    sk: {
+      eyebrow: 'SIGEL Web Intelligence',
+      title: 'Objednávka Web Intelligence reportu',
+      lead: 'Vyplňte údaje objednávky. Pred odoslaním ešte uvidíte súhrn na kontrolu.',
+      priceLabel: 'Štartovacia cena', price: '199 €',
+      customerCompany: 'Firma / podnikateľ', customerCompanyHint: 'Pre fakturáciu na firmu alebo IČO.',
+      customerPerson: 'Fyzická osoba', customerPersonHint: 'Bez IČO, iba kontaktné a fakturačné údaje.',
+      companyLabelPerson: 'Meno objednávateľa', websiteLabel: 'URL webu na analýzu', websiteHint: 'Stačí zadať doménu. https:// doplníme automaticky.',
+      companyLabel: 'Názov firmy / objednávateľa', contactLabel: 'Kontaktná osoba', icoLabel: 'IČO (voliteľné)', dicLabel: 'IČ DPH / DIČ',
+      billingLabel: 'Fakturačná adresa', emailLabel: 'E-mail na doručenie faktúry a reportu', phoneLabel: 'Telefón', reportLangLabel: 'Jazyk reportu', currencyLabel: 'Mena objednávky',
+      noteLabel: 'Kontext analýzy (voliteľné)', termsConsent: 'Súhlasím s obchodnými podmienkami služby SIGEL Web Intelligence.', privacyConsent: 'Beriem na vedomie informácie o spracúvaní osobných údajov.',
+      continue: 'Pokračovať na súhrn', secureNote: 'Objednávka bude odoslaná do systému SIGEL.', summaryEyebrow: 'Kontrola objednávky', summaryTitle: 'Súhrn pred odoslaním',
+      summaryLead: 'Skontrolujte údaje. Po potvrdení sa vytvorí objednávka a príde vám faktúra.', afterSubmitTitle: 'Čo bude nasledovať',
+      afterSubmitText: 'Po odoslaní objednávky vám čoskoro príde faktúra. Po pripísaní platby začne analýza webu a následne dostanete PDF report na uvedený e-mail.',
+      back: 'Späť upraviť', submitOrder: 'Objednať teraz za štartovaciu cenu 199 €', doneEyebrow: 'Objednávka prijatá', doneTitle: 'Hotovo. Objednávka je v systéme.',
+      doneText: 'Objednávka bola prijatá. Čoskoro vám príde faktúra a po pripísaní platby sa začne spracovanie Web Intelligence reportu.', closeDone: 'Zavrieť', newOrder: 'Nová objednávka',
+      websiteError: 'Zadajte platnú URL webu.', emailError: 'Zadajte platný e-mail.', requiredError: 'Toto pole je povinné.', icoError: 'Ak IČO zadáte iba číslicami, má mať 8 číslic.',
+      phoneError: 'Telefónne číslo nevyzerá platne.', consentsError: 'Treba potvrdiť obchodné podmienky aj informácie o osobných údajoch.', sending: 'Odosielam objednávku…',
+      sendError: 'Odoslanie sa nepodarilo. Skúste to znova alebo napíšte e-mail.', closeLabel: 'Zavrieť formulár',
+      summaryLabels: { customerType:'Typ objednávateľa', website:'Web', company:'Firma / objednávateľ', ico:'IČO', dic:'IČ DPH / DIČ', contactPerson:'Kontaktná osoba', email:'E-mail', phone:'Telefón', billing:'Fakturačná adresa', reportLanguage:'Jazyk reportu', price:'Cena', note:'Poznámka' }
     },
     en: {
       eyebrow: 'SIGEL Web Intelligence',
@@ -632,6 +673,9 @@
     if (orderActiveLang === 'en') {
       if (terms) { terms.href = '/en/terms.html'; terms.textContent = 'Terms and Conditions'; }
       if (privacy) { privacy.href = '/en/privacy-policy.html'; privacy.textContent = 'Privacy Policy'; }
+    } else if (orderActiveLang === 'sk') {
+      if (terms) { terms.href = '/obchodni-podminky.html'; terms.textContent = 'Obchodné podmienky (české znenie)'; }
+      if (privacy) { privacy.href = '/ochrana-osobnich-udaju.html'; privacy.textContent = 'Ochrana osobných údajov (české znenie)'; }
     } else {
       if (terms) { terms.href = '/obchodni-podminky.html'; terms.textContent = 'Obchodní podmínky'; }
       if (privacy) { privacy.href = '/ochrana-osobnich-udaju.html'; privacy.textContent = 'Ochrana osobních údajů'; }
@@ -649,32 +693,34 @@
     const companyInput = $('#orderCompany', orderModal);
     if (type === 'person') {
       if (companyLabel) companyLabel.textContent = orderT('companyLabelPerson');
-      if (companyInput) companyInput.placeholder = orderActiveLang === 'en' ? 'Name and surname' : 'Jméno a příjmení';
+      if (companyInput) companyInput.placeholder = orderActiveLang === 'en' ? 'Name and surname' : (orderActiveLang === 'sk' ? 'Meno a priezvisko' : 'Jméno a příjmení');
     } else {
       if (companyLabel) companyLabel.textContent = orderT('companyLabel');
-      if (companyInput) companyInput.placeholder = orderActiveLang === 'en' ? 'Company name' : 'Název firmy';
+      if (companyInput) companyInput.placeholder = orderActiveLang === 'en' ? 'Company name' : (orderActiveLang === 'sk' ? 'Názov firmy' : 'Název firmy');
     }
   }
   function applyOrderLanguage(nextLang) {
-    orderActiveLang = nextLang === 'en' ? 'en' : 'cs';
+    orderActiveLang = ['cs', 'sk', 'en'].includes(nextLang) ? nextLang : 'cs';
     $$('[data-i18n]', orderModal).forEach((el) => {
       const key = el.getAttribute('data-i18n');
       el.textContent = orderT(key);
     });
     $('.sigel-order-close', orderModal)?.setAttribute('aria-label', orderT('closeLabel'));
-    $('#orderWebsite', orderModal).placeholder = orderActiveLang === 'en' ? 'example.com' : 'sigel-industries.com';
-    $('#orderEmail', orderModal).placeholder = orderActiveLang === 'en' ? 'contact@company.com' : 'kontakt@firma.cz';
-    $('#orderContactPerson', orderModal).placeholder = orderActiveLang === 'en' ? 'Name and surname' : 'Jméno a příjmení';
-    $('#orderIco', orderModal).placeholder = orderActiveLang === 'en' ? 'optional' : 'volitelné';
-    $('#orderDic', orderModal).placeholder = orderActiveLang === 'en' ? 'VAT ID / optional' : 'CZ12345678 / volitelné';
-    $('#orderBilling', orderModal).placeholder = orderActiveLang === 'en' ? 'Company name, street, city, ZIP, country...' : 'Název, ulice, město, PSČ, stát...';
-    $('#orderPhone', orderModal).placeholder = '+420 777 000 000';
-    $('#orderNote', orderModal).placeholder = orderActiveLang === 'en' ? 'Anything useful to know about the website or current situation?' : 'Co je dobré vědět o webu nebo aktuální situaci?';
+    const isEn = orderActiveLang === 'en';
+    const isSk = orderActiveLang === 'sk';
+    $('#orderWebsite', orderModal).placeholder = isEn ? 'example.com' : 'sigel-industries.com';
+    $('#orderEmail', orderModal).placeholder = isEn ? 'contact@company.com' : (isSk ? 'kontakt@firma.sk' : 'kontakt@firma.cz');
+    $('#orderContactPerson', orderModal).placeholder = isEn ? 'Name and surname' : (isSk ? 'Meno a priezvisko' : 'Jméno a příjmení');
+    $('#orderIco', orderModal).placeholder = isEn ? 'optional' : (isSk ? 'voliteľné' : 'volitelné');
+    $('#orderDic', orderModal).placeholder = isEn ? 'VAT ID / optional' : (isSk ? 'SK1234567890 / voliteľné' : 'CZ12345678 / volitelné');
+    $('#orderBilling', orderModal).placeholder = isEn ? 'Company name, street, city, ZIP, country...' : (isSk ? 'Názov, ulica, mesto, PSČ, štát...' : 'Název, ulice, město, PSČ, stát...');
+    $('#orderPhone', orderModal).placeholder = isSk ? '+421 900 000 000' : '+420 777 000 000';
+    $('#orderNote', orderModal).placeholder = isEn ? 'Anything useful to know about the website or current situation?' : (isSk ? 'Čo je dobré vedieť o webe alebo aktuálnej situácii?' : 'Co je dobré vědět o webu nebo aktuální situaci?');
     const currency = $('#orderCurrency', orderModal);
-    if (currency) currency.value = orderActiveLang === 'en' ? 'EUR' : 'CZK';
-    const price = orderActiveLang === 'en' ? '€199' : '4 980 Kč';
+    if (currency) currency.value = (isEn || isSk) ? 'EUR' : 'CZK';
+    const price = (isEn || isSk) ? (isSk ? '199 €' : '€199') : '4 980 Kč';
     $('[data-i18n="price"]', orderModal).textContent = price;
-    $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the launch price ${price}` : `Objednat nyní za startovní cenu ${price}`;
+    $('#confirmOrder', orderModal).textContent = isEn ? `Order now for the launch price ${price}` : (isSk ? `Objednať teraz za štartovaciu cenu ${price}` : `Objednat nyní za startovní cenu ${price}`);
     updateOrderCustomerTypeUI();
     updateOrderLegalLinks();
   }
@@ -732,7 +778,7 @@
     if (/^\d+$/.test(v)) return /^\d{8}$/.test(v);
     return /^[A-Za-z0-9 .\-_/]{3,32}$/.test(v);
   }
-  function getOrderPrice(currency) { return currency === 'EUR' ? '€199' : '4 980 Kč'; }
+  function getOrderPrice(currency) { return currency === 'EUR' ? (orderActiveLang === 'sk' ? '199 €' : '€199') : '4 980 Kč'; }
   function createOrderId(date) {
     const pad = (n) => String(n).padStart(2, '0');
     const rand = Math.random().toString(36).slice(2, 7).toUpperCase();
@@ -744,7 +790,7 @@
   function orderPayloadFromForm() {
     const data = Object.fromEntries(new FormData(orderForm).entries());
     const now = new Date();
-    const currency = data.currency || (orderActiveLang === 'en' ? 'EUR' : 'CZK');
+    const currency = data.currency || ((orderActiveLang === 'en' || orderActiveLang === 'sk') ? 'EUR' : 'CZK');
     return {
       id: createOrderId(now),
       createdAt: now.toISOString(),
@@ -791,8 +837,8 @@
   function renderOrderSummary(payload) {
     const L = orderLabels();
     const customerTypeLabel = payload.customerType === 'person'
-      ? (orderActiveLang === 'en' ? 'Individual' : 'Fyzická osoba')
-      : (orderActiveLang === 'en' ? 'Company / entrepreneur' : 'Firma / podnikatel');
+      ? (orderActiveLang === 'en' ? 'Individual' : (orderActiveLang === 'sk' ? 'Fyzická osoba' : 'Fyzická osoba'))
+      : (orderActiveLang === 'en' ? 'Company / entrepreneur' : (orderActiveLang === 'sk' ? 'Firma / podnikateľ' : 'Firma / podnikatel')); 
     const fields = [
       ['customerType', customerTypeLabel], ['website', payload.website], ['company', payload.company],
       ['ico', payload.ico || '—'], ['dic', payload.dic || '—'], ['contactPerson', payload.contactPerson || '—'],
@@ -872,7 +918,7 @@
     $('#orderCurrency', orderModal)?.addEventListener('change', (event) => {
       const price = getOrderPrice(event.target.value);
       $('[data-i18n="price"]', orderModal).textContent = price;
-      $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the launch price ${price}` : `Objednat nyní za startovní cenu ${price}`;
+      $('#confirmOrder', orderModal).textContent = orderActiveLang === 'en' ? `Order now for the launch price ${price}` : (orderActiveLang === 'sk' ? `Objednať teraz za štartovaciu cenu ${price}` : `Objednat nyní za startovní cenu ${price}`);
     });
     $$('[data-order-open]').forEach((btn) => btn.addEventListener('click', (e) => { e.preventDefault(); openOrderModal(btn.getAttribute('data-order-lang') || lang); }));
   }
