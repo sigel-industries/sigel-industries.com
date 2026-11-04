@@ -71,6 +71,11 @@
 {%- else %}
 <a data-order-open="" data-track="nav" href="{{ c.home }}#order">{{ c.nav_order }}</a>
 {%- endif %}
+<div aria-label="{{ c.lang_aria }}" class="nav-langs">
+{%- for l in site.langs %}
+<a{% if l == lang %} aria-current="page"{% endif %} hreflang="{{ l }}" href="{{ (page.alternates or {}).get(l) or i18n[l].chrome.home }}">{{ site.lang_names[l] }}</a>
+{%- endfor %}
+</div>
 </nav>
 <div class="header-actions">
 <div aria-label="{{ c.lang_aria }}" class="lang-switch">
