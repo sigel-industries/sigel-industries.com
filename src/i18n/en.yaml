@@ -124,7 +124,7 @@ order:
     phone: +44 20 0000 0000
     note: Anything useful to know about the website or current situation?
   prices:
-    CZK: CZK 4,980
+    CZK: 4 980 CZK
     EUR: €199
   defaultCurrency: EUR
 report:
