@@ -104,8 +104,8 @@ order:
   requiredError: Dieses Feld ist erforderlich.
   phoneError: Die Telefonnummer scheint nicht gültig zu sein.
   consentsError: AGB und Datenschutzinformationen müssen bestätigt werden.
-  sending: Bestellung wird gesendet …
-  sendError: Die Bestellung konnte nicht gesendet werden, es wurde nichts gespeichert. Versuchen Sie es erneut oder senden Sie sie per E-Mail.
+  sending: Bestellung wird gesendet…
+  sendError: Die Bestellung konnte nicht gesendet werden; es wurde nichts gespeichert. Bitte versuchen Sie es erneut oder senden Sie sie per E-Mail.
   closeLabel: Formular schließen
   summaryLabels:
     website: Website
@@ -165,7 +165,7 @@ report:
     score: '78'
     kicker: Technik
     title: Performance, Indexierbarkeit und technische Grenzen.
-    text: 'Harte Prüfung der Grundlagen: Geschwindigkeit, technischer Zustand, Metadaten, Sitemap, robots und mobile Nutzbarkeit.'
+    text: 'Harte Prüfung der Grundlagen: Geschwindigkeit, technischer Zustand, Metadaten, Sitemap, robots.txt und mobile Nutzbarkeit.'
     items:
     - Geschwindigkeit
     - Indexierung
@@ -203,7 +203,7 @@ report:
     score: '57'
     kicker: Archetypen
     title: Marke und Kundenmotive.
-    text: 'Interpretation von Marken- und Kundenarchetypen: Wer benötigt Belege, Klarheit oder Vision.'
+    text: 'Interpretation von Marken- und Kundenarchetypen: wer Belege, Klarheit oder Vision benötigt.'
     items:
     - Marke
     - Motive
@@ -256,19 +256,19 @@ modal:
     lead: Bevor das Werbebudget steigt, sollte geprüft werden, ob die Landingpage eine Entscheidung überhaupt unterstützt.
     items:
     - - Wann es hilft
-      - Vor Werbung, bei schwacher Conversion oder wenn Kampagnen Traffic ohne Ergebnis senden.
+      - Vor Werbung, bei schwacher Conversion oder wenn Kampagnen Traffic ohne Ergebnis bringen.
     - - Was geprüft wird
-      - Landingbereiche, Geschwindigkeit, CTA, Belege, Vertrauen und Abweichungen zwischen Werbung und Website.
+      - Landingpages, Geschwindigkeit, CTA, Belege, Vertrauen und Abweichungen zwischen Werbung und Website.
     - - Typischer Output
-      - Eine Liste von Barrieren, die Leistung schon vor der Kampagne blockieren können.
-    cta: Website vor Werbung prüfen
+      - Eine Liste von Barrieren, die die Leistung schon vor der Kampagne blockieren können.
+    cta: Website vor der Kampagne prüfen
   problem-redesign:
     kicker: Was es löst
     title: Redesign ohne klares Briefing
     lead: Ein Redesign ohne Diagnostik verändert oft nur die Optik. SIGEL definiert, was die neue Website tatsächlich beheben soll.
     items:
     - - Wann es hilft
-      - Vor Redesign, Agenturbriefing oder der Entscheidung, was geändert werden soll.
+      - Vor einem Redesign, einem Agenturbriefing oder der Entscheidung, was geändert werden soll.
     - - Was geprüft wird
       - Struktur, Angebotskommunikation, Vertrauen, UX, Markenarchetyp und Entscheidungsweg.
     - - Typischer Output
@@ -280,7 +280,7 @@ modal:
     lead: Manchmal ist nicht das Produkt das Problem, sondern die Erklärung seines Werts.
     items:
     - - Wann es hilft
-      - Wenn Kunden Wert, Preis, Unterschied oder Grund zum Fortfahren nicht verstehen.
+      - Wenn Kunden Wert, Preis, Unterschied oder den Grund für den nächsten Schritt nicht verstehen.
     - - Was geprüft wird
       - Angebotssprache, Belege, Markenarchetyp und Kundenmotive.
     - - Typischer Output
@@ -289,19 +289,19 @@ modal:
   problem-strategy:
     kicker: Was es löst
     title: Die Website passt nicht mehr zum Unternehmen
-    lead: Websites bleiben oft in der Vergangenheit, während sich das Unternehmen weiterentwickelt. SIGEL prüft, ob Kommunikation, Angebot und Zielgruppen noch zur Geschäftsrichtung passen.
+    lead: Websites bleiben oft auf altem Stand, während sich das Unternehmen weiterentwickelt. SIGEL prüft, ob Kommunikation, Angebot und Zielgruppen noch zur Geschäftsrichtung passen.
     items:
     - - Wann es hilft
       - Bei Stagnation, verändertem Angebot, neuer Zielgruppe oder vor einer strategischen Entscheidung.
     - - Was geprüft wird
-      - Angebotspassung, Positionierung, Archetyp, Kundensegmente und prioritäre Risiken.
+      - Angebotspassung, Positionierung, Archetyp, Kundensegmente und vorrangige Risiken.
     - - Typischer Output
       - Eine Roadmap dessen, was zuerst geändert werden sollte.
     cta: Website-Strategie prüfen
   problem-agency:
     kicker: Was es löst
     title: Schnelle Grundlage für eine Entscheidung
-    lead: Inhaber, Marketingteams und Agenturen müssen nicht bei Meinungen beginnen. SIGEL liefert externe Diagnostik als Input für Beratung, Redesign, Kampagnen oder Strategie.
+    lead: Inhaber, Marketingteams und Agenturen müssen nicht mit Meinungen beginnen. SIGEL liefert externe Diagnostik als Input für Beratung, Redesign, Kampagnen oder Strategie.
     items:
     - - Wann es hilft
       - Vor Beratung, Empfehlungen, Kampagnen, Redesign oder der nächsten Budgetentscheidung.
@@ -334,7 +334,7 @@ modal:
     lead: 'Das Kernprodukt von SIGEL: Business Intelligence für eine konkrete Website vor Werbung, Redesign oder einer Geschäftsentscheidung.'
     items:
     - - Enthält
-      - Lighthouse-Metriken für Desktop und Mobilgeräte, Core Web Vitals, Links und CTA, Barrierefreiheit, Angebotskommunikation, KI-Bereitschaft, Archetypen-Playbook, Roadmap und Evidenzdaten.
+      - Lighthouse-Metriken für Desktop und Mobilgeräte, Core Web Vitals, Links und CTAs, Barrierefreiheit, Angebotskommunikation, KI-Bereitschaft, Archetypen-Playbook, Roadmap und Evidenzdaten.
     - - Geeignet für
       - Unternehmen, Freelancer, kleine Teams oder Projekte, die einen klaren diagnostischen Input benötigen.
     - - Output
@@ -343,12 +343,12 @@ modal:
   use-agency:
     kicker: Pilot
     title: Agentur-Input
-    lead: 'Dieselbe diagnostische Basis, verpackt für Agenturnutzung: Kundenberatung, Redesign, SEO oder Content-Strategie.'
+    lead: 'Dieselbe diagnostische Basis, aufbereitet für den Einsatz in Agenturen: Kundenberatung, Redesign, SEO oder Content-Strategie.'
     items:
     - - Enthält
       - Externe Sicht auf die Kundenwebsite, Prioritäten und Input für Empfehlungen.
     - - Geeignet für
-      - Agenturen, die einen schnelleren Startpunkt ohne vollständige manuelle Diagnostik von null benötigen.
+      - Agenturen, die einen schnelleren Startpunkt benötigen, ohne die Diagnostik manuell bei null zu beginnen.
     - - Output
       - Report oder interner Input nach Absprache.
     cta: Pilot-Zusammenarbeit besprechen
@@ -356,7 +356,7 @@ modal:
   use-lead-research:
     kicker: Pilot
     title: Lead Research
-    lead: Eine Research-Ebene zur Suche relevanter Unternehmenswebsites und öffentlicher Kontakte in Segment, Region oder individueller Marktauswahl.
+    lead: Eine Research-Ebene zur Suche relevanter Unternehmenswebsites und öffentlicher Kontakte nach Segment, Region oder individueller Marktauswahl.
     items:
     - - Enthält
       - URL-Sammlung, Filterung, grundlegende Validierung und Kontaktvorbereitung für B2B-Research.
@@ -424,7 +424,7 @@ ci:
     lead: Company Intelligence läuft im Pilotbetrieb für tschechische Unternehmen. Nennen Sie uns die Unternehmens-ID (IČO) und den Zweck der Analyse. Wir melden uns mit Termin und Preis. Die Anfrage ist
       unverbindlich.
     ico_label: Unternehmens-ID (IČO) des Unternehmens
-    purpose_label: Wofür benötigen Sie die Analyse
+    purpose_label: Wofür benötigen Sie die Analyse?
     purposes:
     - - banka
       - Bank / Kredit
@@ -439,7 +439,7 @@ ci:
     name_label: Name und Unternehmen
     name_ph: Name, Unternehmen
     note_label: Notiz (optional)
-    note_ph: Wie viele Jahre zurück, Termin, sonstiges…
+    note_ph: Wie viele Jahre zurück, Termin, Sonstiges…
     submit: Unverbindlich anfragen
     sending: Anfrage wird gesendet…
     done: Danke, Ihre Anfrage ist eingegangen. Wir melden uns in Kürze.
@@ -519,9 +519,9 @@ home_areas:
   - - Indexierung und SEO
     - cold
     - Robots.txt, Sitemap, Canonical, Metadaten, Überschriften und Open Graph.
-  - - Links und CTA
+  - - Links und CTAs
     - cold
-    - Defekte und blockierte Links, Calls-to-Action und auffällige Elemente.
+    - Defekte und blockierte Links, Calls-to-Action und verdächtige Elemente.
   - - Barrierefreiheit
     - cold
     - Kontrast, Schriftgröße und Touch-Ziele mit konkreten Elementen auf Desktop und Mobil.
@@ -533,7 +533,7 @@ home_areas:
     - Viewport, Navigation, Orientierung im Inhalt und mobiler Weg der Besucher.
   - - Angebotskommunikation
     - warm
-    - Was die Website anbietet, für wen, wie klar und konkret und wo Vertrauen verloren geht.
+    - Was die Website anbietet, für wen, wie klar und konkret, und wo Vertrauen verloren geht.
   - - KI-Bereitschaft
     - warm
     - Strukturierte Daten und Signale für KI-Suche.
@@ -542,7 +542,7 @@ home_areas:
     - Archetypen-Karte, Brand- und Customer-Playbook, Regeln für die Tonalität.
   - - Geschäftliche Wirkung und Roadmap
     - warm
-    - Management Summary, Wirkung × Aufwand und ein Aktionsplan, was zuerst zu tun ist.
+    - Management Summary, Wirkung × Aufwand und ein Aktionsplan dafür, was zuerst zu tun ist.
   - - Evidenz-Anhang
     - warm
     - Crawl, Robots, Sitemap, Metadaten und Messdaten zur Überprüfung jedes Befunds.
@@ -635,7 +635,6 @@ home_order:
   - Abrechnung per Rechnung
   - In der Regel innerhalb von 24 Std. nach Zahlung
 compare_url: /de/website-audit-agentur-tools-oder-sigel/
-compare_url: /de/website-audit-agentur-tools-oder-sigel/
 cmp_promo:
   href: /de/website-audit-agentur-tools-oder-sigel/
   kicker: Vergleich · 11 Bereiche
@@ -664,9 +663,9 @@ pricing:
     - - - Technik und Performance
         - 'Lighthouse für Desktop und Mobil, Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
       - - Sicherheitssignale
-        - HTTPS und Weiterleitungen, TLS-Zertifikat, Sicherheits-HTTP-Header. Passive Prüfung.
+        - HTTPS und Weiterleitungen, TLS-Zertifikat, HTTP-Security-Header. Passive Prüfung.
       - - Links und CTAs
-        - Defekte und blockierte Links, Handlungsaufforderungen und verdächtige Elemente.
+        - Defekte und blockierte Links, Calls-to-Action und verdächtige Elemente.
       - - Barrierefreiheit
         - Kontrast, Schriftgröße und Touch-Ziele mit den konkreten Elementen auf Desktop und Mobil.
       - - KI-Bereitschaft
@@ -722,7 +721,7 @@ pricing:
     - Der Report ist eine Diagnose und Entscheidungsgrundlage, kein Ergebnisversprechen.
   - - Tausende Produktseiten
     - Der Report bewertet die Website als Ganzes, nicht jede URL eines großen Onlineshops einzeln.
-  - - Vor allem Umsetzung
+  - - Sie suchen vor allem Umsetzung
     - SIGEL sagt, was zu beheben ist und in welcher Reihenfolge. Die Änderungen setzt Ihr Entwickler oder Ihre Agentur um.
   ag_tag: Agenturen und mehrere Websites
   ag_h2: Reports für Kunden, regelmäßig.
@@ -750,12 +749,12 @@ compare:
     - Lighthouse, PageSpeed Insights
     - 0 €
     - sofort
-    - Technische Zahlen ohne Kontext. Sie wissen nicht, was Sie verkaufen oder was zuerst zu beheben ist.
+    - Technische Zahlen ohne Kontext. Die Tools wissen nicht, was Sie verkaufen oder was zuerst zu beheben ist.
   - - SEO-Audit
     - SEO-Spezialist oder Agentur
     - je nach Website-Größe
     - nach Absprache
-    - Tief in der Auffindbarkeit. UX, Angebot und Marke sind nicht sein Thema.
+    - Geht bei der Auffindbarkeit in die Tiefe. UX, Angebot und Marke sind nicht sein Thema.
   - - Agentur-Audit
     - SEO, UX, Copywriting, Brand
     - Summe mehrerer Aufträge
@@ -770,7 +769,7 @@ compare:
   m_h2:
   - Elf Bereiche.
   - Ein Report.
-  m_p: Ein orientierender Vergleich des Umfangs. Agentur-Audits hängen vom Briefing ab; „separat“ bedeutet, dass der Bereich meist ein anderer Spezialist oder ein anderer Auftrag übernimmt.
+  m_p: Ein Vergleich des Umfangs zur Orientierung. Agentur-Audits hängen vom Briefing ab; „separat“ bedeutet, dass meist ein anderer Spezialist oder ein anderer Auftrag diesen Bereich übernimmt.
   legend_aria: Legende
   legend:
   - abgedeckt
@@ -820,7 +819,7 @@ compare:
             - je nach Briefing
           - - y
             - ja
-      - - 'Sicherheit: HTTPS, TLS, Sicherheits-Header'
+      - - 'Sicherheit: HTTPS, TLS, Security-Header'
         - - - p
             - andere Tools
           - - n
@@ -913,7 +912,7 @@ compare:
     - Kostenlose Tools
     - Für den ersten Überblick und laufende Technikkontrollen reichen sie. Jemand muss die Zahlen allerdings lesen können.
   - - „Wir planen langfristiges SEO oder Kampagnen mit einer bestimmten Agentur.“
-    - Audit der Agentur
+    - Agentur-Audit
     - Ein Audit als Einstieg in die Zusammenarbeit ist sinnvoll. Prüfen Sie vorher, welche Bereiche das Briefing abdeckt.
   - - „Wir wissen nicht, warum die Website keine Anfragen bringt, und müssen wissen, was zuerst zu beheben ist.“
     - SIGEL Web Intelligence
