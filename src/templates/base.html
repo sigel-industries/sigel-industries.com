@@ -45,7 +45,8 @@
 <script type="application/ld+json">{% block jsonld %}{% endblock %}</script>
 {%- endif %}{% endblock %}
 </head>
-<body {% if page.url in ["/", "/sk/", "/en/", "/de/"] %}class="is-home" {% endif %}data-lang="{{ lang }}">
+{%- set kind = "home" if page.url in ["/", "/sk/", "/en/", "/de/"] else ("pricing" if page.url == "/cenik/" else ("compare" if page.url == "/audit-webu-agentura-nastroje-nebo-sigel/" else ("legal" if page.url.endswith(".html") else "guide"))) %}
+<body class="kind-{{ kind }}{{ " is-home" if kind == "home" }}{{ " v2" if kind != "legal" }}" data-lang="{{ lang }}">
 <div aria-hidden="true" class="ambient"></div>
 <div aria-hidden="true" class="ambient-grid"></div>
 <div aria-hidden="true" class="noise"></div>

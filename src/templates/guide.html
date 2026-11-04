@@ -34,6 +34,16 @@
 </ol>
 </nav>
 {%- endif %}
+{%- if toc | length > 2 %}
+<details class="guide-toc-m">
+<summary><b>{{ g.toc }}</b><em>{{ toc | length }} · {{ body | reading_minutes }} {{ g.reading }}</em></summary>
+<ol>
+{%- for anchor, text in toc %}
+<li><a href="#{{ anchor }}"><span>{{ '%02d' % loop.index }}</span>{{ text }}</a></li>
+{%- endfor %}
+</ol>
+</details>
+{%- endif %}
 <article class="guide-article">
 {{ body | heading_ids }}
 {%- if lang == 'cs' and page.url != '/audit-webu-agentura-nastroje-nebo-sigel/' %}
@@ -52,7 +62,7 @@
 </div>
 <div class="guide-cards">
 {%- for href, title, text in g.cards if href != page.url %}
-<a class="guide-card reveal" href="{{ href }}"><span class="guide-card-n">{{ '%02d' % loop.index }}</span><strong>{{ title }}</strong><span class="guide-card-text">{{ text }}</span><span class="guide-card-more">{{ g.more }}</span></a>
+<a class="guide-card reveal" href="{{ href }}"><strong>{{ title }}</strong><span class="guide-card-text">{{ text }}</span><span class="guide-card-more">{{ g.more }}</span></a>
 {%- endfor %}
 </div>
 </div>

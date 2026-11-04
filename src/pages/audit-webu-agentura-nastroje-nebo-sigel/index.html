@@ -38,6 +38,14 @@ og_image_alt: 'Audit webu: agentura, nástroje zdarma, nebo SIGEL?'
     ('Důkazní appendix s naměřenými daty', [('p', 'surová data'), ('y', 'ano'), ('p', 'podle zadání'), ('y', 'ano')]),
   ]),
 ] -%}
+{%- macro coverage(groups, c, compact=False) -%}
+{%- set ns = namespace(full=0, part=0) -%}
+{%- for g, rows in groups %}{% for label, cells in rows %}{% if cells[c][0] == 'y' %}{% set ns.full = ns.full + 1 %}{% elif cells[c][0] == 'p' %}{% set ns.part = ns.part + 1 %}{% endif %}{% endfor %}{% endfor -%}
+<div class="cmp-cover{{ ' cmp-cover-compact' if compact }}" role="img" aria-label="Pokrytí: {{ ns.full }} oblastí plně, {{ ns.part }} částečně z 11">
+<span class="cmp-cover-dots" aria-hidden="true">{% for i in range(ns.full) %}<i class="y"></i>{% endfor %}{% for i in range(ns.part) %}<i class="p"></i>{% endfor %}{% for i in range(11 - ns.full - ns.part) %}<i></i>{% endfor %}</span>
+<span class="cmp-cover-text"><b>{{ ns.full }}</b> z 11 plně{% if ns.part %}, {{ ns.part }} částečně{% endif %}</span>
+</div>
+{%- endmacro %}
 <section class="page-shell cmp-hero">
 <div class="wrap">
 <p class="eyebrow reveal"><a href="/">SIGEL</a> / Srovnání</p>
@@ -54,31 +62,31 @@ og_image_alt: 'Audit webu: agentura, nástroje zdarma, nebo SIGEL?'
 <div class="wrap">
 <div class="cmp-contenders">
 <article class="cmp-contender reveal">
-<span class="cmp-index">01</span>
 <h2>Nástroje zdarma</h2>
 <p class="cmp-who">Lighthouse, PageSpeed Insights</p>
+{{ coverage(groups, 0) }}
 <dl><div><dt>Kdo</dt><dd>vy sami</dd></div><div><dt>Cena</dt><dd>0 Kč</dd></div><div><dt>Dodání</dt><dd>okamžitě</dd></div></dl>
 <p>Technická čísla bez kontextu. Nevědí, co prodáváte ani co opravit první.</p>
 </article>
 <article class="cmp-contender reveal">
-<span class="cmp-index">02</span>
 <h2>SEO audit</h2>
 <p class="cmp-who">SEO specialista nebo agentura</p>
+{{ coverage(groups, 1) }}
 <dl><div><dt>Kdo</dt><dd>SEO specialista</dd></div><div><dt>Cena</dt><dd>běžně 5–50 tis. Kč¹</dd></div><div><dt>Dodání</dt><dd>podle dohody</dd></div></dl>
 <p>Do hloubky v dohledatelnosti. UX, nabídka ani značka nejsou jeho téma.</p>
 </article>
 <article class="cmp-contender reveal">
-<span class="cmp-index">03</span>
 <h2>Komplexní agenturní audit</h2>
 <p class="cmp-who">SEO, UX, copywriting, brand</p>
+{{ coverage(groups, 2) }}
 <dl><div><dt>Kdo</dt><dd>tým specialistů</dd></div><div><dt>Cena</dt><dd>součet více zakázek</dd></div><div><dt>Dodání</dt><dd>podle dohody</dd></div></dl>
 <p>Může pokrýt vše, ale skládá se z více zadání a rozsah se liší agentura od agentury.</p>
 </article>
 <article class="cmp-contender cmp-featured reveal">
 <span class="cmp-badge">Vše v jednom reportu</span>
-<span class="cmp-index">04</span>
 <h2>SIGEL Web Intelligence</h2>
 <p class="cmp-who">jeden report, ruční kontrola</p>
+{{ coverage(groups, 3) }}
 <dl><div><dt>Kdo</dt><dd>SIGEL</dd></div><div><dt>Cena</dt><dd>4 980 Kč</dd></div><div><dt>Dodání</dt><dd>do 24 h po platbě</dd></div></dl>
 <p>Technika, UX, bezpečnost, nabídka i značka. Na konci roadmapa, co řešit první.</p>
 <button class="btn btn-primary btn-small" data-order-open="" data-track="compare-card" type="button">Objednat report</button>
@@ -112,6 +120,7 @@ og_image_alt: 'Audit webu: agentura, nástroje zdarma, nebo SIGEL?'
 </tbody>
 {%- endfor %}
 <tfoot>
+<tr class="cmp-cover-row"><th scope="row">Pokrytí 11 oblastí</th>{% for col in columns %}<td class="{{ 'cmp-col-sigel' if loop.last }}" data-label="{{ col }}">{{ coverage(groups, loop.index0, True) }}</td>{% endfor %}</tr>
 {%- for label, cells, extra in [
   ('Kdo to dělá', ['vy sami', 'SEO specialista', 'tým: SEO, UX, copy, brand', 'jeden report, ruční kontrola'], ''),
   ('Cena', ['0 Kč', 'běžně 5–50 tis. Kč¹', 'součet více zakázek', '4 980 Kč'], ' cmp-price'),
@@ -156,12 +165,20 @@ og_image_alt: 'Audit webu: agentura, nástroje zdarma, nebo SIGEL?'
 <section class="section" id="order">
 <div class="section-divider"></div>
 <div class="wrap">
-<div class="order-box reveal">
-<p class="tag centered">SIGEL Web Intelligence</p>
+<div class="order-box order-split reveal">
+<div class="order-main">
+<p class="tag">SIGEL Web Intelligence</p>
 <div class="order-price">4 980 Kč</div>
-<p class="order-sub">Jedenáct oblastí, manažerské shrnutí a prioritní roadmapa v jednom ručně kontrolovaném PDF reportu. Zpravidla do 24 hodin v pracovní dny od připsání platby.</p>
-<div class="order-tags"><a href="/cenik/">Co je v ceně</a><a data-track="compare" href="/docs/demo-report.pdf" rel="noopener" target="_blank">Ukázkový report</a><a href="/seo-audit-vs-komplexni-audit-webu/">SEO audit vs. audit webu</a></div>
-<button class="btn btn-primary" data-order-open="" data-track="compare-bottom" type="button">Získat Web Intelligence report →</button>
+<p class="order-sub">nebo 199 € · jedna URL · pro firmy (B2B)</p>
+<button class="btn btn-primary" data-order-open="" data-track="compare-bottom" type="button">Získat Web Intelligence report</button>
+</div>
+<ul class="order-list">
+<li>11 oblastí v jednom PDF reportu</li>
+<li>Manažerské shrnutí a prioritní roadmapa</li>
+<li>Ručně kontrolovaný výstup</li>
+<li>Zpravidla do 24 h v pracovní dny od připsání platby</li>
+<li><a href="/cenik/">Co přesně je v ceně</a> · <a data-track="compare" href="/docs/demo-report.pdf" rel="noopener" target="_blank">ukázkový report</a></li>
+</ul>
 </div>
 </div>
 </section>

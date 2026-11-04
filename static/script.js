@@ -329,12 +329,20 @@
     const tocObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        tocLinks.forEach((link) => link.classList.remove('is-active'));
-        byId.get(entry.target.id)?.classList.add('is-active');
+        const current = byId.get(entry.target.id);
+        let passed = true;
+        tocLinks.forEach((link) => {
+          if (link === current) passed = false;
+          link.classList.toggle('is-active', link === current);
+          link.classList.toggle('is-read', passed);
+        });
       });
     }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
     $$('.guide-article h2[id]').forEach((h) => tocObserver.observe(h));
   }
+
+  // Mobile table of contents closes after picking a section
+  $$('.guide-toc-m a').forEach((link) => link.addEventListener('click', () => link.closest('details')?.removeAttribute('open')));
 
   // Detail modals for problem cards and system/product layers (copy from site.modal)
   const modal = $('#infoModal');
