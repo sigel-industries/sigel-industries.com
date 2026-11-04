@@ -43,51 +43,35 @@ og_image_alt: Ceník SIGEL Web Intelligence – audit webu za 4 980 Kč
 <div class="wrap pr-hero-grid">
 <div class="pr-hero-copy">
 <p class="eyebrow guide-crumb reveal"><a href="/">SIGEL</a> / Ceník</p>
-<h1 class="reveal">Jedna cena. <span class="italic cold-text">Kompletní report.</span></h1>
-<p class="guide-lead reveal">Kompletní Web Intelligence report pro jednu URL. Bez skrytých položek, bez měsíčních poplatků a bez balíčků, ve kterých se člověk ztratí.</p>
+<h1 class="reveal">Jedna položka na faktuře.</h1>
+<p class="guide-lead reveal">Celý Web Intelligence report pro jednu URL za 4 980 Kč. Bez balíčků, příplatků a měsíčních poplatků. Rozklikněte kteroukoli položku dokladu a uvidíte, co přesně obsahuje.</p>
 <div class="hero-buttons reveal">
 <button class="btn btn-primary" data-order-open="" data-track="pricing-hero" type="button">Objednat report za 4 980 Kč</button>
-<a class="btn btn-ghost" href="/audit-webu-agentura-nastroje-nebo-sigel/">Porovnat s alternativami</a>
+<a class="btn btn-ghost" data-track="pricing" href="/docs/demo-report.pdf" rel="noopener" target="_blank">Ukázkový report, 21 stran</a>
 </div>
-</div>
-<aside class="pr-card reveal" aria-label="Cena">
-<p class="pr-card-tag">SIGEL Web Intelligence</p>
-<div class="pr-card-price">4 980 Kč</div>
-<p class="pr-card-alt">nebo 199 € · za jednu URL · pro firmy</p>
-<ul>
-<li>11 oblastí v jednom PDF reportu</li>
-<li>Manažerské shrnutí a prioritní roadmapa</li>
-<li>Ručně kontrolovaný výstup</li>
-<li>Zpravidla do 24 h po připsání platby</li>
+<ul class="pr-promise reveal">
+<li><b>Zpravidla do 24 h</b> v pracovní dny po připsání platby</li>
+<li><b>Ručně kontrolovaný</b> každý report před odesláním</li>
+<li><b>Faktura na IČO</b>, údaje firmy doplníme z ARES</li>
 </ul>
-<button class="btn btn-primary" data-order-open="" data-track="pricing-card" type="button">Objednat</button>
-<a class="pr-card-demo" data-track="pricing" href="/docs/demo-report.pdf" rel="noopener" target="_blank">Prohlédnout ukázkový report (21 stran) →</a>
-</aside>
 </div>
-</section>
-
-<section class="section" id="obsah">
-<div class="section-divider"></div>
-<div class="wrap">
-<div class="section-head reveal">
-<p class="tag">Co je v ceně</p>
-<h2>Dvanáct částí. <span class="italic cold-text">Žádné příplatky.</span></h2>
-<p>Report v češtině/slovenštině, angličtině nebo němčině. Všechno níže je součástí ceny.</p>
-</div>
-<div class="pr-layers">
+<figure class="receipt reveal" id="obsah" aria-label="Co je v ceně">
+<header class="rc-head">
+<strong>SIGEL INDUSTRIES</strong>
+<span>Web Intelligence report</span>
+<span>1 URL · PDF · CZ/SK/EN/DE</span>
+</header>
 {%- for key, name, intro, items in layers %}
-<div class="pr-layer pr-layer-{{ key }} reveal">
-<div class="pr-layer-head"><h3>{{ name }}</h3><p>{{ intro }}</p></div>
-<ul>
+<p class="rc-group">{{ name }}</p>
 {%- for title, text in items %}
-<li><strong>{{ title }}</strong><span>{{ text }}</span></li>
+<details class="rc-item"><summary><span>{{ title }}</span><i aria-hidden="true"></i><b>v ceně</b></summary><p>{{ text }}</p></details>
 {%- endfor %}
-</ul>
-</div>
 {%- endfor %}
-</div>
-<p class="pr-check reveal"><strong>Ruční kontrola.</strong> Každý report před odesláním osobně procházíme, aby priority dávaly smysl pro váš web.</p>
-</div>
+<details class="rc-item"><summary><span>Ruční kontrola</span><i aria-hidden="true"></i><b>v ceně</b></summary><p>Každý report před odesláním osobně procházíme, aby priority dávaly smysl pro váš web.</p></details>
+<div class="rc-total"><span>Celkem</span><strong>4 980 Kč</strong></div>
+<p class="rc-alt">nebo 199 € · pro firmy a podnikatele</p>
+<div aria-hidden="true" class="rc-code"></div>
+</figure>
 </div>
 </section>
 
