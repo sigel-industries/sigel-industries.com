@@ -115,15 +115,17 @@ hero_preload: true
 }{% endblock %}
 {% block main %}
 <section aria-labelledby="hero-title" class="hero hero-monolith">
+<div aria-hidden="true" class="hero-stage">
+<picture class="monolith-picture">
+<source media="(max-width: 760px)" srcset="../assets/hero/sigel-monolith-mobile.webp" type="image/webp"/>
+<img alt="" aria-hidden="true" class="monolith-img" decoding="async" fetchpriority="high" height="1100" loading="eager" src="../assets/hero/sigel-monolith-desktop.webp" width="1600"/>
+</picture>
+</div>
 <canvas aria-hidden="true" class="hero-canvas" id="heroCanvas"></canvas>
 <div class="wrap hero-layout">
 <div class="hero-copy">
 <p class="tag cold hero-eyebrow reveal">Comprehensive website audit · business intelligence for websites</p>
-<h1 class="reveal" id="hero-title">
-            See what holds your website<br/>
-<em>back</em> — and what<br/>
-            to change first.
-          </h1>
+<h1 class="reveal" id="hero-title">See what holds your website <em>back</em> — and what to change first.</h1>
 <p class="hero-sub reveal">
             SIGEL Web Intelligence is a <strong>comprehensive website audit</strong> connecting <strong>measured evidence</strong> with <strong>business interpretation</strong>
             in one human-reviewed report: technical health, SEO, UX, accessibility, offer clarity, trust, archetypes and a prioritised roadmap. Delivered within 24 hours.
@@ -133,31 +135,15 @@ hero_preload: true
 <a class="btn btn-ghost" href="../docs/demo-report-en.pdf" rel="noopener" target="_blank">View report sample</a>
 </div>
 <div aria-label="Service parameters" class="hero-meta reveal">
-{%- for item in t.home_meta %}<span>{{ item }}</span>{% endfor %}
+{%- for value, label in t.home_meta %}<div><b>{{ value }}</b><span>{{ label }}</span></div>{%- endfor %}
 </div>
 </div>
 <div aria-label="Audit core visualization" class="hero-visual reveal">
-<picture class="monolith-picture">
-<source media="(max-width: 760px)" srcset="../assets/hero/sigel-monolith-mobile.webp" type="image/webp"/>
-<img alt="" aria-hidden="true" class="monolith-img" decoding="async" fetchpriority="high" height="1100" loading="eager" src="../assets/hero/sigel-monolith-desktop.webp" width="1600"/>
-</picture>
-<div aria-hidden="true" class="hero-energy">
-<span class="energy-ring ring-a"></span>
-<span class="energy-ring ring-b"></span>
-<span class="energy-beam beam-a"></span>
-<span class="energy-beam beam-b"></span>
-<span class="energy-beam beam-c"></span>
-<span class="energy-stream stream-a"></span>
-<span class="energy-stream stream-b"></span>
-<span class="energy-node node-a"></span>
-<span class="energy-node node-b"></span>
-<span class="energy-node node-c"></span>
-<span class="energy-node node-d"></span>
-</div>
 <article class="hero-panel panel-measured interactive-card">
 <div class="panel-label cold"><i></i>Measurable</div>
 <div class="panel-score"><span id="scoreNum">0</span><small>/100</small></div>
 <p>audit score · tech and SEO</p>
+<span aria-hidden="true" class="panel-meter"><i></i></span>
 </article>
 <article class="hero-panel panel-interpreted interactive-card">
 <div class="panel-label warm"><i></i>Interpreted</div>
@@ -232,10 +218,10 @@ hero_preload: true
 </div>
 <div class="flow" id="flow">
 <div aria-hidden="true" class="flow-line"></div>
-<article class="flow-step"><div class="flow-num">01</div><h3>URL as input</h3><p>We start with a specific website, not generic marketing theory.</p></article>
-<article class="flow-step"><div class="flow-num">02</div><h3>Measured evidence</h3><p>Technical health, SEO, UX, CTA, accessibility, content, trust and offer structure.</p></article>
-<article class="flow-step"><div class="flow-num">03</div><h3>Business interpretation</h3><p>What the signals mean for the offer, trust, audience and decision path.</p></article>
-<article class="flow-step"><div class="flow-num">04</div><h3>Priority decisions</h3><p>Not everything matters equally. The report shows what to solve first, later and what to ignore.</p></article>
+<article class="flow-step"><div class="flow-num">01</div><h3>URL as input</h3><p>We start with a specific website, not generic marketing theory.</p><span class="flow-out">{{ t.home_flow_out[0] }}</span></article>
+<article class="flow-step"><div class="flow-num">02</div><h3>Measured evidence</h3><p>Technical health, SEO, UX, CTA, accessibility, content, trust and offer structure.</p><span class="flow-out">{{ t.home_flow_out[1] }}</span></article>
+<article class="flow-step"><div class="flow-num">03</div><h3>Business interpretation</h3><p>What the signals mean for the offer, trust, audience and decision path.</p><span class="flow-out">{{ t.home_flow_out[2] }}</span></article>
+<article class="flow-step"><div class="flow-num">04</div><h3>Priority decisions</h3><p>Not everything matters equally. The report shows what to solve first, later and what to ignore.</p><span class="flow-out">{{ t.home_flow_out[3] }}</span></article>
 </div>
 </div>
 </section>
@@ -279,8 +265,12 @@ hero_preload: true
 <div class="section-head reveal"><p class="tag">Web Intelligence Report</p><h2>Data is not enough. <span class="italic cold-text">The output must show priorities.</span></h2><p>Management summary, desktop and mobile Lighthouse metrics, Core Web Vitals, links and CTA, accessibility, offer communication, archetype playbook, roadmap and evidence appendix in one readable PDF.</p></div>
 <div class="report-shell reveal" id="reportWrap">
 <div aria-label="Report sample" class="report-tabs" role="tablist"><button aria-controls="reportPanel" aria-selected="true" class="report-tab active" data-report-tab="dashboard" id="reportTab-dashboard" role="tab" type="button">Dashboard</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="technika" id="reportTab-technika" role="tab" type="button">Technical</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="komunikace" id="reportTab-komunikace" role="tab" type="button">Communication</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="archetypy" id="reportTab-archetypy" role="tab" type="button">Archetypes</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="roadmapa" id="reportTab-roadmapa" role="tab" type="button">Roadmap</button></div>
-<div aria-labelledby="reportTab-dashboard" aria-live="polite" class="report-body" id="reportPanel" role="tabpanel"><div class="report-score-ring"><span id="reportScore">64</span></div><div class="report-copy"><span class="report-kicker" id="reportKicker">Dashboard</span><h3 id="reportTitle">Score, risks and decision direction.</h3><p id="reportText">The first part combines website health, the main risks and business impact into one fast orientation.</p><div class="report-mini-grid"><span>Score</span><span>Risks</span><span>Business impact</span><span>Roadmap</span></div></div></div>
-<div aria-hidden="true" class="report-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div aria-labelledby="reportTab-dashboard" aria-live="polite" class="report-body" id="reportPanel" role="tabpanel"><div class="report-score-ring" style="--score:{{ t.report.dashboard.score }}"><span id="reportScore">64</span></div><div class="report-copy"><span class="report-kicker" id="reportKicker">Dashboard</span><h3 id="reportTitle">Score, risks and decision direction.</h3><p id="reportText">The first part combines website health, the main risks and business impact into one fast orientation.</p><div class="report-mini-grid"><span>Score</span><span>Risks</span><span>Business impact</span><span>Roadmap</span></div></div></div>
+<div class="report-meters">
+{%- for label in t.home_report_bars %}
+<div class="report-meter"><span>{{ label }}<b>{{ t.report.dashboard.bars[loop.index0] }}</b></span><i style="--v:{{ t.report.dashboard.bars[loop.index0] }}%"></i></div>
+{%- endfor %}
+</div>
 </div><div class="report-actions reveal"><a class="btn btn-primary" href="../docs/demo-report-en.pdf" rel="noopener" target="_blank">View report sample</a><p>The sample shows the output structure. A real report contains specific measurements, interpretation, priorities and evidence data for the submitted website.</p></div>
 </div>
 </section>
@@ -313,15 +303,33 @@ hero_preload: true
 </div>
 </section><section class="section muted-section" id="faq">
 <div class="section-divider"></div>
-<div class="wrap"><div class="section-head reveal"><p class="tag">FAQ</p><h2>Practical questions</h2></div><div class="faq-list reveal">
+<div class="wrap faq-layout">
+<div class="faq-side">
+<div class="section-head reveal"><p class="tag">FAQ</p><h2>Practical questions</h2></div>
+<p class="faq-lead">{{ t.home_faq.lead }}</p>
+<button class="btn btn-ghost" data-contact-open="question" type="button">{{ t.home_faq.contact }}</button>
+<nav aria-label="FAQ" class="faq-nav">
+{%- for name, ix in t.home_faq.groups %}
+<a href="#faq-{{ loop.index }}"><span>{{ '%02d' % loop.index }}</span>{{ name }}<em>{{ ix | length }}</em></a>
+{%- endfor %}
+</nav>
+</div>
+<div class="faq-list reveal">
+<div class="faq-group" id="faq-1">
+<p class="faq-group-title"><span>01</span>{{ t.home_faq.groups[0][0] }}</p>
 <details><summary>Is SIGEL just an SEO or technical audit? <span>+</span></summary><p>No. SEO, speed and technical health are only one part. SIGEL works as business intelligence for websites: it connects measured evidence with UX, accessibility, offer clarity, trust, archetypes and a priority roadmap. The result is not another error list, but decision support showing what to fix first.</p></details>
 <details><summary>Is the analysis automated or human-reviewed? <span>+</span></summary><p>The base is created by an analytical system: signal collection, technical checks, custom scoring, UX heuristics and interpretation. Every report is reviewed personally before delivery — so the output has clear priorities and makes practical sense.</p></details>
-<details><summary>How much does it cost and who is it for? <span>+</span></summary><p>The Web Intelligence report costs €199 per URL. The service is for businesses only and is invoiced. The price covers the complete scope: measured technical and UX signals, offer communication, the archetype playbook, a priority roadmap, evidence data and personal review of every report.</p></details>
 <details><summary>When does Web Intelligence make the most sense? <span>+</span></summary><p>It makes the most sense before investing in advertising, before a redesign, when the website gets too few enquiries, or when the offer is good but visitors do not understand it clearly enough. SIGEL does not add another marketing layer blindly; it first shows where the website may be losing clarity, trust or performance.</p></details>
+</div>
+<div class="faq-group" id="faq-2">
+<p class="faq-group-title"><span>02</span>{{ t.home_faq.groups[1][0] }}</p>
 <details><summary>What if the website has good technical scores but still does not work commercially? <span>+</span></summary><p>That is exactly where SIGEL is useful. Technical health is only one layer. A website can be fast, indexable and formally correct while still failing to explain the offer, build trust, guide visitors to action or speak to the right customer type.</p></details>
 <details><summary>What do brand and customer archetypes mean? <span>+</span></summary><p>The brand archetype describes how the company comes across on the website: expert, creator, guide, innovator or another type of brand role. Customer archetypes help define the motivations, doubts and proof different visitor types need in order to understand and trust the offer.</p></details>
-<details><summary>Can agencies use the output? <span>+</span></summary><p>Yes. An agency can use the report as diagnostic input before consulting, redesign, SEO work or content strategy. By agreement, it can serve as internal preparation, client-facing analytical input or the basis for the agency's own recommendation.</p></details>
 <details><summary>What does the output not guarantee? <span>+</span></summary><p>The report does not guarantee revenue growth, better search rankings or advertising campaign results. It is diagnostic decision support: it shows risks, barriers and priorities worth addressing before sending more budget into the website, advertising or redesign.</p></details>
+</div>
+<div class="faq-group" id="faq-3">
+<p class="faq-group-title"><span>03</span>{{ t.home_faq.groups[2][0] }}</p>
+<details><summary>How much does it cost and who is it for? <span>+</span></summary><p>The Web Intelligence report costs €199 per URL. The service is for businesses only and is invoiced. The price covers the complete scope: measured technical and UX signals, offer communication, the archetype playbook, a priority roadmap, evidence data and personal review of every report.</p></details>
 <details>
 <summary>Why pay when Lighthouse and PageSpeed are free? <span>+</span></summary>
 <p>Lighthouse and PageSpeed measure the technical layer: speed, accessibility, basic SEO. They do not tell you whether visitors understand the offer, why they do not trust it or which of the many red numbers to fix first. SIGEL uses these measurements as one input and adds UX, communication, trust and a priority roadmap.</p>
@@ -330,14 +338,33 @@ hero_preload: true
 <summary>What if the report tells me nothing new? <span>+</span></summary>
 <p>Look at the <a href="/docs/demo-report-en.pdf" rel="noopener" target="_blank">sample report</a> first so you know what you get. If the delivered report does not match the described scope, you can file a complaint under the <a href="/en/terms.html">Terms and Conditions</a>.</p>
 </details>
+</div>
+<div class="faq-group" id="faq-4">
+<p class="faq-group-title"><span>04</span>{{ t.home_faq.groups[3][0] }}</p>
+<details><summary>Can agencies use the output? <span>+</span></summary><p>Yes. An agency can use the report as diagnostic input before consulting, redesign, SEO work or content strategy. By agreement, it can serve as internal preparation, client-facing analytical input or the basis for the agency's own recommendation.</p></details>
 <details>
 <summary>Who is SIGEL not for? <span>+</span></summary>
 <p>Websites before launch, anyone who wants guaranteed rankings or revenue, large e-shops that need an audit of thousands of product pages, and anyone mainly looking for implementation.</p>
 </details>
-</div></div>
+</div>
+</div>
+</div>
 </section>
 <section class="section" id="order">
 <div class="section-divider"></div>
-<div class="wrap"><div class="order-box reveal"><div class="order-steps"><span>1 order</span><span>2 invoice</span><span>3 payment</span><span>4 PDF report</span></div><p class="tag centered">Web Intelligence report</p><div class="order-price">€199</div><p class="order-sub">Order a Web Intelligence report for a specific URL. Add the situation you want to verify in the note.</p><p class="launch-note">For businesses (B2B). Invoiced to your company, report normally within 24 hours on business days after payment. Every output is personally reviewed.</p><div class="order-tags"><span>PDF report</span><span>24h delivery</span><span>Human-reviewed</span></div><button class="btn btn-primary" data-order-open="" type="button">Get the Web Intelligence report →</button></div></div>
+<div class="wrap"><div class="order-box order-split reveal">
+<div class="order-main">
+<p class="tag">Web Intelligence report</p>
+<div class="order-price">€199</div>
+<button class="btn btn-primary" data-order-open="" type="button">Get the Web Intelligence report →</button>
+<p class="launch-note">For businesses (B2B). Invoiced to your company, report normally within 24 hours on business days after payment. Every output is personally reviewed.</p>
+</div>
+<ul class="order-list">
+{%- for item in t.home_order['items'] %}
+<li>{{ item }}</li>
+{%- endfor %}
+</ul>
+</div>
+</div>
 </section>
 {% endblock %}

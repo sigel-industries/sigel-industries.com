@@ -454,6 +454,7 @@ contact:
   title: Schreiben Sie uns
   lead: Beschreiben Sie, was Sie brauchen. Wir melden uns mit einem Vorschlag und Preis.
   topics:
+    question: Frage zu Web Intelligence
     agency: Pilot-Zusammenarbeit für Agenturen
     lead-research: Lead Research
     benchmark: Segment-Benchmark
@@ -601,6 +602,27 @@ home_compare:
       - - y
         - ja
 home_meta:
-- 11 Bereiche in einem Report
-- 199 € · für Unternehmen
-- In 24 Std. nach Zahlung
+- ['11', Bereiche in einem Report]
+- [199 €, eine URL · für Unternehmen]
+- [24 Std., in der Regel nach Zahlung]
+home_flow_out:
+- 'Input: URL und Firmendaten'
+- 'Output: Daten aus 11 Bereichen'
+- 'Output: geschäftliche Wirkung'
+- 'Output: priorisierte Roadmap'
+home_report_bars: [Performance, SEO, UX, Barrierefreiheit, Angebot, Vertrauen]
+home_faq:
+  lead: Elf Antworten in vier Gruppen. Ihre Frage ist nicht dabei?
+  contact: Schreiben Sie uns →
+  groups:
+  - [Die Leistung, [0, 1, 3]]
+  - [Der Output, [4, 5, 7]]
+  - [Preis und Nutzen, [2, 8, 9]]
+  - [Für wen, [6, 10]]
+home_order:
+  items:
+  - 11 Bereiche in einem PDF-Report
+  - Management Summary und priorisierte Roadmap
+  - Persönlich geprüfter Output
+  - Abrechnung per Rechnung
+  - In der Regel innerhalb von 24 Std. nach Zahlung

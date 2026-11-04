@@ -36,7 +36,8 @@
 <link href="/favicon.ico" rel="icon" sizes="any"/><link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
 
 {%- if page.hero_preload %}
-<link as="image" href="/assets/hero/sigel-monolith-desktop.webp" imagesizes="(max-width: 760px) 100vw, 52vw" imagesrcset="/assets/hero/sigel-monolith-mobile.webp 760w, /assets/hero/sigel-monolith-desktop.webp 1600w" rel="preload"/>
+<link as="image" fetchpriority="high" href="/assets/hero/sigel-monolith-mobile.webp" media="(max-width: 760px)" rel="preload" type="image/webp"/>
+<link as="image" fetchpriority="high" href="/assets/hero/sigel-monolith-desktop.webp" media="(min-width: 761px)" rel="preload" type="image/webp"/>
 {%- endif %}
 <style>{{ inline_css('/fonts/fonts.css') }}</style>
 <link href="{{ asset('/style.css') }}" rel="stylesheet"/>
@@ -44,7 +45,7 @@
 <script type="application/ld+json">{% block jsonld %}{% endblock %}</script>
 {%- endif %}{% endblock %}
 </head>
-<body data-lang="{{ lang }}">
+<body {% if page.url in ["/", "/sk/", "/en/", "/de/"] %}class="is-home" {% endif %}data-lang="{{ lang }}">
 <div aria-hidden="true" class="ambient"></div>
 <div aria-hidden="true" class="ambient-grid"></div>
 <div aria-hidden="true" class="noise"></div>

@@ -144,8 +144,8 @@
   const reportTitle = $('#reportTitle');
   const reportText = $('#reportText');
   const reportItems = $('.report-mini-grid');
-  const reportShell = $('#reportWrap');
-  const reportBars = $$('.report-bars i');
+  const reportMeters = $$('.report-meter');
+  const reportRing = $('.report-score-ring');
   $$('.report-tab').forEach((tab) => {
     tab.addEventListener('click', () => {
       $$('.report-tab').forEach((item) => { item.classList.remove('active'); item.setAttribute('aria-selected', 'false'); });
@@ -159,16 +159,14 @@
       if (reportTitle) reportTitle.textContent = data.title;
       if (reportText) reportText.textContent = data.text;
       if (reportItems && data.items) reportItems.innerHTML = data.items.map((item) => `<span>${item}</span>`).join('');
-      if (data.bars && reportBars.length) {
-        if (reportShell) reportShell.classList.add('switching');
-        reportBars.forEach((bar, i) => {
-          bar.style.height = `${data.bars[i] || 60}%`;
-          bar.style.transform = 'scaleY(.12)';
+      if (reportRing) reportRing.style.setProperty('--score', data.score);
+      if (data.bars) {
+        reportMeters.forEach((meter, i) => {
+          const value = data.bars[i] ?? 0;
+          const num = $('b', meter);
+          if (num) num.textContent = value;
+          $('i', meter)?.style.setProperty('--v', `${value}%`);
         });
-        window.setTimeout(() => {
-          reportBars.forEach((bar) => { bar.style.transform = 'scaleY(1)'; });
-          if (reportShell) reportShell.classList.remove('switching');
-        }, 80);
       }
     });
   });
@@ -422,6 +420,7 @@
     body.classList.remove('modal-open');
   }
   $$('[data-contact-close]', contactModal || doc).forEach((el) => el.addEventListener('click', closeContactModal));
+  $$('[data-contact-open]').forEach((el) => el.addEventListener('click', () => openContactModal(el.dataset.contactOpen)));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && contactModal?.classList.contains('is-open')) closeContactModal(); });
 
 

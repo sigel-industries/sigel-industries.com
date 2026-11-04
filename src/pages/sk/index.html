@@ -107,15 +107,17 @@ hero_preload: true
 }{% endblock %}
 {% block main %}
 <section aria-labelledby="hero-title" class="hero hero-monolith">
+<div aria-hidden="true" class="hero-stage">
+<picture class="monolith-picture">
+<source media="(max-width: 760px)" srcset="/assets/hero/sigel-monolith-mobile.webp" type="image/webp"/>
+<img alt="" aria-hidden="true" class="monolith-img" decoding="async" fetchpriority="high" height="1100" loading="eager" src="/assets/hero/sigel-monolith-desktop.webp" width="1600"/>
+</picture>
+</div>
 <canvas aria-hidden="true" class="hero-canvas" id="heroCanvas"></canvas>
 <div class="wrap hero-layout">
 <div class="hero-copy">
 <p class="tag cold hero-eyebrow reveal">Komplexný audit webu · business intelligence pre web</p>
-<h1 class="reveal" id="hero-title">
-            Zistite, čo váš web<br/>
-<em>brzdí</em> — a čo<br/>
-            zmeniť ako prvé.
-          </h1>
+<h1 class="reveal" id="hero-title">Zistite, čo váš web <em>brzdí</em> — a čo zmeniť ako prvé.</h1>
 <p class="hero-sub reveal">
             SIGEL Web Intelligence je <strong>komplexný audit webu</strong>, ktorý prepája <strong>namerané dáta</strong> s <strong>obchodnou interpretáciou</strong>
             v jednom ručne kontrolovanom reporte: technika, SEO, UX, prístupnosť, komunikácia ponuky, dôvera, archetypy a prioritná roadmapa. Do 24 hodín.
@@ -125,31 +127,15 @@ hero_preload: true
 <a class="btn btn-ghost" href="/docs/demo-report-sk.pdf" rel="noopener" target="_blank">Pozrieť ukážku reportu</a>
 </div>
 <div aria-label="Parametre služby" class="hero-meta reveal">
-{%- for item in t.home_meta %}<span>{{ item }}</span>{% endfor %}
+{%- for value, label in t.home_meta %}<div><b>{{ value }}</b><span>{{ label }}</span></div>{%- endfor %}
 </div>
 </div>
 <div aria-label="Vizualizácia auditného jadra" class="hero-visual reveal">
-<picture class="monolith-picture">
-<source media="(max-width: 760px)" srcset="/assets/hero/sigel-monolith-mobile.webp" type="image/webp"/>
-<img alt="" aria-hidden="true" class="monolith-img" decoding="async" fetchpriority="high" height="1100" loading="eager" src="/assets/hero/sigel-monolith-desktop.webp" width="1600"/>
-</picture>
-<div aria-hidden="true" class="hero-energy">
-<span class="energy-ring ring-a"></span>
-<span class="energy-ring ring-b"></span>
-<span class="energy-beam beam-a"></span>
-<span class="energy-beam beam-b"></span>
-<span class="energy-beam beam-c"></span>
-<span class="energy-stream stream-a"></span>
-<span class="energy-stream stream-b"></span>
-<span class="energy-node node-a"></span>
-<span class="energy-node node-b"></span>
-<span class="energy-node node-c"></span>
-<span class="energy-node node-d"></span>
-</div>
 <article class="hero-panel panel-measured interactive-card">
 <div class="panel-label cold"><i></i>Merateľné</div>
 <div class="panel-score"><span id="scoreNum">0</span><small>/100</small></div>
 <p>audit skóre · technika a SEO</p>
+<span aria-hidden="true" class="panel-meter"><i></i></span>
 </article>
 <article class="hero-panel panel-interpreted interactive-card">
 <div class="panel-label warm"><i></i>Interpretované</div>
@@ -266,22 +252,22 @@ hero_preload: true
 <div class="flow-num">01</div>
 <h3>URL ako vstup</h3>
 <p>Začíname konkrétnym webom, nie všeobecnou marketingovou teóriou.</p>
-</article>
+<span class="flow-out">{{ t.home_flow_out[0] }}</span></article>
 <article class="flow-step">
 <div class="flow-num">02</div>
 <h3>Nameraná evidencia</h3>
 <p>Technika, SEO, UX, CTA, prístupnosť, obsah, dôvera a štruktúra ponuky.</p>
-</article>
+<span class="flow-out">{{ t.home_flow_out[1] }}</span></article>
 <article class="flow-step">
 <div class="flow-num">03</div>
 <h3>Obchodná interpretácia</h3>
 <p>Čo signály znamenajú pre ponuku, dôveru, publikum a rozhodovaciu cestu.</p>
-</article>
+<span class="flow-out">{{ t.home_flow_out[2] }}</span></article>
 <article class="flow-step">
 <div class="flow-num">04</div>
 <h3>Prioritné rozhodnutia</h3>
 <p>Nie všetko je rovnako dôležité. Report ukáže, čo riešiť ako prvé, čo neskôr a čo ignorovať.</p>
-</article>
+<span class="flow-out">{{ t.home_flow_out[3] }}</span></article>
 </div>
 </div>
 </section>
@@ -354,7 +340,7 @@ hero_preload: true
 <button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="roadmapa" id="reportTab-roadmapa" role="tab" type="button">Roadmapa</button>
 </div>
 <div aria-labelledby="reportTab-dashboard" aria-live="polite" class="report-body" id="reportPanel" role="tabpanel">
-<div class="report-score-ring"><span id="reportScore">64</span></div>
+<div class="report-score-ring" style="--score:{{ t.report.dashboard.score }}"><span id="reportScore">64</span></div>
 <div class="report-copy">
 <span class="report-kicker" id="reportKicker">Dashboard</span>
 <h3 id="reportTitle">Skóre, riziká a smer rozhodovania.</h3>
@@ -364,7 +350,11 @@ hero_preload: true
 </div>
 </div>
 </div>
-<div aria-hidden="true" class="report-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="report-meters">
+{%- for label in t.home_report_bars %}
+<div class="report-meter"><span>{{ label }}<b>{{ t.report.dashboard.bars[loop.index0] }}</b></span><i style="--v:{{ t.report.dashboard.bars[loop.index0] }}%"></i></div>
+{%- endfor %}
+</div>
 </div>
 <div class="report-actions reveal">
 <a class="btn btn-primary" href="/docs/demo-report-sk.pdf" rel="noopener" target="_blank">Pozrieť ukážku reportu</a>
@@ -406,12 +396,23 @@ hero_preload: true
 </section>
 <section class="section muted-section" id="faq">
 <div class="section-divider"></div>
-<div class="wrap">
+<div class="wrap faq-layout">
+<div class="faq-side">
 <div class="section-head reveal">
 <p class="tag">FAQ</p>
 <h2>Praktické otázky</h2>
 </div>
+<p class="faq-lead">{{ t.home_faq.lead }}</p>
+<button class="btn btn-ghost" data-contact-open="question" type="button">{{ t.home_faq.contact }}</button>
+<nav aria-label="FAQ" class="faq-nav">
+{%- for name, ix in t.home_faq.groups %}
+<a href="#faq-{{ loop.index }}"><span>{{ '%02d' % loop.index }}</span>{{ name }}<em>{{ ix | length }}</em></a>
+{%- endfor %}
+</nav>
+</div>
 <div class="faq-list reveal">
+<div class="faq-group" id="faq-1">
+<p class="faq-group-title"><span>01</span>{{ t.home_faq.groups[0][0] }}</p>
 <details>
 <summary>Je SIGEL iba SEO alebo technický audit? <span>+</span></summary>
 <p>Nie. SEO, rýchlosť a technika sú iba jedna časť. SIGEL funguje ako business intelligence pre web: prepojí namerané dáta s UX, prístupnosťou, jasnosťou ponuky, dôverou, archetypmi a prioritnou roadmapou. Výsledkom nie je ďalší zoznam chýb, ale podklad pre rozhodnutie, čo riešiť ako prvé.</p>
@@ -421,13 +422,12 @@ hero_preload: true
 <p>Základ vzniká nad analytickým systémom: zber signálov, technické kontroly, vlastný scoring, UX heuristiky a interpretačná vrstva. Každý report pred odoslaním prechádza ručnou kontrolou, aby mal jasné priority a dával praktický zmysel.</p>
 </details>
 <details>
-<summary>Koľko report stojí a pre koho je? <span>+</span></summary>
-<p>Web Intelligence report stojí 199 € za jednu URL. Služba je určená firmám a podnikateľom, objednávka prebieha na faktúru. V cene je kompletný rozsah: merané technické a UX signály, komunikácia ponuky, archetypový playbook, prioritná roadmapa, evidence dáta a osobná kontrola každého reportu.</p>
-</details>
-<details>
 <summary>Kedy dáva Web Intelligence najväčší zmysel? <span>+</span></summary>
 <p>Najväčší zmysel má pred investíciou do reklamy, pred redizajnom, pri slabých dopytoch z webu alebo vo chvíli, keď máte pocit, že ponuka je dobrá, ale ľudia jej nerozumejú. SIGEL nepridáva ďalšiu marketingovú vrstvu naslepo, ale najprv ukáže, kde môže web strácať výkon, dôveru alebo jasnosť.</p>
 </details>
+</div>
+<div class="faq-group" id="faq-2">
+<p class="faq-group-title"><span>02</span>{{ t.home_faq.groups[1][0] }}</p>
 <details>
 <summary>Čo ak má web dobré technické skóre, ale obchodne nefunguje? <span>+</span></summary>
 <p>Práve tam dáva SIGEL najväčší zmysel. Technický stav je iba jedna vrstva. Web môže byť rýchly, indexovateľný a formálne v poriadku, ale stále nemusí jasne vysvetľovať ponuku, budovať dôveru, viesť návštevníka k akcii alebo hovoriť k správnemu typu zákazníka.</p>
@@ -437,12 +437,15 @@ hero_preload: true
 <p>Archetyp značky opisuje, ako firma na webe pôsobí: či komunikuje ako expert, tvorca, sprievodca, inovátor alebo iný typ značky. Zákaznícke archetypy pomáhajú určiť, aké motivácie, obavy a dôkazy potrebujú rôzne typy návštevníkov, aby ponuke porozumeli a mohli jej dôverovať.</p>
 </details>
 <details>
-<summary>Je výstup použiteľný aj pre agentúry? <span>+</span></summary>
-<p>Áno. Agentúra môže report použiť ako vstupnú diagnostiku pred konzultáciou, redizajnom, SEO úpravami alebo obsahovou stratégiou. Podľa dohody môže slúžiť ako interný podklad, klientsky analytický vstup alebo základ vlastného odporúčania.</p>
-</details>
-<details>
 <summary>Čo výstup negarantuje? <span>+</span></summary>
 <p>Report negarantuje zvýšenie tržieb, lepšie pozície vo vyhľadávaní ani výsledky reklamných kampaní. Je to diagnostický podklad pre rozhodnutie: ukazuje riziká, bariéry a priority, ktoré má zmysel riešiť skôr, než do webu, reklamy alebo redizajnu pošlete ďalší rozpočet.</p>
+</details>
+</div>
+<div class="faq-group" id="faq-3">
+<p class="faq-group-title"><span>03</span>{{ t.home_faq.groups[2][0] }}</p>
+<details>
+<summary>Koľko report stojí a pre koho je? <span>+</span></summary>
+<p>Web Intelligence report stojí 199 € za jednu URL. Služba je určená firmám a podnikateľom, objednávka prebieha na faktúru. V cene je kompletný rozsah: merané technické a UX signály, komunikácia ponuky, archetypový playbook, prioritná roadmapa, evidence dáta a osobná kontrola každého reportu.</p>
 </details>
 <details>
 <summary>Prečo platiť, keď Lighthouse a PageSpeed sú zadarmo? <span>+</span></summary>
@@ -452,24 +455,36 @@ hero_preload: true
 <summary>Čo ak mi report nepovie nič nové? <span>+</span></summary>
 <p>Pozrite sa najprv do <a href="/docs/demo-report-sk.pdf" rel="noopener" target="_blank">ukážkového reportu</a>, aby ste vedeli, čo dostanete. Ak dodaný report nezodpovedá opísanému rozsahu, môžete ho reklamovať podľa <a href="/sk/obchodne-podmienky.html">obchodných podmienok</a>.</p>
 </details>
+</div>
+<div class="faq-group" id="faq-4">
+<p class="faq-group-title"><span>04</span>{{ t.home_faq.groups[3][0] }}</p>
+<details>
+<summary>Je výstup použiteľný aj pre agentúry? <span>+</span></summary>
+<p>Áno. Agentúra môže report použiť ako vstupnú diagnostiku pred konzultáciou, redizajnom, SEO úpravami alebo obsahovou stratégiou. Podľa dohody môže slúžiť ako interný podklad, klientsky analytický vstup alebo základ vlastného odporúčania.</p>
+</details>
 <details>
 <summary>Pre koho SIGEL nie je? <span>+</span></summary>
 <p>Pre weby pred spustením, pre toho, kto chce garanciu pozícií alebo tržieb, pre veľké e-shopy, ktoré potrebujú audit tisícov produktových stránok, a pre toho, kto hľadá hlavne implementáciu.</p>
 </details>
 </div>
 </div>
+</div>
 </section>
 <section class="section" id="order">
 <div class="section-divider"></div>
 <div class="wrap">
-<div class="order-box reveal">
-<div class="order-steps"><span>1 objednávka</span><span>2 faktúra</span><span>3 platba</span><span>4 PDF report</span></div>
-<p class="tag centered">Web Intelligence report</p>
+<div class="order-box order-split reveal">
+<div class="order-main">
+<p class="tag">Web Intelligence report</p>
 <div class="order-price">199 €</div>
-<p class="order-sub">Objednajte si Web Intelligence report pre konkrétnu URL. Do poznámky môžete pridať situáciu, ktorú potrebujete overiť.</p>
-<p class="launch-note">Pre firmy a podnikateľov (B2B). Fakturácia na IČO, report spravidla do 24 hodín v pracovné dni od pripísania platby. Každý výstup prechádza osobnou kontrolou.</p>
-<div class="order-tags"><span>PDF report</span><span>Dodanie do 24 h</span><span>Ručne kontrolovaný</span></div>
 <button class="btn btn-primary" data-order-open="" type="button">Získať Web Intelligence report →</button>
+<p class="launch-note">Pre firmy a podnikateľov (B2B). Fakturácia na IČO, report spravidla do 24 hodín v pracovné dni od pripísania platby. Každý výstup prechádza osobnou kontrolou.</p>
+</div>
+<ul class="order-list">
+{%- for item in t.home_order['items'] %}
+<li>{{ item }}</li>
+{%- endfor %}
+</ul>
 </div>
 </div>
 </section>

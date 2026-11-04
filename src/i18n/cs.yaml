@@ -456,6 +456,7 @@ contact:
   title: Napište nám
   lead: Popište, co potřebujete. Ozveme se s návrhem spolupráce a cenou.
   topics:
+    question: Dotaz k Web Intelligence
     agency: Pilotní spolupráce pro agentury
     lead-research: Lead Research
     benchmark: Segmentový benchmark
@@ -606,6 +607,27 @@ home_compare:
       - - y
         - ano
 home_meta:
-- 11 oblastí v jednom reportu
-- 4 980 Kč · pro firmy
-- Do 24 h po platbě
+- ['11', oblastí v reportu]
+- [4 980 Kč, jedna URL · pro firmy]
+- [24 h, zpravidla po platbě]
+home_flow_out:
+- 'Vstup: URL a IČO'
+- 'Výstup: data z 11 oblastí'
+- 'Výstup: dopad na byznys'
+- 'Výstup: prioritní roadmapa'
+home_report_bars: [Výkon, SEO, UX, Přístupnost, Nabídka, Důvěra]
+home_faq:
+  lead: Jedenáct odpovědí ve čtyřech skupinách. Nenašli jste svou otázku?
+  contact: Napište nám →
+  groups:
+  - [Služba, [0, 1, 3]]
+  - [Výstup, [4, 5, 7]]
+  - [Cena a hodnota, [2, 8, 9]]
+  - [Pro koho, [6, 10]]
+home_order:
+  items:
+  - 11 oblastí v jednom PDF reportu
+  - Manažerské shrnutí a prioritní roadmapa
+  - Ručně kontrolovaný výstup
+  - Faktura na IČO, údaje doplníme z ARES
+  - Zpravidla do 24 h po připsání platby
