@@ -46,52 +46,40 @@ og_image_alt: 'Audit webu: agentura, nástroje zdarma, nebo SIGEL?'
 <span class="cmp-cover-text"><b>{{ ns.full }}</b> z 11 plně{% if ns.part %}, {{ ns.part }} částečně{% endif %}</span>
 </div>
 {%- endmacro %}
+{%- set options = [
+  ('Nástroje zdarma', 'Lighthouse, PageSpeed Insights', '0 Kč', 'okamžitě', 'Technická čísla bez kontextu. Nevědí, co prodáváte ani co opravit první.'),
+  ('SEO audit', 'SEO specialista nebo agentura', 'běžně 5–50 tis. Kč¹', 'podle dohody', 'Do hloubky v dohledatelnosti. UX, nabídka ani značka nejsou jeho téma.'),
+  ('Agenturní audit', 'SEO, UX, copywriting, brand', 'součet více zakázek', 'podle dohody', 'Může pokrýt vše, ale skládá se z více zadání a rozsah se liší agentura od agentury.'),
+  ('SIGEL Web Intelligence', 'jeden report, ruční kontrola', '4 980 Kč', 'do 24 h po platbě', 'Technika, UX, bezpečnost, nabídka i značka. Na konci roadmapa, co řešit první.'),
+] -%}
 <section class="page-shell cmp-hero">
 <div class="wrap">
 <p class="eyebrow reveal"><a href="/">SIGEL</a> / Srovnání</p>
-<h1 class="reveal">Audit webu: agentura, nástroje zdarma, <span class="italic cold-text">nebo SIGEL?</span></h1>
+<div class="cmp-hero-head">
+<h1 class="reveal">Kolik z 11 oblastí váš audit opravdu pokryje?</h1>
 <p class="cmp-lead reveal">Čtyři cesty, jak zjistit, co web brzdí. Liší se cenou a rychlostí, ale hlavně tím, kolik oblastí pokryjí a jestli na konci dostanete čísla, nebo rozhodnutí.</p>
-<div class="hero-buttons reveal">
-<a class="btn btn-primary" href="#srovnani">Zobrazit srovnání</a>
-<a class="btn btn-ghost" href="/cenik/">Ceník a obsah reportu</a>
 </div>
-</div>
-</section>
-
-<section class="section cmp-contenders-section">
-<div class="wrap">
-<div class="cmp-contenders">
-<article class="cmp-contender reveal">
-<h2>Nástroje zdarma</h2>
-<p class="cmp-who">Lighthouse, PageSpeed Insights</p>
-{{ coverage(groups, 0) }}
-<dl><div><dt>Kdo</dt><dd>vy sami</dd></div><div><dt>Cena</dt><dd>0 Kč</dd></div><div><dt>Dodání</dt><dd>okamžitě</dd></div></dl>
-<p>Technická čísla bez kontextu. Nevědí, co prodáváte ani co opravit první.</p>
-</article>
-<article class="cmp-contender reveal">
-<h2>SEO audit</h2>
-<p class="cmp-who">SEO specialista nebo agentura</p>
-{{ coverage(groups, 1) }}
-<dl><div><dt>Kdo</dt><dd>SEO specialista</dd></div><div><dt>Cena</dt><dd>běžně 5–50 tis. Kč¹</dd></div><div><dt>Dodání</dt><dd>podle dohody</dd></div></dl>
-<p>Do hloubky v dohledatelnosti. UX, nabídka ani značka nejsou jeho téma.</p>
-</article>
-<article class="cmp-contender reveal">
-<h2>Komplexní agenturní audit</h2>
-<p class="cmp-who">SEO, UX, copywriting, brand</p>
-{{ coverage(groups, 2) }}
-<dl><div><dt>Kdo</dt><dd>tým specialistů</dd></div><div><dt>Cena</dt><dd>součet více zakázek</dd></div><div><dt>Dodání</dt><dd>podle dohody</dd></div></dl>
-<p>Může pokrýt vše, ale skládá se z více zadání a rozsah se liší agentura od agentury.</p>
-</article>
-<article class="cmp-contender cmp-featured reveal">
-<span class="cmp-badge">Vše v jednom reportu</span>
-<h2>SIGEL Web Intelligence</h2>
-<p class="cmp-who">jeden report, ruční kontrola</p>
-{{ coverage(groups, 3) }}
-<dl><div><dt>Kdo</dt><dd>SIGEL</dd></div><div><dt>Cena</dt><dd>4 980 Kč</dd></div><div><dt>Dodání</dt><dd>do 24 h po platbě</dd></div></dl>
-<p>Technika, UX, bezpečnost, nabídka i značka. Na konci roadmapa, co řešit první.</p>
+<div class="board reveal" role="list" aria-label="Pokrytí 11 oblastí podle typu auditu">
+{%- for name, who, price, delivery, verdict in options %}
+{%- set c = loop.index0 %}
+{%- set ns = namespace(cells=[]) %}
+{%- for g, rows in groups %}{% for label, cells in rows %}{% set ns.cells = ns.cells + [cells[c][0]] %}{% endfor %}{% endfor %}
+{%- set full = ns.cells | select('equalto', 'y') | list | length %}
+{%- set part = ns.cells | select('equalto', 'p') | list | length %}
+<article class="board-col{{ ' board-sigel' if loop.last }}" role="listitem">
+<div class="board-score"><b>{{ full }}</b><span>/ 11 plně{% if part %}<br/>+ {{ part }} částečně{% endif %}</span></div>
+<div aria-hidden="true" class="board-bar">{% for i in range(11 - full - part) %}<i></i>{% endfor %}{% for i in range(part) %}<i class="p"></i>{% endfor %}{% for i in range(full) %}<i class="y"></i>{% endfor %}</div>
+<h2>{{ name }}</h2>
+<p class="board-who">{{ who }}</p>
+<dl><div><dt>Cena</dt><dd>{{ price }}</dd></div><div><dt>Dodání</dt><dd>{{ delivery }}</dd></div></dl>
+<p class="board-verdict">{{ verdict }}</p>
+{%- if loop.last %}
 <button class="btn btn-primary btn-small" data-order-open="" data-track="compare-card" type="button">Objednat report</button>
+{%- endif %}
 </article>
+{%- endfor %}
 </div>
+<p class="board-note reveal">Plně, částečně nebo vůbec: podle tabulky níže. <a href="#srovnani">Zobrazit všech 11 oblastí</a></p>
 </div>
 </section>
 

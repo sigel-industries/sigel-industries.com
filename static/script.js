@@ -323,7 +323,9 @@
 
 
   // Guide table of contents: highlight the section being read
-  const tocLinks = $$('.guide-toc a');
+  const tocLinks = $$('.guide-toc-m a');
+  const tocNum = $('[data-toc-num]');
+  const tocCurrent = $('[data-toc-current]');
   if (tocLinks.length && 'IntersectionObserver' in window) {
     const byId = new Map(tocLinks.map((link) => [link.getAttribute('href').slice(1), link]));
     const tocObserver = new IntersectionObserver((entries) => {
@@ -336,9 +338,21 @@
           link.classList.toggle('is-active', link === current);
           link.classList.toggle('is-read', passed);
         });
+        if (current && tocCurrent) {
+          tocCurrent.textContent = current.textContent.replace(/^\d+/, '').trim();
+          if (tocNum) tocNum.textContent = $('span', current)?.textContent || '';
+        }
       });
     }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
     $$('.guide-article h2[id]').forEach((h) => tocObserver.observe(h));
+    // above the first chapter the bar shows chapter 01 again
+    const firstHeading = $('.guide-article h2[id]');
+    window.addEventListener('scroll', () => {
+      if (!firstHeading || firstHeading.getBoundingClientRect().top < window.innerHeight * .2) return;
+      tocLinks.forEach((link, i) => { link.classList.toggle('is-active', i === 0); link.classList.remove('is-read'); });
+      if (tocCurrent) tocCurrent.textContent = tocLinks[0].textContent.replace(/^\d+/, '').trim();
+      if (tocNum) tocNum.textContent = '01';
+    }, { passive: true });
   }
 
   // Mobile table of contents closes after picking a section

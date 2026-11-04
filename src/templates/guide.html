@@ -5,7 +5,8 @@
 {%- set body = self.guide_body() -%}
 {%- set toc = body | toc_entries -%}
 <section class="page-shell guide-hero">
-<div class="wrap">
+<div class="wrap guide-hero-grid">
+<div class="guide-hero-copy">
 <p class="eyebrow guide-crumb reveal"><a href="{{ t.chrome.home }}">SIGEL</a> / {% block guide_crumb %}{% endblock %}</p>
 <h1 class="reveal">{% block guide_title %}{% endblock %}</h1>
 <p class="guide-lead reveal">{% block guide_lead %}{% endblock %}</p>
@@ -17,16 +18,11 @@
 {%- for value, label in g.facts %}
 <div><dt>{{ value }}</dt><dd>{{ label }}</dd></div>
 {%- endfor %}
-<div class="guide-reading"><dt>{{ body | reading_minutes }}</dt><dd>{{ g.reading }}</dd></div>
 </dl>
 </div>
-</section>
-
-<section class="guide-body">
-<div class="wrap guide-grid">
 {%- if toc | length > 2 %}
-<nav aria-label="{{ g.toc }}" class="guide-toc">
-<p class="guide-toc-title">{{ g.toc }}</p>
+<nav aria-label="{{ g.toc }}" class="guide-index reveal">
+<p class="guide-index-title"><span>{{ g.toc }}</span><em>{{ body | reading_minutes }} {{ g.reading }}</em></p>
 <ol>
 {%- for anchor, text in toc %}
 <li><a href="#{{ anchor }}"><span>{{ '%02d' % loop.index }}</span>{{ text }}</a></li>
@@ -34,9 +30,14 @@
 </ol>
 </nav>
 {%- endif %}
+</div>
+</section>
+
+<section class="guide-body">
+<div class="wrap guide-grid">
 {%- if toc | length > 2 %}
 <details class="guide-toc-m">
-<summary><b>{{ g.toc }}</b><em>{{ toc | length }} · {{ body | reading_minutes }} {{ g.reading }}</em></summary>
+<summary><span class="toc-now"><i data-toc-num="">01</i><b data-toc-current="">{{ toc[0][1] }}</b></span><em>/ {{ '%02d' % (toc | length) }}</em></summary>
 <ol>
 {%- for anchor, text in toc %}
 <li><a href="#{{ anchor }}"><span>{{ '%02d' % loop.index }}</span>{{ text }}</a></li>
@@ -60,9 +61,9 @@
 <p class="tag">{{ g.related_tag }}</p>
 <h2>{{ g.related_title }}</h2>
 </div>
-<div class="guide-cards">
+<div class="guide-list">
 {%- for href, title, text in g.cards if href != page.url %}
-<a class="guide-card reveal" href="{{ href }}"><strong>{{ title }}</strong><span class="guide-card-text">{{ text }}</span><span class="guide-card-more">{{ g.more }}</span></a>
+<a class="guide-row reveal" href="{{ href }}"><strong>{{ title }}</strong><span class="guide-row-text">{{ text }}</span><span aria-hidden="true" class="guide-row-go">↗</span></a>
 {%- endfor %}
 </div>
 </div>
