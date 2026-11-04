@@ -1,0 +1,28 @@
+---
+url: /sk/financna-analyza-firmy/
+lang: sk
+title: Finančná analýza českej firmy z účtovných závierok | SIGEL
+description: SIGEL Company Intelligence prevedie účtovné závierky českej firmy do prehľadného finančného reportu – pre banku, preverenie partnera alebo investičné rozhodnutie. Pilotná prevádzka.
+alternates:
+  cs: /financni-analyza-firmy/
+  sk: /sk/financna-analyza-firmy/
+  en: /en/company-financial-analysis/
+  de: /de/finanzanalyse-unternehmen/
+og_type: website
+og_image_alt: SIGEL Company Intelligence — finančná analýza firmy
+---
+{% extends "base.html" %}
+{% block jsonld %}{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://sigel-industries.com/sk/financna-analyza-firmy/#service",
+  "name": "SIGEL Company Intelligence",
+  "serviceType": "Finančná analýza firmy z účtovných závierok",
+  "url": "https://sigel-industries.com/sk/financna-analyza-firmy/",
+  "inLanguage": "sk",
+  "provider": { "@id": "https://sigel-industries.com/#organization", "@type": "Organization", "name": "SIGEL Industries", "legalName": "Sigel, s.r.o." },
+  "areaServed": { "@type": "Country", "name": "Česko" }
+}{% endblock %}
+{% block main %}
+{% include "partials/ci_landing.html" %}
+{% endblock %}

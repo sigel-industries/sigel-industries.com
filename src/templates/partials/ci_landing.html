@@ -1,0 +1,102 @@
+{#- Company Intelligence landing; all copy lives in i18n/<lang>.yaml under "ci" -#}
+{%- set ci = t.ci -%}
+<section class="page-shell legal-shell">
+<div class="page-layout">
+<div class="legal-head reveal"><div class="section-heading legal-heading reveal">
+<p class="eyebrow"><a href="{{ t.chrome.home }}">SIGEL</a> / {{ ci.eyebrow }}</p>
+<h1>{{ ci.h1 }}</h1>
+<p>{{ ci.lead }}</p>
+<div class="inline-actions"><a class="btn btn-primary" href="#{{ ci.form_anchor }}">{{ ci.cta_hero }}</a></div>
+</div></div>
+</div>
+</section>
+<section class="section" id="{{ ci.use_anchor }}">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">{{ ci.use_tag }}</p>
+<h2>{{ ci.use_h2[0] }} <span class="italic warm-text">{{ ci.use_h2[1] }}</span></h2>
+<p>{{ ci.use_lead }}</p>
+</div>
+<div class="problem-grid">
+{%- for tag, title, text in ci.cards %}
+<article class="problem-card {{ 'warm' if loop.last else 'cold' }} reveal">
+<span class="problem-icon">{{ '%02d' % loop.index }}</span>
+<span class="problem-tag">{{ tag }}</span>
+<h3>{{ title }}</h3>
+<p>{{ text }}</p>
+</article>
+{%- endfor %}
+</div>
+</div>
+</section>
+<section class="section flow-section" id="{{ ci.how_anchor }}">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">{{ ci.how_tag }}</p>
+<h2>{{ ci.how_h2[0] }} <span class="italic cold-text">{{ ci.how_h2[1] }}</span></h2>
+</div>
+<div class="flow" id="flow">
+<div aria-hidden="true" class="flow-line"></div>
+{%- for title, text in ci.steps %}
+<article class="flow-step"><div class="flow-num">{{ '%02d' % loop.index }}</div><h3>{{ title }}</h3><p>{{ text }}</p></article>
+{%- endfor %}
+</div>
+</div>
+</section>
+{%- set f = ci.form %}
+<section class="section muted-section" id="{{ ci.form_anchor }}">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="order-box ci-inquiry reveal">
+<p class="tag centered">{{ f.tag }}</p>
+<h2>{{ f.h2 }}</h2>
+<p class="order-sub">{{ f.lead }}</p>
+<form class="sigel-order-form ci-form" data-done="{{ f.done }}" data-error="{{ f.error }}" data-error-required="{{ f.required }}" data-inquiry="company-intelligence" data-sending="{{ f.sending }}" novalidate="">
+<input aria-hidden="true" autocomplete="off" class="sigel-hp-field" name="website_extra" tabindex="-1" type="text"/>
+<div class="sigel-form-grid">
+<div class="sigel-field">
+<label for="ciIco">{{ f.ico_label }}</label>
+<input id="ciIco" inputmode="numeric" name="ico" placeholder="12345678" required="" type="text"/>
+<p class="sigel-field-error" data-error-for="ico"></p>
+</div>
+<div class="sigel-field">
+<label for="ciPurpose">{{ f.purpose_label }}</label>
+<select id="ciPurpose" name="purpose">
+{%- for value, label in f.purposes %}
+<option value="{{ value }}">{{ label }}</option>
+{%- endfor %}
+</select>
+</div>
+</div>
+<div class="sigel-form-grid">
+<div class="sigel-field">
+<label for="ciEmail">{{ f.email_label }}</label>
+<input autocomplete="email" id="ciEmail" name="email" placeholder="{{ f.email_ph }}" required="" type="email"/>
+<p class="sigel-field-error" data-error-for="email"></p>
+</div>
+<div class="sigel-field">
+<label for="ciName">{{ f.name_label }}</label>
+<input autocomplete="name" id="ciName" name="name" placeholder="{{ f.name_ph }}" type="text"/>
+</div>
+</div>
+<div class="sigel-field">
+<label for="ciNote">{{ f.note_label }}</label>
+<textarea id="ciNote" name="note" placeholder="{{ f.note_ph }}" rows="3"></textarea>
+</div>
+<div class="sigel-consent-box">
+<label class="sigel-consent-row">
+<input name="privacyConsent" required="" type="checkbox"/>
+<span><span>{{ t.order.privacyConsent }}</span> <a href="{{ t.chrome.privacy[0] }}" rel="noopener" target="_blank">{{ t.chrome.privacy[1] }}</a></span>
+</label>
+<p class="sigel-field-error" data-error-for="privacyConsent"></p>
+</div>
+<div aria-live="polite" class="sigel-order-status" data-inquiry-status="" role="status"></div>
+<div class="sigel-order-footer">
+<button class="btn btn-primary" type="submit">{{ f.submit }}</button>
+</div>
+</form>
+</div>
+</div>
+</section>

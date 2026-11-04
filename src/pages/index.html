@@ -366,13 +366,13 @@ hero_preload: true
 </div>
 <div class="report-shell reveal" id="reportWrap">
 <div aria-label="Ukázka reportu" class="report-tabs" role="tablist">
-<button class="report-tab active" data-report-tab="dashboard" type="button">Dashboard</button>
-<button class="report-tab" data-report-tab="technika" type="button">Technika</button>
-<button class="report-tab" data-report-tab="komunikace" type="button">Komunikace</button>
-<button class="report-tab" data-report-tab="archetypy" type="button">Archetypy</button>
-<button class="report-tab" data-report-tab="roadmapa" type="button">Roadmapa</button>
+<button aria-controls="reportPanel" aria-selected="true" class="report-tab active" data-report-tab="dashboard" id="reportTab-dashboard" role="tab" type="button">Dashboard</button>
+<button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="technika" id="reportTab-technika" role="tab" type="button">Technika</button>
+<button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="komunikace" id="reportTab-komunikace" role="tab" type="button">Komunikace</button>
+<button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="archetypy" id="reportTab-archetypy" role="tab" type="button">Archetypy</button>
+<button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="roadmapa" id="reportTab-roadmapa" role="tab" type="button">Roadmapa</button>
 </div>
-<div class="report-body">
+<div aria-labelledby="reportTab-dashboard" aria-live="polite" class="report-body" id="reportPanel" role="tabpanel">
 <div class="report-score-ring"><span id="reportScore">64</span></div>
 <div class="report-copy">
 <span class="report-kicker" id="reportKicker">Dashboard</span>
@@ -405,7 +405,7 @@ hero_preload: true
 <article class="use-card reveal"><span class="mini-icon warm">03</span><span class="status-pill pilot">Pilotně</span><h3>Lead Research</h3><p>Hodí se, když chcete najít relevantní firemní weby a veřejné kontakty v konkrétním segmentu nebo lokalitě.</p><button class="card-more" data-modal-target="use-lead-research" type="button">Zjistit víc →</button></article>
 <article class="use-card reveal"><span class="mini-icon warm">04</span><span class="status-pill planned">Připravujeme</span><h3>Segmentový benchmark</h3><p>Hodí se, když chcete porovnat více webů v jednom odvětví, lokalitě nebo vlastním tržním výběru.</p><button class="card-more" data-modal-target="use-benchmark" type="button">Zjistit víc →</button></article>
 </div>
-<a class="product-strip reveal" href="/financni-analyza-firmy/"><div><span class="status-pill pilot">Pilotně</span><h3>Finanční analýza firmy</h3><p>SIGEL Company Intelligence převede účetní závěrky české firmy do přehledného finančního reportu: pro banku, prověření partnera nebo investici.</p></div><span class="card-more">Zjistit víc →</span></a>
+{% include "partials/ci_strip.html" %}
 </div>
 </section>
 <section class="section" id="pruvodci">

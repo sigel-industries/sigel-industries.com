@@ -14,7 +14,7 @@
 
   --ink: #F0EEE9;
   --ink-2: #B8BAC4;
-  --ink-3: #737580;
+  --ink-3: #7A7C87; /* 4.9:1 on --bg (WCAG AA) */
 
   --cold: #4DDFC8;
   --cold-2: #7B9FFF;

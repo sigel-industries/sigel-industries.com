@@ -1,0 +1,28 @@
+---
+url: /de/finanzanalyse-unternehmen/
+lang: de
+title: Finanzanalyse tschechischer Unternehmen | SIGEL
+description: SIGEL Company Intelligence macht aus Jahresabschlüssen tschechischer Unternehmen einen übersichtlichen Finanzreport – für Bank, Partnerprüfung oder Investitionsentscheidung. Pilotbetrieb.
+alternates:
+  cs: /financni-analyza-firmy/
+  sk: /sk/financna-analyza-firmy/
+  en: /en/company-financial-analysis/
+  de: /de/finanzanalyse-unternehmen/
+og_type: website
+og_image_alt: SIGEL Company Intelligence — Finanzanalyse tschechischer Unternehmen
+---
+{% extends "base.html" %}
+{% block jsonld %}{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://sigel-industries.com/de/finanzanalyse-unternehmen/#service",
+  "name": "SIGEL Company Intelligence",
+  "serviceType": "Finanzanalyse tschechischer Unternehmen aus Jahresabschlüssen",
+  "url": "https://sigel-industries.com/de/finanzanalyse-unternehmen/",
+  "inLanguage": "de",
+  "provider": { "@id": "https://sigel-industries.com/#organization", "@type": "Organization", "name": "SIGEL Industries", "legalName": "Sigel, s.r.o." },
+  "areaServed": { "@type": "Country", "name": "Tschechien" }
+}{% endblock %}
+{% block main %}
+{% include "partials/ci_landing.html" %}
+{% endblock %}

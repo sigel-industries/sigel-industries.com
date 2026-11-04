@@ -56,6 +56,9 @@ chrome:
     - Audit vor dem Redesign
   - - /de/seo-audit-vs-website-audit/
     - SEO-Audit vs. Website-Audit
+  nav_products:
+  - - /de/finanzanalyse-unternehmen/
+    - Finanzanalyse
 order:
   eyebrow: SIGEL Web Intelligence
   title: Web-Intelligence-Report bestellen
@@ -361,3 +364,78 @@ modal:
     - - Output
       - Benchmark-Karte und Zusammenfassung der wichtigsten Erkenntnisse.
     cta: Benchmark anfragen
+ci:
+  url: /de/finanzanalyse-unternehmen/
+  eyebrow: Company Intelligence · Pilotbetrieb
+  h1: Finanzanalyse tschechischer Unternehmen aus Jahresabschlüssen
+  lead: SIGEL Company Intelligence macht aus den veröffentlichten Jahresabschlüssen eines tschechischen Unternehmens einen übersichtlichen Finanzreport. Ohne manuelles Abtippen von Bilanzen und ohne Zahlensuche
+    in gescannten PDFs.
+  cta_hero: Analyse unverbindlich anfragen
+  use_anchor: einsatz
+  how_anchor: ablauf
+  form_anchor: anfrage
+  use_tag: Wann es sich lohnt
+  use_h2:
+  - Die Zahlen sind öffentlich.
+  - Lesbar sind sie meist nicht.
+  use_lead: Tschechische Unternehmen hinterlegen ihre Jahresabschlüsse in der öffentlichen Urkundensammlung (Sbírka listin), oft als Scans auf Tschechisch. Bis daraus eine brauchbare Übersicht entsteht,
+    vergehen Stunden manueller Arbeit. Company Intelligence erledigt das automatisch.
+  cards:
+  - - Finanzierung
+    - Bankgespräche
+    - Ein übersichtlicher Finanzreport Ihres tschechischen Unternehmens als Grundlage für einen Kreditantrag oder ein Bankgespräch.
+  - - Risiko
+    - Partnerprüfung
+    - Ein schneller Blick auf die Finanzen eines tschechischen Kunden, Lieferanten oder Wettbewerbers, bevor Sie unterschreiben.
+  - - Investition
+    - Übernahmen und Investitionen
+    - Ein finanzielles Ausgangsbild vor einer tieferen Due Diligence, einer Investitionsentscheidung oder einem Angebot.
+  how_tag: So funktioniert es
+  how_h2:
+  - Von der Unternehmens-ID
+  - zum Finanzreport.
+  steps:
+  - - Unternehmens-ID
+    - Sie nennen das Unternehmen. Grundlage sind seine Jahresabschlüsse (Bilanz sowie Gewinn- und Verlustrechnung).
+  - - Datenextraktion
+    - Das System liest Zahlen auch aus gescannten PDFs per OCR aus und prüft sie gegen die Struktur des Abschlusses.
+  - - Finanzmodell
+    - Daten aus verschiedenen Jahren und Formaten werden in ein einheitliches Modell überführt, aus dem Entwicklung und Kennzahlen berechnet werden.
+  - - Report
+    - Ergebnis ist ein übersichtlicher Report (auf Tschechisch) als Grundlage für die Bank oder interne Entscheidungen.
+  form:
+    tag: Pilotbetrieb · tschechische Unternehmen
+    h2: Analyse eines konkreten Unternehmens?
+    lead: Company Intelligence läuft im Pilotbetrieb für tschechische Unternehmen. Nennen Sie uns die Unternehmens-ID (IČO) und den Zweck der Analyse. Wir melden uns mit Termin und Preis. Die Anfrage ist
+      unverbindlich.
+    ico_label: Unternehmens-ID (IČO) des Unternehmens
+    purpose_label: Wofür benötigen Sie die Analyse
+    purposes:
+    - - banka
+      - Bank / Kredit
+    - - partner
+      - Partnerprüfung
+    - - investice
+      - Übernahme / Investition
+    - - jine
+      - Sonstiges
+    email_label: E-Mail
+    email_ph: kontakt@unternehmen.de
+    name_label: Name und Unternehmen
+    name_ph: Name, Unternehmen
+    note_label: Notiz (optional)
+    note_ph: Wie viele Jahre zurück, Termin, sonstiges…
+    submit: Unverbindlich anfragen
+    sending: Anfrage wird gesendet…
+    done: Danke, Ihre Anfrage ist eingegangen. Wir melden uns in Kürze.
+    error: Die Anfrage konnte nicht gesendet werden. Bitte schreiben Sie uns an
+    required: Dieses Feld ist erforderlich.
+  strip:
+    pill: Pilot
+    title: Finanzanalyse tschechischer Unternehmen
+    text: 'SIGEL Company Intelligence macht aus Jahresabschlüssen tschechischer Unternehmen einen übersichtlichen Finanzreport: für die Bank, die Partnerprüfung oder eine Investition.'
+    more: Mehr erfahren →
+og:
+  title: Was Ihre Website <em>bremst</em> — und was zuerst zu ändern ist.
+  eyebrow: Website-Audit · Web Intelligence
+  meta: PDF-Report in 24 Stunden · persönlich geprüft

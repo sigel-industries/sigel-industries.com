@@ -364,3 +364,75 @@ modal:
     - - Výstup
       - Benchmarková mapa a souhrn hlavních zjištění.
     cta: Zeptat se na benchmark
+ci:
+  url: /financni-analyza-firmy/
+  eyebrow: Company Intelligence · pilotní provoz
+  h1: Finanční analýza firmy z účetních závěrek
+  lead: SIGEL Company Intelligence převede účetní závěrky české firmy do jednoho přehledného finančního reportu. Bez ručního přepisování výkazů a bez hledání čísel v naskenovaných PDF.
+  cta_hero: Nezávazně poptat analýzu
+  use_anchor: pouziti
+  how_anchor: jak
+  form_anchor: poptavka
+  use_tag: Kdy dává smysl
+  use_h2:
+  - Čísla firmy jsou veřejná.
+  - Čitelná většinou nejsou.
+  use_lead: Účetní závěrky leží ve Sbírce listin často jako skeny. Než z nich vznikne použitelný přehled, stráví někdo hodiny přepisováním. Company Intelligence tuhle práci dělá automaticky.
+  cards:
+  - - Financování
+    - Jednání s bankou
+    - Přehledný finanční report vlastní firmy jako podklad k žádosti o úvěr nebo k jednání s bankou.
+  - - Riziko
+    - Prověření partnera
+    - Rychlý pohled na hospodaření odběratele, dodavatele nebo konkurenta dřív, než podepíšete smlouvu.
+  - - Investice
+    - Akvizice a investice
+    - Výchozí finanční obraz firmy před hlubší due diligence, investičním rozhodnutím nebo nabídkou.
+  how_tag: Jak to funguje
+  how_h2:
+  - Od IČO
+  - k finančnímu reportu.
+  steps:
+  - - IČO firmy
+    - Zadáte firmu. Podkladem jsou její účetní závěrky (rozvaha a výkaz zisku a ztráty).
+  - - Extrakce dat
+    - Systém vytěží čísla i z naskenovaných PDF pomocí OCR a ověří je proti struktuře výkazu.
+  - - Finanční model
+    - Data z různých let a formátů převede do jednotného modelu, ze kterého počítá vývoj a ukazatele.
+  - - Report
+    - Výstupem je přehledný report v češtině, připravený jako podklad pro banku nebo interní rozhodnutí.
+  form:
+    tag: Pilotní provoz · české firmy
+    h2: Chcete analýzu konkrétní firmy?
+    lead: Company Intelligence je v pilotním provozu pro české firmy (Slovensko připravujeme). Napište IČO a k čemu analýzu potřebujete. Ozveme se s termínem a cenou. Poptávka je nezávazná.
+    ico_label: IČO analyzované firmy
+    purpose_label: K čemu analýzu potřebujete
+    purposes:
+    - - banka
+      - Jednání s bankou / úvěr
+    - - partner
+      - Prověření partnera
+    - - investice
+      - Akvizice / investice
+    - - jine
+      - Jiné
+    email_label: E-mail
+    email_ph: kontakt@firma.cz
+    name_label: Jméno a firma
+    name_ph: Jméno, firma
+    note_label: Poznámka (volitelné)
+    note_ph: Kolik let zpětně, termín, cokoliv dalšího…
+    submit: Odeslat nezávaznou poptávku
+    sending: Odesílám poptávku…
+    done: Děkujeme, poptávka je u nás. Brzy se ozveme.
+    error: Poptávku se nepodařilo odeslat. Napište nám prosím na
+    required: Toto pole je povinné.
+  strip:
+    pill: Pilotně
+    title: Finanční analýza firmy
+    text: 'SIGEL Company Intelligence převede účetní závěrky české firmy do přehledného finančního reportu: pro banku, prověření partnera nebo investici.'
+    more: Zjistit víc →
+og:
+  title: Zjistěte, co váš web <em>brzdí</em> — a co změnit jako první.
+  eyebrow: Komplexní audit webu · Web Intelligence
+  meta: PDF report do 24 hodin · ručně kontrolovaný

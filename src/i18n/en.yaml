@@ -56,6 +56,9 @@ chrome:
     - Audit before redesign
   - - /en/seo-audit-vs-website-audit/
     - SEO audit vs website audit
+  nav_products:
+  - - /en/company-financial-analysis/
+    - Financial analysis
 order:
   eyebrow: SIGEL Web Intelligence
   title: Web Intelligence Report Order
@@ -361,3 +364,76 @@ modal:
     - - Output
       - Benchmark map and a summary of key findings.
     cta: Ask about benchmark
+ci:
+  url: /en/company-financial-analysis/
+  eyebrow: Company Intelligence · pilot
+  h1: Financial analysis of Czech companies from their annual accounts
+  lead: SIGEL Company Intelligence turns the published financial statements of a Czech company into one clear financial report. No manual retyping of statements and no hunting for numbers in scanned PDFs.
+  cta_hero: Request an analysis
+  use_anchor: use-cases
+  how_anchor: how-it-works
+  form_anchor: inquiry
+  use_tag: When it helps
+  use_h2:
+  - The numbers are public.
+  - Readable they are not.
+  use_lead: Czech companies file their financial statements in the public Collection of Documents (Sbírka listin), often as scans in Czech. Turning them into a usable overview takes hours of manual work.
+    Company Intelligence does that work automatically.
+  cards:
+  - - Financing
+    - Bank discussions
+    - A clear financial report of your Czech company as supporting material for a loan application or bank meeting.
+  - - Risk
+    - Partner check
+    - A quick look at the finances of a Czech customer, supplier or competitor before you sign a contract.
+  - - Investment
+    - Acquisitions and investment
+    - A baseline financial picture of a Czech company before deeper due diligence, an investment decision or an offer.
+  how_tag: How it works
+  how_h2:
+  - From company ID
+  - to a financial report.
+  steps:
+  - - Company ID
+    - You name the company. The input is its annual accounts (balance sheet and profit and loss statement).
+  - - Data extraction
+    - The system extracts figures even from scanned PDFs using OCR and checks them against the statement structure.
+  - - Financial model
+    - Data from different years and formats is converted into one consistent model used to calculate trends and ratios.
+  - - Report
+    - The output is a clear report (in Czech), ready as material for a bank or an internal decision.
+  form:
+    tag: Pilot · Czech companies
+    h2: Need an analysis of a specific company?
+    lead: Company Intelligence is in pilot operation for Czech companies. Send us the company ID (IČO) and what you need the analysis for. We will get back to you with timing and price. The inquiry is non-binding.
+    ico_label: Company ID (IČO) of the analysed company
+    purpose_label: What do you need it for
+    purposes:
+    - - banka
+      - Bank / loan
+    - - partner
+      - Partner check
+    - - investice
+      - Acquisition / investment
+    - - jine
+      - Other
+    email_label: E-mail
+    email_ph: contact@company.com
+    name_label: Name and company
+    name_ph: Name, company
+    note_label: Note (optional)
+    note_ph: How many years back, deadline, anything else…
+    submit: Send non-binding inquiry
+    sending: Sending inquiry…
+    done: Thank you, we have your inquiry and will get back to you soon.
+    error: The inquiry could not be sent. Please write to us at
+    required: This field is required.
+  strip:
+    pill: Pilot
+    title: Financial analysis of Czech companies
+    text: 'SIGEL Company Intelligence turns the annual accounts of a Czech company into a clear financial report: for a bank, a partner check or an investment.'
+    more: Learn more →
+og:
+  title: See what holds your website <em>back</em> — and what to change first.
+  eyebrow: Website audit · Web Intelligence
+  meta: PDF report within 24 hours · human-reviewed

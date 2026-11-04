@@ -4,7 +4,6 @@ email: info@sigel-industries.com
 ga_id: G-QZW7S98DC1
 # Google Apps Script web app (see apps-script/Code.gs). Must return JSON {ok, id}.
 order_endpoint: https://script.google.com/macros/s/AKfycbxrIL5pXrGT4VLBhlCN6ynTDEw07G7V6D_xzMvUH83aju6bZg6vY0Ahcl2ifzebtzDE/exec
-og_image: /assets/og/sigel-og.jpg
 langs: [cs, sk, en, de]
 lang_labels: {cs: CZ, sk: SK, en: EN, de: DE}
 lang_names: {cs: Česky, sk: Slovensky, en: English, de: Deutsch}

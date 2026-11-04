@@ -18,6 +18,8 @@ import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
 
+import rcssmin
+import rjsmin
 import yaml
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
@@ -61,6 +63,10 @@ def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(ROOT / 'static', OUT)
+    # Ship minified CSS/JS; sources in static/ stay readable.
+    for name, minify in (('style.css', rcssmin.cssmin), ('script.js', rjsmin.jsmin)):
+        path = OUT / name
+        path.write_text(minify(path.read_text(encoding='utf-8')), encoding='utf-8')
 
     def asset(path):
         digest = hashlib.sha256((OUT / path.lstrip('/')).read_bytes()).hexdigest()[:10]

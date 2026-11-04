@@ -147,8 +147,10 @@
   const reportBars = $$('.report-bars i');
   $$('.report-tab').forEach((tab) => {
     tab.addEventListener('click', () => {
-      $$('.report-tab').forEach((item) => item.classList.remove('active'));
+      $$('.report-tab').forEach((item) => { item.classList.remove('active'); item.setAttribute('aria-selected', 'false'); });
       tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      $('#reportPanel')?.setAttribute('aria-labelledby', tab.id);
       const data = site.report?.[tab.dataset.reportTab];
       if (!data) return;
       if (reportScore) reportScore.textContent = data.score;
