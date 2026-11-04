@@ -133,9 +133,7 @@ hero_preload: true
 <a class="btn btn-ghost" href="docs/demo-report.pdf" rel="noopener" target="_blank">Prohlédnout ukázku reportu</a>
 </div>
 <div aria-label="Parametry služby" class="hero-meta reveal">
-<span>Vizuální PDF report</span>
-<span>Ručně kontrolovaný výstup</span>
-<span>24h dodání</span>
+{%- for item in t.home_meta %}<span>{{ item }}</span>{% endfor %}
 </div>
 </div>
 <div aria-label="Vizualizace auditního jádra" class="hero-visual reveal">
@@ -208,13 +206,7 @@ hero_preload: true
 </div>
 </div>
 </section>
-<section aria-label="Web jako systém signálů" class="signal-interlude">
-<canvas aria-hidden="true" id="signalCanvas"></canvas>
-<div class="signal-label reveal">
-<strong>Web jako systém signálů.</strong>
-<span>Technické · Uživatelské · Komunikační · Obchodní</span>
-</div>
-</section>
+{% include "partials/home_compare.html" %}
 <section class="section" id="reseni">
 <div class="section-divider"></div>
 <div class="wrap">
@@ -306,17 +298,14 @@ hero_preload: true
 <div class="wrap">
 <div class="section-head reveal">
 <p class="tag">Analytické jádro SIGEL</p>
-<h2>Šest vrstev. Jedna odpověď:<br/><span class="italic">co má smysl <span class="cold-text">řešit první.</span></span></h2>
+<h2>{{ t.home_areas.h2[0] }}<br/><span class="italic">{{ t.home_areas.h2[1] }} <span class="cold-text">{{ t.home_areas.h2[2] }}</span></span></h2>
 <p>Výstup nevzniká jako čistý AI text ani běžný checklist. SIGEL používá vlastní analytický systém, scoring, algoritmická pravidla, UX heuristiky, obchodní interpretační vrstvu a ruční kontrolu.</p>
 </div>
 <div class="system-layout reveal">
-<div aria-label="Šest vrstev auditu" class="system-layers" id="diagList">
-<article class="diag-row cold-layer"><div class="diag-n">01</div><h3>Technika a výkon</h3><p>Lighthouse pro desktop i mobil, Core Web Vitals, render, SSL, mixed content, robots a sitemap.</p></article>
-<article class="diag-row cold-layer"><div class="diag-n">02</div><h3>SEO a objevitelnost</h3><p>Metadata, nadpisy, canonical, Open Graph, schema.org a signály AI připravenosti.</p></article>
-<article class="diag-row cold-layer"><div class="diag-n">03</div><h3>UX, CTA a přístupnost</h3><p>Odkazy, CTA, mobilní viewport, kontrast, velikost písma a dotykové cíle.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">04</div><h3>Komunikace nabídky</h3><p>Co web nabízí, komu slouží, jaký má obchodní účel a kde komunikace ztrácí jasnost.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">05</div><h3>Archetyp značky a publika</h3><p>Archetyp značky i publika, jejich strategická shoda a praktický komunikační playbook.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">06</div><h3>Roadmapa a evidence</h3><p>Manažerské shrnutí, dopad versus náročnost, akční plán a technický i evidence appendix.</p></article>
+<div aria-label="{{ t.home_areas.aria }}" class="system-layers" id="diagList">
+{%- for title, layer, text in t.home_areas['items'] %}
+<article class="diag-row {{ layer }}-layer"><div class="diag-n">{{ '%02d' % loop.index }}</div><h3>{{ title }}</h3><p>{{ text }}</p></article>
+{%- endfor %}
 </div>
 <aside aria-label="Jak vzniká výstup" class="system-process interactive-card">
 <p class="tag cold">Jak vzniká report</p>
@@ -332,7 +321,7 @@ hero_preload: true
 </div>
 <div aria-label="Co je v reportu reálně změřené" class="audit-evidence reveal">
 <div class="audit-evidence-head"><p class="tag cold">Důkazová vrstva</p><h3>Co je v reportu reálně změřené</h3></div>
-<div class="audit-evidence-grid">
+<div class="audit-evidence-grid"><span>{{ t.home_areas.chip }}</span>
 <span>Lighthouse a Core Web Vitals</span><span>Odkazy a CTA</span><span>Mobilní viewport</span><span>Kontrast a dotykové cíle</span><span>Metadata a schema</span><span>Obsahová extrakce</span><span>AI připravenost</span><span>Evidence data</span>
 </div>
 </div>

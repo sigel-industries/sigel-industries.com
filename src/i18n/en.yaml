@@ -494,3 +494,111 @@ guide:
   - - /en/seo-audit-vs-website-audit/
     - SEO audit vs website audit
     - When technical SEO is enough and when UX, communication, trust and conversion also need to be reviewed.
+home_areas:
+  h2:
+  - 'Eleven areas. One answer:'
+  - what deserves to be
+  - fixed first.
+  aria: Eleven audit areas
+  chip: HTTPS, TLS and security headers
+  items:
+  - - Performance
+    - cold
+    - 'Lighthouse for desktop and mobile and Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+  - - Indexing and SEO
+    - cold
+    - Robots.txt, sitemap, canonical, metadata, headings and Open Graph.
+  - - Links and CTA
+    - cold
+    - Broken and blocked links, calls to action and suspicious elements.
+  - - Accessibility
+    - cold
+    - Contrast, font size and touch targets with concrete elements on desktop and mobile.
+  - - Security signals
+    - cold
+    - HTTPS and redirects, TLS certificate and HTTP security headers. Passive check.
+  - - UX and mobile usability
+    - warm
+    - Viewport, navigation, content orientation and the visitor’s mobile journey.
+  - - Offer communication
+    - warm
+    - What the website offers, to whom, how clearly and concretely, and where trust is lost.
+  - - AI readiness
+    - warm
+    - Structured data and signals for AI search.
+  - - Brand and audience archetype
+    - warm
+    - Archetype map, brand and customer playbook, tone-of-voice rules.
+  - - Business impact and roadmap
+    - warm
+    - Executive summary, impact × effort and an action plan of what to fix first.
+  - - Evidence appendix
+    - warm
+    - Crawl, robots, sitemap, metadata and measured data to verify every finding.
+home_compare:
+  tag: Comparison
+  h2:
+  - Where other audits stop,
+  - SIGEL keeps going.
+  lead: Five areas where audits differ the most.
+  cols:
+  - Free tools
+  - SEO audit
+  - Agency
+  - SIGEL
+  cta: Order the report
+  cta_href: ''
+  legend:
+  - covered
+  - partly / separate
+  - not covered
+  rows:
+  - - Security signals
+    - - - p
+        - other tools
+      - - n
+        - 'no'
+      - - p
+        - separate
+      - - y
+        - 'yes'
+  - - UX and mobile usability
+    - - - n
+        - 'no'
+      - - n
+        - 'no'
+      - - p
+        - separate UX audit
+      - - y
+        - 'yes'
+  - - Offer communication
+    - - - n
+        - 'no'
+      - - n
+        - 'no'
+      - - p
+        - separate
+      - - y
+        - 'yes'
+  - - Brand archetype and playbook
+    - - - n
+        - 'no'
+      - - n
+        - 'no'
+      - - p
+        - brand strategy
+      - - y
+        - 'yes'
+  - - 'Roadmap: what to fix first'
+    - - - n
+        - 'no'
+      - - p
+        - SEO recommendations
+      - - y
+        - 'yes'
+      - - y
+        - 'yes'
+home_meta:
+- 11 areas in one report
+- €199 · for businesses
+- Within 24 h of payment

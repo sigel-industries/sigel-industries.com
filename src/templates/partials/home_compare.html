@@ -1,0 +1,32 @@
+{#- Homepage: compact comparison (5 areas), copy in i18n home_compare -#}
+{%- set c = t.home_compare -%}
+<section class="section home-compare" id="srovnani">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">{{ c.tag }}</p>
+<h2>{{ c.h2[0] }} <span class="italic cold-text">{{ c.h2[1] }}</span></h2>
+<p>{{ c.lead }}</p>
+</div>
+<ul aria-hidden="true" class="cmp-legend reveal">
+{%- for state in ['y', 'p', 'n'] %}<li><span class="cmp-dot cmp-{{ state }}"></span>{{ c.legend[loop.index0] }}</li>{% endfor %}
+</ul>
+<div class="cmp-matrix-wrap reveal">
+<table class="cmp-matrix">
+<thead><tr><th scope="col"></th>{% for col in c.cols %}<th class="{{ 'cmp-col-sigel' if loop.last }}" scope="col">{{ col }}</th>{% endfor %}</tr></thead>
+<tbody>
+{%- for label, cells in c.rows %}
+<tr><th scope="row">{{ label }}</th>{% for state, note in cells %}<td class="cmp-cell cmp-{{ state }}{{ ' cmp-col-sigel' if loop.last }}" data-label="{{ c.cols[loop.index0] }}"><span aria-hidden="true" class="cmp-dot cmp-{{ state }}"></span><span class="cmp-note">{{ note }}</span></td>{% endfor %}</tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+<div class="home-compare-cta reveal">
+{%- if c.cta_href %}
+<a class="btn btn-ghost" data-track="home-compare" href="{{ c.cta_href }}">{{ c.cta }}</a>
+{%- else %}
+<button class="btn btn-ghost" data-order-open="" data-track="home-compare" type="button">{{ c.cta }}</button>
+{%- endif %}
+</div>
+</div>
+</section>

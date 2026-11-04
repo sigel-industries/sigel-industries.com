@@ -138,9 +138,7 @@ hero_preload: true
 <a class="btn btn-ghost" href="../docs/demo-report-en.pdf" rel="noopener" target="_blank">Beispielreport ansehen (EN)</a>
 </div>
 <div aria-label="Leistungsparameter" class="hero-meta reveal">
-<span>Visueller PDF-Report</span>
-<span>Persönlich geprüft</span>
-<span>Lieferung in 24 Std.</span>
+{%- for item in t.home_meta %}<span>{{ item }}</span>{% endfor %}
 </div>
 </div>
 <div aria-label="Visualisierung des Audit-Kerns" class="hero-visual reveal">
@@ -213,13 +211,7 @@ hero_preload: true
 </div>
 </div>
 </section>
-<section aria-label="Website als System von Signalen" class="signal-interlude">
-<canvas aria-hidden="true" id="signalCanvas"></canvas>
-<div class="signal-label reveal">
-<strong>Die Website als System von Signalen.</strong>
-<span>Technik · Nutzer · Kommunikation · Geschäft</span>
-</div>
-</section>
+{% include "partials/home_compare.html" %}
 <section class="section" id="solutions">
 <div class="section-divider"></div>
 <div class="wrap">
@@ -255,21 +247,18 @@ hero_preload: true
 <section class="section system-section" id="engine">
 <div class="section-divider"></div>
 <div class="wrap">
-<div class="section-head reveal"><p class="tag">Der analytische Kern von SIGEL</p><h2>Sechs Ebenen. Eine Antwort:<br/><span class="italic">was zuerst <span class="cold-text">gelöst werden sollte.</span></span></h2><p>Der Output ist weder reiner KI-Text noch eine generische Checkliste. SIGEL nutzt ein eigenes Analysesystem, Scoring, algorithmische Regeln, UX-Heuristiken, eine geschäftliche Interpretationsschicht und persönliche Prüfung.</p></div>
+<div class="section-head reveal"><p class="tag">Der analytische Kern von SIGEL</p><h2>{{ t.home_areas.h2[0] }}<br/><span class="italic">{{ t.home_areas.h2[1] }} <span class="cold-text">{{ t.home_areas.h2[2] }}</span></span></h2><p>Der Output ist weder reiner KI-Text noch eine generische Checkliste. SIGEL nutzt ein eigenes Analysesystem, Scoring, algorithmische Regeln, UX-Heuristiken, eine geschäftliche Interpretationsschicht und persönliche Prüfung.</p></div>
 <div class="system-layout reveal">
-<div aria-label="Sechs Audit-Ebenen" class="system-layers" id="diagList">
-<article class="diag-row cold-layer"><div class="diag-n">01</div><h3>Technik und Performance</h3><p>Lighthouse für Desktop und Mobilgeräte, Core Web Vitals, Rendering, SSL, Mixed Content, robots und Sitemap.</p></article>
-<article class="diag-row cold-layer"><div class="diag-n">02</div><h3>SEO und Auffindbarkeit</h3><p>Metadaten, Überschriften, Canonical, Open Graph, schema.org und Signale zur KI-Bereitschaft.</p></article>
-<article class="diag-row cold-layer"><div class="diag-n">03</div><h3>UX, CTA und Barrierefreiheit</h3><p>Links, CTA, mobiler Viewport, Kontrast, Schriftgröße und Touch-Ziele.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">04</div><h3>Angebotskommunikation</h3><p>Was die Website anbietet, wem sie dient, welchen Geschäftszweck sie verfolgt und wo die Kommunikation an Klarheit verliert.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">05</div><h3>Marken- und Zielgruppenarchetypen</h3><p>Marken- und Zielgruppenarchetypen, ihre strategische Passung und ein praktisches Kommunikations-Playbook.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">06</div><h3>Roadmap und Evidenz</h3><p>Management-Zusammenfassung, Wirkung versus Aufwand, Maßnahmenplan sowie technische und Evidenz-Anhänge.</p></article>
+<div aria-label="{{ t.home_areas.aria }}" class="system-layers" id="diagList">
+{%- for title, layer, text in t.home_areas['items'] %}
+<article class="diag-row {{ layer }}-layer"><div class="diag-n">{{ '%02d' % loop.index }}</div><h3>{{ title }}</h3><p>{{ text }}</p></article>
+{%- endfor %}
 </div>
 <aside aria-label="So entsteht der Output" class="system-process interactive-card"><p class="tag cold">So entsteht der Report</p><h3>Daten → Scoring → Interpretation → Prüfung.</h3><ol><li><span>Erfassung technischer und inhaltlicher Signale</span></li><li><span>Eigenes Scoring, Gewichtungen und Algorithmen</span></li><li><span>UX-Heuristiken und Interpretationsschicht</span></li><li><span>Persönlich geprüft</span></li></ol><button class="card-more" data-modal-target="system-process" type="button">So funktioniert das System →</button></aside>
 </div>
 <div aria-label="Was im Report tatsächlich gemessen wird" class="audit-evidence reveal">
 <div class="audit-evidence-head"><p class="tag cold">Evidenzebene</p><h3>Was im Report tatsächlich gemessen wird</h3></div>
-<div class="audit-evidence-grid">
+<div class="audit-evidence-grid"><span>{{ t.home_areas.chip }}</span>
 <span>Lighthouse und Core Web Vitals</span><span>Links und CTA</span><span>Mobiler Viewport</span><span>Kontrast und Touch-Ziele</span><span>Metadaten und Schema</span><span>Inhaltsextraktion</span><span>KI-Bereitschaft</span><span>Evidenzdaten</span>
 </div>
 </div>

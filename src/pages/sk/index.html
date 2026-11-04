@@ -125,9 +125,7 @@ hero_preload: true
 <a class="btn btn-ghost" href="/docs/demo-report-sk.pdf" rel="noopener" target="_blank">Pozrieť ukážku reportu</a>
 </div>
 <div aria-label="Parametre služby" class="hero-meta reveal">
-<span>Vizuálny PDF report</span>
-<span>Ručne kontrolovaný výstup</span>
-<span>Dodanie do 24 h</span>
+{%- for item in t.home_meta %}<span>{{ item }}</span>{% endfor %}
 </div>
 </div>
 <div aria-label="Vizualizácia auditného jadra" class="hero-visual reveal">
@@ -200,13 +198,7 @@ hero_preload: true
 </div>
 </div>
 </section>
-<section aria-label="Web ako systém signálov" class="signal-interlude">
-<canvas aria-hidden="true" id="signalCanvas"></canvas>
-<div class="signal-label reveal">
-<strong>Web ako systém signálov.</strong>
-<span>Technické · Používateľské · Komunikačné · Obchodné</span>
-</div>
-</section>
+{% include "partials/home_compare.html" %}
 <section class="section" id="reseni">
 <div class="section-divider"></div>
 <div class="wrap">
@@ -298,17 +290,14 @@ hero_preload: true
 <div class="wrap">
 <div class="section-head reveal">
 <p class="tag">Analytické jadro SIGEL</p>
-<h2>Šesť vrstiev. Jedna odpoveď:<br/><span class="italic">čo má zmysel <span class="cold-text">riešiť ako prvé.</span></span></h2>
+<h2>{{ t.home_areas.h2[0] }}<br/><span class="italic">{{ t.home_areas.h2[1] }} <span class="cold-text">{{ t.home_areas.h2[2] }}</span></span></h2>
 <p>Výstup nevzniká ako čistý AI text ani bežný checklist. SIGEL používa vlastný analytický systém, scoring, algoritmické pravidlá, UX heuristiky, obchodnú interpretačnú vrstvu a ručnú kontrolu.</p>
 </div>
 <div class="system-layout reveal">
-<div aria-label="Šesť vrstiev auditu" class="system-layers" id="diagList">
-<article class="diag-row cold-layer"><div class="diag-n">01</div><h3>Technika a výkon</h3><p>Lighthouse pre desktop aj mobil, Core Web Vitals, render, SSL, mixed content, robots a sitemap.</p></article>
-<article class="diag-row cold-layer"><div class="diag-n">02</div><h3>SEO a dohľadateľnosť</h3><p>Metadáta, nadpisy, canonical, Open Graph, schema.org a signály AI pripravenosti.</p></article>
-<article class="diag-row cold-layer"><div class="diag-n">03</div><h3>UX, CTA a prístupnosť</h3><p>Odkazy, CTA, mobilný viewport, kontrast, veľkosť písma a dotykové ciele.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">04</div><h3>Komunikácia ponuky</h3><p>Čo web ponúka, komu slúži, aký má obchodný účel a kde komunikácia stráca jasnosť.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">05</div><h3>Archetyp značky a publika</h3><p>Archetyp značky aj publika, ich strategická zhoda a praktický komunikačný playbook.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">06</div><h3>Roadmapa a evidencia</h3><p>Manažérske zhrnutie, dopad verzus náročnosť, akčný plán a technický aj evidence appendix.</p></article>
+<div aria-label="{{ t.home_areas.aria }}" class="system-layers" id="diagList">
+{%- for title, layer, text in t.home_areas['items'] %}
+<article class="diag-row {{ layer }}-layer"><div class="diag-n">{{ '%02d' % loop.index }}</div><h3>{{ title }}</h3><p>{{ text }}</p></article>
+{%- endfor %}
 </div>
 <aside aria-label="Jak vzniká výstup" class="system-process interactive-card">
 <p class="tag cold">Ako vzniká report</p>
@@ -324,7 +313,7 @@ hero_preload: true
 </div>
 <div aria-label="Čo je v reporte reálne zmerané" class="audit-evidence reveal">
 <div class="audit-evidence-head"><p class="tag cold">Dôkazová vrstva</p><h3>Čo je v reporte reálne zmerané</h3></div>
-<div class="audit-evidence-grid">
+<div class="audit-evidence-grid"><span>{{ t.home_areas.chip }}</span>
 <span>Lighthouse a Core Web Vitals</span><span>Odkazy a CTA</span><span>Mobilný viewport</span><span>Kontrast a dotykové ciele</span><span>Metadáta a schema</span><span>Obsahová extrakcia</span><span>AI pripravenosť</span><span>Evidence dáta</span>
 </div>
 </div>

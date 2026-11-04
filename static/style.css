@@ -3046,3 +3046,11 @@ section,
 @media (max-width: 640px) {
   .pr-included, .pr-not, .pr-steps { grid-template-columns: 1fr; }
 }
+
+/* Homepage mini comparison */
+.home-compare .cmp-legend { margin-top: -24px; }
+@media (min-width: 641px) {
+  .home-compare .cmp-matrix { min-width: 700px; }
+  .home-compare .cmp-matrix th:first-child { width: 28%; }
+}
+.home-compare-cta { margin-top: 22px; }

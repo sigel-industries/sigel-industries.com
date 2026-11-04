@@ -501,3 +501,111 @@ guide:
   - - /audit-webu-agentura-nastroje-nebo-sigel/
     - Agentura, nástroje, nebo SIGEL?
     - 'Jedenáct oblastí vedle sebe: co který audit pokryje, kolik stojí a kdy se hodí.'
+home_areas:
+  h2:
+  - 'Jedenáct oblastí. Jedna odpověď:'
+  - co má smysl
+  - řešit první.
+  aria: Jedenáct oblastí auditu
+  chip: HTTPS, TLS a bezpečnostní hlavičky
+  items:
+  - - Výkon
+    - cold
+    - 'Lighthouse pro desktop i mobil a Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+  - - Indexace a SEO
+    - cold
+    - Robots.txt, sitemap, canonical, metadata, nadpisy a Open Graph.
+  - - Odkazy a CTA
+    - cold
+    - Nefunkční a blokované odkazy, výzvy k akci a podezřelé prvky.
+  - - Přístupnost
+    - cold
+    - Kontrast, velikost písma a dotykové cíle s konkrétními prvky na desktopu i mobilu.
+  - - Bezpečnostní signály
+    - cold
+    - HTTPS a přesměrování, TLS certifikát a bezpečnostní HTTP hlavičky. Pasivní kontrola.
+  - - UX a mobilní použitelnost
+    - warm
+    - Viewport, navigace, orientace v obsahu a mobilní cesta návštěvníka.
+  - - Komunikace nabídky
+    - warm
+    - Co web nabízí, komu, jak jasně a konkrétně, a kde ztrácí důvěru.
+  - - AI připravenost
+    - warm
+    - Strukturovaná data a signály pro AI vyhledávání.
+  - - Archetyp značky a publika
+    - warm
+    - Mapa archetypů, brand a customer playbook, pravidla tónu komunikace.
+  - - Obchodní dopad a roadmapa
+    - warm
+    - Manažerské shrnutí, dopad × náročnost a akční plán, co řešit první.
+  - - Důkazní appendix
+    - warm
+    - Crawl, robots, sitemap, metadata a naměřená data k ověření každého nálezu.
+home_compare:
+  tag: Srovnání
+  h2:
+  - Kde jiné audity končí,
+  - SIGEL pokračuje.
+  lead: Pět oblastí, ve kterých se audity nejvíc liší. Celé srovnání má jedenáct.
+  cols:
+  - Nástroje zdarma
+  - SEO audit
+  - Agentura
+  - SIGEL
+  cta: Celé srovnání →
+  cta_href: /audit-webu-agentura-nastroje-nebo-sigel/
+  legend:
+  - pokryto
+  - částečně / zvlášť
+  - nepokryto
+  rows:
+  - - Bezpečnostní signály
+    - - - p
+        - jiné nástroje
+      - - n
+        - ne
+      - - p
+        - zvlášť
+      - - y
+        - ano
+  - - UX a mobilní použitelnost
+    - - - n
+        - ne
+      - - n
+        - ne
+      - - p
+        - UX audit zvlášť
+      - - y
+        - ano
+  - - Komunikace nabídky
+    - - - n
+        - ne
+      - - n
+        - ne
+      - - p
+        - zvlášť
+      - - y
+        - ano
+  - - Archetyp značky a playbook
+    - - - n
+        - ne
+      - - n
+        - ne
+      - - p
+        - brand strategie
+      - - y
+        - ano
+  - - 'Roadmapa: co řešit první'
+    - - - n
+        - ne
+      - - p
+        - SEO doporučení
+      - - y
+        - ano
+      - - y
+        - ano
+home_meta:
+- 11 oblastí v jednom reportu
+- 4 980 Kč · pro firmy
+- Do 24 h po platbě

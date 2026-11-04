@@ -496,3 +496,111 @@ guide:
   - - /de/seo-audit-vs-website-audit/
     - SEO-Audit vs. Website-Audit
     - Wann technisches SEO ausreicht und wann zusätzlich UX, Kommunikation, Vertrauen und Conversion geprüft werden müssen.
+home_areas:
+  h2:
+  - 'Elf Bereiche. Eine Antwort:'
+  - was zuerst
+  - gelöst werden sollte.
+  aria: Elf Audit-Bereiche
+  chip: HTTPS, TLS und Security-Header
+  items:
+  - - Performance
+    - cold
+    - 'Lighthouse für Desktop und Mobil sowie Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+  - - Indexierung und SEO
+    - cold
+    - Robots.txt, Sitemap, Canonical, Metadaten, Überschriften und Open Graph.
+  - - Links und CTA
+    - cold
+    - Defekte und blockierte Links, Calls-to-Action und auffällige Elemente.
+  - - Barrierefreiheit
+    - cold
+    - Kontrast, Schriftgröße und Touch-Ziele mit konkreten Elementen auf Desktop und Mobil.
+  - - Sicherheitssignale
+    - cold
+    - HTTPS und Weiterleitungen, TLS-Zertifikat und HTTP-Security-Header. Passive Prüfung.
+  - - UX und mobile Nutzbarkeit
+    - warm
+    - Viewport, Navigation, Orientierung im Inhalt und mobiler Weg der Besucher.
+  - - Angebotskommunikation
+    - warm
+    - Was die Website anbietet, für wen, wie klar und konkret und wo Vertrauen verloren geht.
+  - - KI-Bereitschaft
+    - warm
+    - Strukturierte Daten und Signale für KI-Suche.
+  - - Marken- und Zielgruppenarchetyp
+    - warm
+    - Archetypen-Karte, Brand- und Customer-Playbook, Regeln für die Tonalität.
+  - - Geschäftliche Wirkung und Roadmap
+    - warm
+    - Management Summary, Wirkung × Aufwand und ein Aktionsplan, was zuerst zu tun ist.
+  - - Evidenz-Anhang
+    - warm
+    - Crawl, Robots, Sitemap, Metadaten und Messdaten zur Überprüfung jedes Befunds.
+home_compare:
+  tag: Vergleich
+  h2:
+  - Wo andere Audits aufhören,
+  - macht SIGEL weiter.
+  lead: Fünf Bereiche, in denen sich Audits am stärksten unterscheiden.
+  cols:
+  - Kostenlose Tools
+  - SEO-Audit
+  - Agentur
+  - SIGEL
+  cta: Report bestellen
+  cta_href: ''
+  legend:
+  - abgedeckt
+  - teilweise / separat
+  - nicht abgedeckt
+  rows:
+  - - Sicherheitssignale
+    - - - p
+        - andere Tools
+      - - n
+        - nein
+      - - p
+        - separat
+      - - y
+        - ja
+  - - UX und mobile Nutzbarkeit
+    - - - n
+        - nein
+      - - n
+        - nein
+      - - p
+        - UX-Audit separat
+      - - y
+        - ja
+  - - Angebotskommunikation
+    - - - n
+        - nein
+      - - n
+        - nein
+      - - p
+        - separat
+      - - y
+        - ja
+  - - Markenarchetyp und Playbook
+    - - - n
+        - nein
+      - - n
+        - nein
+      - - p
+        - Markenstrategie
+      - - y
+        - ja
+  - - 'Roadmap: was zuerst'
+    - - - n
+        - nein
+      - - p
+        - SEO-Empfehlungen
+      - - y
+        - ja
+      - - y
+        - ja
+home_meta:
+- 11 Bereiche in einem Report
+- 199 € · für Unternehmen
+- In 24 Std. nach Zahlung

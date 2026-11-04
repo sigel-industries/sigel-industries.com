@@ -133,9 +133,7 @@ hero_preload: true
 <a class="btn btn-ghost" href="../docs/demo-report-en.pdf" rel="noopener" target="_blank">View report sample</a>
 </div>
 <div aria-label="Service parameters" class="hero-meta reveal">
-<span>Visual PDF report</span>
-<span>Human-reviewed output</span>
-<span>24h delivery</span>
+{%- for item in t.home_meta %}<span>{{ item }}</span>{% endfor %}
 </div>
 </div>
 <div aria-label="Audit core visualization" class="hero-visual reveal">
@@ -208,13 +206,7 @@ hero_preload: true
 </div>
 </div>
 </section>
-<section aria-label="Website as a system of signals" class="signal-interlude">
-<canvas aria-hidden="true" id="signalCanvas"></canvas>
-<div class="signal-label reveal">
-<strong>Website as a system of signals.</strong>
-<span>Technical · User · Communication · Business</span>
-</div>
-</section>
+{% include "partials/home_compare.html" %}
 <section class="section" id="solutions">
 <div class="section-divider"></div>
 <div class="wrap">
@@ -250,21 +242,18 @@ hero_preload: true
 <section class="section system-section" id="engine">
 <div class="section-divider"></div>
 <div class="wrap">
-<div class="section-head reveal"><p class="tag">The SIGEL analytical core</p><h2>Six layers. One answer:<br/><span class="italic">what deserves to be <span class="cold-text">fixed first.</span></span></h2><p>The output is not pure AI text or a generic checklist. SIGEL uses its own analytical system, scoring, algorithmic rules, UX heuristics, a business interpretation layer and human review.</p></div>
+<div class="section-head reveal"><p class="tag">The SIGEL analytical core</p><h2>{{ t.home_areas.h2[0] }}<br/><span class="italic">{{ t.home_areas.h2[1] }} <span class="cold-text">{{ t.home_areas.h2[2] }}</span></span></h2><p>The output is not pure AI text or a generic checklist. SIGEL uses its own analytical system, scoring, algorithmic rules, UX heuristics, a business interpretation layer and human review.</p></div>
 <div class="system-layout reveal">
-<div aria-label="Six audit layers" class="system-layers" id="diagList">
-<article class="diag-row cold-layer"><div class="diag-n">01</div><h3>Technical layer and performance</h3><p>Desktop and mobile Lighthouse, Core Web Vitals, rendering, SSL, mixed content, robots and sitemap.</p></article>
-<article class="diag-row cold-layer"><div class="diag-n">02</div><h3>SEO and discoverability</h3><p>Metadata, headings, canonical, Open Graph, schema.org and AI-readiness signals.</p></article>
-<article class="diag-row cold-layer"><div class="diag-n">03</div><h3>UX, CTA and accessibility</h3><p>Links, CTA, mobile viewport, contrast, font size and touch targets.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">04</div><h3>Offer communication</h3><p>What the website offers, who it serves, its business purpose and where communication loses clarity.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">05</div><h3>Brand and audience archetypes</h3><p>Brand and audience archetypes, their strategic fit and a practical communication playbook.</p></article>
-<article class="diag-row warm-layer"><div class="diag-n">06</div><h3>Roadmap and evidence</h3><p>Executive summary, impact versus effort, action plan and technical and evidence appendices.</p></article>
+<div aria-label="{{ t.home_areas.aria }}" class="system-layers" id="diagList">
+{%- for title, layer, text in t.home_areas['items'] %}
+<article class="diag-row {{ layer }}-layer"><div class="diag-n">{{ '%02d' % loop.index }}</div><h3>{{ title }}</h3><p>{{ text }}</p></article>
+{%- endfor %}
 </div>
 <aside aria-label="How the output is created" class="system-process interactive-card"><p class="tag cold">How the report is created</p><h3>Data → scoring → interpretation → review.</h3><ol><li><span>Technical and content signal collection</span></li><li><span>Own scoring, weights and algorithms</span></li><li><span>UX heuristics and interpretation layer</span></li><li><span>Human-reviewed output</span></li></ol><button class="card-more" data-modal-target="system-process" type="button">How the system works →</button></aside>
 </div>
 <div aria-label="What is actually measured in the report" class="audit-evidence reveal">
 <div class="audit-evidence-head"><p class="tag cold">Evidence layer</p><h3>What is actually measured in the report</h3></div>
-<div class="audit-evidence-grid">
+<div class="audit-evidence-grid"><span>{{ t.home_areas.chip }}</span>
 <span>Lighthouse and Core Web Vitals</span><span>Links and CTA</span><span>Mobile viewport</span><span>Contrast and touch targets</span><span>Metadata and schema</span><span>Content extraction</span><span>AI readiness</span><span>Evidence data</span>
 </div>
 </div>

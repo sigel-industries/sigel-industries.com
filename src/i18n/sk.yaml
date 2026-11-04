@@ -494,3 +494,111 @@ guide:
   - - /sk/seo-audit-vs-komplexny-audit-webu/
     - SEO audit vs. audit webu
     - Kedy stačí technické SEO a kedy treba riešiť aj UX, komunikáciu, dôveru a konverziu.
+home_areas:
+  h2:
+  - 'Jedenásť oblastí. Jedna odpoveď:'
+  - čo má zmysel
+  - riešiť ako prvé.
+  aria: Jedenásť oblastí auditu
+  chip: HTTPS, TLS a bezpečnostné hlavičky
+  items:
+  - - Výkon
+    - cold
+    - 'Lighthouse pre desktop aj mobil a Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+  - - Indexácia a SEO
+    - cold
+    - Robots.txt, sitemap, canonical, metadáta, nadpisy a Open Graph.
+  - - Odkazy a CTA
+    - cold
+    - Nefunkčné a blokované odkazy, výzvy na akciu a podozrivé prvky.
+  - - Prístupnosť
+    - cold
+    - Kontrast, veľkosť písma a dotykové ciele s konkrétnymi prvkami na desktope aj mobile.
+  - - Bezpečnostné signály
+    - cold
+    - HTTPS a presmerovanie, TLS certifikát a bezpečnostné HTTP hlavičky. Pasívna kontrola.
+  - - UX a mobilná použiteľnosť
+    - warm
+    - Viewport, navigácia, orientácia v obsahu a mobilná cesta návštevníka.
+  - - Komunikácia ponuky
+    - warm
+    - Čo web ponúka, komu, ako jasne a konkrétne, a kde stráca dôveru.
+  - - AI pripravenosť
+    - warm
+    - Štruktúrované dáta a signály pre AI vyhľadávanie.
+  - - Archetyp značky a publika
+    - warm
+    - Mapa archetypov, brand a customer playbook, pravidlá tónu komunikácie.
+  - - Obchodný dopad a roadmapa
+    - warm
+    - Manažérske zhrnutie, dopad × náročnosť a akčný plán, čo riešiť ako prvé.
+  - - Dôkazový appendix
+    - warm
+    - Crawl, robots, sitemap, metadáta a namerané dáta na overenie každého nálezu.
+home_compare:
+  tag: Porovnanie
+  h2:
+  - Kde iné audity končia,
+  - SIGEL pokračuje.
+  lead: Päť oblastí, v ktorých sa audity najviac líšia.
+  cols:
+  - Nástroje zadarmo
+  - SEO audit
+  - Agentúra
+  - SIGEL
+  cta: Objednať report
+  cta_href: ''
+  legend:
+  - pokryté
+  - čiastočne / zvlášť
+  - nepokryté
+  rows:
+  - - Bezpečnostné signály
+    - - - p
+        - iné nástroje
+      - - n
+        - nie
+      - - p
+        - zvlášť
+      - - y
+        - áno
+  - - UX a mobilná použiteľnosť
+    - - - n
+        - nie
+      - - n
+        - nie
+      - - p
+        - UX audit zvlášť
+      - - y
+        - áno
+  - - Komunikácia ponuky
+    - - - n
+        - nie
+      - - n
+        - nie
+      - - p
+        - zvlášť
+      - - y
+        - áno
+  - - Archetyp značky a playbook
+    - - - n
+        - nie
+      - - n
+        - nie
+      - - p
+        - brand stratégia
+      - - y
+        - áno
+  - - 'Roadmapa: čo riešiť ako prvé'
+    - - - n
+        - nie
+      - - p
+        - SEO odporúčania
+      - - y
+        - áno
+      - - y
+        - áno
+home_meta:
+- 11 oblastí v jednom reporte
+- 199 € · pre firmy
+- Do 24 h po platbe
