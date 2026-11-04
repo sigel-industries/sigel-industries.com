@@ -16,7 +16,7 @@ og_image_alt: Warum Ihre Website nicht konvertiert oder Anfragen erzeugt | SIGEL
 twitter_title: Warum Ihre Website nicht konvertiert oder Anfragen erzeugt | SIGEL
 twitter_description: 'Warum eine Website trotz Traffic zu wenige Anfragen erzeugt: Angebotsklarheit, Vertrauen, CTA, mobile UX, Performance und technische Barrieren systematisch prüfen.'
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -132,11 +132,10 @@ twitter_description: 'Warum eine Website trotz Traffic zu wenige Anfragen erzeug
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/de/">SIGEL</a> / Warum die Website nicht konvertiert</p><h1>Warum Ihre Website Traffic erhält, aber nicht konvertiert</h1><p>Wenn Besucher kommen, aber Anfragen, Bestellungen oder Registrierungen ausbleiben, liegt die Ursache selten in nur einer Kennzahl. Meist wirken Technik, UX, Kommunikation und Vertrauen gleichzeitig.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}Warum die Website nicht konvertiert{% endblock %}
+{% block guide_title %}Warum Ihre Website Traffic erhält, aber nicht konvertiert{% endblock %}
+{% block guide_lead %}Wenn Besucher kommen, aber Anfragen, Bestellungen oder Registrierungen ausbleiben, liegt die Ursache selten in nur einer Kennzahl. Meist wirken Technik, UX, Kommunikation und Vertrauen gleichzeitig.{% endblock %}
+{% block guide_body %}
 <p>Eine Website kann schnell sein, ordentlich aussehen und trotzdem zu wenig Geschäft erzeugen. „Nicht konvertieren“ bedeutet nicht automatisch, dass nur ein Button fehlt. Häufig entsteht das Problem aus mehreren kleinen Barrieren, die zusammen den Entscheidungsweg unterbrechen.</p>
 <h2>Die häufigsten Gründe für schwache Website-Conversions</h2>
 <ul>
@@ -171,11 +170,7 @@ twitter_description: 'Warum eine Website trotz Traffic zu wenige Anfragen erzeug
 <h2>Was liefert SIGEL?</h2>
 <p>Der Web-Intelligence-Report verbindet technische Daten, mobile UX, Barrierefreiheit, Angebotskommunikation, Vertrauen, Archetypen und Prioritäten. Er zeigt nicht nur mögliche Ursachen, sondern ordnet sie nach Wirkung und Aufwand.</p>
 <p>Die Reportstruktur sehen Sie im <a href="/docs/demo-report-en.pdf" rel="noopener" target="_blank">englischen Beispielreport</a>. Der deutsche Report ist als Ausgabesprache verfügbar.</p>
-<h2>Verwandte Leitfäden</h2>
-<p><a href="/de/website-audit/">Umfassendes Website-Audit</a><br/><a href="/de/website-audit-vor-redesign/">Audit vor dem Redesign</a><br/><a href="/de/seo-audit-vs-website-audit/">SEO-Audit vs. Website-Audit</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/de/#order">Website diagnostizieren lassen — 199 € →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">199 €</div><p class="order-sub">Ein persönlich geprüfter PDF-Report für eine konkrete URL. Ursachen für schwache Conversion in Technik, UX, Kommunikation, Vertrauen und Entscheidungsweg. Normalerweise innerhalb von 24 Stunden nach Zahlung.</p><div class="order-tags"><span>Umfassendes Website-Audit</span><span>Lieferung in 24 Std.</span><span>Persönlich geprüft</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/de/#order">Weiter zur Bestellung →</a></div></div></section>
 {% endblock %}

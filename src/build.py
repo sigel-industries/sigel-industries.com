@@ -32,6 +32,33 @@ FRONT_MATTER_KEYS = {
 }
 
 
+H2_RE = re.compile(r'<h2>(.*?)</h2>', re.S)
+
+
+def slugify(text):
+    """ASCII anchor id from heading text (diacritics stripped)."""
+    import unicodedata
+    plain = re.sub(r'&[a-z]+;|&#\d+;', ' ', re.sub(r'<[^>]+>', '', text))
+    plain = unicodedata.normalize('NFKD', plain).encode('ascii', 'ignore').decode()
+    slug = re.sub(r'[^a-z0-9]+', '-', plain.lower()).strip('-') or 'sekce'
+    return slug if slug[0].isalpha() else f's-{slug}'  # valid as a CSS selector too
+
+
+def heading_ids(html):
+    """Give every <h2> an id so the table of contents can link to it."""
+    return H2_RE.sub(lambda m: f'<h2 id="{slugify(m.group(1))}">{m.group(1)}</h2>', str(html))
+
+
+def toc_entries(html):
+    """[(id, text)] for the <h2> headings of a guide body."""
+    return [(slugify(h), re.sub(r'<[^>]+>', '', h).strip()) for h in H2_RE.findall(str(html))]
+
+
+def reading_minutes(html):
+    words = len(re.sub(r'<[^>]+>', ' ', str(html)).split())
+    return max(1, round(words / 200))
+
+
 def load_yaml(path):
     return yaml.safe_load(path.read_text(encoding='utf-8'))
 
@@ -81,6 +108,7 @@ def main():
         return re.sub(r"url\(\./([^)]+)\)", lambda m: f"url({asset(base + '/' + m.group(1))})", css)
 
     env.globals.update(site=site, i18n=i18n, asset=asset, inline_css=inline_css, year=datetime.date.today().year)
+    env.filters.update(heading_ids=heading_ids, toc_entries=toc_entries, reading_minutes=reading_minutes)
 
     pages = []
     for path in sorted((SRC / 'pages').rglob('*.html')):

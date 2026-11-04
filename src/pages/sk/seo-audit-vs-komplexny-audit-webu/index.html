@@ -16,7 +16,7 @@ og_image_alt: 'SIGEL Web Intelligence — SEO audit vs. komplexný audit webu: a
 twitter_title: 'SEO audit vs. komplexný audit webu: rozdiel | SIGEL'
 twitter_description: SEO audit rieši viditeľnosť vo vyhľadávačoch. Komplexný audit webu prepája SEO aj s UX, výkonom, prístupnosťou, ponukou, dôverou a konverziou.
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -122,11 +122,10 @@ twitter_description: SEO audit rieši viditeľnosť vo vyhľadávačoch. Komplex
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/sk/">SIGEL</a> / SEO a audit webu</p><h1>SEO audit vs. komplexný audit webu: aký je rozdiel?</h1><p>SEO audit a komplexný audit webu nie sú konkurenčné služby. Skúmajú rozdielne vrstvy toho istého systému. Rozdiel je v otázke, na ktorú má výstup odpovedať.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}SEO a audit webu{% endblock %}
+{% block guide_title %}SEO audit vs. komplexný audit webu: aký je rozdiel?{% endblock %}
+{% block guide_lead %}SEO audit a komplexný audit webu nie sú konkurenčné služby. Skúmajú rozdielne vrstvy toho istého systému. Rozdiel je v otázke, na ktorú má výstup odpovedať.{% endblock %}
+{% block guide_body %}
 <p>SEO audit zisťuje, či vyhľadávače dokážu web nájsť, prechádzať, pochopiť a zaradiť. Komplexný audit webu sa navyše pýta, čo sa deje po kliknutí: či návštevník rozumie ponuke, dôveruje jej, dokáže web používať a dostane sa k dopytu alebo nákupu.</p>
 <h2>Čo kontroluje SEO audit</h2>
 <ul>
@@ -173,11 +172,7 @@ twitter_description: SEO audit rieši viditeľnosť vo vyhľadávačoch. Komplex
 <p>SIGEL Web Intelligence obsahuje technické SEO aj výkon, ale nekončí sa pri nich. V jednom reporte kontroluje aj UX, prístupnosť, komunikáciu ponuky, dôveru, archetypy a obchodné priority. Evidence appendix zachováva technický základ a roadmapa mení nálezy na poradie rozhodnutí.</p>
 <h2>Čo SIGEL nenahrádza</h2>
 <p>Výstup nie je kompletná dlhodobá SEO stratégia, detailná analýza kľúčových slov pre stovky URL ani implementácia opráv. Je to diagnostická vrstva, ktorá ukáže, kde problém leží a aký typ práce má nasledovať.</p>
-<h2>Súvisiaci sprievodcovia</h2>
-<p><a href="/sk/audit-webu/">Čo obsahuje komplexný audit webu</a><br/><a href="/sk/preco-web-nekonvertuje/">Prečo web neprináša dopyty</a><br/><a href="/sk/audit-webu-pred-redizajnom/">Audit webu pred redizajnom</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/sk/#order">Objednať komplexný Web Intelligence report za 199 € →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">199 €</div><p class="order-sub">Ručne kontrolovaný PDF report pre konkrétnu URL. Technika, SEO, UX, prístupnosť, komunikácia, dôvera a prioritná roadmapa. Dodanie spravidla do 24 hodín počas pracovných dní od potvrdenia platby.</p><div class="order-tags"><span>Komplexný audit webu</span><span>Dodanie do 24 h</span><span>Ručne kontrolovaný</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/sk/#order">Prejsť k objednávke →</a></div></div></section>
 {% endblock %}

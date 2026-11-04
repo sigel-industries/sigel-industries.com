@@ -1,0 +1,61 @@
+{#- Layout for long-form guides: hero with facts, table of contents built from <h2>, related guides, order box. -#}
+{% extends "base.html" %}
+{% block main %}
+{%- set g = t.guide -%}
+{%- set body = self.guide_body() -%}
+{%- set toc = body | toc_entries -%}
+<section class="page-shell guide-hero">
+<div class="wrap">
+<p class="eyebrow guide-crumb reveal"><a href="{{ t.chrome.home }}">SIGEL</a> / {% block guide_crumb %}{% endblock %}</p>
+<h1 class="reveal">{% block guide_title %}{% endblock %}</h1>
+<p class="guide-lead reveal">{% block guide_lead %}{% endblock %}</p>
+<div class="hero-buttons reveal">
+<button class="btn btn-primary" data-order-open="" data-track="guide-hero" type="button">{{ g.order }}</button>
+<a class="btn btn-ghost" data-track="guide-hero" href="{{ t.chrome.demo[0] }}" rel="noopener" target="_blank">{{ g.demo }}</a>
+</div>
+<dl class="guide-facts reveal">
+{%- for value, label in g.facts %}
+<div><dt>{{ value }}</dt><dd>{{ label }}</dd></div>
+{%- endfor %}
+<div class="guide-reading"><dt>{{ body | reading_minutes }}</dt><dd>{{ g.reading }}</dd></div>
+</dl>
+</div>
+</section>
+
+<section class="guide-body">
+<div class="wrap guide-grid">
+{%- if toc | length > 2 %}
+<nav aria-label="{{ g.toc }}" class="guide-toc">
+<p class="guide-toc-title">{{ g.toc }}</p>
+<ol>
+{%- for anchor, text in toc %}
+<li><a href="#{{ anchor }}"><span>{{ '%02d' % loop.index }}</span>{{ text }}</a></li>
+{%- endfor %}
+</ol>
+</nav>
+{%- endif %}
+<article class="guide-article">
+{{ body | heading_ids }}
+{%- if lang == 'cs' and page.url != '/audit-webu-agentura-nastroje-nebo-sigel/' %}
+{% include "partials/cmp_promo.html" %}
+{%- endif %}
+</article>
+</div>
+</section>
+
+<section class="section guide-related">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">{{ g.related_tag }}</p>
+<h2>{{ g.related_title }}</h2>
+</div>
+<div class="guide-cards">
+{%- for href, title, text in g.cards if href != page.url %}
+<a class="guide-card reveal" href="{{ href }}"><span class="guide-card-n">{{ '%02d' % loop.index }}</span><strong>{{ title }}</strong><span class="guide-card-text">{{ text }}</span><span class="guide-card-more">{{ g.more }}</span></a>
+{%- endfor %}
+</div>
+</div>
+</section>
+{% block guide_after %}{% endblock %}
+{% endblock %}

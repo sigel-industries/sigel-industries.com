@@ -16,7 +16,7 @@ og_image_alt: SIGEL Web Intelligence — why a website is not converting
 twitter_title: Why Your Website Is Not Converting | SIGEL
 twitter_description: 'Find why your website is not converting: unclear offers, weak trust, poor calls to action, mobile UX, performance or a mismatch with advertising.'
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -122,25 +122,24 @@ twitter_description: 'Find why your website is not converting: unclear offers, w
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/en/">SIGEL</a> / Website conversion</p><h1>Why your website is not converting or generating leads</h1><p>Traffic alone is not enough. When a website does not generate customers, the cause may be technical, behavioural, communicational or commercial — and often several at once.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}Website conversion{% endblock %}
+{% block guide_title %}Why your website is not converting or generating leads{% endblock %}
+{% block guide_lead %}Traffic alone is not enough. When a website does not generate customers, the cause may be technical, behavioural, communicational or commercial — and often several at once.{% endblock %}
+{% block guide_body %}
 <p>When a website is not converting, the first reaction is often to increase advertising, change the design or rewrite a few sections. Any of those may help, but without diagnosis they are still guesses. Conversion happens only when visitors understand the offer quickly, trust it, find the right next step and complete it without unnecessary friction.</p>
-<h2>1. The offer is not immediately clear</h2>
+<h2>The offer is not immediately clear</h2>
 <p>Within a few seconds, visitors should understand what the business offers, who the service is for and which problem it solves. A vague slogan, overly general wording or several equally prominent offers can leave people unsure where to continue.</p>
-<h2>2. The website lists features but not concrete value</h2>
+<h2>The website lists features but not concrete value</h2>
 <p>Explaining features is not the same as giving someone a business reason to buy. A website may describe the process, technology or scope in detail and still fail to answer the decisive question: what will the customer gain, and why should they act now?</p>
-<h2>3. Trust and proof are missing</h2>
+<h2>Trust and proof are missing</h2>
 <p>Testimonials, output samples, a clear method, transparent pricing, provider identity and understandable terms all reduce perceived risk. When a website asks for contact details or payment before it has built trust, visitors often leave without acting.</p>
-<h2>4. The call to action does not match visitor readiness</h2>
+<h2>The call to action does not match visitor readiness</h2>
 <p>“Contact us” is not a universal solution. Some visitors are ready to order; others first need to see a sample, understand the price or verify the scope. A website needs one clear primary call to action and a sensible secondary step for people who are not ready to buy yet.</p>
-<h2>5. The mobile journey is worse than desktop</h2>
+<h2>The mobile journey is worse than desktop</h2>
 <p>Small touch targets, long forms, overlays, horizontal scrolling or slow loading can destroy conversion on an otherwise well-designed website. Mobile problems are not a minor UX detail when a large share of visitors arrive on smaller screens.</p>
-<h2>6. The website is slow or feels unstable</h2>
+<h2>The website is slow or feels unstable</h2>
 <p>Largest Contentful Paint, Cumulative Layout Shift and blocking scripts influence how quickly visitors see the main content and whether they can interact with it confidently. A score alone is not enough: the important question is whether the issue affects a key landing page or decision path.</p>
-<h2>7. Advertising and the landing page make different promises</h2>
+<h2>Advertising and the landing page make different promises</h2>
 <p>A campaign may attract relevant visitors, but the landing page must continue with the same offer, language and expectation. When an advert promises a specific result and the click leads to a generic corporate homepage, part of the budget disappears between the click and comprehension.</p>
 <h2>How to find why a website is not generating customers</h2>
 <p>Start by separating four layers: technical availability, user friction, offer communication and commercial trust. Only then can you see whether the main problem lies in performance, mobile UX, calls to action, content, audience fit or the path to purchase.</p>
@@ -156,11 +155,7 @@ twitter_description: 'Find why your website is not converting: unclear offers, w
 </ul>
 <h2>When a comprehensive audit makes sense</h2>
 <p>An audit is useful when there is no single obvious defect, or when several people propose different changes without a shared evidence base. It also makes sense before advertising, before a redesign or after the offer has changed.</p>
-<h2>Related guides</h2>
-<p><a href="/en/website-audit/">What a comprehensive website audit should include</a><br/><a href="/en/website-audit-before-redesign/">How to prepare a redesign using evidence</a><br/><a href="/en/seo-audit-vs-website-audit/">When an SEO audit is not enough</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/en/#order">Order the Web Intelligence report for 199 EUR →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">199 EUR</div><p class="order-sub">A human-reviewed PDF report for a specific URL. Technical health, SEO, UX, accessibility, communication, trust and a prioritised roadmap. Normally delivered within 24 hours on business days after payment is confirmed.</p><div class="order-tags"><span>Comprehensive website audit</span><span>24h delivery</span><span>Human-reviewed</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/en/#order">Continue to order →</a></div></div></section>
 {% endblock %}

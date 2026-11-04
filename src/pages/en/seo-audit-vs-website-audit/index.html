@@ -16,7 +16,7 @@ og_image_alt: SIGEL Web Intelligence — SEO audit versus comprehensive website 
 twitter_title: 'SEO Audit vs Website Audit: What Is the Difference? | SIGEL'
 twitter_description: An SEO audit reviews search visibility. A comprehensive website audit also connects SEO with UX, performance, accessibility, offer clarity, trust and conversion.
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -122,11 +122,10 @@ twitter_description: An SEO audit reviews search visibility. A comprehensive web
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/en/">SIGEL</a> / SEO and website audit</p><h1>SEO audit vs website audit: what is the difference?</h1><p>An SEO audit and a comprehensive website audit are not competing services. They examine different layers of the same system. The difference lies in the question the output is expected to answer.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}SEO and website audit{% endblock %}
+{% block guide_title %}SEO audit vs website audit: what is the difference?{% endblock %}
+{% block guide_lead %}An SEO audit and a comprehensive website audit are not competing services. They examine different layers of the same system. The difference lies in the question the output is expected to answer.{% endblock %}
+{% block guide_body %}
 <p>An SEO audit asks whether search engines can find, crawl, understand and rank a website. A comprehensive website audit also asks what happens after the click: whether visitors understand the offer, trust it, can use the website and reach an enquiry or purchase.</p>
 <h2>What does an SEO audit review?</h2>
 <ul>
@@ -173,11 +172,7 @@ twitter_description: An SEO audit reviews search visibility. A comprehensive web
 <p>SIGEL Web Intelligence includes technical SEO and performance, but it does not stop there. The same report reviews UX, accessibility, offer communication, trust, archetypes and business priorities. The evidence appendix retains the technical basis, while the roadmap converts findings into a decision order.</p>
 <h2>What SIGEL does not replace</h2>
 <p>The output is not a full long-term SEO strategy, a detailed keyword analysis for hundreds of URLs or the implementation of fixes. It is a diagnostic layer that identifies where the problem is and which type of work should come next.</p>
-<h2>Related guides</h2>
-<p><a href="/en/website-audit/">What a comprehensive website audit includes</a><br/><a href="/en/why-website-not-converting/">Why a website is not generating leads</a><br/><a href="/en/website-audit-before-redesign/">Website audit before redesign</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/en/#order">Order the Web Intelligence report for 199 EUR →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">199 EUR</div><p class="order-sub">A human-reviewed PDF report for a specific URL. Technical health, SEO, UX, accessibility, communication, trust and a prioritised roadmap. Normally delivered within 24 hours on business days after payment is confirmed.</p><div class="order-tags"><span>Comprehensive website audit</span><span>24h delivery</span><span>Human-reviewed</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/en/#order">Continue to order →</a></div></div></section>
 {% endblock %}

@@ -468,3 +468,31 @@ contact:
   done: Danke, Ihre Nachricht ist eingegangen. Wir melden uns in Kürze.
   error: Die Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns an
   required: Dieses Feld ist erforderlich.
+guide:
+  facts:
+  - - '11'
+    - Bereiche in einem Report
+  - - 199 €
+    - pro URL, B2B
+  - - 24 Std.
+    - Lieferung nach Zahlung
+  toc: Inhalt
+  reading: Min. Lesezeit
+  related_tag: Leitfäden
+  related_title: Weitere Leitfäden
+  order: Report bestellen
+  demo: Beispielreport
+  more: Leitfaden lesen →
+  cards:
+  - - /de/website-audit/
+    - Umfassendes Website-Audit
+    - Was ein nützliches Website-Audit prüfen sollte, was der Output enthalten muss und wann sich die Investition lohnt.
+  - - /de/warum-website-nicht-konvertiert/
+    - Warum eine Website nicht konvertiert
+    - 'Die häufigsten Barrieren zwischen Traffic und Anfragen: Angebotsklarheit, Vertrauen, Calls-to-Action, mobile UX und Performance.'
+  - - /de/website-audit-vor-redesign/
+    - Audit vor dem Redesign
+    - Wie ein Redesign-Briefing auf Evidenz und realen Problemen statt auf Meinungen und kosmetischen Änderungen basiert.
+  - - /de/seo-audit-vs-website-audit/
+    - SEO-Audit vs. Website-Audit
+    - Wann technisches SEO ausreicht und wann zusätzlich UX, Kommunikation, Vertrauen und Conversion geprüft werden müssen.

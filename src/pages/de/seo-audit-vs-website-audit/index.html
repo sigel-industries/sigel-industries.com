@@ -16,7 +16,7 @@ og_image_alt: 'SEO-Audit vs. Website-Audit: Was ist der Unterschied? | SIGEL'
 twitter_title: 'SEO-Audit vs. Website-Audit: Was ist der Unterschied? | SIGEL'
 twitter_description: 'SEO-Audit und umfassendes Website-Audit vergleichen: Technik, Rankings, UX, Angebotsklarheit, Vertrauen, Conversion und geschäftliche Prioritäten.'
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -132,11 +132,10 @@ twitter_description: 'SEO-Audit und umfassendes Website-Audit vergleichen: Techn
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/de/">SIGEL</a> / SEO-Audit vs. Website-Audit</p><h1>SEO-Audit vs. umfassendes Website-Audit: Wo endet SEO?</h1><p>Ein SEO-Audit prüft, ob eine Website gefunden werden kann. Ein umfassendes Website-Audit prüft zusätzlich, ob Besucher das Angebot verstehen, vertrauen und handeln.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}SEO-Audit vs. Website-Audit{% endblock %}
+{% block guide_title %}SEO-Audit vs. umfassendes Website-Audit: Wo endet SEO?{% endblock %}
+{% block guide_lead %}Ein SEO-Audit prüft, ob eine Website gefunden werden kann. Ein umfassendes Website-Audit prüft zusätzlich, ob Besucher das Angebot verstehen, vertrauen und handeln.{% endblock %}
+{% block guide_body %}
 <p>Die Begriffe SEO-Audit, Site Audit, Website-Audit und Webseitenanalyse werden häufig vermischt. Dadurch erwarten Unternehmen von einem technischen SEO-Check manchmal Antworten, die er gar nicht liefern kann. Die richtige Wahl hängt davon ab, welche Geschäftsfrage beantwortet werden soll.</p>
 <h2>Was prüft ein SEO-Audit?</h2>
 <p>Ein SEO-Audit konzentriert sich auf die organische Auffindbarkeit einer Website. Typische Bereiche sind:</p>
@@ -193,11 +192,7 @@ twitter_description: 'SEO-Audit und umfassendes Website-Audit vergleichen: Techn
 <h2>Was liefert SIGEL?</h2>
 <p>Der SIGEL-Web-Intelligence-Report verbindet die technische Tiefe eines Audits mit einer geschäftlichen Interpretationsschicht. Er ist besonders für Unternehmen geeignet, die nicht nur wissen wollen, was technisch falsch ist, sondern welche Änderung zuerst den größten Sinn ergibt.</p>
 <p>Die Reportstruktur sehen Sie im <a href="/docs/demo-report-en.pdf" rel="noopener" target="_blank">englischen Beispielreport</a>. Der deutsche Report ist als Ausgabesprache verfügbar.</p>
-<h2>Verwandte Leitfäden</h2>
-<p><a href="/de/website-audit/">Umfassendes Website-Audit</a><br/><a href="/de/warum-website-nicht-konvertiert/">Warum Websites nicht konvertieren</a><br/><a href="/de/website-audit-vor-redesign/">Audit vor dem Redesign</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/de/#order">Umfassenden Web-Intelligence-Report bestellen — 199 € →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">199 €</div><p class="order-sub">Ein persönlich geprüfter PDF-Report, der technische SEO mit UX, Kommunikation, Vertrauen, Conversion und geschäftlicher Priorisierung verbindet.</p><div class="order-tags"><span>Umfassendes Website-Audit</span><span>Lieferung in 24 Std.</span><span>Persönlich geprüft</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/de/#order">Weiter zur Bestellung →</a></div></div></section>
 {% endblock %}

@@ -16,7 +16,7 @@ og_image_alt: Website-Audit & Webseitenanalyse für SEO, UX und Conversion | SIG
 twitter_title: Website-Audit & Webseitenanalyse für SEO, UX und Conversion | SIGEL
 twitter_description: Umfassendes Website-Audit mit technischer SEO, Performance, mobiler UX, Barrierefreiheit, Angebotsklarheit und priorisierter Roadmap. Persönlich geprüft, in 24 Stunden.
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -132,11 +132,10 @@ twitter_description: Umfassendes Website-Audit mit technischer SEO, Performance,
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/de/">SIGEL</a> / Website-Audit</p><h1>Website-Audit und Webseitenanalyse, die nicht bei einer Fehlerliste enden</h1><p>Ein nützliches Website-Audit sollte mehr leisten als technische Probleme aufzuzählen. Es sollte erklären, was die Evidenz für Besucher, Vertrauen, Anfragen und die nächste Investition in die Website bedeutet.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}Website-Audit{% endblock %}
+{% block guide_title %}Website-Audit und Webseitenanalyse, die nicht bei einer Fehlerliste enden{% endblock %}
+{% block guide_lead %}Ein nützliches Website-Audit sollte mehr leisten als technische Probleme aufzuzählen. Es sollte erklären, was die Evidenz für Besucher, Vertrauen, Anfragen und die nächste Investition in die Website bedeutet.{% endblock %}
+{% block guide_body %}
 <p><strong>SIGEL Web Intelligence</strong> ist ein umfassendes Website-Audit für Unternehmen, Marketingteams und Agenturen, die nicht nur wissen müssen, <em>was</em> auf einer Website nicht funktioniert, sondern vor allem <em>was zuerst behoben werden sollte</em>. Es verbindet technische Evidenz, UX, Barrierefreiheit, Angebotskommunikation und geschäftliche Interpretation in einem priorisierten Output.</p>
 <h2>Was ist ein Website-Audit?</h2>
 <p>Ein Website-Audit ist eine systematische Analyse einer Website. Je nach Umfang prüft es den technischen Zustand, die Indexierbarkeit, Performance, mobile Nutzbarkeit, Inhalte, Navigation, Vertrauen und die Fähigkeit der Website, Besucher zu einer Anfrage oder einem Kauf zu führen.</p>
@@ -170,11 +169,7 @@ twitter_description: Umfassendes Website-Audit mit technischer SEO, Performance,
 <p>Der Preis für den SIGEL-Web-Intelligence-Report beträgt <strong>199 €</strong>. Der Report wird für eine konkrete URL erstellt und jeder Output persönlich geprüft. Die Lieferung erfolgt an Werktagen normalerweise innerhalb von 24 Stunden nach bestätigtem Zahlungseingang.</p>
 <h2>Was das Audit nicht garantiert</h2>
 <p>Das Audit garantiert weder höhere Umsätze noch bessere Suchpositionen oder Kampagnenergebnisse. Es ist eine diagnostische Entscheidungsgrundlage. Es zeigt Risiken, Barrieren und Prioritäten, die geprüft werden sollten, bevor weiteres Budget in Werbung, Redesign oder Website-Änderungen fließt.</p>
-<h2>Verwandte Leitfäden</h2>
-<p><a href="/de/warum-website-nicht-konvertiert/">Warum Ihre Website nicht konvertiert oder zu wenige Anfragen erzeugt</a><br/><a href="/de/website-audit-vor-redesign/">Website-Audit vor dem Redesign</a><br/><a href="/de/seo-audit-vs-website-audit/">SEO-Audit vs. Website-Audit</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/de/#order">Web-Intelligence-Report für 199 € bestellen →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">199 €</div><p class="order-sub">Ein persönlich geprüfter PDF-Report für eine konkrete URL. Technik, SEO, UX, Barrierefreiheit, Kommunikation, Vertrauen und eine priorisierte Roadmap. An Werktagen normalerweise innerhalb von 24 Stunden nach bestätigtem Zahlungseingang.</p><div class="order-tags"><span>Umfassendes Website-Audit</span><span>Lieferung in 24 Std.</span><span>Persönlich geprüft</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/de/#order">Weiter zur Bestellung →</a></div></div></section>
 {% endblock %}

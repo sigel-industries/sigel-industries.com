@@ -20,54 +20,118 @@ og_image_alt: Ceník SIGEL Web Intelligence – audit webu za 4 980 Kč
   ]
 }{% endblock %}
 {% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal">
-<p class="eyebrow"><a href="/">SIGEL</a> / Ceník</p>
-<h1>Ceník auditu webu</h1>
-<p>Jedna služba, jedna cena: <strong>4 980 Kč</strong> (199 €) za kompletní Web Intelligence report pro jednu URL. Bez skrytých položek a bez měsíčních poplatků.</p>
-<div class="inline-actions"><button class="btn btn-primary" data-order-open="" data-track="pricing-hero" type="button">Objednat report za 4 980 Kč</button><a class="btn btn-ghost" href="/audit-webu-agentura-nastroje-nebo-sigel/">Porovnat s alternativami</a></div>
-</div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
-<h2>Co je v ceně</h2>
+{%- set included = [
+  ('Celkový obraz', 'Skóre v šesti oblastech a souhrn silných stránek a rizik.'),
+  ('Technika a výkon', 'Lighthouse pro desktop i mobil, Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'),
+  ('Bezpečnostní signály', 'HTTPS a přesměrování, TLS certifikát, bezpečnostní HTTP hlavičky. Pasivní kontrola.'),
+  ('Odkazy a CTA', 'Nefunkční a blokované odkazy, výzvy k akci a podezřelé prvky.'),
+  ('Přístupnost', 'Kontrast, velikost písma a dotykové cíle s konkrétními prvky na desktopu i mobilu.'),
+  ('UX a komunikace nabídky', 'Jasnost, konzistence a konkrétnost sdělení, navigace a dopad na konverzi.'),
+  ('AI připravenost', 'Strukturovaná data a signály pro AI vyhledávání.'),
+  ('Archetyp značky a publika', 'Mapa archetypů, brand a customer playbook, pravidla tónu komunikace.'),
+  ('Manažerské shrnutí', 'Krátký rozhodovací přehled a obchodní dopad pro vedení.'),
+  ('Prioritní roadmapa', 'Co řešit první, rychlé výhry, dopad × náročnost.'),
+  ('Důkazní appendix', 'Crawl, robots, sitemap, metadata a naměřená data.'),
+  ('Ruční kontrola', 'Každý report před odesláním osobně zkontrolovaný.'),
+] -%}
+<section class="page-shell pr-hero">
+<div class="wrap pr-hero-grid">
+<div class="pr-hero-copy">
+<p class="eyebrow guide-crumb reveal"><a href="/">SIGEL</a> / Ceník</p>
+<h1 class="reveal">Jedna cena. <span class="italic cold-text">Kompletní report.</span></h1>
+<p class="guide-lead reveal">Kompletní Web Intelligence report pro jednu URL. Bez skrytých položek, bez měsíčních poplatků a bez balíčků, ve kterých se člověk ztratí.</p>
+<div class="hero-buttons reveal">
+<button class="btn btn-primary" data-order-open="" data-track="pricing-hero" type="button">Objednat report za 4 980 Kč</button>
+<a class="btn btn-ghost" href="/audit-webu-agentura-nastroje-nebo-sigel/">Porovnat s alternativami</a>
+</div>
+</div>
+<aside class="pr-card reveal" aria-label="Cena">
+<p class="pr-card-tag">SIGEL Web Intelligence</p>
+<div class="pr-card-price">4 980 Kč</div>
+<p class="pr-card-alt">nebo 199 € · za jednu URL · pro firmy</p>
 <ul>
-<li><strong>Celkový obraz:</strong> skóre v šesti oblastech (celkový stav, SEO, technika, UX/mobil, komunikace, strategie) a souhrn silných stránek a rizik.</li>
-<li><strong>Technika a výkon:</strong> Lighthouse pro desktop i mobil, Core Web Vitals (LCP, FCP, CLS, TBT, Speed Index, TTI).</li>
-<li><strong>Bezpečnostní signály:</strong> HTTPS a přesměrování, TLS certifikát a bezpečnostní HTTP hlavičky (CSP, HSTS a další), pasivní kontrola.</li>
-<li><strong>Odkazy a CTA:</strong> nefunkční a blokované odkazy, výzvy k akci a podezřelé prvky.</li>
-<li><strong>Přístupnost:</strong> kontrast, velikost písma a dotykové cíle s konkrétními prvky na desktopu i mobilu.</li>
-<li><strong>UX a komunikace nabídky:</strong> jasnost, konzistence a konkrétnost sdělení, navigace a dopad na konverzi.</li>
-<li><strong>AI připravenost:</strong> strukturovaná data a signály pro AI vyhledávání.</li>
-<li><strong>Archetyp značky a publika:</strong> mapa archetypů, brand a customer playbook, pravidla tónu komunikace.</li>
-<li><strong>Manažerské shrnutí a obchodní dopad</strong> pro vedení.</li>
-<li><strong>Prioritní roadmapa:</strong> co řešit první, rychlé výhry, dopad × náročnost.</li>
-<li><strong>Technický a důkazní appendix:</strong> crawl, robots, sitemap, metadata a naměřená data.</li>
-<li><strong>Ruční kontrola</strong> každého reportu před odesláním.</li>
+<li>11 oblastí v jednom PDF reportu</li>
+<li>Manažerské shrnutí a prioritní roadmapa</li>
+<li>Ručně kontrolovaný výstup</li>
+<li>Zpravidla do 24 h po připsání platby</li>
 </ul>
-<p>Výstupem je vizuální PDF report v češtině/slovenštině, angličtině nebo němčině. Jak vypadá, ukazuje <a data-track="pricing" href="/docs/demo-report.pdf" rel="noopener" target="_blank">ukázkový report (21 stran)</a>.</p>
-<h2>Jak probíhá objednávka</h2>
-<ol>
-<li><strong>Objednávka:</strong> zadáte URL a IČO, údaje firmy doplníme z ARES.</li>
-<li><strong>Faktura:</strong> brzy vám přijde faktura na zadaný e-mail.</li>
-<li><strong>Platba:</strong> převodem podle faktury.</li>
-<li><strong>Report:</strong> zpravidla do 24 hodin v pracovní dny od připsání platby, e-mailem jako PDF.</li>
+<button class="btn btn-primary" data-order-open="" data-track="pricing-card" type="button">Objednat</button>
+<a class="pr-card-demo" data-track="pricing" href="/docs/demo-report.pdf" rel="noopener" target="_blank">Prohlédnout ukázkový report (21 stran) →</a>
+</aside>
+</div>
+</section>
+
+<section class="section" id="obsah">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">Co je v ceně</p>
+<h2>Dvanáct částí. <span class="italic cold-text">Žádné příplatky.</span></h2>
+<p>Report v češtině/slovenštině, angličtině nebo němčině. Všechno níže je součástí ceny.</p>
+</div>
+<div class="pr-included">
+{%- for title, text in included %}
+<article class="pr-item reveal"><span class="pr-item-n">{{ '%02d' % loop.index }}</span><h3>{{ title }}</h3><p>{{ text }}</p></article>
+{%- endfor %}
+</div>
+</div>
+</section>
+
+<section class="section muted-section" id="postup">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">Jak probíhá objednávka</p>
+<h2>Čtyři kroky. <span class="italic warm-text">Bez schůzek.</span></h2>
+</div>
+<ol class="pr-steps">
+<li class="reveal"><span>01</span><h3>Objednávka</h3><p>Zadáte URL a IČO, údaje firmy doplníme z ARES.</p></li>
+<li class="reveal"><span>02</span><h3>Faktura</h3><p>Brzy vám přijde faktura na zadaný e-mail.</p></li>
+<li class="reveal"><span>03</span><h3>Platba</h3><p>Převodem podle faktury.</p></li>
+<li class="reveal"><span>04</span><h3>Report</h3><p>Zpravidla do 24 hodin v pracovní dny od připsání platby, e-mailem jako PDF.</p></li>
 </ol>
-<p>Služba je určena firmám a podnikatelům (B2B). Podrobnosti upravují <a href="/obchodni-podminky.html">obchodní podmínky</a>.</p>
-<h2>Cena v kontextu</h2>
-<p>Samotný SEO audit se v Česku podle velikosti webu běžně pohybuje zhruba mezi 5 a 50 tisíci Kč (<a href="https://loudavymkrokem.cz/kolik-stoji-seo/" rel="noopener" target="_blank">přehled cen SEO</a>) a pokrývá jen jednu z oblastí výše. UX, přístupnost, bezpečnost nebo komunikace značky se u agentur obvykle řeší jako další samostatné zakázky. Nástroje jako Lighthouse nebo PageSpeed Insights jsou zdarma, ale vrátí jen technická čísla bez obchodní interpretace a bez priorit.</p>
-<p>SIGEL Web Intelligence spojuje měřená data jako nástroje s tím, co jinak řeší různí specialisté: UX, komunikace nabídky, bezpečnost a značka, a seřadí to do roadmapy, co řešit první.</p>
+<p class="pr-note reveal">Služba je určena firmám a podnikatelům (B2B). Podrobnosti upravují <a href="/obchodni-podminky.html">obchodní podmínky</a>.</p>
+</div>
+</section>
+
+<section class="section" id="kontext">
+<div class="section-divider"></div>
+<div class="wrap pr-context">
+<div class="section-head reveal">
+<p class="tag">Cena v kontextu</p>
+<h2>Co byste jinak <span class="italic cold-text">skládali z více zakázek.</span></h2>
+<p>Samotný SEO audit se v Česku podle velikosti webu běžně pohybuje zhruba mezi 5 a 50 tisíci Kč (<a href="https://loudavymkrokem.cz/kolik-stoji-seo/" rel="noopener" target="_blank">přehled cen SEO</a>) a pokrývá jen jednu z oblastí výše. UX, přístupnost, bezpečnost nebo komunikace značky se u agentur obvykle řeší jako další samostatné zakázky.</p>
+</div>
 {% include "partials/cmp_promo.html" %}
-<h2>Pro koho to není</h2>
-<ul>
-<li><strong>Weby před spuštěním</strong> – není co měřit. Report dává smysl až na běžícím webu.</li>
-<li><strong>Kdo chce garanci pozic nebo tržeb</strong> – report je diagnostika a podklad pro rozhodnutí, ne slib výsledku.</li>
-<li><strong>Velké e-shopy, které potřebují audit tisíců produktových stránek</strong> – report hodnotí web jako celek, ne každou URL zvlášť.</li>
-<li><strong>Kdo potřebuje hlavně implementaci</strong> – SIGEL řekne, co opravit a v jakém pořadí; samotné úpravy dělá váš vývojář nebo agentura.</li>
-</ul>
-<h2>Agentury a více webů</h2>
-<p>Potřebujete reporty pravidelně pro klienty nebo pro více webů najednou? <a data-order-open="" href="/#order">Objednejte první report</a>, nebo nám napište na <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a> a domluvíme podmínky pro opakovanou spolupráci.</p>
-<p class="legal-backlink"><a data-order-open="" data-track="pricing-bottom" href="/#order">Objednat Web Intelligence report za 4 980 Kč →</a></p>
-</article></div>
+</div>
+</section>
+
+<section class="section muted-section" id="pro-koho-ne">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">Pro koho to není</p>
+<h2>Ať víte předem, <span class="italic warm-text">kdy SIGEL nedává smysl.</span></h2>
+</div>
+<div class="pr-not">
+<article class="reveal"><h3>Weby před spuštěním</h3><p>Není co měřit. Report dává smysl až na běžícím webu.</p></article>
+<article class="reveal"><h3>Garance pozic nebo tržeb</h3><p>Report je diagnostika a podklad pro rozhodnutí, ne slib výsledku.</p></article>
+<article class="reveal"><h3>Tisíce produktových stránek</h3><p>Report hodnotí web jako celek, ne každou URL velkého e-shopu zvlášť.</p></article>
+<article class="reveal"><h3>Hlavně implementace</h3><p>SIGEL řekne, co opravit a v jakém pořadí. Samotné úpravy dělá váš vývojář nebo agentura.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section" id="order">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="order-box reveal">
+<p class="tag centered">Agentury a více webů</p>
+<div class="order-price">4 980 Kč</div>
+<p class="order-sub">Potřebujete reporty pravidelně pro klienty nebo pro více webů? Objednejte první report, nebo napište na <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a> a domluvíme podmínky opakované spolupráce.</p>
+<div class="order-tags"><a href="#obsah">Co je v ceně</a><a href="/audit-webu-agentura-nastroje-nebo-sigel/">Srovnání</a><a data-track="pricing" href="/docs/demo-report.pdf" rel="noopener" target="_blank">Ukázkový report</a></div>
+<button class="btn btn-primary" data-order-open="" data-track="pricing-bottom" type="button">Objednat Web Intelligence report →</button>
+</div>
 </div>
 </section>
 {% endblock %}

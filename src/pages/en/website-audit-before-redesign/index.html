@@ -16,7 +16,7 @@ og_image_alt: SIGEL Web Intelligence — website audit before redesign
 twitter_title: 'Website Audit Before Redesign: What to Fix | SIGEL'
 twitter_description: A website audit before redesign shows what to keep, what to fix and how to create a brief based on evidence, UX and business priorities.
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -122,11 +122,10 @@ twitter_description: A website audit before redesign shows what to keep, what to
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/en/">SIGEL</a> / Website redesign</p><h1>Website audit before redesign: what to change and what to keep</h1><p>A redesign without diagnosis often replaces the visual layer while preserving the same problems. A pre-redesign audit creates a brief based on real barriers rather than opinions.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}Website redesign{% endblock %}
+{% block guide_title %}Website audit before redesign: what to change and what to keep{% endblock %}
+{% block guide_lead %}A redesign without diagnosis often replaces the visual layer while preserving the same problems. A pre-redesign audit creates a brief based on real barriers rather than opinions.{% endblock %}
+{% block guide_body %}
 <p>A website redesign is an expensive decision. When a business starts with colours, layouts or templates before defining the real problem, it can end up with a more attractive version of the same underperforming website. A website audit before redesign should therefore answer three questions: what works, what blocks the result and what the new website must change first.</p>
 <h2>Why audit before redesign?</h2>
 <p>Once the new design is complete, many important decisions are already locked into the structure, content and technical solution. A late audit often identifies issues whose correction requires more budget and another round of work.</p>
@@ -160,11 +159,7 @@ twitter_description: A website audit before redesign shows what to keep, what to
 </ul>
 <h2>When should the audit be ordered?</h2>
 <p>Ideally, before wireframes and visual design begin. If the redesign is already under way, the audit can still help before the structure is locked or before final launch. The later a problem is discovered, the more expensive it usually becomes to correct.</p>
-<h2>Related guides</h2>
-<p><a href="/en/website-audit/">Comprehensive website audit</a><br/><a href="/en/why-website-not-converting/">Why your website is not converting</a><br/><a href="/en/seo-audit-vs-website-audit/">SEO audit vs website audit</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/en/#order">Order the Web Intelligence report for 199 EUR →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">199 EUR</div><p class="order-sub">A human-reviewed PDF report for a specific URL. Technical health, SEO, UX, accessibility, communication, trust and a prioritised roadmap. Normally delivered within 24 hours on business days after payment is confirmed.</p><div class="order-tags"><span>Comprehensive website audit</span><span>24h delivery</span><span>Human-reviewed</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/en/#order">Continue to order →</a></div></div></section>
 {% endblock %}

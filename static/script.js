@@ -324,6 +324,20 @@
   initParticleCanvas($('#signalCanvas'), { count: window.innerWidth < 760 ? 24 : 34, maxDistance: 96, gx: .5, gy: .5 });
 
 
+  // Guide table of contents: highlight the section being read
+  const tocLinks = $$('.guide-toc a');
+  if (tocLinks.length && 'IntersectionObserver' in window) {
+    const byId = new Map(tocLinks.map((link) => [link.getAttribute('href').slice(1), link]));
+    const tocObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        tocLinks.forEach((link) => link.classList.remove('is-active'));
+        byId.get(entry.target.id)?.classList.add('is-active');
+      });
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+    $$('.guide-article h2[id]').forEach((h) => tocObserver.observe(h));
+  }
+
   // Detail modals for problem cards and system/product layers (copy from site.modal)
   const modal = $('#infoModal');
   const modalKicker = $('#modalKicker');

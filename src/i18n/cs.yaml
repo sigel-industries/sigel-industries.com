@@ -470,3 +470,34 @@ contact:
   done: Děkujeme, zprávu máme. Brzy se ozveme.
   error: Zprávu se nepodařilo odeslat. Napište nám prosím na
   required: Toto pole je povinné.
+guide:
+  facts:
+  - - '11'
+    - oblastí v jednom reportu
+  - - 4 980 Kč
+    - za jednu URL, B2B
+  - - 24 h
+    - dodání po platbě
+  toc: Obsah
+  reading: min čtení
+  related_tag: Průvodci
+  related_title: Další průvodci
+  order: Objednat report
+  demo: Ukázkový report
+  more: Číst průvodce →
+  cards:
+  - - /audit-webu/
+    - Komplexní audit webu
+    - Co má kvalitní audit webu kontrolovat, jaký výstup čekat a kdy se investice vyplatí.
+  - - /proc-web-nekonvertuje/
+    - Proč web nekonvertuje
+    - 'Nejčastější bariéry mezi návštěvností a poptávkou: nabídka, důvěra, CTA, mobil a výkon.'
+  - - /audit-webu-pred-redesignem/
+    - Audit před redesignem
+    - Jak vytvořit zadání redesignu podle problémů a dat místo dojmů a kosmetických změn.
+  - - /seo-audit-vs-komplexni-audit-webu/
+    - SEO audit vs. audit webu
+    - Kdy stačí technické SEO a kdy je nutné řešit také UX, komunikaci, důvěru a konverzi.
+  - - /audit-webu-agentura-nastroje-nebo-sigel/
+    - Agentura, nástroje, nebo SIGEL?
+    - 'Jedenáct oblastí vedle sebe: co který audit pokryje, kolik stojí a kdy se hodí.'

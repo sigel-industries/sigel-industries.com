@@ -16,7 +16,7 @@ og_image_alt: SIGEL Web Intelligence — a website audit that goes beyond a list
 twitter_title: 'Website Audit: SEO, UX, Performance & Conversion | SIGEL'
 twitter_description: A comprehensive website audit connecting technical SEO, performance, mobile UX, accessibility, offer clarity and business priorities. Human-reviewed report in 24 hours.
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -122,11 +122,10 @@ twitter_description: A comprehensive website audit connecting technical SEO, per
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/en/">SIGEL</a> / Website audit</p><h1>A website audit that does not end with a list of errors</h1><p>A useful website audit should do more than list technical issues. It should explain what the evidence means for visitors, trust, enquiries and the next investment in your website.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}Website audit{% endblock %}
+{% block guide_title %}A website audit that does not end with a list of errors{% endblock %}
+{% block guide_lead %}A useful website audit should do more than list technical issues. It should explain what the evidence means for visitors, trust, enquiries and the next investment in your website.{% endblock %}
+{% block guide_body %}
 <p><strong>SIGEL Web Intelligence</strong> is a comprehensive website audit for businesses, marketing teams and agencies that need to know not only <em>what</em> is wrong with a website, but above all <em>what should be fixed first</em>. It combines technical evidence, UX, accessibility, offer communication and business interpretation in one prioritised output.</p>
 <h2>What is a website audit?</h2>
 <p>A website audit is a systematic analysis of a website. Depending on its scope, it may review technical health, indexation, performance, mobile usability, content, navigation, trust and the website's ability to move a visitor towards an enquiry or purchase.</p>
@@ -160,11 +159,7 @@ twitter_description: A comprehensive website audit connecting technical SEO, per
 <p>The price of the SIGEL Web Intelligence report is <strong>199 EUR</strong>. The report is prepared for a specific URL and every output is manually reviewed. Delivery is normally within 24 hours on business days after payment is confirmed.</p>
 <h2>What the audit does not guarantee</h2>
 <p>The audit does not guarantee higher revenue, search rankings or campaign results. It is a diagnostic basis for decision-making. It identifies risks, barriers and priorities worth validating before more budget is spent on advertising, redesign or further website changes.</p>
-<h2>Related guides</h2>
-<p><a href="/en/why-website-not-converting/">Why your website is not converting or generating leads</a><br/><a href="/en/website-audit-before-redesign/">Website audit before redesign</a><br/><a href="/en/seo-audit-vs-website-audit/">SEO audit vs website audit</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/en/#order">Order the Web Intelligence report for 199 EUR →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">199 EUR</div><p class="order-sub">A human-reviewed PDF report for a specific URL. Technical health, SEO, UX, accessibility, communication, trust and a prioritised roadmap. Normally delivered within 24 hours on business days after payment is confirmed.</p><div class="order-tags"><span>Comprehensive website audit</span><span>24h delivery</span><span>Human-reviewed</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/en/#order">Continue to order →</a></div></div></section>
 {% endblock %}

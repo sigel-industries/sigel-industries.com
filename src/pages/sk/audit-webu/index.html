@@ -16,7 +16,7 @@ og_image_alt: SIGEL Web Intelligence — Audit webu, ktorý sa nekončí zoznamo
 twitter_title: 'Audit webu: technika, UX, SEO a konverzie | SIGEL'
 twitter_description: Komplexný audit webu prepája technické SEO, rýchlosť, mobilné UX, prístupnosť, komunikáciu ponuky a obchodné priority. Report do 24 hodín.
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -122,11 +122,10 @@ twitter_description: Komplexný audit webu prepája technické SEO, rýchlosť, 
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/sk/">SIGEL</a> / Audit webu</p><h1>Audit webu, ktorý sa nekončí zoznamom chýb</h1><p>Kvalitný audit webu nemá iba vypísať technické nedostatky. Má vysvetliť, čo namerané signály znamenajú pre návštevníka, dôveru, dopyty a ďalšie investície do webu.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}Audit webu{% endblock %}
+{% block guide_title %}Audit webu, ktorý sa nekončí zoznamom chýb{% endblock %}
+{% block guide_lead %}Kvalitný audit webu nemá iba vypísať technické nedostatky. Má vysvetliť, čo namerané signály znamenajú pre návštevníka, dôveru, dopyty a ďalšie investície do webu.{% endblock %}
+{% block guide_body %}
 <p><strong>SIGEL Web Intelligence</strong> je komplexný audit webu pre firmy, marketingové tímy a agentúry, ktoré potrebujú vedieť nielen <em>čo</em> je na webe zlé, ale najmä <em>čo má zmysel riešiť ako prvé</em>. Spája technickú evidenciu, UX, prístupnosť, komunikáciu ponuky a obchodnú interpretáciu do jedného prioritizovaného výstupu.</p>
 <h2>Čo je audit webu</h2>
 <p>Audit webu je systematická analýza webovej stránky. Podľa rozsahu môže kontrolovať technický stav, indexáciu, rýchlosť, mobilnú použiteľnosť, obsah, navigáciu, dôveryhodnosť a schopnosť webu doviesť návštevníka k dopytu alebo objednávke.</p>
@@ -160,11 +159,7 @@ twitter_description: Komplexný audit webu prepája technické SEO, rýchlosť, 
 <p>Cena SIGEL Web Intelligence reportu je <strong>199 €</strong>. Report sa spracúva pre konkrétnu URL a každý výstup prechádza ručnou kontrolou. Dodanie prebieha spravidla do 24 hodín počas pracovných dní od potvrdenia platby.</p>
 <h2>Čo audit negarantuje</h2>
 <p>Audit nie je garanciou vyšších tržieb, pozícií vo vyhľadávaní ani výsledkov kampaní. Je to diagnostický podklad pre rozhodnutie. Ukazuje riziká, bariéry a priority, ktoré má zmysel overiť a riešiť skôr, než do reklamy, redizajnu alebo ďalších úprav odíde ďalší rozpočet.</p>
-<h2>Súvisiaci sprievodcovia</h2>
-<p><a href="/sk/preco-web-nekonvertuje/">Prečo web nekonvertuje a neprináša dopyty</a><br/><a href="/sk/audit-webu-pred-redizajnom/">Audit webu pred redizajnom</a><br/><a href="/sk/seo-audit-vs-komplexny-audit-webu/">SEO audit vs. komplexný audit webu</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/sk/#order">Objednať Web Intelligence report za 199 € →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">199 €</div><p class="order-sub">Ručne kontrolovaný PDF report pre konkrétnu URL. Technika, SEO, UX, prístupnosť, komunikácia, dôvera a prioritná roadmapa. Dodanie spravidla do 24 hodín počas pracovných dní od potvrdenia platby.</p><div class="order-tags"><span>Komplexný audit webu</span><span>Dodanie do 24 h</span><span>Ručne kontrolovaný</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/sk/#order">Prejsť k objednávke →</a></div></div></section>
 {% endblock %}

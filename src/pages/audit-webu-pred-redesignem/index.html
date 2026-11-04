@@ -16,7 +16,7 @@ og_image_alt: 'SIGEL Web Intelligence — Audit webu před redesignem: co změni
 twitter_title: 'Audit webu před redesignem: co změnit | SIGEL'
 twitter_description: Audit webu před redesignem odhalí, co zachovat, co opravit a jak vytvořit zadání podle dat, UX a obchodních priorit místo pouhé změny vzhledu.
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -122,11 +122,10 @@ twitter_description: Audit webu před redesignem odhalí, co zachovat, co opravi
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/">SIGEL</a> / Redesign webu</p><h1>Audit webu před redesignem: co změnit a co zachovat</h1><p>Redesign bez diagnostiky často vymění vizuál, ale zachová stejné problémy. Audit před redesignem vytvoří zadání podle reálných bariér, nikoli podle dojmů.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}Redesign webu{% endblock %}
+{% block guide_title %}Audit webu před redesignem: co změnit a co zachovat{% endblock %}
+{% block guide_lead %}Redesign bez diagnostiky často vymění vizuál, ale zachová stejné problémy. Audit před redesignem vytvoří zadání podle reálných bariér, nikoli podle dojmů.{% endblock %}
+{% block guide_body %}
 <p>Redesign webu je drahé rozhodnutí. Pokud firma začne barvami, layoutem nebo výběrem šablony dřív, než pojmenuje skutečný problém, může vzniknout hezčí verze stejného nefunkčního webu. Audit webu před redesignem má proto odpovědět na tři otázky: co funguje, co brzdí výsledek a co má nový web změnit jako první.</p>
 <h2>Proč audit udělat před redesignem</h2>
 <p>Ve chvíli, kdy je nový design hotový, bývá část zásadních rozhodnutí už uzamčená ve struktuře, obsahu a technickém řešení. Pozdní audit pak často jen popíše problémy, jejichž oprava znamená další rozpočet a nové kolo práce.</p>
@@ -160,12 +159,7 @@ twitter_description: Audit webu před redesignem odhalí, co zachovat, co opravi
 </ol>
 <h2>Kdy audit objednat</h2>
 <p>Ideálně před tvorbou wireframů a grafického návrhu. Pokud už redesign běží, má audit stále smysl před uzamčením struktury nebo před finálním spuštěním. Čím později se problém odhalí, tím dražší bývá jeho oprava. Lidstvo tomu říká „šetření času“ a potom platí za dvě verze téhož webu.</p>
-{% include "partials/cmp_promo.html" %}
-<h2>Související průvodci</h2>
-<p><a href="/audit-webu/">Komplexní audit webu</a><br/><a href="/proc-web-nekonvertuje/">Proč web nekonvertuje</a><br/><a href="/seo-audit-vs-komplexni-audit-webu/">SEO audit vs. komplexní audit webu</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/#order">Objednat Web Intelligence report za 4 980 Kč →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">4 980 Kč</div><p class="order-sub">Ručně kontrolovaný PDF report pro konkrétní URL. Technika, SEO, UX, přístupnost, komunikace, důvěra a prioritní roadmapa. Dodání zpravidla do 24 hodin v pracovních dnech od potvrzení platby.</p><div class="order-tags"><span>Komplexní audit webu</span><span>24 h dodání</span><span>Ručně kontrolovaný</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/#order">Přejít k objednávce →</a></div></div></section>
 {% endblock %}

@@ -466,3 +466,31 @@ contact:
   done: Ďakujeme, správu máme. Čoskoro sa ozveme.
   error: Správu sa nepodarilo odoslať. Napíšte nám prosím na
   required: Toto pole je povinné.
+guide:
+  facts:
+  - - '11'
+    - oblastí v jednom reporte
+  - - 199 €
+    - za jednu URL, B2B
+  - - 24 h
+    - dodanie po platbe
+  toc: Obsah
+  reading: min čítania
+  related_tag: Sprievodcovia
+  related_title: Ďalší sprievodcovia
+  order: Objednať report
+  demo: Ukážkový report
+  more: Čítať sprievodcu →
+  cards:
+  - - /sk/audit-webu/
+    - Komplexný audit webu
+    - Čo má kvalitný audit webu kontrolovať, aký výstup čakať a kedy sa investícia oplatí.
+  - - /sk/preco-web-nekonvertuje/
+    - Prečo web nekonvertuje
+    - 'Najčastejšie bariéry medzi návštevnosťou a dopytom: ponuka, dôvera, CTA, mobil a výkon.'
+  - - /sk/audit-webu-pred-redizajnom/
+    - Audit pred redizajnom
+    - Ako vytvoriť zadanie redizajnu podľa problémov a dát namiesto dojmov a kozmetických zmien.
+  - - /sk/seo-audit-vs-komplexny-audit-webu/
+    - SEO audit vs. audit webu
+    - Kedy stačí technické SEO a kedy treba riešiť aj UX, komunikáciu, dôveru a konverziu.

@@ -466,3 +466,31 @@ contact:
   done: Thank you, we have your message and will get back to you soon.
   error: The message could not be sent. Please write to us at
   required: This field is required.
+guide:
+  facts:
+  - - '11'
+    - areas in one report
+  - - €199
+    - per URL, B2B
+  - - 24 h
+    - delivery after payment
+  toc: Contents
+  reading: min read
+  related_tag: Guides
+  related_title: More guides
+  order: Order the report
+  demo: Sample report
+  more: Read the guide →
+  cards:
+  - - /en/website-audit/
+    - Comprehensive website audit
+    - What a useful website audit should review, what the output should contain and when the investment makes sense.
+  - - /en/why-website-not-converting/
+    - Why a website is not converting
+    - 'The most common barriers between traffic and enquiries: offer clarity, trust, calls to action, mobile UX and performance.'
+  - - /en/website-audit-before-redesign/
+    - Audit before redesign
+    - How to create a redesign brief from evidence and real problems instead of opinions and cosmetic changes.
+  - - /en/seo-audit-vs-website-audit/
+    - SEO audit vs website audit
+    - When technical SEO is enough and when UX, communication, trust and conversion also need to be reviewed.

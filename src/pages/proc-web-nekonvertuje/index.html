@@ -16,7 +16,7 @@ og_image_alt: SIGEL Web Intelligence — Proč web nekonvertuje a nepřináší 
 twitter_title: Proč web nekonvertuje a nepřináší poptávky | SIGEL
 twitter_description: 'Zjistěte, proč web nekonvertuje: nejasná nabídka, slabá důvěra, CTA, mobilní UX, rychlost nebo nesoulad s reklamou. Diagnostika a priority.'
 ---
-{% extends "base.html" %}
+{% extends "guide.html" %}
 {% block jsonld %}{
   "@context": "https://schema.org",
   "@graph": [
@@ -122,25 +122,24 @@ twitter_description: 'Zjistěte, proč web nekonvertuje: nejasná nabídka, slab
     }
   ]
 }{% endblock %}
-{% block main %}
-<section class="page-shell legal-shell">
-<div class="page-layout">
-<div class="legal-head reveal"><div class="section-heading legal-heading reveal"><p class="eyebrow"><a href="/">SIGEL</a> / Konverze webu</p><h1>Proč web nekonvertuje a nepřináší poptávky</h1><p>Návštěvnost sama o sobě nestačí. Pokud web nepřináší zákazníky, příčina může být technická, uživatelská, komunikační nebo obchodní — často několik z nich současně.</p></div></div>
-<div class="legal-wrap"><article class="legal-content page-card reveal">
+{% block guide_crumb %}Konverze webu{% endblock %}
+{% block guide_title %}Proč web nekonvertuje a nepřináší poptávky{% endblock %}
+{% block guide_lead %}Návštěvnost sama o sobě nestačí. Pokud web nepřináší zákazníky, příčina může být technická, uživatelská, komunikační nebo obchodní — často několik z nich současně.{% endblock %}
+{% block guide_body %}
 <p>Když web nekonvertuje, první reakce bývá zvýšit reklamu, změnit design nebo přepsat několik textů. To může pomoct, ale bez diagnostiky je to jen další pokus. Webová konverze vzniká až tehdy, když návštěvník rychle pochopí nabídku, uvěří jí, najde správný další krok a zvládne ho bez zbytečného tření.</p>
-<h2>1. Není jasné, co firma nabízí</h2>
+<h2>Není jasné, co firma nabízí</h2>
 <p>Návštěvník by měl během několika sekund pochopit, co web nabízí, pro koho je služba určená a jaký problém řeší. Nejasný slogan, příliš obecná formulace nebo několik rovnocenných nabídek vede k tomu, že člověk neví, kam pokračovat.</p>
-<h2>2. Nabídka nevysvětluje konkrétní hodnotu</h2>
+<h2>Nabídka nevysvětluje konkrétní hodnotu</h2>
 <p>Popis funkcí není totéž jako obchodní důvod ke koupi. Web může detailně vysvětlovat proces, technologii nebo rozsah služby, ale stále neodpovědět na otázku: co z toho bude mít zákazník a proč to má řešit právě teď.</p>
-<h2>3. Chybí důvěra a důkazy</h2>
+<h2>Chybí důvěra a důkazy</h2>
 <p>Reference, ukázky výstupu, konkrétní metodika, transparentní cena, identita poskytovatele a jasné podmínky snižují riziko rozhodnutí. Když web požaduje kontakt nebo platbu dřív, než vybuduje důvěru, návštěvník často odejde bez akce.</p>
-<h2>4. CTA neodpovídá připravenosti návštěvníka</h2>
+<h2>CTA neodpovídá připravenosti návštěvníka</h2>
 <p>Tlačítko „Kontaktujte nás“ není univerzální řešení. Někdo chce objednat, jiný nejdřív vidět ukázku, pochopit cenu nebo ověřit rozsah. Web potřebuje jasné primární CTA a rozumný sekundární krok pro lidi, kteří ještě nejsou připraveni koupit.</p>
-<h2>5. Mobilní cesta je horší než desktop</h2>
+<h2>Mobilní cesta je horší než desktop</h2>
 <p>Malé dotykové cíle, příliš dlouhé formuláře, překryvy, horizontální scroll nebo pomalé načítání dokážou zničit konverzi i na jinak dobře navrženém webu. Google navíc používá mobilní verzi obsahu pro indexaci a hodnocení, takže mobilní problémy nejsou jen UX detail.</p>
-<h2>6. Web je pomalý nebo působí nestabilně</h2>
+<h2>Web je pomalý nebo působí nestabilně</h2>
 <p>Largest Contentful Paint, Cumulative Layout Shift a blokující skripty ovlivňují, jak rychle návštěvník uvidí hlavní obsah a zda s ním může bezpečně pracovat. Samotné skóre ale nestačí: důležité je určit, zda problém zasahuje hlavní vstupní stránku a rozhodovací cestu.</p>
-<h2>7. Reklama a web slibují něco jiného</h2>
+<h2>Reklama a web slibují něco jiného</h2>
 <p>Kampaň může přivést relevantní návštěvníky, ale landing page musí navázat stejnou nabídkou, jazykem a očekáváním. Když reklama slibuje konkrétní výsledek a web návštěvníka vrátí na obecnou firemní prezentaci, část rozpočtu se ztratí mezi kliknutím a pochopením.</p>
 <h2>Jak zjistit, proč web nepřináší zákazníky</h2>
 <p>Nejprve je potřeba oddělit čtyři vrstvy: technickou dostupnost, uživatelské tření, komunikaci nabídky a obchodní důvěru. Teprve jejich propojení ukáže, zda je hlavní problém v rychlosti, mobilu, CTA, obsahu, cílové skupině nebo v samotné cestě k objednávce.</p>
@@ -156,12 +155,7 @@ twitter_description: 'Zjistěte, proč web nekonvertuje: nejasná nabídka, slab
 </ol>
 <h2>Kdy dává smysl komplexní audit</h2>
 <p>Audit je vhodný ve chvíli, kdy neexistuje jedna zjevná chyba, nebo když několik lidí navrhuje různé úpravy bez společného podkladu. Pomůže také před spuštěním reklamy, před redesignem nebo po změně nabídky.</p>
-{% include "partials/cmp_promo.html" %}
-<h2>Související průvodci</h2>
-<p><a href="/audit-webu/">Co má obsahovat komplexní audit webu</a><br/><a href="/audit-webu-pred-redesignem/">Jak připravit redesign podle dat</a><br/><a href="/seo-audit-vs-komplexni-audit-webu/">Kdy SEO audit nestačí</a></p>
-<p class="legal-backlink"><a data-order-open="" data-track="guide" href="/#order">Objednat Web Intelligence report za 4 980 Kč →</a></p>
-</article></div>
-</div>
-</section>
+{% endblock %}
+{% block guide_after %}
 <section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">4 980 Kč</div><p class="order-sub">Ručně kontrolovaný PDF report pro konkrétní URL. Technika, SEO, UX, přístupnost, komunikace, důvěra a prioritní roadmapa. Dodání zpravidla do 24 hodin v pracovních dnech od potvrzení platby.</p><div class="order-tags"><span>Komplexní audit webu</span><span>24 h dodání</span><span>Ručně kontrolovaný</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/#order">Přejít k objednávce →</a></div></div></section>
 {% endblock %}
