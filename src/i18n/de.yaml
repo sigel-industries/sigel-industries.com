@@ -309,7 +309,7 @@ modal:
       - Technik, UX, Kommunikation, Vertrauen, Archetypen und Prioritäten in einem Input.
     - - Typischer Output
       - Ein schneller Report als interne Entscheidungsgrundlage oder Kunden-Input.
-    cta: Pilot-Zusammenarbeit besprechen
+    cta: Konditionen der Zusammenarbeit besprechen
     inquiry: agency
   system-process:
     kicker: Analytischer Kern
@@ -341,9 +341,9 @@ modal:
       - Visueller PDF-Report mit Prioritäten und Empfehlungen.
     cta: Web-Intelligence-Report bestellen
   use-agency:
-    kicker: Pilot
+    kicker: Verfügbar
     title: Agentur-Input
-    lead: 'Dieselbe diagnostische Basis, aufbereitet für den Einsatz in Agenturen: Kundenberatung, Redesign, SEO oder Content-Strategie.'
+    lead: 'Derselbe Web-Intelligence-Report für die Websites Ihrer Kunden: Kundenberatung, Redesign, SEO oder Content-Strategie.'
     items:
     - - Enthält
       - Externe Sicht auf die Kundenwebsite, Prioritäten und Input für Empfehlungen.
@@ -351,7 +351,7 @@ modal:
       - Agenturen, die einen schnelleren Startpunkt benötigen, ohne die Diagnostik manuell bei null zu beginnen.
     - - Output
       - Report oder interner Input nach Absprache.
-    cta: Pilot-Zusammenarbeit besprechen
+    cta: Konditionen der Zusammenarbeit besprechen
     inquiry: agency
   use-lead-research:
     kicker: Pilot
@@ -460,7 +460,7 @@ contact:
   lead: Beschreiben Sie, was Sie brauchen. Wir melden uns mit einem Vorschlag und Preis.
   topics:
     question: Frage zu Web Intelligence
-    agency: Pilot-Zusammenarbeit für Agenturen
+    agency: Zusammenarbeit für Agenturen
     lead-research: Lead Research
     benchmark: Segment-Benchmark
   email: E-Mail

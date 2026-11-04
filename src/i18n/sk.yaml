@@ -309,7 +309,7 @@ modal:
       - Technika, UX, komunikácia, dôvera, archetypy a priority v jednom podklade.
     - - Typický výstup
       - Rýchly report použiteľný ako interný rozhodovací alebo klientsky podklad.
-    cta: Dohodnúť pilotnú spoluprácu
+    cta: Dohodnúť podmienky spolupráce
     inquiry: agency
   system-process:
     kicker: Analytické jadro
@@ -341,9 +341,9 @@ modal:
       - Vizuálny PDF report s prioritami a odporúčaniami.
     cta: Získať Web Intelligence report
   use-agency:
-    kicker: Pilotne
+    kicker: Dostupné
     title: Agentúrny podklad
-    lead: 'Rovnaký diagnostický základ, ale pripravený pre agentúrne použitie: klientsku konzultáciu, redizajn, SEO alebo obsahovú stratégiu.'
+    lead: 'Rovnaký Web Intelligence report pre weby vašich klientov: klientská konzultácia, redizajn, SEO alebo obsahová stratégia.'
     items:
     - - Obsahuje
       - Externý pohľad na klientsky web, priority a podklad pre odporúčanie.
@@ -351,7 +351,7 @@ modal:
       - Agentúry, ktoré chcú rýchlejší vstup bez kompletnej ručnej diagnostiky od nuly.
     - - Výstup
       - Report alebo interný podklad podľa dohody.
-    cta: Dohodnúť pilotnú spoluprácu
+    cta: Dohodnúť podmienky spolupráce
     inquiry: agency
   use-lead-research:
     kicker: Pilotne
@@ -458,7 +458,7 @@ contact:
   lead: Opíšte, čo potrebujete. Ozveme sa s návrhom spolupráce a cenou.
   topics:
     question: Otázka k Web Intelligence
-    agency: Pilotná spolupráca pre agentúry
+    agency: Spolupráca pre agentúry
     lead-research: Lead Research
     benchmark: Segmentový benchmark
   email: E-mail

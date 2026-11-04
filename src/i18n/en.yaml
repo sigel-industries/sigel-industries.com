@@ -309,7 +309,7 @@ modal:
       - Tech, UX, communication, trust, archetypes and priorities in one input.
     - - Typical output
       - A fast report usable as internal decision support or client-facing input.
-    cta: Discuss pilot cooperation
+    cta: Agree terms of cooperation
     inquiry: agency
   system-process:
     kicker: Analytical core
@@ -341,9 +341,9 @@ modal:
       - A visual PDF report with priorities and recommendations.
     cta: Get the Web Intelligence report
   use-agency:
-    kicker: Pilot
+    kicker: Available
     title: Agency input
-    lead: 'The same diagnostic base packaged for agency use: client consultation, redesign, SEO or content strategy.'
+    lead: 'The same Web Intelligence report for your clients’ websites: client consultation, redesign, SEO or content strategy.'
     items:
     - - Includes
       - External view of the client website, priorities and input for recommendations.
@@ -351,7 +351,7 @@ modal:
       - Agencies that want a faster starting point without full manual diagnostics from zero.
     - - Output
       - Report or internal input by agreement.
-    cta: Discuss pilot cooperation
+    cta: Agree terms of cooperation
     inquiry: agency
   use-lead-research:
     kicker: Pilot
@@ -458,7 +458,7 @@ contact:
   lead: Tell us what you need. We will get back to you with a proposal and price.
   topics:
     question: Question about Web Intelligence
-    agency: Pilot cooperation for agencies
+    agency: Cooperation for agencies
     lead-research: Lead Research
     benchmark: Segment benchmark
   email: E-mail
