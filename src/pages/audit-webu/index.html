@@ -131,14 +131,11 @@ twitter_description: Komplexní audit webu propojí technické SEO, rychlost, mo
 <p>Audit webu je systematická analýza webových stránek. Podle rozsahu může kontrolovat technický stav, indexaci, rychlost, mobilní použitelnost, obsah, navigaci, důvěryhodnost a schopnost webu dovést návštěvníka k poptávce nebo objednávce.</p>
 <p>Problém běžných automatických auditů je, že často skončí u seznamu metrik. Červené skóre samo o sobě neříká, zda jde o hlavní obchodní bariéru, drobnou technickou nepřesnost nebo kosmetickou věc, která může počkat. Proto SIGEL přidává interpretační a prioritizační vrstvu.</p>
 <h2>Co komplexní audit webu kontroluje</h2>
+<p>Report pokrývá jedenáct oblastí, od měřitelné techniky až po obchodní interpretaci a prioritní roadmapu.</p>
 <ul>
-<li><strong>Technický výkon:</strong> desktopové a mobilní Lighthouse skóre, LCP, FCP, CLS, TBT, Speed Index a Time to Interactive.</li>
-<li><strong>SEO a indexaci:</strong> robots.txt, sitemap, metadata, canonical, strukturu nadpisů, odkazy a základní signály pro vyhledávače.</li>
-<li><strong>Mobilní UX:</strong> viewport, horizontální přesahy, klikatelné prvky, čitelnost a cestu uživatele na menší obrazovce.</li>
-<li><strong>Přístupnost:</strong> kontrast, velikost textu a dotykových cílů s konkrétními nálezy k manuální kontrole.</li>
-<li><strong>Komunikaci nabídky:</strong> zda návštěvník rychle chápe, co firma nabízí, komu, proč tomu věřit a co udělat dál.</li>
-<li><strong>Důvěru a rozhodovací cestu:</strong> CTA, důkazové prvky, tření, konzistenci a místa, kde může návštěvník ztratit jistotu.</li>
-<li><strong>Strategii značky:</strong> archetyp značky, zákaznické motivace a doporučený tón komunikace.</li>
+{%- for title, layer, text in t.home_areas['items'] %}
+<li><strong>{{ title }}:</strong> {{ text }}</li>
+{%- endfor %}
 </ul>
 <h2>Audit webu versus SEO audit</h2>
 <p>SEO audit řeší především dohledatelnost webu ve vyhledávačích: indexaci, technické překážky, obsahovou strukturu a signály související s organickou návštěvností. To je důležité, ale neodpovídá to na celou otázku.</p>
@@ -156,10 +153,10 @@ twitter_description: Komplexní audit webu propojí technické SEO, rychlost, mo
 <p>Výstupem je vizuální PDF report. Obsahuje manažerské shrnutí, měřená data, interpretaci nálezů, hlavní rizika, doporučené priority, roadmapu a evidence appendix. Smyslem není zahltit klienta desítkami metrik, ale oddělit zásadní změny od věcí, které mohou počkat.</p>
 <p>Ukázku reálné struktury si můžete <a href="/docs/demo-report.pdf" rel="noopener" target="_blank">prohlédnout v demo reportu</a>.</p>
 <h2>Cena auditu webu a dodání</h2>
-<p>Cena SIGEL Web Intelligence reportu je <strong>4 980 Kč</strong> nebo <strong>199 EUR</strong>. Report je zpracován pro konkrétní URL a každý výstup prochází ruční kontrolou. Dodání probíhá zpravidla do 24 hodin v pracovních dnech od potvrzení platby.</p>
+<p>Cena SIGEL Web Intelligence reportu je <strong>4 980 Kč</strong> nebo <strong>199 EUR</strong>. Report je zpracován pro konkrétní URL a každý výstup prochází ruční kontrolou. Dodání probíhá zpravidla do 24 hodin v pracovních dnech od připsání platby.</p>
 <h2>Co audit negarantuje</h2>
 <p>Audit není garance vyšších tržeb, pozic ve vyhledávání ani výsledků kampaní. Je to diagnostický podklad pro rozhodnutí. Ukazuje rizika, bariéry a priority, které má smysl ověřit a řešit dřív, než do reklamy, redesignu nebo dalších úprav odejde další rozpočet.</p>
 {% endblock %}
 {% block guide_after %}
-<section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">4 980 Kč</div><p class="order-sub">Ručně kontrolovaný PDF report pro konkrétní URL. Technika, SEO, UX, přístupnost, komunikace, důvěra a prioritní roadmapa. Dodání zpravidla do 24 hodin v pracovních dnech od potvrzení platby.</p><div class="order-tags"><span>Komplexní audit webu</span><span>24 h dodání</span><span>Ručně kontrolovaný</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/#order">Přejít k objednávce →</a></div></div></section>
+<section class="section" id="order"><div class="section-divider"></div><div class="wrap"><div class="order-box reveal"><p class="tag centered">SIGEL Web Intelligence</p><div class="order-price">4 980 Kč</div><p class="order-sub">Ručně kontrolovaný PDF report pro konkrétní URL. Jedenáct oblastí, manažerské shrnutí a prioritní roadmapa. Dodání zpravidla do 24 hodin v pracovních dnech od připsání platby.</p><div class="order-tags"><span>Komplexní audit webu</span><span>24 h dodání</span><span>Ručně kontrolovaný</span></div><a class="btn btn-primary" data-order-open="" data-track="guide" href="/#order">Přejít k objednávce →</a></div></div></section>
 {% endblock %}
