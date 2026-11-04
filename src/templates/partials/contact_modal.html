@@ -1,0 +1,42 @@
+{%- set c = t.contact -%}
+<div aria-hidden="true" class="sigel-order-modal" id="contactModal">
+<div class="sigel-order-backdrop" data-contact-close=""></div>
+<section aria-labelledby="contactTitle" aria-modal="true" class="sigel-order-dialog sigel-contact-dialog" role="dialog">
+<button aria-label="{{ t.chrome.modal.close }}" class="sigel-order-close" data-contact-close="" type="button">×</button>
+<div class="sigel-order-head">
+<p class="sigel-order-eyebrow" id="contactTopic">{{ c.eyebrow }}</p>
+<h2 id="contactTitle">{{ c.title }}</h2>
+<p>{{ c.lead }}</p>
+</div>
+<form class="sigel-order-form" data-done="{{ c.done }}" data-error="{{ c.error }}" data-error-required="{{ c.required }}" data-inquiry="contact" data-sending="{{ c.sending }}" id="contactForm" novalidate="">
+<input aria-hidden="true" autocomplete="off" class="sigel-hp-field" name="website_extra" tabindex="-1" type="text"/>
+<div class="sigel-form-grid">
+<div class="sigel-field">
+<label for="contactEmail">{{ c.email }}</label>
+<input autocomplete="email" id="contactEmail" name="email" placeholder="{{ c.email_ph }}" required="" type="email"/>
+<p class="sigel-field-error" data-error-for="email"></p>
+</div>
+<div class="sigel-field">
+<label for="contactName">{{ c.name }}</label>
+<input autocomplete="organization" id="contactName" name="name" placeholder="{{ c.name_ph }}" type="text"/>
+</div>
+</div>
+<div class="sigel-field">
+<label for="contactMessage">{{ c.message }}</label>
+<textarea id="contactMessage" name="message" placeholder="{{ c.message_ph }}" required="" rows="4"></textarea>
+<p class="sigel-field-error" data-error-for="message"></p>
+</div>
+<div class="sigel-consent-box">
+<label class="sigel-consent-row">
+<input name="privacyConsent" required="" type="checkbox"/>
+<span><span>{{ t.order.privacyConsent }}</span> <a href="{{ t.chrome.privacy[0] }}" rel="noopener" target="_blank">{{ t.chrome.privacy[1] }}</a></span>
+</label>
+<p class="sigel-field-error" data-error-for="privacyConsent"></p>
+</div>
+<div aria-live="polite" class="sigel-order-status" data-inquiry-status="" role="status"></div>
+<div class="sigel-order-footer">
+<button class="btn btn-primary" type="submit">{{ c.submit }}</button>
+</div>
+</form>
+</section>
+</div>

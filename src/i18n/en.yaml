@@ -56,9 +56,6 @@ chrome:
     - Audit before redesign
   - - /en/seo-audit-vs-website-audit/
     - SEO audit vs website audit
-  nav_products:
-  - - /en/company-financial-analysis/
-    - Financial analysis
 order:
   eyebrow: SIGEL Web Intelligence
   title: Web Intelligence Report Order
@@ -130,6 +127,10 @@ order:
     CZK: 4 980 CZK
     EUR: €199
   defaultCurrency: EUR
+  icoHint: For Czech companies we fill in name, VAT ID and address from the ARES register.
+  aresLoading: Looking up the company in ARES…
+  aresFilled: Details filled in from ARES. Please check them.
+  aresNotFound: Company not found in ARES, please fill in the details.
 report:
   dashboard:
     score: '64'
@@ -299,6 +300,7 @@ modal:
     - - Typical output
       - A fast report usable as internal decision support or client-facing input.
     cta: Discuss pilot cooperation
+    inquiry: agency
   system-process:
     kicker: Analytical core
     title: How SIGEL builds the Web Intelligence output
@@ -340,6 +342,7 @@ modal:
     - - Output
       - Report or internal input by agreement.
     cta: Discuss pilot cooperation
+    inquiry: agency
   use-lead-research:
     kicker: Pilot
     title: Lead Research
@@ -352,6 +355,7 @@ modal:
     - - Output
       - Structured list of websites and contacts based on the brief.
     cta: Discuss segment selection
+    inquiry: lead-research
   use-benchmark:
     kicker: In preparation
     title: Segment benchmark
@@ -364,6 +368,7 @@ modal:
     - - Output
       - Benchmark map and a summary of key findings.
     cta: Ask about benchmark
+    inquiry: benchmark
 ci:
   url: /en/company-financial-analysis/
   eyebrow: Company Intelligence · pilot
@@ -437,3 +442,22 @@ og:
   title: See what holds your website <em>back</em> — and what to change first.
   eyebrow: Website audit · Web Intelligence
   meta: PDF report within 24 hours · human-reviewed
+contact:
+  eyebrow: Non-binding inquiry
+  title: Get in touch
+  lead: Tell us what you need. We will get back to you with a proposal and price.
+  topics:
+    agency: Pilot cooperation for agencies
+    lead-research: Lead Research
+    benchmark: Segment benchmark
+  email: E-mail
+  email_ph: contact@company.com
+  name: Name and company
+  name_ph: Name, company
+  message: Message
+  message_ph: What you need, scope, deadline…
+  submit: Send inquiry
+  sending: Sending…
+  done: Thank you, we have your message and will get back to you soon.
+  error: The message could not be sent. Please write to us at
+  required: This field is required.

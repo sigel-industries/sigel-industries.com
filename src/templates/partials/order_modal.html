@@ -37,6 +37,18 @@
 </div>
 <div class="sigel-form-grid">
 <div class="sigel-field">
+<label for="orderIco">{{ o.icoLabel }}</label>
+<input autocomplete="off" id="orderIco" name="ico" placeholder="{{ o.ph.ico }}" required="" type="text"/>
+<p aria-live="polite" class="sigel-field-hint" data-ares-status="">{{ o.icoHint }}</p>
+<p class="sigel-field-error" data-error-for="ico"></p>
+</div>
+<div class="sigel-field">
+<label for="orderDic">{{ o.dicLabel }}</label>
+<input id="orderDic" name="dic" placeholder="{{ o.ph.dic }}" type="text"/>
+</div>
+</div>
+<div class="sigel-form-grid">
+<div class="sigel-field">
 <label for="orderCompany">{{ o.companyLabel }}</label>
 <input autocomplete="organization" id="orderCompany" name="company" placeholder="{{ o.ph.company }}" required="" type="text"/>
 <p class="sigel-field-error" data-error-for="company"></p>
@@ -44,17 +56,6 @@
 <div class="sigel-field">
 <label for="orderContactPerson">{{ o.contactLabel }}</label>
 <input autocomplete="name" id="orderContactPerson" name="contactPerson" placeholder="{{ o.ph.contactPerson }}" type="text"/>
-</div>
-</div>
-<div class="sigel-form-grid">
-<div class="sigel-field">
-<label for="orderIco">{{ o.icoLabel }}</label>
-<input id="orderIco" name="ico" placeholder="{{ o.ph.ico }}" required="" type="text"/>
-<p class="sigel-field-error" data-error-for="ico"></p>
-</div>
-<div class="sigel-field">
-<label for="orderDic">{{ o.dicLabel }}</label>
-<input id="orderDic" name="dic" placeholder="{{ o.ph.dic }}" type="text"/>
 </div>
 </div>
 <div class="sigel-field">

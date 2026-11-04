@@ -378,6 +378,37 @@
     if (e.key === 'Escape' && modal && !modal.hidden) closeInfoModal();
   });
 
+  // Detail CTA: products sold directly open the order form, cooperation topics open the contact form
+  modalCta?.addEventListener('click', () => {
+    const topic = site.modal?.[modal?.dataset.key]?.inquiry;
+    if (topic) openContactModal(topic);
+    else openOrderModal(modal?.dataset.key || 'detail');
+  });
+
+  // Contact form for non-order requests (agency pilot, lead research, benchmark)
+  const contactModal = $('#contactModal');
+  const contactForm = $('#contactForm');
+  function openContactModal(topic) {
+    if (!contactModal || !contactForm) return;
+    if (modal && !modal.hidden) { modal.hidden = true; modal.setAttribute('aria-hidden', 'true'); }
+    contactForm.dataset.inquiry = topic;
+    const label = site.contactTopics?.[topic];
+    const topicEl = $('#contactTopic', contactModal);
+    if (topicEl && label) topicEl.textContent = label;
+    contactModal.classList.add('is-open');
+    contactModal.setAttribute('aria-hidden', 'false');
+    body.classList.add('modal-open');
+    track('contact_open', { topic });
+    setTimeout(() => $('#contactEmail', contactModal)?.focus(), 40);
+  }
+  function closeContactModal() {
+    contactModal?.classList.remove('is-open');
+    contactModal?.setAttribute('aria-hidden', 'true');
+    body.classList.remove('modal-open');
+  }
+  $$('[data-contact-close]', contactModal || doc).forEach((el) => el.addEventListener('click', closeContactModal));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && contactModal?.classList.contains('is-open')) closeContactModal(); });
+
 
   // Order modal. Markup and copy are rendered by the build in the page language (src/i18n).
   // Backend: Google Apps Script (apps-script/Code.gs) answering JSON {ok, id}.
@@ -534,6 +565,56 @@
     orderDoneMeta.innerHTML = `<strong>${orderEsc(payload.id)}</strong><br>${orderEsc(payload.createdAtLocal)} · ${orderEsc(payload.price)} · ${orderEsc(payload.website)}<br>${orderEsc(payload.email)}`;
   }
 
+  // ARES autofill: a valid Czech IČO fills company, DIČ and address via the backend (?action=ares).
+  // Only fields that are empty or were filled by a previous lookup are overwritten.
+  function validCzIco(value) {
+    if (!/^\d{8}$/.test(value)) return false;
+    const d = value.split('').map(Number);
+    const sum = d.slice(0, 7).reduce((acc, n, i) => acc + n * (8 - i), 0);
+    const r = sum % 11;
+    return d[7] === (r === 0 ? 1 : r === 1 ? 0 : 11 - r);
+  }
+  function initAresLookup() {
+    const ico = $('#orderIco', orderModal);
+    const status = $('[data-ares-status]', orderModal);
+    if (!ico || !status) return;
+    const hint = status.textContent;
+    const targets = { company: $('#orderCompany', orderModal), dic: $('#orderDic', orderModal), address: $('#orderBilling', orderModal) };
+    let requested = '';
+    const setStatus = (text) => { status.textContent = text; };
+    async function lookup() {
+      const value = ico.value.replace(/\s+/g, '');
+      if (!validCzIco(value)) { if (!value) setStatus(hint); return; }
+      if (value === requested) return;
+      requested = value;
+      setStatus(T.aresLoading);
+      try {
+        const response = await fetch(`${site.endpoint}?action=ares&ico=${encodeURIComponent(value)}`, { redirect: 'follow' });
+        const result = await response.json();
+        if (requested !== value) return; // a newer lookup started
+        if (result?.ok && result.found) {
+          Object.entries(targets).forEach(([key, field]) => {
+            if (!field || !result[key]) return;
+            if (!field.value.trim() || field.dataset.ares === 'filled') { field.value = result[key]; field.dataset.ares = 'filled'; }
+          });
+          setStatus(T.aresFilled);
+          track('ares_autofill', { found: true });
+        } else if (result?.ok && result.found === false) {
+          setStatus(T.aresNotFound);
+          track('ares_autofill', { found: false });
+        } else {
+          setStatus(hint); // backend without ARES support: stay silent, manual entry works
+        }
+      } catch (error) {
+        if (requested === value) setStatus(hint);
+      }
+    }
+    ico.addEventListener('input', () => { if (ico.value.replace(/\s+/g, '').length === 8) lookup(); });
+    ico.addEventListener('blur', lookup);
+    Object.values(targets).forEach((field) => field?.addEventListener('input', () => { delete field.dataset.ares; }));
+    orderForm.addEventListener('reset', () => { requested = ''; setStatus(hint); Object.values(targets).forEach((f) => f && delete f.dataset.ares); });
+  }
+
   // POST as text/plain: a CORS "simple request" (no preflight, which Apps Script cannot answer),
   // yet the JSON response is readable, so success is only shown when the backend confirms it.
   async function postToBackend(payload) {
@@ -614,6 +695,7 @@
       setTimeout(() => $('#orderWebsite', orderModal)?.focus(), 40);
     });
     $('#orderCurrency', orderModal)?.addEventListener('change', updateOrderPrice);
+    initAresLookup();
     orderMailFallback?.addEventListener('click', () => track('order_mail_fallback'));
     $$('[data-order-open]').forEach((btn) => btn.addEventListener('click', (e) => {
       e.preventDefault();

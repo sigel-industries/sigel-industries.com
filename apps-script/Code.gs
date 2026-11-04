@@ -147,6 +147,49 @@ function handleInquiry_(payload) {
 }
 
 /* =========================
+   ARES LOOKUP (order form autofill)
+   Public, read-only proxy for one Czech company ID; results cached for 6 hours.
+========================= */
+
+function aresLookup_(rawIco) {
+  const ico = String(rawIco || "").replace(/\s+/g, "");
+  if (!/^\d{8}$/.test(ico)) {
+    return { ok: false, error: "invalid_ico" };
+  }
+
+  const cache = CacheService.getScriptCache();
+  const cached = cache.get("ares:" + ico);
+  if (cached) return JSON.parse(cached);
+
+  const response = UrlFetchApp.fetch(
+    "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/" + ico,
+    { muteHttpExceptions: true, headers: { Accept: "application/json" } }
+  );
+  const code = response.getResponseCode();
+
+  let result;
+  if (code === 404 || code === 400) {
+    result = { ok: true, found: false };
+  } else if (code === 200) {
+    const data = JSON.parse(response.getContentText());
+    const sidlo = data.sidlo || {};
+    result = {
+      ok: true,
+      found: true,
+      ico: ico,
+      company: data.obchodniJmeno || "",
+      dic: data.dic || "",
+      address: sidlo.textovaAdresa || ""
+    };
+  } else {
+    return { ok: false, error: "ares_http_" + code };
+  }
+
+  cache.put("ares:" + ico, JSON.stringify(result), 6 * 60 * 60);
+  return result;
+}
+
+/* =========================
    CRM EXPORT ENDPOINT
 ========================= */
 
@@ -154,6 +197,10 @@ function doGet(e) {
   try {
     const params = (e && e.parameter) || {};
     const action = String(params.action || "").trim();
+
+    if (action === "ares") {
+      return json_(aresLookup_(params.ico));
+    }
 
     if (action === "orders") {
       if (!EXPORT_TOKEN || params.token !== EXPORT_TOKEN) {

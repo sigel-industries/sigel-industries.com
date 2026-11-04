@@ -117,6 +117,7 @@
 </div>
 </div>
 {% include "partials/order_modal.html" %}
+{% include "partials/contact_modal.html" %}
 <div aria-hidden="true" class="sigel-modal" hidden="" id="infoModal">
 <div class="modal-backdrop" data-modal-close=""></div>
 <section aria-labelledby="modalTitle" aria-modal="true" class="modal-dialog" role="dialog">
@@ -126,7 +127,7 @@
 <p class="modal-lead" id="modalLead"></p>
 <div class="modal-grid" id="modalGrid"></div>
 <p class="modal-note" id="modalNote"></p>
-<button class="btn btn-primary modal-cta" data-order-open="" id="modalCta" type="button">{{ c.modal.cta }}</button>
+<button class="btn btn-primary modal-cta" id="modalCta" type="button">{{ c.modal.cta }}</button>
 </section>
 </div>
 <script id="siteData" type="application/json">{{ client_data | tojson }}</script>

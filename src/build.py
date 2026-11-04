@@ -101,6 +101,7 @@ def main():
             'email': site['email'],
             'order': t['order'],
             'modalDefaults': t['chrome']['modal'],
+            'contactTopics': t['contact']['topics'],
         }
         if 'report-tab' in body:
             client['report'] = t['report']

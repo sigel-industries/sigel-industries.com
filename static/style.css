@@ -2800,3 +2800,6 @@ section,
 .product-strip p { margin: 0; max-width: 640px; }
 .product-strip .card-more { white-space: nowrap; }
 @media (max-width: 760px) { .product-strip { flex-direction: column; align-items: flex-start; padding: 22px; } }
+
+/* Contact modal */
+.sigel-contact-dialog .sigel-order-form { margin-top: 26px; }

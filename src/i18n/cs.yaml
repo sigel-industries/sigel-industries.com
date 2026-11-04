@@ -13,9 +13,6 @@ chrome:
   - - report
     - Report
   nav_guide: Audit webu
-  nav_products:
-  - - /financni-analyza-firmy/
-    - Finanční analýza
   nav_order: Objednávka
   footer:
     tagline: Komplexní audit webu a business intelligence pro techniku, UX, komunikaci, důvěru a obchodní priority.
@@ -130,6 +127,10 @@ order:
     CZK: 4 980 Kč
     EUR: 199 €
   defaultCurrency: CZK
+  icoHint: U českých firem doplníme název, DIČ a adresu z ARES automaticky.
+  aresLoading: Hledám firmu v ARES…
+  aresFilled: Údaje doplněny z ARES. Zkontrolujte je.
+  aresNotFound: Firmu jsme v ARES nenašli, vyplňte údaje ručně.
 report:
   dashboard:
     score: '64'
@@ -299,6 +300,7 @@ modal:
     - - Typický výstup
       - Rychlý report použitelný jako interní rozhodovací nebo klientský podklad.
     cta: Domluvit pilotní spolupráci
+    inquiry: agency
   system-process:
     kicker: Analytické jádro
     title: Jak SIGEL skládá Web Intelligence výstup
@@ -340,6 +342,7 @@ modal:
     - - Výstup
       - Report nebo interní podklad podle dohody.
     cta: Domluvit pilotní spolupráci
+    inquiry: agency
   use-lead-research:
     kicker: Pilotně
     title: Lead Research
@@ -352,6 +355,7 @@ modal:
     - - Výstup
       - Strukturovaný seznam webů a kontaktů podle zadání.
     cta: Probrat výběr segmentu
+    inquiry: lead-research
   use-benchmark:
     kicker: Připravujeme
     title: Segmentový benchmark
@@ -364,6 +368,7 @@ modal:
     - - Výstup
       - Benchmarková mapa a souhrn hlavních zjištění.
     cta: Zeptat se na benchmark
+    inquiry: benchmark
 ci:
   url: /financni-analyza-firmy/
   eyebrow: Company Intelligence · pilotní provoz
@@ -436,3 +441,22 @@ og:
   title: Zjistěte, co váš web <em>brzdí</em> — a co změnit jako první.
   eyebrow: Komplexní audit webu · Web Intelligence
   meta: PDF report do 24 hodin · ručně kontrolovaný
+contact:
+  eyebrow: Nezávazná poptávka
+  title: Napište nám
+  lead: Popište, co potřebujete. Ozveme se s návrhem spolupráce a cenou.
+  topics:
+    agency: Pilotní spolupráce pro agentury
+    lead-research: Lead Research
+    benchmark: Segmentový benchmark
+  email: E-mail
+  email_ph: kontakt@firma.cz
+  name: Jméno a firma
+  name_ph: Jméno, firma
+  message: Zpráva
+  message_ph: Co potřebujete, v jakém rozsahu, termín…
+  submit: Odeslat poptávku
+  sending: Odesílám…
+  done: Děkujeme, zprávu máme. Brzy se ozveme.
+  error: Zprávu se nepodařilo odeslat. Napište nám prosím na
+  required: Toto pole je povinné.

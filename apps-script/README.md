@@ -6,7 +6,8 @@ CRM export `?action=orders`), doplnený o:
 - **dopyty** (`kind: "inquiry"`, napr. Company Intelligence) → vlastný hárok `SIGEL Inquiries`, nemiešajú sa s objednávkami ani s CRM,
 - **honeypot**: vyplnené pole `website_extra` (boty) sa neuloží,
 - **CRM token zo Script Properties** (`EXPORT_TOKEN`) namiesto hodnoty v kóde. Repo je verejné, token v ňom nesmie byť. Bez nastaveného tokenu je export vypnutý,
-- záložné ceny 4 980 Kč / 199 € namiesto starých 2 490 / 99.
+- záložné ceny 4 980 Kč / 199 € namiesto starých 2 490 / 99,
+- **ARES lookup** (`?action=ares&ico=12345678`) pre automatické doplnenie firmy v objednávkovom formulári. Pri prvom nasadení si Google vypýta nové oprávnenie „Connect to an external service“ – povoliť.
 
 Web posiela POST s JSON (`Content-Type: text/plain`) a objednávku ukáže ako prijatú iba po odpovedi `{"ok": true}`.
 
@@ -21,4 +22,5 @@ Web posiela POST s JSON (`Content-Type: text/plain`) a objednávku ukáže ako p
 
 - `…/exec` v prehliadači → `{"ok":true,"service":"SIGEL Web Audit Orders",…}`
 - `…/exec?action=orders&token=STARÝ_TOKEN` → `unauthorized`; s novým tokenom → zoznam objednávok.
+- `…/exec?action=ares&ico=17428432` → `{"ok":true,"found":true,"company":"Sigel, s.r.o.",…}`
 - Testovacia objednávka na webe → riadok v `SIGEL Web Audit Orders` + mail.

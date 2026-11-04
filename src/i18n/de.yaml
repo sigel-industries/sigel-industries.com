@@ -56,9 +56,6 @@ chrome:
     - Audit vor dem Redesign
   - - /de/seo-audit-vs-website-audit/
     - SEO-Audit vs. Website-Audit
-  nav_products:
-  - - /de/finanzanalyse-unternehmen/
-    - Finanzanalyse
 order:
   eyebrow: SIGEL Web Intelligence
   title: Web-Intelligence-Report bestellen
@@ -130,6 +127,10 @@ order:
     CZK: 4 980 CZK
     EUR: 199 €
   defaultCurrency: EUR
+  icoHint: Bei tschechischen Unternehmen ergänzen wir Name, USt-IdNr. und Adresse automatisch aus dem ARES-Register.
+  aresLoading: Unternehmen wird in ARES gesucht…
+  aresFilled: Daten aus ARES übernommen. Bitte prüfen.
+  aresNotFound: Unternehmen nicht in ARES gefunden, bitte manuell ausfüllen.
 report:
   dashboard:
     score: '64'
@@ -299,6 +300,7 @@ modal:
     - - Typischer Output
       - Ein schneller Report als interne Entscheidungsgrundlage oder Kunden-Input.
     cta: Pilot-Zusammenarbeit besprechen
+    inquiry: agency
   system-process:
     kicker: Analytischer Kern
     title: So erstellt SIGEL den Web-Intelligence-Output
@@ -340,6 +342,7 @@ modal:
     - - Output
       - Report oder interner Input nach Absprache.
     cta: Pilot-Zusammenarbeit besprechen
+    inquiry: agency
   use-lead-research:
     kicker: Pilot
     title: Lead Research
@@ -352,6 +355,7 @@ modal:
     - - Output
       - Strukturierte Liste von Websites und Kontakten nach Briefing.
     cta: Segmentauswahl besprechen
+    inquiry: lead-research
   use-benchmark:
     kicker: In Vorbereitung
     title: Segment-Benchmark
@@ -364,6 +368,7 @@ modal:
     - - Output
       - Benchmark-Karte und Zusammenfassung der wichtigsten Erkenntnisse.
     cta: Benchmark anfragen
+    inquiry: benchmark
 ci:
   url: /de/finanzanalyse-unternehmen/
   eyebrow: Company Intelligence · Pilotbetrieb
@@ -439,3 +444,22 @@ og:
   title: Was Ihre Website <em>bremst</em> — und was zuerst zu ändern ist.
   eyebrow: Website-Audit · Web Intelligence
   meta: PDF-Report in 24 Stunden · persönlich geprüft
+contact:
+  eyebrow: Unverbindliche Anfrage
+  title: Schreiben Sie uns
+  lead: Beschreiben Sie, was Sie brauchen. Wir melden uns mit einem Vorschlag und Preis.
+  topics:
+    agency: Pilot-Zusammenarbeit für Agenturen
+    lead-research: Lead Research
+    benchmark: Segment-Benchmark
+  email: E-Mail
+  email_ph: kontakt@unternehmen.de
+  name: Name und Unternehmen
+  name_ph: Name, Unternehmen
+  message: Nachricht
+  message_ph: Was Sie brauchen, Umfang, Termin…
+  submit: Anfrage senden
+  sending: Wird gesendet…
+  done: Danke, Ihre Nachricht ist eingegangen. Wir melden uns in Kürze.
+  error: Die Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns an
+  required: Dieses Feld ist erforderlich.
