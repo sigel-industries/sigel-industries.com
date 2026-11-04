@@ -1,0 +1,135 @@
+{%- set c = t.chrome -%}
+{%- set is_home = page.url == c.home -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{ page.title }}</title>
+<meta content="{{ page.description }}" name="description"/>
+<meta content="{{ page.robots or 'index, follow' }}" name="robots"/>
+<link href="{{ site.origin }}{{ page.url }}" rel="canonical"/>
+{%- if page.alternates %}
+{%- for alt_lang, alt_url in page.alternates.items() %}
+<link href="{{ site.origin }}{{ alt_url }}" hreflang="{{ alt_lang }}" rel="alternate"/>
+{%- endfor %}
+<link href="{{ site.origin }}{{ page.alternates.cs or page.url }}" hreflang="x-default" rel="alternate"/>
+{%- endif %}
+<meta content="{{ page.og_title or page.title }}" property="og:title"/>
+<meta content="{{ page.og_description or page.description }}" property="og:description"/>
+<meta content="{{ page.og_type or 'website' }}" property="og:type"/>
+<meta content="{{ site.origin }}{{ page.url }}" property="og:url"/>
+<meta content="SIGEL Industries" property="og:site_name"/>
+<meta content="{{ site.locales[lang] }}" property="og:locale"/>
+{%- for l in site.langs if l != lang and page.alternates and l in page.alternates %}
+<meta content="{{ site.locales[l] }}" property="og:locale:alternate"/>
+{%- endfor %}
+<meta content="{{ site.origin }}{{ site.og_image }}" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="{{ page.og_image_alt or page.title }}" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="{{ page.twitter_title or page.og_title or page.title }}" name="twitter:title"/>
+<meta content="{{ page.twitter_description or page.og_description or page.description }}" name="twitter:description"/>
+<meta content="{{ site.origin }}{{ site.og_image }}" name="twitter:image"/>
+<meta content="#05060A" name="theme-color"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/><link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+
+{%- if page.hero_preload %}
+<link as="image" href="/assets/hero/sigel-monolith-desktop.webp" imagesizes="(max-width: 760px) 100vw, 52vw" imagesrcset="/assets/hero/sigel-monolith-mobile.webp 760w, /assets/hero/sigel-monolith-desktop.webp 1600w" rel="preload"/>
+{%- endif %}
+<style>{{ inline_css('/fonts/fonts.css') }}</style>
+<link href="{{ asset('/style.css') }}" rel="stylesheet"/>
+{%- block jsonld_wrap %}{% if self.jsonld() | trim %}
+<script type="application/ld+json">{% block jsonld %}{% endblock %}</script>
+{%- endif %}{% endblock %}
+</head>
+<body data-lang="{{ lang }}">
+<div aria-hidden="true" class="ambient"></div>
+<div aria-hidden="true" class="ambient-grid"></div>
+<div aria-hidden="true" class="noise"></div>
+<div class="progress" id="progress"></div>
+<div aria-hidden="true" class="cursor" id="cursor"></div>
+<header class="site-header" id="siteHeader">
+<div class="wrap header-inner">
+<a aria-label="SIGEL Industries" class="brand" href="{{ c.home }}">
+<span aria-hidden="true" class="brand-mark"><img alt="" aria-hidden="true" class="brand-logo" src="/sigel-mark-256.png"/></span>
+<span class="brand-text">SIGEL INDUSTRIES</span>
+</a>
+<nav aria-label="{{ c.nav_aria }}" class="main-nav" id="mainNav">
+{%- for anchor, label in c.nav %}
+<a href="{{ '' if is_home else c.home }}#{{ anchor }}">{{ label }}</a>
+{%- endfor %}
+<a{% if page.url == c.guides[0][0] %} aria-current="page"{% endif %} href="{{ c.guides[0][0] }}">{{ c.nav_guide }}</a>
+{%- for href, label in c.nav_products | default([]) %}
+<a{% if page.url == href %} aria-current="page"{% endif %} class="nav-product" href="{{ href }}">{{ label }}</a>
+{%- endfor %}
+{%- if is_home %}
+<a href="#order">{{ c.nav_order }}</a>
+{%- else %}
+<a data-order-open="" data-track="nav" href="{{ c.home }}#order">{{ c.nav_order }}</a>
+{%- endif %}
+</nav>
+<div class="header-actions">
+<div aria-label="{{ c.lang_aria }}" class="lang-switch">
+{%- for l in site.langs %}
+<a{% if l == lang %} aria-current="page" class="active"{% endif %} hreflang="{{ l }}" href="{{ (page.alternates or {}).get(l) or i18n[l].chrome.home }}">{{ site.lang_labels[l] }}</a>
+{%- endfor %}
+</div>
+<button aria-controls="mainNav" aria-expanded="false" aria-label="{{ c.menu_open }}" class="menu-toggle" id="menuToggle" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
+<main id="top">
+{% block main %}{% endblock %}
+</main>
+<footer class="site-footer">
+<div class="wrap footer-grid">
+<div class="footer-brand">
+<strong>SIGEL INDUSTRIES</strong>
+<p>{{ c.footer.tagline }}</p>
+<p>{{ c.footer.company }}</p>
+<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+</div>
+<div class="footer-col"><span>{{ c.footer.service }}</span>
+{%- for anchor, label in c.footer.service_links %}<a href="{{ '' if is_home else c.home }}#{{ anchor }}">{{ label }}</a>{% endfor %}
+{%- for href, label in c.nav_products | default([]) %}<a href="{{ href }}">{{ label }}</a>{% endfor %}
+</div>
+<div class="footer-col"><span>{{ c.footer.guides }}</span>
+{%- for href, label in c.guides %}<a href="{{ href }}">{{ label }}</a>{% endfor %}
+</div>
+<div class="footer-col"><span>{{ c.footer.documents }}</span><a href="{{ c.terms[0] }}">{{ c.terms[1] }}</a><a href="{{ c.privacy[0] }}">{{ c.privacy[1] }}</a><a data-track="demo" href="{{ c.demo[0] }}" rel="noopener" target="_blank">{{ c.demo[1] }}</a>
+{%- for l in site.langs if l != lang %}<a hreflang="{{ l }}" href="{{ i18n[l].chrome.home }}">{{ site.lang_names[l] }}</a>{% endfor %}
+</div>
+</div>
+<div class="wrap footer-bottom"><span>© {{ year }} SIGEL INDUSTRIES</span><span>{{ c.footer.bottom }}</span></div>
+</footer>
+<div class="cookie-bar" hidden="" id="cookieBar">
+<div>
+<strong>Cookies</strong>
+<p>{{ c.cookie.text }} <a href="{{ c.privacy[0] }}">{{ c.privacy[1] }}</a>.</p>
+</div>
+<div class="cookie-actions">
+<button class="btn btn-ghost btn-small" data-cookie-choice="deny" type="button">{{ c.cookie.deny }}</button>
+<button class="btn btn-primary btn-small" data-cookie-choice="accept" type="button">{{ c.cookie.accept }}</button>
+</div>
+</div>
+{% include "partials/order_modal.html" %}
+<div aria-hidden="true" class="sigel-modal" hidden="" id="infoModal">
+<div class="modal-backdrop" data-modal-close=""></div>
+<section aria-labelledby="modalTitle" aria-modal="true" class="modal-dialog" role="dialog">
+<button aria-label="{{ c.modal.close }}" class="modal-close" data-modal-close="" type="button">×</button>
+<p class="tag" id="modalKicker">Detail</p>
+<h2 id="modalTitle">Detail</h2>
+<p class="modal-lead" id="modalLead"></p>
+<div class="modal-grid" id="modalGrid"></div>
+<p class="modal-note" id="modalNote"></p>
+<button class="btn btn-primary modal-cta" data-order-open="" id="modalCta" type="button">{{ c.modal.cta }}</button>
+</section>
+</div>
+<script id="siteData" type="application/json">{{ client_data | tojson }}</script>
+<script defer="" src="{{ asset('/script.js') }}"></script>
+</body>
+</html>

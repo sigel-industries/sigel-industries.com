@@ -1,0 +1,363 @@
+chrome:
+  home: /sk/
+  nav_aria: Hlavná navigácia
+  lang_aria: Jazyk
+  menu_open: Otvoriť menu
+  nav:
+  - - rozdil
+    - Prečo SIGEL
+  - - reseni
+    - Riešenia
+  - - metoda
+    - Metóda
+  - - report
+    - Report
+  nav_guide: Audit webu
+  nav_order: Objednávka
+  footer:
+    tagline: Komplexný audit webu a business intelligence pre techniku, UX, komunikáciu, dôveru a obchodné priority.
+    company: Sigel, s.r.o. · IČO 17428432 · Praha
+    service: Služba
+    guides: Sprievodcovia
+    documents: Dokumenty
+    service_links:
+    - - rozdil
+      - Prečo SIGEL
+    - - metoda
+      - Metóda
+    - - report
+      - Ukážka reportu
+    - - order
+      - Objednávka
+    bottom: Website business intelligence before the next spend.
+  terms:
+  - /obchodni-podminky.html
+  - Obchodné podmienky (české znenie)
+  privacy:
+  - /ochrana-osobnich-udaju.html
+  - Ochrana osobných údajov (české znenie)
+  demo:
+  - /docs/demo-report-sk.pdf
+  - Demo report
+  cookie:
+    text: Používame analytiku na zlepšovanie webu. Bez reklamných cookies.
+    deny: Odmietnuť
+    accept: Prijať
+  modal:
+    close: Zavrieť
+    cta: Získať Web Intelligence report
+    note: 'Poznámka: Report je diagnostický podklad pre rozhodnutie. Negarantuje zvýšenie tržieb, pozícií vo vyhľadávaní ani výsledkov kampaní.'
+  guides:
+  - - /sk/audit-webu/
+    - Audit webu
+  - - /sk/preco-web-nekonvertuje/
+    - Prečo web nekonvertuje
+  - - /sk/audit-webu-pred-redizajnom/
+    - Audit pred redizajnom
+  - - /sk/seo-audit-vs-komplexny-audit-webu/
+    - SEO audit vs. audit webu
+order:
+  eyebrow: SIGEL Web Intelligence
+  title: Objednávka Web Intelligence reportu
+  lead: Vyplňte údaje objednávky. Pred odoslaním ešte uvidíte súhrn na kontrolu.
+  priceLabel: Cena
+  websiteLabel: URL webu na analýzu
+  websiteHint: Stačí zadať doménu. https:// doplníme automaticky.
+  companyLabel: Názov firmy / objednávateľa
+  contactLabel: Kontaktná osoba
+  icoLabel: IČO
+  dicLabel: IČ DPH / DIČ
+  billingLabel: Fakturačná adresa
+  emailLabel: E-mail na doručenie faktúry a reportu
+  phoneLabel: Telefón
+  reportLangLabel: Jazyk reportu
+  currencyLabel: Mena objednávky
+  noteLabel: Kontext analýzy (voliteľné)
+  termsConsent: Objednávam ako podnikateľ a súhlasím s obchodnými podmienkami.
+  privacyConsent: Beriem na vedomie informácie o spracúvaní osobných údajov.
+  continue: Pokračovať na súhrn
+  secureNote: Objednávka bude odoslaná do systému SIGEL.
+  summaryEyebrow: Kontrola objednávky
+  summaryTitle: Súhrn pred odoslaním
+  summaryLead: Skontrolujte údaje. Po potvrdení sa vytvorí objednávka a príde vám faktúra.
+  afterSubmitTitle: Čo bude nasledovať
+  afterSubmitText: Po odoslaní objednávky vám čoskoro príde faktúra. Po pripísaní platby začne analýza webu a následne dostanete PDF report na uvedený e-mail.
+  back: Späť upraviť
+  submitOrder: Záväzne objednať za {price}
+  doneEyebrow: Objednávka prijatá
+  doneTitle: Hotovo. Objednávka je v systéme.
+  doneText: Objednávka bola prijatá. Čoskoro vám príde faktúra a po pripísaní platby sa začne spracovanie Web Intelligence reportu.
+  closeDone: Zavrieť
+  newOrder: Nová objednávka
+  websiteError: Zadajte platnú URL webu.
+  emailError: Zadajte platný e-mail.
+  requiredError: Toto pole je povinné.
+  phoneError: Telefónne číslo nevyzerá platne.
+  consentsError: Treba potvrdiť obchodné podmienky aj informácie o osobných údajoch.
+  sending: Odosielam objednávku…
+  sendError: Objednávku sa nepodarilo odoslať a nič sa neuložilo. Skúste to znova alebo ju pošlite e-mailom.
+  closeLabel: Zavrieť formulár
+  summaryLabels:
+    website: Web
+    company: Firma / objednávateľ
+    ico: IČO
+    dic: IČ DPH / DIČ
+    contactPerson: Kontaktná osoba
+    email: E-mail
+    phone: Telefón
+    billing: Fakturačná adresa
+    reportLanguage: Jazyk reportu
+    price: Cena
+    note: Poznámka
+  icoRequired: Zadajte IČO firmy.
+  b2bNote: Služba je určená firmám a podnikateľom (B2B).
+  sendEmail: Poslať objednávku e-mailom
+  mailSubject: Objednávka Web Intelligence reportu
+  ph:
+    website: vasafirma.sk
+    company: Názov firmy
+    contactPerson: Meno a priezvisko
+    ico: '12345678'
+    dic: SK1234567890 / voliteľné
+    billing: Názov, ulica, mesto, PSČ, štát…
+    email: kontakt@firma.sk
+    phone: +421 900 000 000
+    note: Čo je dobré vedieť o webe alebo aktuálnej situácii?
+  prices:
+    CZK: 4 980 Kč
+    EUR: 199 €
+  defaultCurrency: EUR
+report:
+  dashboard:
+    score: '64'
+    kicker: Dashboard
+    title: Skóre, riziká a smer rozhodovania.
+    text: Prvá časť spája stav webu, hlavné riziká a obchodný dopad do jednej rýchlej orientácie.
+    items:
+    - Skóre
+    - Riziká
+    - Obchodný dopad
+    - Roadmapa
+    bars:
+    - 45
+    - 70
+    - 52
+    - 90
+    - 75
+    - 95
+    - 62
+    - 82
+  technika:
+    score: '78'
+    kicker: Technika
+    title: Výkon, indexácia a technické limity.
+    text: 'Tvrdá kontrola základov: rýchlosť, technické zdravie, metadáta, sitemap, robots a mobilná použiteľnosť.'
+    items:
+    - Rýchlosť
+    - Indexácia
+    - Metadáta
+    - Mobil
+    bars:
+    - 86
+    - 98
+    - 76
+    - 92
+    - 70
+    - 88
+    - 54
+    - 78
+  komunikace:
+    score: '49'
+    kicker: Komunikácia
+    title: Jasnosť ponuky a dôvera.
+    text: Vyhodnotenie toho, či návštevník rýchlo chápe ponuku, dôvody na nákup a ďalší krok.
+    items:
+    - Ponuka
+    - Dôvera
+    - CTA
+    - Dôkazy
+    bars:
+    - 52
+    - 74
+    - 45
+    - 82
+    - 64
+    - 58
+    - 88
+    - 70
+  archetypy:
+    score: '57'
+    kicker: Archetypy
+    title: Značka a zákaznícke motivácie.
+    text: 'Interpretácia archetypu značky a zákazníckych archetypov: kto potrebuje dôkaz, jasnosť alebo víziu.'
+    items:
+    - Značka
+    - Motivácie
+    - Obavy
+    - Tón
+    bars:
+    - 62
+    - 78
+    - 88
+    - 56
+    - 92
+    - 66
+    - 80
+    - 72
+  roadmapa:
+    score: '64'
+    kicker: Roadmapa
+    title: Čo riešiť ako prvé, druhé a neskôr.
+    text: Prioritný plán oddeľujúci kozmetiku od vecí s reálnym obchodným dopadom.
+    items:
+    - Priorita
+    - Dopad
+    - Rýchlosť
+    - Ďalší krok
+    bars:
+    - 92
+    - 64
+    - 80
+    - 70
+    - 88
+    - 76
+    - 58
+    - 95
+modal:
+  problem-leads:
+    kicker: Čo to rieši
+    title: Málo dopytov z webu
+    lead: Web môže byť technicky v poriadku a napriek tomu nepresviedčať. SIGEL hľadá miesta, kde návštevník stráca jasnosť, dôveru alebo ďalší krok.
+    items:
+    - - Kedy pomáha
+      - Keď má web návštevnosť, ale málo dopytov, objednávok alebo zmysluplných akcií.
+    - - Čo sa kontroluje
+      - Jasnosť ponuky, CTA, dôvera, mobilná cesta a komunikačné bariéry.
+    - - Typický výstup
+      - Priority oddeľujúce kozmetiku od vecí s reálnym dopadom.
+    cta: Získať Web Intelligence report za 199 €
+  problem-marketing:
+    kicker: Čo to rieši
+    title: Marketing beží, výsledky sú slabé
+    lead: Pred zvýšením rozpočtu sa oplatí overiť, či vstupný web vôbec dokáže podporiť rozhodnutie.
+    items:
+    - - Kedy pomáha
+      - Pred reklamou, pri slabej konverzii alebo keď kampane posielajú návštevnosť bez výsledku.
+    - - Čo sa kontroluje
+      - Landing sekcie, rýchlosť, CTA, dôkazy, dôvera a nesúlad medzi reklamou a webom.
+    - - Typický výstup
+      - Zoznam bariér, ktoré môžu brzdiť výkon ešte pred samotnou kampaňou.
+    cta: Overiť web pred reklamou
+  problem-redesign:
+    kicker: Čo to rieši
+    title: Redizajn bez jasného zadania
+    lead: Redizajn bez diagnostiky často zmení iba vzhľad. SIGEL pomôže určiť, čo má nový web skutočne opraviť.
+    items:
+    - - Kedy pomáha
+      - Pred redizajnom, zadaním pre agentúru alebo rozhodnutím, čo na webe meniť.
+    - - Čo sa kontroluje
+      - Štruktúra, komunikácia ponuky, dôvera, UX, archetyp značky a rozhodovacia cesta.
+    - - Typický výstup
+      - Podklad pre redizajn zameraný na funkciu, nie dekoráciu.
+    cta: Získať podklad pre redizajn
+  problem-offer:
+    kicker: Čo to rieši
+    title: Ponuka je dobrá, ľudia jej nerozumejú
+    lead: Niekedy nie je problém produkt, ale spôsob, akým sa vysvetľuje jeho hodnota.
+    items:
+    - - Kedy pomáha
+      - Keď zákazníci nerozumejú hodnote, cene, rozdielu alebo dôvodu pokračovať.
+    - - Čo sa kontroluje
+      - Jazyk ponuky, dôkazy, archetyp značky a zákaznícke motivácie.
+    - - Typický výstup
+      - Odporúčania na spresnenie ponuky pre rôzne typy zákazníkov.
+    cta: Spresniť komunikáciu webu
+  problem-strategy:
+    kicker: Čo to rieši
+    title: Web už nezodpovedá firme
+    lead: Web často zostane v minulosti, aj keď sa firma posunula. SIGEL overí, či komunikácia, ponuka a cieľové skupiny stále zodpovedajú realite biznisu.
+    items:
+    - - Kedy pomáha
+      - Pri stagnácii, zmene ponuky, novej cieľovke alebo pred zásadnejším obchodným rozhodnutím.
+    - - Čo sa kontroluje
+      - Súlad ponuky, positioning, archetyp, zákaznícke segmenty a prioritné riziká.
+    - - Typický výstup
+      - Roadmapa toho, čo zmeniť ako prvé, aby web znovu podporoval smer firmy.
+    cta: Overiť stratégiu webu
+  problem-agency:
+    kicker: Čo to rieši
+    title: Rýchly podklad pre rozhodnutie
+    lead: Majiteľ, marketingový tím ani agentúra nemusia začínať od dojmov. SIGEL dodá externú diagnostiku ako vstup do konzultácie, redizajnu, kampane alebo stratégie.
+    items:
+    - - Kedy pomáha
+      - Pred konzultáciou, návrhom úprav, kampaňou, redizajnom alebo rozhodnutím o ďalšom rozpočte.
+    - - Čo sa kontroluje
+      - Technika, UX, komunikácia, dôvera, archetypy a priority v jednom podklade.
+    - - Typický výstup
+      - Rýchly report použiteľný ako interný rozhodovací alebo klientsky podklad.
+    cta: Dohodnúť pilotnú spoluprácu
+  system-process:
+    kicker: Analytické jadro
+    title: Ako SIGEL skladá Web Intelligence výstup
+    lead: SIGEL Web Intelligence nie je čistý AI text ani bežný checklist. Je to analytický systém, ktorý zbiera signály z webu, vyhodnocuje ich vlastným scoringom, pravidlami, váhami a UX heuristikami
+      a prevádza ich do obchodne použiteľného reportu.
+    items:
+    - - Zber signálov
+      - Technika, SEO, štruktúra, obsah, CTA, dôvera a komunikácia ponuky.
+    - - Vlastná analytická logika
+      - Systém pracuje s pravidlami, váhami, prioritami a scoringom, aby bolo jasné, čo má reálny dopad.
+    - - UX a komunikačné heuristiky
+      - Systém sleduje, kde návštevník chápe ponuku, kde váha a kde môže strácať dôveru.
+    - - Interpretačná vrstva
+      - Nad dátami vzniká interpretácia značky, zákazníckych archetypov a komunikácie pre rôzne typy zákazníkov.
+    - - Ručná kontrola výstupu
+      - Každý report pred odoslaním prechádza osobnou kontrolou, aby mal jasné priority a praktický zmysel.
+    cta: Získať Web Intelligence report za 199 €
+  use-web-audit:
+    kicker: Dostupné
+    title: Web Intelligence Report
+    lead: 'Základný produkt SIGEL: business intelligence pre jeden konkrétny web pred reklamou, redizajnom alebo obchodným rozhodnutím.'
+    items:
+    - - Obsahuje
+      - Desktopové a mobilné Lighthouse metriky, Core Web Vitals, odkazy a CTA, prístupnosť, komunikáciu ponuky, AI pripravenosť, archetypový playbook, roadmapu a evidence dáta.
+    - - Hodí sa pre
+      - Firmy, freelancerov, menšie tímy alebo projekty, ktoré potrebujú jasný diagnostický vstup.
+    - - Výstup
+      - Vizuálny PDF report s prioritami a odporúčaniami.
+    cta: Získať Web Intelligence report
+  use-agency:
+    kicker: Pilotne
+    title: Agentúrny podklad
+    lead: 'Rovnaký diagnostický základ, ale pripravený pre agentúrne použitie: klientsku konzultáciu, redizajn, SEO alebo obsahovú stratégiu.'
+    items:
+    - - Obsahuje
+      - Externý pohľad na klientsky web, priority a podklad pre odporúčanie.
+    - - Hodí sa pre
+      - Agentúry, ktoré chcú rýchlejší vstup bez kompletnej ručnej diagnostiky od nuly.
+    - - Výstup
+      - Report alebo interný podklad podľa dohody.
+    cta: Dohodnúť pilotnú spoluprácu
+  use-lead-research:
+    kicker: Pilotne
+    title: Lead Research
+    lead: 'Výskumná vrstva: hľadanie relevantných firemných webov a verejných kontaktov v segmente, lokalite alebo vlastnom výbere trhu.'
+    items:
+    - - Obsahuje
+      - Zber URL, filtrovanie, základnú validáciu a prípravu kontaktov pre B2B výskum.
+    - - Hodí sa pre
+      - Obchodnú prípravu, segmentáciu trhu, zoznam potenciálnych klientov alebo nadväzujúcu analýzu.
+    - - Výstup
+      - Štruktúrovaný zoznam webov a kontaktov podľa zadania.
+    cta: Prebrať výber segmentu
+  use-benchmark:
+    kicker: Pripravujeme
+    title: Segmentový benchmark
+    lead: Porovnanie viacerých webov v jednom odvetví, lokalite alebo výbere trhu. Ide o nadväzujúcu vrstvu nad jednotlivými reportmi.
+    items:
+    - - Obsahuje
+      - Porovnanie skóre, opakujúce sa vzorce, rozdiely medzi hráčmi a segmentové signály.
+    - - Hodí sa pre
+      - Prehľad trhu, interné rozhodovanie, obchodný výber alebo prípravu stratégie.
+    - - Výstup
+      - Benchmarková mapa a súhrn hlavných zistení.
+    cta: Opýtať sa na benchmark

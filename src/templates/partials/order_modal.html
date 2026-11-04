@@ -1,0 +1,148 @@
+{%- set o = t.order -%}
+<div aria-hidden="true" class="sigel-order-modal" id="orderModal">
+<div class="sigel-order-backdrop" data-order-close=""></div>
+<section aria-labelledby="orderTitle" aria-modal="true" class="sigel-order-dialog" role="dialog">
+<button aria-label="{{ o.closeLabel }}" class="sigel-order-close" data-order-close="" type="button">×</button>
+<div class="sigel-order-brand">
+<span aria-hidden="true" class="sigel-order-brand-mark"><img alt="" aria-hidden="true" class="sigel-order-brand-logo" src="/sigel-mark-256.png"/></span>
+<span class="sigel-order-brand-name">SIGEL INDUSTRIES</span>
+<span class="sigel-order-brand-line"></span>
+<span class="sigel-order-brand-module">ORDER MODULE</span>
+</div>
+<div aria-hidden="true" class="sigel-order-progress">
+<span class="sigel-order-dot is-active" data-step-dot="form">1</span>
+<span class="sigel-order-line"></span>
+<span class="sigel-order-dot" data-step-dot="summary">2</span>
+<span class="sigel-order-line"></span>
+<span class="sigel-order-dot" data-step-dot="done">3</span>
+</div>
+<div class="sigel-order-view is-active" data-view="form">
+<div class="sigel-order-head">
+<p class="sigel-order-eyebrow">{{ o.eyebrow }}</p>
+<h2 id="orderTitle">{{ o.title }}</h2>
+<p>{{ o.lead }}</p>
+</div>
+<div class="sigel-order-pricebar">
+<span>{{ o.priceLabel }}</span>
+<strong data-order-price="">{{ o.prices[o.defaultCurrency] }}</strong>
+</div>
+<p class="sigel-field-hint sigel-b2b-note">{{ o.b2bNote }}</p>
+<form class="sigel-order-form" id="orderForm" novalidate="">
+<input aria-hidden="true" autocomplete="off" class="sigel-hp-field" name="website_extra" tabindex="-1" type="text"/>
+<div class="sigel-field">
+<label for="orderWebsite">{{ o.websiteLabel }}</label>
+<input autocomplete="url" id="orderWebsite" inputmode="url" name="website" placeholder="{{ o.ph.website }}" required="" type="text"/>
+<p class="sigel-field-hint">{{ o.websiteHint }}</p>
+<p class="sigel-field-error" data-error-for="website"></p>
+</div>
+<div class="sigel-form-grid">
+<div class="sigel-field">
+<label for="orderCompany">{{ o.companyLabel }}</label>
+<input autocomplete="organization" id="orderCompany" name="company" placeholder="{{ o.ph.company }}" required="" type="text"/>
+<p class="sigel-field-error" data-error-for="company"></p>
+</div>
+<div class="sigel-field">
+<label for="orderContactPerson">{{ o.contactLabel }}</label>
+<input autocomplete="name" id="orderContactPerson" name="contactPerson" placeholder="{{ o.ph.contactPerson }}" type="text"/>
+</div>
+</div>
+<div class="sigel-form-grid">
+<div class="sigel-field">
+<label for="orderIco">{{ o.icoLabel }}</label>
+<input id="orderIco" name="ico" placeholder="{{ o.ph.ico }}" required="" type="text"/>
+<p class="sigel-field-error" data-error-for="ico"></p>
+</div>
+<div class="sigel-field">
+<label for="orderDic">{{ o.dicLabel }}</label>
+<input id="orderDic" name="dic" placeholder="{{ o.ph.dic }}" type="text"/>
+</div>
+</div>
+<div class="sigel-field">
+<label for="orderBilling">{{ o.billingLabel }}</label>
+<textarea autocomplete="street-address" id="orderBilling" name="billing" placeholder="{{ o.ph.billing }}" required="" rows="3"></textarea>
+<p class="sigel-field-error" data-error-for="billing"></p>
+</div>
+<div class="sigel-form-grid">
+<div class="sigel-field">
+<label for="orderEmail">{{ o.emailLabel }}</label>
+<input autocomplete="email" id="orderEmail" name="email" placeholder="{{ o.ph.email }}" required="" type="email"/>
+<p class="sigel-field-error" data-error-for="email"></p>
+</div>
+<div class="sigel-field">
+<label for="orderPhone">{{ o.phoneLabel }}</label>
+<input autocomplete="tel" id="orderPhone" inputmode="tel" name="phone" placeholder="{{ o.ph.phone }}" type="tel"/>
+<p class="sigel-field-error" data-error-for="phone"></p>
+</div>
+</div>
+<div class="sigel-form-grid">
+<div class="sigel-field">
+<label for="orderReportLanguage">{{ o.reportLangLabel }}</label>
+<select id="orderReportLanguage" name="reportLanguage" required="">
+{%- for value in ['CZ/SK', 'EN', 'DE'] %}
+<option value="{{ value }}"{% if (value == 'CZ/SK' and lang in ['cs', 'sk']) or value|lower == lang %} selected=""{% endif %}>{{ value }}</option>
+{%- endfor %}
+</select>
+</div>
+<div class="sigel-field">
+<label for="orderCurrency">{{ o.currencyLabel }}</label>
+<select id="orderCurrency" name="currency" required="">
+{%- for cur, price in o.prices.items() %}
+<option value="{{ cur }}"{% if cur == o.defaultCurrency %} selected=""{% endif %}>{{ cur }} · {{ price }}</option>
+{%- endfor %}
+</select>
+</div>
+</div>
+<div class="sigel-field">
+<label for="orderNote">{{ o.noteLabel }}</label>
+<textarea id="orderNote" name="note" placeholder="{{ o.ph.note }}" rows="3"></textarea>
+</div>
+<div class="sigel-consent-box">
+<label class="sigel-consent-row">
+<input id="orderTermsConsent" name="termsConsent" required="" type="checkbox"/>
+<span><span>{{ o.termsConsent }}</span> <a href="{{ t.chrome.terms[0] }}" rel="noopener" target="_blank">{{ t.chrome.terms[1] }}</a></span>
+</label>
+<label class="sigel-consent-row">
+<input id="orderPrivacyConsent" name="privacyConsent" required="" type="checkbox"/>
+<span><span>{{ o.privacyConsent }}</span> <a href="{{ t.chrome.privacy[0] }}" rel="noopener" target="_blank">{{ t.chrome.privacy[1] }}</a></span>
+</label>
+</div>
+<p class="sigel-field-error sigel-consent-error" data-error-for="consents"></p>
+<div class="sigel-order-footer">
+<button class="btn btn-primary" type="submit">{{ o.continue }}</button>
+<p>{{ o.secureNote }}</p>
+</div>
+</form>
+</div>
+<div class="sigel-order-view" data-view="summary">
+<div class="sigel-order-head">
+<p class="sigel-order-eyebrow">{{ o.summaryEyebrow }}</p>
+<h2>{{ o.summaryTitle }}</h2>
+<p>{{ o.summaryLead }}</p>
+</div>
+<div class="sigel-summary-card" id="summaryCard"></div>
+<div class="sigel-process-note">
+<strong>{{ o.afterSubmitTitle }}</strong>
+<p>{{ o.afterSubmitText }}</p>
+</div>
+<div aria-live="polite" class="sigel-order-status" id="summaryStatus" role="status"></div>
+<a class="btn btn-ghost sigel-mail-fallback" hidden="" id="orderMailFallback" href="mailto:{{ site.email }}">{{ o.sendEmail }}</a>
+<div class="sigel-order-footer sigel-two-actions">
+<button class="btn btn-ghost" id="backToForm" type="button">{{ o.back }}</button>
+<button class="btn btn-primary" id="confirmOrder" type="button">{{ o.submitOrder | replace('{price}', o.prices[o.defaultCurrency]) }}</button>
+</div>
+</div>
+<div class="sigel-order-view" data-view="done">
+<div class="sigel-success-state">
+<div class="sigel-success-orb">✓</div>
+<p class="sigel-order-eyebrow">{{ o.doneEyebrow }}</p>
+<h2>{{ o.doneTitle }}</h2>
+<p>{{ o.doneText }}</p>
+<div class="sigel-done-meta" id="doneMeta"></div>
+<div class="sigel-order-footer sigel-two-actions">
+<button class="btn btn-primary" data-order-close="" type="button">{{ o.closeDone }}</button>
+<button class="btn btn-ghost" id="newOrder" type="button">{{ o.newOrder }}</button>
+</div>
+</div>
+</div>
+</section>
+</div>

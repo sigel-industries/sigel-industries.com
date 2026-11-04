@@ -1,0 +1,363 @@
+chrome:
+  home: /en/
+  nav_aria: Main navigation
+  lang_aria: Language
+  menu_open: Open menu
+  nav:
+  - - difference
+    - Why SIGEL
+  - - solutions
+    - Solutions
+  - - method
+    - Method
+  - - report
+    - Report
+  nav_guide: Website audit
+  nav_order: Order
+  footer:
+    tagline: Comprehensive website audit and business intelligence for technical health, UX, communication, trust and business priorities.
+    company: Sigel, s.r.o. · Company ID 17428432 · Prague
+    service: Service
+    guides: Guides
+    documents: Documents
+    service_links:
+    - - difference
+      - Why SIGEL
+    - - method
+      - Method
+    - - report
+      - Report sample
+    - - order
+      - Order
+    bottom: Website business intelligence before the next spend.
+  terms:
+  - /en/terms.html
+  - Terms
+  privacy:
+  - /en/privacy-policy.html
+  - Privacy policy
+  demo:
+  - /docs/demo-report-en.pdf
+  - Demo report
+  cookie:
+    text: We use analytics to improve the website. No advertising cookies.
+    deny: Decline
+    accept: Accept
+  modal:
+    close: Close
+    cta: Get the Web Intelligence report
+    note: 'Note: The report is diagnostic decision support. It does not guarantee revenue growth, search ranking improvements or campaign results.'
+  guides:
+  - - /en/website-audit/
+    - Website audit
+  - - /en/why-website-not-converting/
+    - Why websites do not convert
+  - - /en/website-audit-before-redesign/
+    - Audit before redesign
+  - - /en/seo-audit-vs-website-audit/
+    - SEO audit vs website audit
+order:
+  eyebrow: SIGEL Web Intelligence
+  title: Web Intelligence Report Order
+  lead: Fill in the order details. You will see a summary before submitting.
+  priceLabel: Price
+  websiteLabel: Website URL to analyse
+  websiteHint: You can enter just the domain. We will add https:// automatically.
+  companyLabel: Company / order name
+  contactLabel: Contact person
+  icoLabel: Company registration number
+  dicLabel: VAT ID
+  billingLabel: Billing address
+  emailLabel: Email for invoice and report delivery
+  phoneLabel: Phone
+  reportLangLabel: Report language
+  currencyLabel: Order currency
+  noteLabel: Analysis context (optional)
+  termsConsent: I am ordering as a business and agree with the Terms and Conditions.
+  privacyConsent: I acknowledge the information about personal data processing.
+  continue: Continue to summary
+  secureNote: The order will be sent to the SIGEL system.
+  summaryEyebrow: Order check
+  summaryTitle: Summary before submission
+  summaryLead: Check the details. Confirming this creates the order and you will receive an invoice.
+  afterSubmitTitle: What happens next
+  afterSubmitText: After submitting the order, you will receive an invoice shortly. Once the payment is received, the website analysis starts and the PDF report will be sent to the email provided.
+  back: Back to edit
+  submitOrder: Place binding order for {price}
+  doneEyebrow: Order received
+  doneTitle: Done. The order is in the system.
+  doneText: The order has been received. You will receive an invoice shortly. Once the payment is received, processing of your Web Intelligence report will begin.
+  closeDone: Close
+  newOrder: New order
+  websiteError: Enter a valid website URL.
+  emailError: Enter a valid email address.
+  requiredError: This field is required.
+  phoneError: This phone number does not look valid.
+  consentsError: You need to confirm both Terms and Privacy information.
+  sending: Sending order…
+  sendError: The order could not be sent and nothing was saved. Try again or send it by email.
+  closeLabel: Close form
+  summaryLabels:
+    website: Website
+    company: Company / order name
+    ico: Company ID
+    dic: VAT ID
+    contactPerson: Contact person
+    email: Email
+    phone: Phone
+    billing: Billing address
+    reportLanguage: Report language
+    price: Price
+    note: Note
+  icoRequired: Enter the company registration number.
+  b2bNote: The service is provided to businesses only (B2B).
+  sendEmail: Send order by email
+  mailSubject: Web Intelligence report order
+  ph:
+    website: example.com
+    company: Company name
+    contactPerson: Name and surname
+    ico: Registration number
+    dic: VAT ID / optional
+    billing: Company name, street, city, ZIP, country…
+    email: contact@company.com
+    phone: +44 20 0000 0000
+    note: Anything useful to know about the website or current situation?
+  prices:
+    CZK: CZK 4,980
+    EUR: €199
+  defaultCurrency: EUR
+report:
+  dashboard:
+    score: '64'
+    kicker: Dashboard
+    title: Score, risks and decision direction.
+    text: The first part combines website health, the main risks and business impact into one fast orientation.
+    items:
+    - Score
+    - Risks
+    - Business impact
+    - Roadmap
+    bars:
+    - 45
+    - 70
+    - 52
+    - 90
+    - 75
+    - 95
+    - 62
+    - 82
+  technika:
+    score: '78'
+    kicker: Technical
+    title: Performance, indexability and technical limits.
+    text: 'A hard check of the foundations: speed, technical health, metadata, sitemap, robots and mobile usability.'
+    items:
+    - Speed
+    - Indexing
+    - Metadata
+    - Mobile
+    bars:
+    - 86
+    - 98
+    - 76
+    - 92
+    - 70
+    - 88
+    - 54
+    - 78
+  komunikace:
+    score: '49'
+    kicker: Communication
+    title: Offer clarity and trust.
+    text: Evaluation of whether visitors quickly understand the offer, the reasons to buy and the next step.
+    items:
+    - Offer
+    - Trust
+    - CTA
+    - Proof
+    bars:
+    - 52
+    - 74
+    - 45
+    - 82
+    - 64
+    - 58
+    - 88
+    - 70
+  archetypy:
+    score: '57'
+    kicker: Archetypes
+    title: Brand and customer motivations.
+    text: 'Interpretation of the brand archetype and customer archetypes: who needs proof, clarity or vision.'
+    items:
+    - Brand
+    - Motives
+    - Objections
+    - Tone
+    bars:
+    - 62
+    - 78
+    - 88
+    - 56
+    - 92
+    - 66
+    - 80
+    - 72
+  roadmapa:
+    score: '64'
+    kicker: Roadmap
+    title: What to solve first, second and later.
+    text: A priority plan separating cosmetic changes from things with real business impact.
+    items:
+    - Priority
+    - Impact
+    - Speed
+    - Next step
+    bars:
+    - 92
+    - 64
+    - 80
+    - 70
+    - 88
+    - 76
+    - 58
+    - 95
+modal:
+  problem-leads:
+    kicker: What it solves
+    title: Too few enquiries from the website
+    lead: A website can be technically fine and still fail to persuade. SIGEL looks for places where visitors lose clarity, trust or the next step.
+    items:
+    - - When it helps
+      - When the site has traffic but few enquiries, orders or meaningful actions.
+    - - What is checked
+      - Offer clarity, CTA, trust, mobile path and communication barriers.
+    - - Typical output
+      - Priorities separating cosmetic changes from things with real impact.
+    cta: Get the Web Intelligence report for €199
+  problem-marketing:
+    kicker: What it solves
+    title: Marketing is running, results are weak
+    lead: Before raising ad spend, it is worth checking whether the landing website can actually support a decision.
+    items:
+    - - When it helps
+      - Before advertising, during weak conversion or when campaigns send traffic without results.
+    - - What is checked
+      - Landing sections, speed, CTA, proof, trust and mismatch between ads and the website.
+    - - Typical output
+      - A list of barriers that may block performance before the campaign itself.
+    cta: Check the website before advertising
+  problem-redesign:
+    kicker: What it solves
+    title: Redesign without a clear brief
+    lead: A redesign without diagnostics often only changes visuals. SIGEL helps define what the new website should actually fix.
+    items:
+    - - When it helps
+      - Before a redesign, agency brief or decision on what to change.
+    - - What is checked
+      - Structure, offer communication, trust, UX, brand archetype and decision path.
+    - - Typical output
+      - A redesign input focused on function, not decoration.
+    cta: Get redesign input
+  problem-offer:
+    kicker: What it solves
+    title: The offer is good, people do not get it
+    lead: Sometimes the product is not the problem. The problem is how the value is explained.
+    items:
+    - - When it helps
+      - When customers do not understand the value, price, difference or reason to continue.
+    - - What is checked
+      - Offer language, proof, brand archetype and customer motivations.
+    - - Typical output
+      - Recommendations for clarifying the offer for different customer types.
+    cta: Clarify website communication
+  problem-strategy:
+    kicker: What it solves
+    title: The website no longer matches the business
+    lead: Websites often stay in the past while the company moves on. SIGEL checks whether the communication, offer and target groups still fit the business direction.
+    items:
+    - - When it helps
+      - During stagnation, changed offer, new target group or before a strategic decision.
+    - - What is checked
+      - Offer fit, positioning, archetype, customer segments and priority risks.
+    - - Typical output
+      - A roadmap of what to change first.
+    cta: Check website strategy
+  problem-agency:
+    kicker: What it solves
+    title: Fast input for a decision
+    lead: Owners, marketing teams and agencies do not have to start from opinions. SIGEL provides external diagnostic input for consulting, redesign, campaigns or strategy.
+    items:
+    - - When it helps
+      - Before consulting, recommendations, campaigns, redesign or the next budget decision.
+    - - What is checked
+      - Tech, UX, communication, trust, archetypes and priorities in one input.
+    - - Typical output
+      - A fast report usable as internal decision support or client-facing input.
+    cta: Discuss pilot cooperation
+  system-process:
+    kicker: Analytical core
+    title: How SIGEL builds the Web Intelligence output
+    lead: SIGEL Web Intelligence is not pure AI text or a generic checklist. It is an analytical system that collects website signals, evaluates them through its own scoring, rules, weights and UX heuristics,
+      and turns them into a business-ready report.
+    items:
+    - - Signal collection
+      - Technical, SEO, structure, content, CTA, trust and offer communication signals.
+    - - Own analytical logic
+      - The system works with rules, weights, priorities and scoring so it is clear what has real impact.
+    - - UX and communication heuristics
+      - The system checks where visitors understand the offer, hesitate, lose trust or fail to find the next step.
+    - - Interpretation layer
+      - The data is interpreted through brand, customer archetypes and communication patterns.
+    - - Human review of the output
+      - Every report is personally reviewed before delivery so it has clear priorities and practical value.
+    cta: Get the Web Intelligence report for €199
+  use-web-audit:
+    kicker: Available
+    title: Web Intelligence Report
+    lead: 'The core SIGEL product: business intelligence for one specific website before advertising, redesign or a business decision.'
+    items:
+    - - Includes
+      - Desktop and mobile Lighthouse metrics, Core Web Vitals, links and CTA, accessibility, offer communication, AI readiness, an archetype playbook, roadmap and evidence data.
+    - - Useful for
+      - Companies, freelancers, small teams or projects needing clear diagnostic input.
+    - - Output
+      - A visual PDF report with priorities and recommendations.
+    cta: Get the Web Intelligence report
+  use-agency:
+    kicker: Pilot
+    title: Agency input
+    lead: 'The same diagnostic base packaged for agency use: client consultation, redesign, SEO or content strategy.'
+    items:
+    - - Includes
+      - External view of the client website, priorities and input for recommendations.
+    - - Useful for
+      - Agencies that want a faster starting point without full manual diagnostics from zero.
+    - - Output
+      - Report or internal input by agreement.
+    cta: Discuss pilot cooperation
+  use-lead-research:
+    kicker: Pilot
+    title: Lead Research
+    lead: A research layer for finding relevant company websites and public contacts in a segment, location or custom market selection.
+    items:
+    - - Includes
+      - URL collection, filtering, basic validation and contact preparation for B2B research.
+    - - Useful for
+      - Sales preparation, market segmentation, prospect lists or follow-up analysis.
+    - - Output
+      - Structured list of websites and contacts based on the brief.
+    cta: Discuss segment selection
+  use-benchmark:
+    kicker: In preparation
+    title: Segment benchmark
+    lead: Comparison of multiple websites in one industry, location or market selection. This is a layer above individual reports.
+    items:
+    - - Includes
+      - Score comparison, recurring patterns, differences between players and segment signals.
+    - - Useful for
+      - Market overview, internal decision-making, sales selection or strategy preparation.
+    - - Output
+      - Benchmark map and a summary of key findings.
+    cta: Ask about benchmark

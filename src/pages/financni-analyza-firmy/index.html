@@ -1,0 +1,139 @@
+---
+url: /financni-analyza-firmy/
+lang: cs
+title: Finanční analýza firmy z účetních závěrek | SIGEL
+description: SIGEL Company Intelligence převede účetní závěrky české firmy do přehledného finančního reportu – pro jednání s bankou, prověření partnera nebo investiční rozhodnutí. Pilotní provoz.
+og_type: website
+og_image_alt: SIGEL Company Intelligence — finanční analýza firmy
+---
+{% extends "base.html" %}
+{% block jsonld %}{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://sigel-industries.com/financni-analyza-firmy/#service",
+  "name": "SIGEL Company Intelligence",
+  "alternateName": "Finanční analýza firmy",
+  "serviceType": "Finanční analýza firmy z účetních závěrek",
+  "url": "https://sigel-industries.com/financni-analyza-firmy/",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://sigel-industries.com/#organization",
+    "name": "SIGEL Industries",
+    "legalName": "Sigel, s.r.o."
+  },
+  "areaServed": { "@type": "Country", "name": "Česko" },
+  "audience": { "@type": "BusinessAudience", "audienceType": "Firmy, podnikatelé, finanční a obchodní týmy" }
+}{% endblock %}
+{% block main %}
+<section class="page-shell legal-shell">
+<div class="page-layout">
+<div class="legal-head reveal"><div class="section-heading legal-heading reveal">
+<p class="eyebrow"><a href="/">SIGEL</a> / Company Intelligence · pilotní provoz</p>
+<h1>Finanční analýza firmy z účetních závěrek</h1>
+<p>SIGEL Company Intelligence převede účetní závěrky české firmy do jednoho přehledného finančního reportu. Bez ručního přepisování výkazů a bez hledání čísel v naskenovaných PDF.</p>
+<div class="inline-actions"><a class="btn btn-primary" href="#poptavka">Nezávazně poptat analýzu</a></div>
+</div></div>
+</div>
+</section>
+<section class="section" id="pouziti">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">Kdy dává smysl</p>
+<h2>Čísla firmy jsou veřejná. <span class="italic warm-text">Čitelná většinou nejsou.</span></h2>
+<p>Účetní závěrky leží ve Sbírce listin často jako skeny. Než z nich vznikne použitelný přehled, stráví někdo hodiny přepisováním. Company Intelligence tuhle práci dělá automaticky.</p>
+</div>
+<div class="problem-grid">
+<article class="problem-card cold reveal">
+<span class="problem-icon">01</span>
+<span class="problem-tag">Financování</span>
+<h3>Jednání s bankou</h3>
+<p>Přehledný finanční report vlastní firmy jako podklad k žádosti o úvěr nebo k jednání s bankou.</p>
+</article>
+<article class="problem-card cold reveal">
+<span class="problem-icon">02</span>
+<span class="problem-tag">Riziko</span>
+<h3>Prověření partnera</h3>
+<p>Rychlý pohled na hospodaření odběratele, dodavatele nebo konkurenta dřív, než podepíšete smlouvu.</p>
+</article>
+<article class="problem-card warm reveal">
+<span class="problem-icon">03</span>
+<span class="problem-tag">Investice</span>
+<h3>Akvizice a investice</h3>
+<p>Výchozí finanční obraz firmy před hlubší due diligence, investičním rozhodnutím nebo nabídkou.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section flow-section" id="jak">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">Jak to funguje</p>
+<h2>Od IČO <span class="italic cold-text">k finančnímu reportu.</span></h2>
+</div>
+<div class="flow" id="flow">
+<div aria-hidden="true" class="flow-line"></div>
+<article class="flow-step"><div class="flow-num">01</div><h3>IČO firmy</h3><p>Zadáte firmu. Podkladem jsou její účetní závěrky (rozvaha a výkaz zisku a ztráty).</p></article>
+<article class="flow-step"><div class="flow-num">02</div><h3>Extrakce dat</h3><p>Systém vytěží čísla i z naskenovaných PDF pomocí OCR a ověří je proti struktuře výkazu.</p></article>
+<article class="flow-step"><div class="flow-num">03</div><h3>Finanční model</h3><p>Data z různých let a formátů převede do jednotného modelu, ze kterého počítá vývoj a ukazatele.</p></article>
+<article class="flow-step"><div class="flow-num">04</div><h3>Report</h3><p>Výstupem je přehledný report v češtině, připravený jako podklad pro banku nebo interní rozhodnutí.</p></article>
+</div>
+</div>
+</section>
+<section class="section muted-section" id="poptavka">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="order-box ci-inquiry reveal">
+<p class="tag centered">Pilotní provoz · české firmy</p>
+<h2>Chcete analýzu konkrétní firmy?</h2>
+<p class="order-sub">Company Intelligence je v pilotním provozu pro české firmy (Slovensko připravujeme). Napište IČO a k čemu analýzu potřebujete. Ozveme se s termínem a cenou. Poptávka je nezávazná.</p>
+<form class="sigel-order-form ci-form" data-done="Děkujeme, poptávka je u nás. Brzy se ozveme." data-error="Poptávku se nepodařilo odeslat. Napište nám prosím na" data-error-required="Toto pole je povinné." data-inquiry="company-intelligence" data-sending="Odesílám poptávku…" novalidate="">
+<input aria-hidden="true" autocomplete="off" class="sigel-hp-field" name="website_extra" tabindex="-1" type="text"/>
+<div class="sigel-form-grid">
+<div class="sigel-field">
+<label for="ciIco">IČO analyzované firmy</label>
+<input id="ciIco" inputmode="numeric" name="ico" placeholder="12345678" required="" type="text"/>
+<p class="sigel-field-error" data-error-for="ico"></p>
+</div>
+<div class="sigel-field">
+<label for="ciPurpose">K čemu analýzu potřebujete</label>
+<select id="ciPurpose" name="purpose">
+<option value="banka">Jednání s bankou / úvěr</option>
+<option value="partner">Prověření partnera</option>
+<option value="investice">Akvizice / investice</option>
+<option value="jine">Jiné</option>
+</select>
+</div>
+</div>
+<div class="sigel-form-grid">
+<div class="sigel-field">
+<label for="ciEmail">E-mail</label>
+<input autocomplete="email" id="ciEmail" name="email" placeholder="kontakt@firma.cz" required="" type="email"/>
+<p class="sigel-field-error" data-error-for="email"></p>
+</div>
+<div class="sigel-field">
+<label for="ciName">Jméno a firma</label>
+<input autocomplete="name" id="ciName" name="name" placeholder="Jméno, firma" type="text"/>
+</div>
+</div>
+<div class="sigel-field">
+<label for="ciNote">Poznámka (volitelné)</label>
+<textarea id="ciNote" name="note" placeholder="Kolik let zpětně, termín, cokoliv dalšího…" rows="3"></textarea>
+</div>
+<div class="sigel-consent-box">
+<label class="sigel-consent-row">
+<input name="privacyConsent" required="" type="checkbox"/>
+<span><span>Beru na vědomí informace o zpracování osobních údajů.</span> <a href="/ochrana-osobnich-udaju.html" rel="noopener" target="_blank">Ochrana osobních údajů</a></span>
+</label>
+<p class="sigel-field-error" data-error-for="privacyConsent"></p>
+</div>
+<div aria-live="polite" class="sigel-order-status" data-inquiry-status="" role="status"></div>
+<div class="sigel-order-footer">
+<button class="btn btn-primary" type="submit">Odeslat nezávaznou poptávku</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+{% endblock %}

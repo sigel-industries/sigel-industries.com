@@ -1,0 +1,342 @@
+---
+url: /en/
+lang: en
+title: Website Audit for SEO, UX & Conversion | SIGEL
+description: A comprehensive website audit combining technical SEO, performance, mobile UX, accessibility, offer clarity and a prioritised business roadmap. Delivered within 24 hours.
+robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+alternates:
+  cs: /
+  sk: /sk/
+  en: /en/
+  de: /de/
+og_type: website
+og_title: Website Audit for SEO, UX & Conversion | SIGEL
+og_description: Find what is holding your website back and what to change first. Technical evidence and business interpretation in one report.
+og_image_alt: SIGEL Web Intelligence — comprehensive website audit
+twitter_title: Website Audit for SEO, UX & Conversion | SIGEL
+twitter_description: Technical SEO, UX, communication and business priorities in one human-reviewed report.
+hero_preload: true
+---
+{% extends "base.html" %}
+{% block jsonld %}{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://sigel-industries.com/#organization",
+      "name": "SIGEL Industries",
+      "legalName": "Sigel, s.r.o.",
+      "url": "https://sigel-industries.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sigel-industries.com/sigel-mark-256.png",
+        "width": 256,
+        "height": 256
+      },
+      "image": "https://sigel-industries.com/assets/hero/sigel-monolith-desktop.webp",
+      "email": "info@sigel-industries.com",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "IČO",
+        "value": "17428432"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Roháčova 1637/88",
+        "addressLocality": "Praha",
+        "postalCode": "130 00",
+        "addressCountry": "CZ"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sigel-industries.com/#website",
+      "url": "https://sigel-industries.com/",
+      "name": "SIGEL Industries",
+      "alternateName": "SIGEL Web Intelligence",
+      "publisher": {
+        "@id": "https://sigel-industries.com/#organization"
+      },
+      "inLanguage": [
+        "cs",
+        "sk",
+        "en",
+        "de"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://sigel-industries.com/#web-intelligence-service",
+      "name": "SIGEL Web Intelligence Audit",
+      "alternateName": [
+        "Comprehensive website audit",
+        "Web Intelligence Report"
+      ],
+      "serviceType": "Comprehensive website audit and business intelligence for websites",
+      "url": "https://sigel-industries.com/#order",
+      "provider": {
+        "@id": "https://sigel-industries.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Česko"
+        },
+        {
+          "@type": "Country",
+          "name": "Slovensko"
+        },
+        {
+          "@type": "Place",
+          "name": "Evropa"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Businesses, marketing teams, agencies and founders"
+      },
+      "description": "A human-reviewed website audit combining technical SEO, performance, UX, accessibility, offer communication, trust, archetypes and a prioritised roadmap.",
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "4980",
+          "priceCurrency": "CZK",
+          "url": "https://sigel-industries.com/#order"
+        },
+        {
+          "@type": "Offer",
+          "price": "199",
+          "priceCurrency": "EUR",
+          "url": "https://sigel-industries.com/en/#order"
+        }
+      ]
+    }
+  ]
+}{% endblock %}
+{% block main %}
+<section aria-labelledby="hero-title" class="hero hero-monolith">
+<canvas aria-hidden="true" class="hero-canvas" id="heroCanvas"></canvas>
+<div class="wrap hero-layout">
+<div class="hero-copy">
+<p class="tag cold hero-eyebrow reveal">Comprehensive website audit · business intelligence for websites</p>
+<h1 class="reveal" id="hero-title">
+            See what holds your website<br/>
+<em>back</em> — and what<br/>
+            to change first.
+          </h1>
+<p class="hero-sub reveal">
+            SIGEL Web Intelligence is a <strong>comprehensive website audit</strong> connecting <strong>measured evidence</strong> with <strong>business interpretation</strong>
+            in one human-reviewed report: technical health, SEO, UX, accessibility, offer clarity, trust, archetypes and a prioritised roadmap. Delivered within 24 hours.
+          </p>
+<div class="hero-buttons reveal">
+<button class="btn btn-primary" data-order-open="" type="button">Get the Web Intelligence report</button>
+<a class="btn btn-ghost" href="../docs/demo-report-en.pdf" rel="noopener" target="_blank">View report sample</a>
+</div>
+<div aria-label="Service parameters" class="hero-meta reveal">
+<span>Visual PDF report</span>
+<span>Human-reviewed output</span>
+<span>24h delivery</span>
+</div>
+</div>
+<div aria-label="Audit core visualization" class="hero-visual reveal">
+<picture class="monolith-picture">
+<source media="(max-width: 760px)" srcset="../assets/hero/sigel-monolith-mobile.webp" type="image/webp"/>
+<img alt="" aria-hidden="true" class="monolith-img" decoding="async" fetchpriority="high" height="1100" loading="eager" src="../assets/hero/sigel-monolith-desktop.webp" width="1600"/>
+</picture>
+<div aria-hidden="true" class="hero-energy">
+<span class="energy-ring ring-a"></span>
+<span class="energy-ring ring-b"></span>
+<span class="energy-beam beam-a"></span>
+<span class="energy-beam beam-b"></span>
+<span class="energy-beam beam-c"></span>
+<span class="energy-stream stream-a"></span>
+<span class="energy-stream stream-b"></span>
+<span class="energy-node node-a"></span>
+<span class="energy-node node-b"></span>
+<span class="energy-node node-c"></span>
+<span class="energy-node node-d"></span>
+</div>
+<article class="hero-panel panel-measured interactive-card">
+<div class="panel-label cold"><i></i>Measurable</div>
+<div class="panel-score"><span id="scoreNum">0</span><small>/100</small></div>
+<p>audit score · tech and SEO</p>
+</article>
+<article class="hero-panel panel-interpreted interactive-card">
+<div class="panel-label warm"><i></i>Interpreted</div>
+<strong>Offer clarity</strong>
+<p>trust · CTA · decision path</p>
+</article>
+<article class="hero-panel panel-priority interactive-card">
+<span class="priority-pill">Top priority</span>
+<p>Clarify the offer and the main visitor path.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="difference">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">Why this is not another SEO audit</p>
+<h2>Tools measure separate layers of a website.<br/><span class="italic warm-text">SIGEL shows what they mean for the business.</span></h2>
+<p>Lighthouse, SEO tools and UX checklists each answer only part of the problem. SIGEL connects technical evidence, user friction, offer clarity, trust, archetypes and business priorities into one decision layer.</p>
+</div>
+<div class="versus reveal">
+<div class="vs-side vs-cold">
+<span class="vs-chip"><i></i>What can be measured</span>
+<h3>Data and technical signals</h3>
+<p>Hard evidence about website performance and usability: speed, indexability, structure, mobile behaviour, accessibility and technical health.</p>
+<ul class="vs-list">
+<li>Lighthouse, performance and technical limits</li>
+<li>Indexability, sitemap, robots.txt</li>
+<li>Metadata, schema and content structure</li>
+<li>Mobile path, accessibility and CTA friction</li>
+</ul>
+</div>
+<div class="vs-side vs-warm">
+<span class="vs-chip"><i></i>What must be interpreted</span>
+<h3>Business meaning</h3>
+<p>What the measured signals mean for the offer, trust and visitor decisions — and which changes deserve priority over cosmetic work.</p>
+<ul class="vs-list">
+<li>Where the offer loses clarity or trust</li>
+<li>Which audiences lack the right arguments</li>
+<li>How the brand comes across and what that supports</li>
+<li>What to fix first by impact and effort</li>
+</ul>
+</div>
+<div class="vs-foot"><strong>SIGEL</strong> turns measured evidence and business context into one priority roadmap for decisions.</div>
+</div>
+</div>
+</section>
+<section aria-label="Website as a system of signals" class="signal-interlude">
+<canvas aria-hidden="true" id="signalCanvas"></canvas>
+<div class="signal-label reveal">
+<strong>Website as a system of signals.</strong>
+<span>Technical · User · Communication · Business</span>
+</div>
+</section>
+<section class="section" id="solutions">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">When Web Intelligence pays off</p>
+<h2>Six situations, <span class="italic warm-text">one diagnostic for better decisions.</span></h2>
+</div>
+<div class="problem-grid">
+<article class="problem-card cold reveal"><span class="problem-icon">01</span><span class="problem-tag">Conversion &amp; UX</span><h3>Traffic arrives, enquiries do not</h3><p>SIGEL shows where offer clarity, trust, CTA or the main visitor path breaks down.</p><button class="card-more" data-modal-target="problem-leads" type="button">What it solves →</button></article>
+<article class="problem-card cold reveal"><span class="problem-icon">02</span><span class="problem-tag">Performance</span><h3>Marketing is running, results are weak</h3><p>Before increasing spend, it makes sense to check whether the website can persuade visitors at all.</p><button class="card-more" data-modal-target="problem-marketing" type="button">What it solves →</button></article>
+<article class="problem-card warm reveal"><span class="problem-icon">03</span><span class="problem-tag">Redesign</span><h3>Redesign without a clear brief</h3><p>The diagnostic defines what the new website should actually improve: not just visuals, but structure, trust and messaging.</p><button class="card-more" data-modal-target="problem-redesign" type="button">What it solves →</button></article>
+<article class="problem-card warm reveal"><span class="problem-icon">04</span><span class="problem-tag">Archetype</span><h3>The offer is good, people do not get it</h3><p>Sigel clarifies how the company is perceived, who it speaks to and how to formulate the offer.</p><button class="card-more" data-modal-target="problem-offer" type="button">What it solves →</button></article>
+<article class="problem-card warm reveal"><span class="problem-icon">05</span><span class="problem-tag">Strategy</span><h3>The website no longer matches the business</h3><p>SIGEL checks whether the website still matches what the company sells, who it sells to and how it wants to be perceived.</p><button class="card-more" data-modal-target="problem-strategy" type="button">What it solves →</button></article>
+<article class="problem-card cold reveal"><span class="problem-icon">06</span><span class="problem-tag">Teams &amp; agencies</span><h3>Fast input for a decision</h3><p>External diagnostics help avoid starting from zero before consulting, redesign, campaigns or strategic decisions.</p><button class="card-more" data-modal-target="problem-agency" type="button">What it solves →</button></article>
+</div>
+</div>
+</section>
+<section class="section flow-section" id="method">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">How Web Intelligence works</p><h2>From a concrete URL <span class="italic cold-text">to a decision map.</span></h2><p>Four steps connect measured evidence with business context and separate meaningful changes from noise.</p>
+</div>
+<div class="flow" id="flow">
+<div aria-hidden="true" class="flow-line"></div>
+<article class="flow-step"><div class="flow-num">01</div><h3>URL as input</h3><p>We start with a specific website, not generic marketing theory.</p></article>
+<article class="flow-step"><div class="flow-num">02</div><h3>Measured evidence</h3><p>Technical health, SEO, UX, CTA, accessibility, content, trust and offer structure.</p></article>
+<article class="flow-step"><div class="flow-num">03</div><h3>Business interpretation</h3><p>What the signals mean for the offer, trust, audience and decision path.</p></article>
+<article class="flow-step"><div class="flow-num">04</div><h3>Priority decisions</h3><p>Not everything matters equally. The report shows what to solve first, later and what to ignore.</p></article>
+</div>
+</div>
+</section>
+<section class="section system-section" id="engine">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal"><p class="tag">The SIGEL analytical core</p><h2>Six layers. One answer:<br/><span class="italic">what deserves to be <span class="cold-text">fixed first.</span></span></h2><p>The output is not pure AI text or a generic checklist. SIGEL uses its own analytical system, scoring, algorithmic rules, UX heuristics, a business interpretation layer and human review.</p></div>
+<div class="system-layout reveal">
+<div aria-label="Six audit layers" class="system-layers" id="diagList">
+<article class="diag-row cold-layer"><div class="diag-n">01</div><h3>Technical layer and performance</h3><p>Desktop and mobile Lighthouse, Core Web Vitals, rendering, SSL, mixed content, robots and sitemap.</p></article>
+<article class="diag-row cold-layer"><div class="diag-n">02</div><h3>SEO and discoverability</h3><p>Metadata, headings, canonical, Open Graph, schema.org and AI-readiness signals.</p></article>
+<article class="diag-row cold-layer"><div class="diag-n">03</div><h3>UX, CTA and accessibility</h3><p>Links, CTA, mobile viewport, contrast, font size and touch targets.</p></article>
+<article class="diag-row warm-layer"><div class="diag-n">04</div><h3>Offer communication</h3><p>What the website offers, who it serves, its business purpose and where communication loses clarity.</p></article>
+<article class="diag-row warm-layer"><div class="diag-n">05</div><h3>Brand and audience archetypes</h3><p>Brand and audience archetypes, their strategic fit and a practical communication playbook.</p></article>
+<article class="diag-row warm-layer"><div class="diag-n">06</div><h3>Roadmap and evidence</h3><p>Executive summary, impact versus effort, action plan and technical and evidence appendices.</p></article>
+</div>
+<aside aria-label="How the output is created" class="system-process interactive-card"><p class="tag cold">How the report is created</p><h3>Data → scoring → interpretation → review.</h3><ol><li><span>Technical and content signal collection</span></li><li><span>Own scoring, weights and algorithms</span></li><li><span>UX heuristics and interpretation layer</span></li><li><span>Human-reviewed output</span></li></ol><button class="card-more" data-modal-target="system-process" type="button">How the system works →</button></aside>
+</div>
+<div aria-label="What is actually measured in the report" class="audit-evidence reveal">
+<div class="audit-evidence-head"><p class="tag cold">Evidence layer</p><h3>What is actually measured in the report</h3></div>
+<div class="audit-evidence-grid">
+<span>Lighthouse and Core Web Vitals</span><span>Links and CTA</span><span>Mobile viewport</span><span>Contrast and touch targets</span><span>Metadata and schema</span><span>Content extraction</span><span>AI readiness</span><span>Evidence data</span>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="agencies">
+<div class="section-divider"></div>
+<div class="wrap agency-grid">
+<div class="agency-copy reveal">
+<p class="tag">For companies, marketing teams and agencies</p><h2>One diagnostic for people <span class="italic warm-text">who make website decisions.</span></h2><p>Business owners, marketing teams and external agencies get the same foundation: measured facts, business context and clear priorities without assembling five separate audits.</p>
+<div class="inline-actions"><button class="btn btn-primary" data-order-open="" type="button">Get the Web Intelligence report</button></div>
+</div>
+<div class="agency-cards reveal">
+<article class="agency-card"><span class="mini-icon cold">01</span><div><h3>Owner / leadership</h3><p>What is actually holding the website back and where the next budget should go.</p></div></article>
+<article class="agency-card"><span class="mini-icon cold">02</span><div><h3>Marketing / growth</h3><p>What to verify before a campaign and why traffic may not turn into enquiries.</p></div></article>
+<article class="agency-card"><span class="mini-icon warm">03</span><div><h3>Agency / supplier</h3><p>External evidence for consulting, redesign or the agency’s own client recommendation.</p></div></article>
+</div>
+</div>
+</section>
+<section class="section muted-section" id="report">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal"><p class="tag">Web Intelligence Report</p><h2>Data is not enough. <span class="italic cold-text">The output must show priorities.</span></h2><p>Management summary, desktop and mobile Lighthouse metrics, Core Web Vitals, links and CTA, accessibility, offer communication, archetype playbook, roadmap and evidence appendix in one readable PDF.</p></div>
+<div class="report-shell reveal" id="reportWrap">
+<div aria-label="Report sample" class="report-tabs" role="tablist"><button class="report-tab active" data-report-tab="dashboard" type="button">Dashboard</button><button class="report-tab" data-report-tab="technika" type="button">Technical</button><button class="report-tab" data-report-tab="komunikace" type="button">Communication</button><button class="report-tab" data-report-tab="archetypy" type="button">Archetypes</button><button class="report-tab" data-report-tab="roadmapa" type="button">Roadmap</button></div>
+<div class="report-body"><div class="report-score-ring"><span id="reportScore">64</span></div><div class="report-copy"><span class="report-kicker" id="reportKicker">Dashboard</span><h3 id="reportTitle">Score, risks and decision direction.</h3><p id="reportText">The first part combines website health, the main risks and business impact into one fast orientation.</p><div class="report-mini-grid"><span>Score</span><span>Risks</span><span>Business impact</span><span>Roadmap</span></div></div></div>
+<div aria-hidden="true" class="report-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div><div class="report-actions reveal"><a class="btn btn-primary" href="../docs/demo-report-en.pdf" rel="noopener" target="_blank">View report sample</a><p>The sample shows the output structure. A real report contains specific measurements, interpretation, priorities and evidence data for the submitted website.</p></div>
+</div>
+</section>
+<section class="section" id="system-map">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal"><p class="tag">The SIGEL platform</p><h2>One website, one report. <span class="italic warm-text">Or a broader intelligence layer.</span></h2><p>Depending on the situation, SIGEL can analyse one website, provide agency input, prepare a research layer or build the foundation for a segment benchmark.</p></div>
+<div class="use-grid use-grid-expanded">
+<article class="use-card reveal"><span class="mini-icon cold">01</span><span class="status-pill ready">Available</span><h3>Web Intelligence Report</h3><p>Useful when you need to understand one specific website before advertising, redesign or a business decision.</p><button class="card-more" data-modal-target="use-web-audit" type="button">Learn more →</button></article>
+<article class="use-card reveal"><span class="mini-icon cold">02</span><span class="status-pill pilot">Pilot</span><h3>Agency input</h3><p>Useful when an agency needs fast external input for a client, consultation, redesign or recommendation.</p><button class="card-more" data-modal-target="use-agency" type="button">Learn more →</button></article>
+<article class="use-card reveal"><span class="mini-icon warm">03</span><span class="status-pill pilot">Pilot</span><h3>Lead Research</h3><p>Useful when you need relevant company websites and public contacts in a specific segment or location.</p><button class="card-more" data-modal-target="use-lead-research" type="button">Learn more →</button></article>
+<article class="use-card reveal"><span class="mini-icon warm">04</span><span class="status-pill planned">In preparation</span><h3>Segment benchmark</h3><p>Useful when you want to compare multiple websites in one industry, location or custom market selection.</p><button class="card-more" data-modal-target="use-benchmark" type="button">Learn more →</button></article>
+</div>
+</div>
+</section>
+<section class="section" id="guides">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">Website performance guides</p>
+<h2>Start with the situation, <span class="italic cold-text">not the name of a tool.</span></h2>
+<p>Four practical guides explain when a website audit is useful, why a website fails to convert, what to check before a redesign and where a standard SEO audit stops.</p>
+</div>
+<div class="use-grid use-grid-expanded">
+<article class="use-card reveal"><span class="mini-icon cold">01</span><h3>Comprehensive website audit</h3><p>What a useful website audit should review, what the output should contain and when the investment makes sense.</p><a class="card-more" href="/en/website-audit/">Explore website audits →</a></article>
+<article class="use-card reveal"><span class="mini-icon cold">02</span><h3>Why a website is not converting</h3><p>The most common barriers between traffic and enquiries: offer clarity, trust, calls to action, mobile UX and performance.</p><a class="card-more" href="/en/why-website-not-converting/">Find the causes →</a></article>
+<article class="use-card reveal"><span class="mini-icon warm">03</span><h3>Audit before redesign</h3><p>How to create a redesign brief from evidence and real problems instead of opinions and cosmetic changes.</p><a class="card-more" href="/en/website-audit-before-redesign/">Prepare the redesign →</a></article>
+<article class="use-card reveal"><span class="mini-icon warm">04</span><h3>SEO audit vs website audit</h3><p>When technical SEO is enough and when UX, communication, trust and conversion also need to be reviewed.</p><a class="card-more" href="/en/seo-audit-vs-website-audit/">Compare the approaches →</a></article>
+</div>
+</div>
+</section><section class="section muted-section" id="faq">
+<div class="section-divider"></div>
+<div class="wrap"><div class="section-head reveal"><p class="tag">FAQ</p><h2>Practical questions</h2></div><div class="faq-list reveal">
+<details><summary>Is SIGEL just an SEO or technical audit? <span>+</span></summary><p>No. SEO, speed and technical health are only one part. SIGEL works as business intelligence for websites: it connects measured evidence with UX, accessibility, offer clarity, trust, archetypes and a priority roadmap. The result is not another error list, but decision support showing what to fix first.</p></details>
+<details><summary>Is the analysis automated or human-reviewed? <span>+</span></summary><p>The base is created by an analytical system: signal collection, technical checks, custom scoring, UX heuristics and interpretation. Every report is reviewed personally before delivery — so the output has clear priorities and makes practical sense.</p></details>
+<details><summary>How much does it cost and who is it for? <span>+</span></summary><p>The Web Intelligence report costs €199 per URL. The service is for businesses only and is invoiced. The price covers the complete scope: measured technical and UX signals, offer communication, the archetype playbook, a priority roadmap, evidence data and personal review of every report.</p></details>
+<details><summary>When does Web Intelligence make the most sense? <span>+</span></summary><p>It makes the most sense before investing in advertising, before a redesign, when the website gets too few enquiries, or when the offer is good but visitors do not understand it clearly enough. SIGEL does not add another marketing layer blindly; it first shows where the website may be losing clarity, trust or performance.</p></details>
+<details><summary>What if the website has good technical scores but still does not work commercially? <span>+</span></summary><p>That is exactly where SIGEL is useful. Technical health is only one layer. A website can be fast, indexable and formally correct while still failing to explain the offer, build trust, guide visitors to action or speak to the right customer type.</p></details>
+<details><summary>What do brand and customer archetypes mean? <span>+</span></summary><p>The brand archetype describes how the company comes across on the website: expert, creator, guide, innovator or another type of brand role. Customer archetypes help define the motivations, doubts and proof different visitor types need in order to understand and trust the offer.</p></details>
+<details><summary>Can agencies use the output? <span>+</span></summary><p>Yes. An agency can use the report as diagnostic input before consulting, redesign, SEO work or content strategy. By agreement, it can serve as internal preparation, client-facing analytical input or the basis for the agency's own recommendation.</p></details>
+<details><summary>What does the output not guarantee? <span>+</span></summary><p>The report does not guarantee revenue growth, better search rankings or advertising campaign results. It is diagnostic decision support: it shows risks, barriers and priorities worth addressing before sending more budget into the website, advertising or redesign.</p></details>
+</div></div>
+</section>
+<section class="section" id="order">
+<div class="section-divider"></div>
+<div class="wrap"><div class="order-box reveal"><div class="order-steps"><span>1 order</span><span>2 invoice</span><span>3 payment</span><span>4 PDF report</span></div><p class="tag centered">Web Intelligence report</p><div class="order-price">€199</div><p class="order-sub">Order a Web Intelligence report for a specific URL. Add the situation you want to verify in the note.</p><p class="launch-note">For businesses (B2B). Invoiced to your company, report normally within 24 hours on business days after payment. Every output is personally reviewed.</p><div class="order-tags"><span>PDF report</span><span>24h delivery</span><span>Human-reviewed</span></div><button class="btn btn-primary" data-order-open="" type="button">Get the Web Intelligence report →</button></div></div>
+</section>
+{% endblock %}

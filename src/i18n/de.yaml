@@ -1,0 +1,363 @@
+chrome:
+  home: /de/
+  nav_aria: Hauptnavigation
+  lang_aria: Sprache
+  menu_open: Menü öffnen
+  nav:
+  - - difference
+    - Warum SIGEL
+  - - solutions
+    - Lösungen
+  - - method
+    - Methode
+  - - report
+    - Report
+  nav_guide: Website-Audit
+  nav_order: Bestellen
+  footer:
+    tagline: Umfassendes Website-Audit und Business Intelligence für Technik, UX, Kommunikation, Vertrauen und geschäftliche Prioritäten.
+    company: Sigel, s.r.o. · Unternehmens-ID 17428432 · Prag
+    service: Leistung
+    guides: Leitfäden
+    documents: Dokumente
+    service_links:
+    - - difference
+      - Warum SIGEL
+    - - method
+      - Methode
+    - - report
+      - Beispielreport
+    - - order
+      - Bestellen
+    bottom: Website Business Intelligence vor dem nächsten Budgeteinsatz.
+  terms:
+  - /de/agb.html
+  - AGB
+  privacy:
+  - /de/datenschutz.html
+  - Datenschutzerklärung
+  demo:
+  - /docs/demo-report-en.pdf
+  - Beispielreport (EN)
+  cookie:
+    text: Wir verwenden Analytics zur Verbesserung der Website. Keine Werbe-Cookies.
+    deny: Ablehnen
+    accept: Akzeptieren
+  modal:
+    close: Schließen
+    cta: Web-Intelligence-Report bestellen
+    note: 'Hinweis: Der Report ist eine diagnostische Entscheidungsgrundlage. Er garantiert weder Umsatzwachstum noch bessere Suchpositionen oder Kampagnenergebnisse.'
+  guides:
+  - - /de/website-audit/
+    - Website-Audit
+  - - /de/warum-website-nicht-konvertiert/
+    - Warum Websites nicht konvertieren
+  - - /de/website-audit-vor-redesign/
+    - Audit vor dem Redesign
+  - - /de/seo-audit-vs-website-audit/
+    - SEO-Audit vs. Website-Audit
+order:
+  eyebrow: SIGEL Web Intelligence
+  title: Web-Intelligence-Report bestellen
+  lead: Füllen Sie die Bestelldaten aus. Vor dem Absenden sehen Sie eine Zusammenfassung.
+  priceLabel: Preis
+  websiteLabel: Zu analysierende Website-URL
+  websiteHint: Geben Sie einfach die Domain ein. https:// wird automatisch ergänzt.
+  companyLabel: Unternehmen / Auftraggeber
+  contactLabel: Ansprechperson
+  icoLabel: Handelsregister- / Unternehmensnummer
+  dicLabel: USt-IdNr.
+  billingLabel: Rechnungsadresse
+  emailLabel: E-Mail für Rechnung und Report
+  phoneLabel: Telefon
+  reportLangLabel: Reportsprache
+  currencyLabel: Bestellwährung
+  noteLabel: Kontext zur Analyse (optional)
+  termsConsent: Ich bestelle als Unternehmer und stimme den AGB zu.
+  privacyConsent: Ich habe die Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten zur Kenntnis genommen.
+  continue: Weiter zur Zusammenfassung
+  secureNote: Die Bestellung wird an das SIGEL-System übermittelt.
+  summaryEyebrow: Bestellung prüfen
+  summaryTitle: Zusammenfassung vor dem Absenden
+  summaryLead: Prüfen Sie Ihre Angaben. Nach der Bestätigung wird die Bestellung erstellt und eine Rechnung versendet.
+  afterSubmitTitle: Wie es weitergeht
+  afterSubmitText: Nach dem Absenden erhalten Sie in Kürze eine Rechnung. Sobald die Zahlung bestätigt ist, beginnt die Website-Analyse und der PDF-Report wird an die angegebene E-Mail-Adresse gesendet.
+  back: Zurück zum Bearbeiten
+  submitOrder: Verbindlich bestellen für {price}
+  doneEyebrow: Bestellung eingegangen
+  doneTitle: Erledigt. Ihre Bestellung ist im System.
+  doneText: Ihre Bestellung ist eingegangen. Sie erhalten in Kürze eine Rechnung. Nach bestätigtem Zahlungseingang beginnt die Erstellung Ihres Web-Intelligence-Reports.
+  closeDone: Schließen
+  newOrder: Neue Bestellung
+  websiteError: Geben Sie eine gültige Website-URL ein.
+  emailError: Geben Sie eine gültige E-Mail-Adresse ein.
+  requiredError: Dieses Feld ist erforderlich.
+  phoneError: Die Telefonnummer scheint nicht gültig zu sein.
+  consentsError: AGB und Datenschutzinformationen müssen bestätigt werden.
+  sending: Bestellung wird gesendet …
+  sendError: Die Bestellung konnte nicht gesendet werden, es wurde nichts gespeichert. Versuchen Sie es erneut oder senden Sie sie per E-Mail.
+  closeLabel: Formular schließen
+  summaryLabels:
+    website: Website
+    company: Unternehmen / Auftraggeber
+    ico: Unternehmensnummer
+    dic: USt-IdNr.
+    contactPerson: Ansprechperson
+    email: E-Mail
+    phone: Telefon
+    billing: Rechnungsadresse
+    reportLanguage: Reportsprache
+    price: Preis
+    note: Notiz
+  icoRequired: Geben Sie die Unternehmensnummer an.
+  b2bNote: Die Leistung richtet sich ausschließlich an Unternehmen (B2B).
+  sendEmail: Bestellung per E-Mail senden
+  mailSubject: Bestellung Web-Intelligence-Report
+  ph:
+    website: beispiel.de
+    company: Unternehmensname
+    contactPerson: Vor- und Nachname
+    ico: HRB 12345 / Nummer
+    dic: DE123456789 / optional
+    billing: Name, Straße, PLZ, Ort, Land…
+    email: kontakt@unternehmen.de
+    phone: +49 30 00000000
+    note: Was sollten wir über die Website oder die aktuelle Situation wissen?
+  prices:
+    CZK: 4.980 CZK
+    EUR: 199 €
+  defaultCurrency: EUR
+report:
+  dashboard:
+    score: '64'
+    kicker: Dashboard
+    title: Score, Risiken und Entscheidungsrichtung.
+    text: Der erste Teil verbindet Website-Zustand, Hauptrisiken und geschäftliche Wirkung zu einer schnellen Orientierung.
+    items:
+    - Score
+    - Risiken
+    - Geschäftliche Wirkung
+    - Roadmap
+    bars:
+    - 45
+    - 70
+    - 52
+    - 90
+    - 75
+    - 95
+    - 62
+    - 82
+  technika:
+    score: '78'
+    kicker: Technik
+    title: Performance, Indexierbarkeit und technische Grenzen.
+    text: 'Harte Prüfung der Grundlagen: Geschwindigkeit, technischer Zustand, Metadaten, Sitemap, robots und mobile Nutzbarkeit.'
+    items:
+    - Geschwindigkeit
+    - Indexierung
+    - Metadaten
+    - Mobil
+    bars:
+    - 86
+    - 98
+    - 76
+    - 92
+    - 70
+    - 88
+    - 54
+    - 78
+  komunikace:
+    score: '49'
+    kicker: Kommunikation
+    title: Angebotsklarheit und Vertrauen.
+    text: Bewertung, ob Besucher das Angebot, die Kaufgründe und den nächsten Schritt schnell verstehen.
+    items:
+    - Angebot
+    - Vertrauen
+    - CTA
+    - Belege
+    bars:
+    - 52
+    - 74
+    - 45
+    - 82
+    - 64
+    - 58
+    - 88
+    - 70
+  archetypy:
+    score: '57'
+    kicker: Archetypen
+    title: Marke und Kundenmotive.
+    text: 'Interpretation von Marken- und Kundenarchetypen: Wer benötigt Belege, Klarheit oder Vision.'
+    items:
+    - Marke
+    - Motive
+    - Einwände
+    - Ton
+    bars:
+    - 62
+    - 78
+    - 88
+    - 56
+    - 92
+    - 66
+    - 80
+    - 72
+  roadmapa:
+    score: '64'
+    kicker: Roadmap
+    title: Was zuerst, danach und später zu lösen ist.
+    text: Ein priorisierter Plan, der kosmetische Änderungen von Punkten mit echter geschäftlicher Wirkung trennt.
+    items:
+    - Priorität
+    - Wirkung
+    - Tempo
+    - Nächster Schritt
+    bars:
+    - 92
+    - 64
+    - 80
+    - 70
+    - 88
+    - 76
+    - 58
+    - 95
+modal:
+  problem-leads:
+    kicker: Was es löst
+    title: Zu wenige Anfragen über die Website
+    lead: Eine Website kann technisch sauber sein und trotzdem nicht überzeugen. SIGEL sucht Stellen, an denen Besucher Klarheit, Vertrauen oder den nächsten Schritt verlieren.
+    items:
+    - - Wann es hilft
+      - Wenn die Website Traffic hat, aber wenige Anfragen, Bestellungen oder sinnvolle Aktionen erzeugt.
+    - - Was geprüft wird
+      - Angebotsklarheit, CTA, Vertrauen, mobiler Weg und Kommunikationsbarrieren.
+    - - Typischer Output
+      - Prioritäten, die Kosmetik von Punkten mit echter Wirkung trennen.
+    cta: Web-Intelligence-Report für 199 € bestellen
+  problem-marketing:
+    kicker: Was es löst
+    title: Marketing läuft, die Ergebnisse bleiben schwach
+    lead: Bevor das Werbebudget steigt, sollte geprüft werden, ob die Landingpage eine Entscheidung überhaupt unterstützt.
+    items:
+    - - Wann es hilft
+      - Vor Werbung, bei schwacher Conversion oder wenn Kampagnen Traffic ohne Ergebnis senden.
+    - - Was geprüft wird
+      - Landingbereiche, Geschwindigkeit, CTA, Belege, Vertrauen und Abweichungen zwischen Werbung und Website.
+    - - Typischer Output
+      - Eine Liste von Barrieren, die Leistung schon vor der Kampagne blockieren können.
+    cta: Website vor Werbung prüfen
+  problem-redesign:
+    kicker: Was es löst
+    title: Redesign ohne klares Briefing
+    lead: Ein Redesign ohne Diagnostik verändert oft nur die Optik. SIGEL definiert, was die neue Website tatsächlich beheben soll.
+    items:
+    - - Wann es hilft
+      - Vor Redesign, Agenturbriefing oder der Entscheidung, was geändert werden soll.
+    - - Was geprüft wird
+      - Struktur, Angebotskommunikation, Vertrauen, UX, Markenarchetyp und Entscheidungsweg.
+    - - Typischer Output
+      - Eine Redesign-Grundlage mit Fokus auf Funktion statt Dekoration.
+    cta: Grundlage für das Redesign erhalten
+  problem-offer:
+    kicker: Was es löst
+    title: Das Angebot ist gut, wird aber nicht verstanden
+    lead: Manchmal ist nicht das Produkt das Problem, sondern die Erklärung seines Werts.
+    items:
+    - - Wann es hilft
+      - Wenn Kunden Wert, Preis, Unterschied oder Grund zum Fortfahren nicht verstehen.
+    - - Was geprüft wird
+      - Angebotssprache, Belege, Markenarchetyp und Kundenmotive.
+    - - Typischer Output
+      - Empfehlungen zur Präzisierung des Angebots für unterschiedliche Kundentypen.
+    cta: Website-Kommunikation präzisieren
+  problem-strategy:
+    kicker: Was es löst
+    title: Die Website passt nicht mehr zum Unternehmen
+    lead: Websites bleiben oft in der Vergangenheit, während sich das Unternehmen weiterentwickelt. SIGEL prüft, ob Kommunikation, Angebot und Zielgruppen noch zur Geschäftsrichtung passen.
+    items:
+    - - Wann es hilft
+      - Bei Stagnation, verändertem Angebot, neuer Zielgruppe oder vor einer strategischen Entscheidung.
+    - - Was geprüft wird
+      - Angebotspassung, Positionierung, Archetyp, Kundensegmente und prioritäre Risiken.
+    - - Typischer Output
+      - Eine Roadmap dessen, was zuerst geändert werden sollte.
+    cta: Website-Strategie prüfen
+  problem-agency:
+    kicker: Was es löst
+    title: Schnelle Grundlage für eine Entscheidung
+    lead: Inhaber, Marketingteams und Agenturen müssen nicht bei Meinungen beginnen. SIGEL liefert externe Diagnostik als Input für Beratung, Redesign, Kampagnen oder Strategie.
+    items:
+    - - Wann es hilft
+      - Vor Beratung, Empfehlungen, Kampagnen, Redesign oder der nächsten Budgetentscheidung.
+    - - Was geprüft wird
+      - Technik, UX, Kommunikation, Vertrauen, Archetypen und Prioritäten in einem Input.
+    - - Typischer Output
+      - Ein schneller Report als interne Entscheidungsgrundlage oder Kunden-Input.
+    cta: Pilot-Zusammenarbeit besprechen
+  system-process:
+    kicker: Analytischer Kern
+    title: So erstellt SIGEL den Web-Intelligence-Output
+    lead: SIGEL Web Intelligence ist weder reiner KI-Text noch eine generische Checkliste. Das Analysesystem sammelt Website-Signale, bewertet sie mit eigenem Scoring, Regeln, Gewichtungen und UX-Heuristiken
+      und übersetzt sie in einen geschäftlich nutzbaren Report.
+    items:
+    - - Signalerfassung
+      - Technik, SEO, Struktur, Inhalt, CTA, Vertrauen und Angebotskommunikation.
+    - - Eigene Analyselogik
+      - Regeln, Gewichtungen, Prioritäten und Scoring machen sichtbar, was echte Wirkung hat.
+    - - UX- und Kommunikationsheuristiken
+      - Das System prüft, wo Besucher das Angebot verstehen, zögern, Vertrauen verlieren oder den nächsten Schritt nicht finden.
+    - - Interpretationsschicht
+      - Daten werden über Marke, Kundenarchetypen und Kommunikationsmuster interpretiert.
+    - - Persönliche Prüfung
+      - Jeder Report wird vor der Lieferung geprüft, damit Prioritäten klar und praktisch nutzbar sind.
+    cta: Web-Intelligence-Report für 199 € bestellen
+  use-web-audit:
+    kicker: Verfügbar
+    title: Web-Intelligence-Report
+    lead: 'Das Kernprodukt von SIGEL: Business Intelligence für eine konkrete Website vor Werbung, Redesign oder einer Geschäftsentscheidung.'
+    items:
+    - - Enthält
+      - Lighthouse-Metriken für Desktop und Mobilgeräte, Core Web Vitals, Links und CTA, Barrierefreiheit, Angebotskommunikation, KI-Bereitschaft, Archetypen-Playbook, Roadmap und Evidenzdaten.
+    - - Geeignet für
+      - Unternehmen, Freelancer, kleine Teams oder Projekte, die einen klaren diagnostischen Input benötigen.
+    - - Output
+      - Visueller PDF-Report mit Prioritäten und Empfehlungen.
+    cta: Web-Intelligence-Report bestellen
+  use-agency:
+    kicker: Pilot
+    title: Agentur-Input
+    lead: 'Dieselbe diagnostische Basis, verpackt für Agenturnutzung: Kundenberatung, Redesign, SEO oder Content-Strategie.'
+    items:
+    - - Enthält
+      - Externe Sicht auf die Kundenwebsite, Prioritäten und Input für Empfehlungen.
+    - - Geeignet für
+      - Agenturen, die einen schnelleren Startpunkt ohne vollständige manuelle Diagnostik von null benötigen.
+    - - Output
+      - Report oder interner Input nach Absprache.
+    cta: Pilot-Zusammenarbeit besprechen
+  use-lead-research:
+    kicker: Pilot
+    title: Lead Research
+    lead: Eine Research-Ebene zur Suche relevanter Unternehmenswebsites und öffentlicher Kontakte in Segment, Region oder individueller Marktauswahl.
+    items:
+    - - Enthält
+      - URL-Sammlung, Filterung, grundlegende Validierung und Kontaktvorbereitung für B2B-Research.
+    - - Geeignet für
+      - Vertriebsvorbereitung, Marktsegmentierung, Interessentenlisten oder Folgeanalysen.
+    - - Output
+      - Strukturierte Liste von Websites und Kontakten nach Briefing.
+    cta: Segmentauswahl besprechen
+  use-benchmark:
+    kicker: In Vorbereitung
+    title: Segment-Benchmark
+    lead: Vergleich mehrerer Websites in einer Branche, Region oder Marktauswahl. Diese Ebene liegt über einzelnen Reports.
+    items:
+    - - Enthält
+      - Score-Vergleich, wiederkehrende Muster, Unterschiede zwischen Marktteilnehmern und Segmentsignale.
+    - - Geeignet für
+      - Marktüberblick, interne Entscheidungen, Vertriebsselektion oder Strategievorbereitung.
+    - - Output
+      - Benchmark-Karte und Zusammenfassung der wichtigsten Erkenntnisse.
+    cta: Benchmark anfragen
