@@ -47,7 +47,7 @@
 {%- endif %}
 <article class="guide-article">
 {{ body | heading_ids }}
-{%- if lang == 'cs' and page.url != '/audit-webu-agentura-nastroje-nebo-sigel/' %}
+{%- if page.url != t.compare_url %}
 {% include "partials/cmp_promo.html" %}
 {%- endif %}
 </article>

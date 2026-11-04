@@ -57,6 +57,11 @@ chrome:
     - Audit pred redizajnom
   - - /sk/seo-audit-vs-komplexny-audit-webu/
     - SEO audit vs. audit webu
+  - - /sk/audit-webu-agentura-nastroje-alebo-sigel/
+    - Agentúra, nástroje, alebo SIGEL
+  nav_products:
+  - - /sk/cennik/
+    - Cenník
   lang_offer:
     text: Zobraziť túto stránku po slovensky?
     'yes': Áno, po slovensky
@@ -495,6 +500,9 @@ guide:
   - - /sk/seo-audit-vs-komplexny-audit-webu/
     - SEO audit vs. audit webu
     - Kedy stačí technické SEO a kedy treba riešiť aj UX, komunikáciu, dôveru a konverziu.
+  - - /sk/audit-webu-agentura-nastroje-alebo-sigel/
+    - Agentúra, nástroje, alebo SIGEL?
+    - 'Jedenásť oblastí vedľa seba: čo ktorý audit pokryje, koľko stojí a kedy sa hodí.'
 home_areas:
   h2:
   - 'Jedenásť oblastí. Jedna odpoveď:'
@@ -548,7 +556,7 @@ home_compare:
   - Agentúra
   - SIGEL
   cta: Objednať report
-  cta_href: ''
+  cta_href: /sk/audit-webu-agentura-nastroje-alebo-sigel/
   legend:
   - pokryté
   - čiastočne / zvlášť
@@ -624,3 +632,298 @@ home_order:
   - Ručne kontrolovaný výstup
   - Faktúra na IČO
   - Spravidla do 24 h po pripísaní platby
+compare_url: /sk/audit-webu-agentura-nastroje-alebo-sigel/
+compare_url: /sk/audit-webu-agentura-nastroje-alebo-sigel/
+cmp_promo:
+  href: /sk/audit-webu-agentura-nastroje-alebo-sigel/
+  kicker: Porovnanie · 11 oblastí
+  title: Agentúra, nástroje zadarmo, alebo SIGEL?
+  text: Čo ktorý audit pokryje, koľko stojí a kedy sa hodí. Prehľadne vedľa seba.
+  cta: Porovnať →
+pricing:
+  ld: 'Komplexný audit webu pre jednu URL: technika, SEO, UX, prístupnosť, komunikácia ponuky, archetypy a prioritná roadmapa v ručne kontrolovanom PDF reporte.'
+  crumb: Cenník
+  h1: Jedna položka na faktúre.
+  lead: Celý Web Intelligence report pre jednu URL za 199 €. Bez balíkov, príplatkov a mesačných poplatkov. Rozkliknite ktorúkoľvek položku dokladu a uvidíte, čo presne obsahuje.
+  cta_hero: Objednať report za 199 €
+  demo: Ukážkový report, 21 strán
+  promise:
+  - - Spravidla do 24 h
+    - ' v pracovné dni po pripísaní platby'
+  - - Ručne kontrolovaný
+    - ' každý report pred odoslaním'
+  - - Faktúra na IČO
+    - ', pri českých firmách doplníme údaje z ARES'
+  receipt_aria: Čo je v cene
+  rc_sub: Web Intelligence report
+  in_price: v cene
+  layers:
+  - - Meriame
+    - - - Technika a výkon
+        - 'Lighthouse pre desktop aj mobil, Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+      - - Bezpečnostné signály
+        - HTTPS a presmerovania, TLS certifikát, bezpečnostné HTTP hlavičky. Pasívna kontrola.
+      - - Odkazy a CTA
+        - Nefunkčné a blokované odkazy, výzvy na akciu a podozrivé prvky.
+      - - Prístupnosť
+        - Kontrast, veľkosť písma a dotykové ciele s konkrétnymi prvkami na desktope aj mobile.
+      - - AI pripravenosť
+        - Štruktúrované dáta a signály pre AI vyhľadávanie.
+  - - Vyhodnocujeme
+    - - - Celkový obraz
+        - Skóre v šiestich oblastiach a súhrn silných stránok a rizík.
+      - - UX a komunikácia ponuky
+        - Jasnosť, konzistentnosť a konkrétnosť posolstva, navigácia a dopad na konverziu.
+      - - Archetyp značky a publika
+        - Mapa archetypov, brand a customer playbook, pravidlá tónu komunikácie.
+  - - Rozhodujete
+    - - - Manažérske zhrnutie
+        - Krátky rozhodovací prehľad a obchodný dopad pre vedenie.
+      - - Prioritná roadmapa
+        - Čo riešiť ako prvé, rýchle výhry, dopad × náročnosť.
+      - - Dôkazný appendix
+        - Crawl, robots, sitemap, metadáta a namerané dáta.
+  review:
+  - Ručná kontrola
+  - Každý report pred odoslaním osobne prechádzame, aby priority dávali zmysel pre váš web.
+  total: Spolu
+  price: 199 €
+  alt: alebo 4 980 Kč · pre firmy a podnikateľov
+  steps_tag: Ako prebieha objednávka
+  steps_h2:
+  - Štyri kroky.
+  - Bez stretnutí.
+  steps:
+  - - Objednávka
+    - Zadáte URL a IČO, pri českých firmách doplníme údaje z ARES.
+  - - Faktúra
+    - Čoskoro vám príde faktúra na zadaný e-mail.
+  - - Platba
+    - Prevodom podľa faktúry.
+  - - Report
+    - Spravidla do 24 hodín v pracovné dni od pripísania platby, e-mailom ako PDF.
+  note: Služba je určená firmám a podnikateľom (B2B). Podrobnosti upravujú <a href="/sk/obchodne-podmienky.html">obchodné podmienky</a>.
+  ctx_tag: Cena v kontexte
+  ctx_h2:
+  - Čo by ste inak
+  - skladali z viacerých zákaziek.
+  ctx_p: Samostatný SEO audit sa oceňuje podľa veľkosti webu a pokrýva len jednu z oblastí vyššie. UX, prístupnosť, bezpečnosť alebo komunikácia značky sa v agentúrach zvyčajne riešia ako ďalšie samostatné zákazky.
+  scale: null
+  not_tag: Pre koho to nie je
+  not_h2:
+  - Aby ste vedeli vopred,
+  - kedy SIGEL nedáva zmysel.
+  not:
+  - - Weby pred spustením
+    - Nie je čo merať. Report dáva zmysel až na bežiacom webe.
+  - - Záruka pozícií alebo tržieb
+    - Report je diagnostika a podklad na rozhodnutie, nie sľub výsledku.
+  - - Tisíce produktových stránok
+    - Report hodnotí web ako celok, nie každú URL veľkého e-shopu zvlášť.
+  - - Hlavne implementácia
+    - SIGEL povie, čo opraviť a v akom poradí. Samotné úpravy robí váš vývojár alebo agentúra.
+  ag_tag: Agentúry a viac webov
+  ag_h2: Reporty pre klientov, pravidelne.
+  ag_p: Potrebujete reporty pre viac webov alebo klientov? Objednajte prvý report, alebo napíšte na <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a> a dohodneme podmienky opakovanej spolupráce.
+  ag_cta: Objednať prvý report
+  ag_links:
+  - Čo je v cene
+  - Porovnanie s agentúrou a nástrojmi
+  - Ukážkový report, 21 strán
+compare:
+  crumb: Porovnanie
+  h1: Koľko z 11 oblastí váš audit naozaj pokryje?
+  lead: Štyri cesty, ako zistiť, čo web brzdí. Líšia sa cenou a rýchlosťou, ale hlavne tým, koľko oblastí pokryjú a či na konci dostanete čísla, alebo rozhodnutie.
+  board_aria: Pokrytie 11 oblastí podľa typu auditu
+  full: plne
+  part: čiastočne
+  of: z 11
+  price: Cena
+  delivery: Dodanie
+  card_cta: Objednať report
+  board_note: 'Plne, čiastočne alebo vôbec: podľa tabuľky nižšie.'
+  board_link: Zobraziť všetkých 11 oblastí
+  options:
+  - - Nástroje zadarmo
+    - Lighthouse, PageSpeed Insights
+    - 0 €
+    - okamžite
+    - Technické čísla bez kontextu. Nevedia, čo predávate, ani čo opraviť ako prvé.
+  - - SEO audit
+    - SEO špecialista alebo agentúra
+    - podľa rozsahu webu
+    - podľa dohody
+    - Do hĺbky v dohľadateľnosti. UX, ponuka ani značka nie sú jeho téma.
+  - - Agentúrny audit
+    - SEO, UX, copywriting, brand
+    - súčet viacerých zákaziek
+    - podľa dohody
+    - Môže pokryť všetko, ale skladá sa z viacerých zadaní a rozsah sa líši agentúra od agentúry.
+  - - SIGEL Web Intelligence
+    - jeden report, ručná kontrola
+    - 199 €
+    - do 24 h po platbe
+    - Technika, UX, bezpečnosť, ponuka aj značka. Na konci roadmapa, čo riešiť ako prvé.
+  m_tag: Čo ktorý audit pokryje
+  m_h2:
+  - Jedenásť oblastí.
+  - Jeden report.
+  m_p: Orientačné porovnanie rozsahu. Agentúrne audity sa líšia podľa zadania; „zvlášť“ znamená, že oblasť zvyčajne rieši iný špecialista alebo iná objednávka.
+  legend_aria: Legenda
+  legend:
+  - pokryté
+  - čiastočne / podľa zadania
+  - nepokryté
+  area: Oblasť
+  columns:
+  - Nástroje zadarmo
+  - SEO audit
+  - Komplexný agentúrny audit
+  - SIGEL Web Intelligence
+  groups:
+  - - Technika a dohľadateľnosť
+    - - - 'Výkon: Lighthouse desktop aj mobil, Core Web Vitals'
+        - - - y
+            - áno
+          - - y
+            - áno
+          - - y
+            - áno
+          - - y
+            - áno
+      - - 'Indexácia: robots.txt, sitemap, canonical, metadáta'
+        - - - p
+            - základ
+          - - y
+            - áno
+          - - y
+            - áno
+          - - y
+            - áno
+      - - Odkazy a výzvy na akciu (CTA)
+        - - - p
+            - len odkazy
+          - - p
+            - len odkazy
+          - - p
+            - podľa zadania
+          - - y
+            - áno
+      - - Prístupnosť s konkrétnymi prvkami
+        - - - p
+            - všeobecné skóre
+          - - n
+            - nie
+          - - p
+            - podľa zadania
+          - - y
+            - áno
+      - - 'Bezpečnosť: HTTPS, TLS, bezpečnostné hlavičky'
+        - - - p
+            - iné nástroje
+          - - n
+            - nie
+          - - p
+            - samostatná zákazka
+          - - y
+            - pasívna kontrola
+  - - Používateľ, ponuka a značka
+    - - - UX a mobilná použiteľnosť
+        - - - n
+            - nie
+          - - n
+            - nie
+          - - p
+            - UX audit zvlášť
+          - - y
+            - áno
+      - - 'Komunikácia ponuky: jasnosť, konzistentnosť, konkrétnosť'
+        - - - n
+            - nie
+          - - n
+            - nie
+          - - p
+            - copy / stratégia zvlášť
+          - - y
+            - áno
+      - - 'AI pripravenosť: štruktúrované dáta, signály pre AI'
+        - - - n
+            - nie
+          - - p
+            - niekedy
+          - - p
+            - niekedy
+          - - y
+            - áno
+      - - Archetyp značky a publika, komunikačný playbook
+        - - - n
+            - nie
+          - - n
+            - nie
+          - - p
+            - brand stratégia zvlášť
+          - - y
+            - áno
+  - - Výstup pre rozhodnutie
+    - - - Obchodný dopad a roadmapa (dopad × náročnosť)
+        - - - n
+            - nie
+          - - p
+            - SEO odporúčania
+          - - y
+            - áno
+          - - y
+            - áno
+      - - Dôkazný appendix s nameranými dátami
+        - - - p
+            - surové dáta
+          - - y
+            - áno
+          - - p
+            - podľa zadania
+          - - y
+            - áno
+  cover_label: Pokrytie 11 oblastí
+  cover_aria: 'Pokrytie: {full} oblastí plne, {part} čiastočne z 11'
+  foot:
+  - - Kto to robí
+    - - vy sami
+      - SEO špecialista
+      - 'tím: SEO, UX, copy, brand'
+      - jeden report, ručná kontrola
+  - - Cena
+    - - 0 €
+      - podľa rozsahu webu
+      - súčet viacerých zákaziek
+      - 199 €
+  - - Dodanie
+    - - okamžite
+      - podľa dohody
+      - podľa dohody
+      - spravidla do 24 h po platbe
+  footnote: 'Pri SEO a komplexných agentúrnych auditoch uvádzame rozsah, nie cenu: líši sa podľa veľkosti webu, počtu špecialistov a zadania.'
+  d_tag: Ako sa rozhodnúť
+  d_h2:
+  - Každá cesta má zmysel.
+  - Len v inej situácii.
+  decide:
+  - - „Riešime len rýchlosť a technické chyby a máme vývojára, ktorý ich opraví.“
+    - Nástroje zadarmo
+    - Na prvú orientáciu a priebežnú kontrolu techniky stačia. Počítajte s tým, že čísla musí niekto vedieť prečítať.
+  - - „Chystáme dlhodobé SEO alebo kampane s konkrétnou agentúrou.“
+    - Audit od agentúry
+    - Audit ako vstup do spolupráce dáva zmysel. Vopred si overte, ktoré oblasti zadanie pokrýva.
+  - - „Nevieme, prečo web neprináša dopyty, a potrebujeme vedieť, čo opraviť ako prvé.“
+    - SIGEL Web Intelligence
+    - Rýchly podklad pred redizajnom, kampaňou alebo rozhodnutím o rozpočte, prípadne ako zadanie pre vývojára či agentúru.
+  o_price: 199 €
+  o_sub: alebo 4 980 Kč · jedna URL · pre firmy (B2B)
+  o_cta: Získať Web Intelligence report
+  o_list:
+  - 11 oblastí v jednom PDF reporte
+  - Manažérske zhrnutie a prioritná roadmapa
+  - Ručne kontrolovaný výstup
+  - Spravidla do 24 h v pracovné dni od pripísania platby
+  o_links:
+  - Čo presne je v cene
+  - ukážkový report

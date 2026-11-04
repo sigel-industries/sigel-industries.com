@@ -1,0 +1,125 @@
+{#- Pricing page; copy in i18n `pricing`, shared by cs/sk/en/de -#}
+{% extends "base.html" %}
+{% block jsonld %}{%- set P = t.pricing %}{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "{{ site.origin }}{{ page.url }}#product",
+  "name": "SIGEL Web Intelligence Report",
+  "description": "{{ P.ld }}",
+  "brand": { "@type": "Brand", "name": "SIGEL" },
+  "offers": [
+    { "@type": "Offer", "price": "4980", "priceCurrency": "CZK", "url": "{{ site.origin }}{{ page.url }}", "availability": "https://schema.org/InStock", "seller": { "@id": "https://sigel-industries.com/#organization" } },
+    { "@type": "Offer", "price": "199", "priceCurrency": "EUR", "url": "{{ site.origin }}{{ page.url }}", "availability": "https://schema.org/InStock", "seller": { "@id": "https://sigel-industries.com/#organization" } }
+  ]
+}{% endblock %}
+{% block main %}
+{%- set P = t.pricing %}
+<section class="page-shell pr-hero">
+<div class="wrap pr-hero-grid">
+<div class="pr-hero-copy">
+<p class="eyebrow guide-crumb reveal"><a href="{{ t.chrome.home }}">SIGEL</a> / {{ P.crumb }}</p>
+<h1 class="reveal">{{ P.h1 }}</h1>
+<p class="guide-lead reveal">{{ P.lead }}</p>
+<div class="hero-buttons reveal">
+<button class="btn btn-primary" data-order-open="" data-track="pricing-hero" type="button">{{ P.cta_hero }}</button>
+<a class="btn btn-ghost" data-track="pricing" href="{{ t.chrome.demo[0] }}" rel="noopener" target="_blank">{{ P.demo }}</a>
+</div>
+<ul class="pr-promise reveal">
+{%- for b, rest in P.promise %}
+<li><b>{{ b }}</b>{{ rest }}</li>
+{%- endfor %}
+</ul>
+</div>
+<figure class="receipt reveal" id="obsah" aria-label="{{ P.receipt_aria }}">
+<header class="rc-head">
+<strong>SIGEL INDUSTRIES</strong>
+<span>{{ P.rc_sub }}</span>
+<span>1 URL · PDF · CZ/SK/EN/DE</span>
+</header>
+{%- for name, items in P.layers %}
+<p class="rc-group">{{ name }}</p>
+{%- for title, text in items %}
+<details class="rc-item"><summary><span>{{ title }}</span><i aria-hidden="true"></i><b>{{ P.in_price }}</b></summary><p>{{ text }}</p></details>
+{%- endfor %}
+{%- endfor %}
+<details class="rc-item"><summary><span>{{ P.review[0] }}</span><i aria-hidden="true"></i><b>{{ P.in_price }}</b></summary><p>{{ P.review[1] }}</p></details>
+<div class="rc-total"><span>{{ P.total }}</span><strong>{{ P.price }}</strong></div>
+<p class="rc-alt">{{ P.alt }}</p>
+<div aria-hidden="true" class="rc-code"></div>
+</figure>
+</div>
+</section>
+
+<section class="section muted-section" id="postup">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">{{ P.steps_tag }}</p>
+<h2>{{ P.steps_h2[0] }} <span class="italic warm-text">{{ P.steps_h2[1] }}</span></h2>
+</div>
+<ol class="pr-timeline reveal">
+{%- for h, p in P.steps %}
+<li{% if loop.last %} class="pr-timeline-end"{% endif %}><span class="pr-node"></span><h3>{{ h }}</h3><p>{{ p }}</p></li>
+{%- endfor %}
+</ol>
+<p class="pr-note reveal">{{ P.note }}</p>
+</div>
+</section>
+
+<section class="section" id="kontext">
+<div class="section-divider"></div>
+<div class="wrap pr-context">
+<div class="section-head reveal">
+<p class="tag">{{ P.ctx_tag }}</p>
+<h2>{{ P.ctx_h2[0] }} <span class="italic cold-text">{{ P.ctx_h2[1] }}</span></h2>
+<p>{{ P.ctx_p }}</p>
+</div>
+{%- if P.scale %}
+{%- set sc = P.scale %}
+<figure class="pr-scale reveal" aria-label="{{ sc.aria }}">
+<div class="pr-scale-track">
+<span class="pr-scale-band" style="left:10%;right:0"><span><b>{{ sc.band_b }}</b> {{ sc.band }}</span></span>
+<span class="pr-scale-mark" style="left:9.96%"><b>{{ sc.mark_b }}</b> {{ sc.mark }}</span>
+</div>
+<div class="pr-scale-axis">{% for v in sc.axis %}<span style="left:{{ loop.index0 * 20 }}%">{{ v }}</span>{% endfor %}</div>
+<figcaption>{{ sc.caption }}</figcaption>
+</figure>
+{%- endif %}
+{% include "partials/cmp_promo.html" %}
+</div>
+</section>
+
+<section class="section muted-section" id="pro-koho-ne">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">{{ P.not_tag }}</p>
+<h2>{{ P.not_h2[0] }} <span class="italic warm-text">{{ P.not_h2[1] }}</span></h2>
+</div>
+<ul class="pr-not-list reveal">
+{%- for h, p in P.not %}
+<li><h3>{{ h }}</h3><p>{{ p }}</p></li>
+{%- endfor %}
+</ul>
+</div>
+</section>
+
+<section class="section" id="order">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="order-box order-split reveal">
+<div class="order-main">
+<p class="tag">{{ P.ag_tag }}</p>
+<h2 class="order-title">{{ P.ag_h2 }}</h2>
+<p class="order-sub">{{ P.ag_p }}</p>
+<button class="btn btn-primary" data-order-open="" data-track="pricing-bottom" type="button">{{ P.ag_cta }}</button>
+</div>
+<ul class="order-links">
+<li><a href="#obsah">{{ P.ag_links[0] }}</a></li>
+<li><a href="{{ t.compare_url }}">{{ P.ag_links[1] }}</a></li>
+<li><a data-track="pricing" href="{{ t.chrome.demo[0] }}" rel="noopener" target="_blank">{{ P.ag_links[2] }}</a></li>
+</ul>
+</div>
+</div>
+</section>
+{% endblock %}

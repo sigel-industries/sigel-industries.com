@@ -1,10 +1,11 @@
-{#- Featured link to the comparison page (CS) -#}
-<a class="cmp-promo reveal" data-track="compare-promo" href="/audit-webu-agentura-nastroje-nebo-sigel/">
+{#- Featured link to the comparison page, copy in i18n cmp_promo -#}
+{%- set cp = t.cmp_promo -%}
+<a class="cmp-promo reveal" data-track="compare-promo" href="{{ cp.href }}">
 <span>
-<span class="cmp-promo-kicker">Srovnání · 11 oblastí</span>
-<strong>Agentura, nástroje zdarma, nebo SIGEL?</strong>
-<span class="cmp-promo-text">Co který audit pokryje, kolik stojí a kdy se hodí. Přehledně vedle sebe.</span>
+<span class="cmp-promo-kicker">{{ cp.kicker }}</span>
+<strong>{{ cp.title }}</strong>
+<span class="cmp-promo-text">{{ cp.text }}</span>
 <span aria-hidden="true" class="cmp-promo-dots">{% for s in ['y','y','y','y','y','y','y','y','y','y','y'] %}<span class="cmp-dot cmp-{{ s }}"></span>{% endfor %}</span>
 </span>
-<span class="cmp-promo-cta">Porovnat →</span>
+<span class="cmp-promo-cta">{{ cp.cta }}</span>
 </a>

@@ -57,6 +57,11 @@ chrome:
     - Audit before redesign
   - - /en/seo-audit-vs-website-audit/
     - SEO audit vs website audit
+  - - /en/website-audit-agency-tools-or-sigel/
+    - Agency, tools, or SIGEL
+  nav_products:
+  - - /en/pricing/
+    - Pricing
   lang_offer:
     text: View this page in English?
     'yes': Yes, English
@@ -495,6 +500,9 @@ guide:
   - - /en/seo-audit-vs-website-audit/
     - SEO audit vs website audit
     - When technical SEO is enough and when UX, communication, trust and conversion also need to be reviewed.
+  - - /en/website-audit-agency-tools-or-sigel/
+    - Agency, tools, or SIGEL?
+    - 'Eleven areas side by side: what each audit covers, what it costs and when it fits.'
 home_areas:
   h2:
   - 'Eleven areas. One answer:'
@@ -548,7 +556,7 @@ home_compare:
   - Agency
   - SIGEL
   cta: Order the report
-  cta_href: ''
+  cta_href: /en/website-audit-agency-tools-or-sigel/
   legend:
   - covered
   - partly / separate
@@ -624,3 +632,298 @@ home_order:
   - Human-reviewed output
   - Invoiced to your company
   - Usually within 24 h after payment
+compare_url: /en/website-audit-agency-tools-or-sigel/
+compare_url: /en/website-audit-agency-tools-or-sigel/
+cmp_promo:
+  href: /en/website-audit-agency-tools-or-sigel/
+  kicker: Comparison · 11 areas
+  title: Agency, free tools, or SIGEL?
+  text: What each audit covers, what it costs and when it fits. Side by side.
+  cta: Compare →
+pricing:
+  ld: 'Comprehensive website audit for one URL: technical health, SEO, UX, accessibility, offer communication, archetypes and a priority roadmap in a human-reviewed PDF report.'
+  crumb: Pricing
+  h1: One line on the invoice.
+  lead: The complete Web Intelligence report for one URL for €199. No packages, add-ons or monthly fees. Open any line of the receipt to see exactly what it contains.
+  cta_hero: Order the report for €199
+  demo: Sample report, 21 pages
+  promise:
+  - - Usually within 24 h
+    - ' on business days after payment'
+  - - Human-reviewed
+    - ', every report before it is sent'
+  - - Invoiced to your company
+    - ', B2B only'
+  receipt_aria: What's included
+  rc_sub: Web Intelligence report
+  in_price: included
+  layers:
+  - - We measure
+    - - - Technical health and performance
+        - 'Lighthouse for desktop and mobile, Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+      - - Security signals
+        - HTTPS and redirects, TLS certificate, security HTTP headers. Passive check.
+      - - Links and CTAs
+        - Broken and blocked links, calls to action and suspicious elements.
+      - - Accessibility
+        - Contrast, font size and touch targets with the specific elements on desktop and mobile.
+      - - AI readiness
+        - Structured data and signals for AI search.
+  - - We evaluate
+    - - - Overall picture
+        - Scores in six areas and a summary of strengths and risks.
+      - - UX and offer communication
+        - Clarity, consistency and specificity of the message, navigation and impact on conversion.
+      - - Brand and audience archetype
+        - Archetype map, brand and customer playbook, tone-of-voice rules.
+  - - You decide
+    - - - Executive summary
+        - A short decision overview and business impact for management.
+      - - Priority roadmap
+        - What to fix first, quick wins, impact × effort.
+      - - Evidence appendix
+        - Crawl, robots, sitemap, metadata and measured data.
+  review:
+  - Human review
+  - We personally review every report before sending it, so the priorities make sense for your website.
+  total: Total
+  price: €199
+  alt: or CZK 4,980 · for businesses
+  steps_tag: How ordering works
+  steps_h2:
+  - Four steps.
+  - No meetings.
+  steps:
+  - - Order
+    - Enter the URL and your company details.
+  - - Invoice
+    - The invoice arrives shortly at the e-mail you entered.
+  - - Payment
+    - By bank transfer according to the invoice.
+  - - Report
+    - Usually within 24 hours on business days after payment, as a PDF by e-mail.
+  note: The service is for businesses only (B2B). Details are set out in the <a href="/en/terms.html">terms and conditions</a>.
+  ctx_tag: Price in context
+  ctx_h2:
+  - What you would otherwise
+  - assemble from several projects.
+  ctx_p: A standalone SEO audit is priced by the size of the website and covers only one of the areas above. UX, accessibility, security or brand communication are usually separate projects at an agency.
+  scale: null
+  not_tag: Who it is not for
+  not_h2:
+  - So you know upfront
+  - when SIGEL does not make sense.
+  not:
+  - - Websites before launch
+    - There is nothing to measure yet. The report makes sense on a live website.
+  - - Guaranteed rankings or revenue
+    - The report is a diagnosis and decision support, not a promise of results.
+  - - Thousands of product pages
+    - The report assesses the website as a whole, not every URL of a large e-shop.
+  - - Mainly implementation
+    - SIGEL tells you what to fix and in which order. Your developer or agency makes the changes.
+  ag_tag: Agencies and multiple websites
+  ag_h2: Reports for clients, on a regular basis.
+  ag_p: Need reports for several websites or clients? Order the first report, or write to <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a> and we will agree terms for ongoing work.
+  ag_cta: Order the first report
+  ag_links:
+  - What's included
+  - Comparison with agencies and tools
+  - Sample report, 21 pages
+compare:
+  crumb: Comparison
+  h1: How many of the 11 areas does your audit really cover?
+  lead: Four ways to find out what holds a website back. They differ in price and speed, but above all in how many areas they cover and whether you end up with numbers or a decision.
+  board_aria: Coverage of the 11 areas by audit type
+  full: fully
+  part: partly
+  of: of 11
+  price: Price
+  delivery: Delivery
+  card_cta: Order the report
+  board_note: 'Fully, partly or not at all: based on the table below.'
+  board_link: Show all 11 areas
+  options:
+  - - Free tools
+    - Lighthouse, PageSpeed Insights
+    - €0
+    - instant
+    - Technical numbers without context. They do not know what you sell or what to fix first.
+  - - SEO audit
+    - SEO specialist or agency
+    - depends on site size
+    - by agreement
+    - Deep on findability. UX, the offer and the brand are not its topic.
+  - - Agency audit
+    - SEO, UX, copywriting, brand
+    - sum of several projects
+    - by agreement
+    - Can cover everything, but is assembled from several briefs and the scope differs from agency to agency.
+  - - SIGEL Web Intelligence
+    - one report, human-reviewed
+    - €199
+    - within 24 h of payment
+    - Technical health, UX, security, offer and brand. Ends with a roadmap of what to fix first.
+  m_tag: What each audit covers
+  m_h2:
+  - Eleven areas.
+  - One report.
+  m_p: An indicative comparison of scope. Agency audits vary by brief; “separate” means the area is usually handled by another specialist or another order.
+  legend_aria: Legend
+  legend:
+  - covered
+  - partly / depends on brief
+  - not covered
+  area: Area
+  columns:
+  - Free tools
+  - SEO audit
+  - Comprehensive agency audit
+  - SIGEL Web Intelligence
+  groups:
+  - - Technical health and findability
+    - - - 'Performance: Lighthouse desktop and mobile, Core Web Vitals'
+        - - - y
+            - 'yes'
+          - - y
+            - 'yes'
+          - - y
+            - 'yes'
+          - - y
+            - 'yes'
+      - - 'Indexation: robots.txt, sitemap, canonical, metadata'
+        - - - p
+            - basics
+          - - y
+            - 'yes'
+          - - y
+            - 'yes'
+          - - y
+            - 'yes'
+      - - Links and calls to action (CTA)
+        - - - p
+            - links only
+          - - p
+            - links only
+          - - p
+            - depends on brief
+          - - y
+            - 'yes'
+      - - Accessibility with specific elements
+        - - - p
+            - general score
+          - - n
+            - 'no'
+          - - p
+            - depends on brief
+          - - y
+            - 'yes'
+      - - 'Security: HTTPS, TLS, security headers'
+        - - - p
+            - other tools
+          - - n
+            - 'no'
+          - - p
+            - separate project
+          - - y
+            - passive check
+  - - User, offer and brand
+    - - - UX and mobile usability
+        - - - n
+            - 'no'
+          - - n
+            - 'no'
+          - - p
+            - separate UX audit
+          - - y
+            - 'yes'
+      - - 'Offer communication: clarity, consistency, specificity'
+        - - - n
+            - 'no'
+          - - n
+            - 'no'
+          - - p
+            - separate copy / strategy
+          - - y
+            - 'yes'
+      - - 'AI readiness: structured data, signals for AI'
+        - - - n
+            - 'no'
+          - - p
+            - sometimes
+          - - p
+            - sometimes
+          - - y
+            - 'yes'
+      - - Brand and audience archetype, communication playbook
+        - - - n
+            - 'no'
+          - - n
+            - 'no'
+          - - p
+            - separate brand strategy
+          - - y
+            - 'yes'
+  - - Output for decisions
+    - - - Business impact and roadmap (impact × effort)
+        - - - n
+            - 'no'
+          - - p
+            - SEO recommendations
+          - - y
+            - 'yes'
+          - - y
+            - 'yes'
+      - - Evidence appendix with measured data
+        - - - p
+            - raw data
+          - - y
+            - 'yes'
+          - - p
+            - depends on brief
+          - - y
+            - 'yes'
+  cover_label: Coverage of 11 areas
+  cover_aria: 'Coverage: {full} areas fully, {part} partly of 11'
+  foot:
+  - - Who does it
+    - - you
+      - SEO specialist
+      - 'team: SEO, UX, copy, brand'
+      - one report, human-reviewed
+  - - Price
+    - - €0
+      - depends on site size
+      - sum of several projects
+      - €199
+  - - Delivery
+    - - instant
+      - by agreement
+      - by agreement
+      - usually within 24 h of payment
+  footnote: 'For SEO and comprehensive agency audits we state the scope, not a price: it depends on the size of the website, the number of specialists and the brief.'
+  d_tag: How to decide
+  d_h2:
+  - Every option makes sense.
+  - Just in a different situation.
+  decide:
+  - - “We only care about speed and technical errors, and we have a developer to fix them.”
+    - Free tools
+    - Good enough for a first look and ongoing technical checks. Someone still has to read the numbers.
+  - - “We are planning long-term SEO or campaigns with a specific agency.”
+    - Agency audit
+    - An audit as the start of a collaboration makes sense. Check upfront which areas the brief covers.
+  - - “We do not know why the website brings no enquiries, and we need to know what to fix first.”
+    - SIGEL Web Intelligence
+    - Fast decision support before a redesign, a campaign or a budget decision, or as a brief for your developer or agency.
+  o_price: €199
+  o_sub: or CZK 4,980 · one URL · for businesses (B2B)
+  o_cta: Get the Web Intelligence report
+  o_list:
+  - 11 areas in one PDF report
+  - Executive summary and priority roadmap
+  - Human-reviewed output
+  - Usually within 24 h on business days after payment
+  o_links:
+  - What exactly is included
+  - sample report

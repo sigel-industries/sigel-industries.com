@@ -57,6 +57,11 @@ chrome:
     - Audit vor dem Redesign
   - - /de/seo-audit-vs-website-audit/
     - SEO-Audit vs. Website-Audit
+  - - /de/website-audit-agentur-tools-oder-sigel/
+    - Agentur, Tools oder SIGEL
+  nav_products:
+  - - /de/preise/
+    - Preise
   lang_offer:
     text: Diese Seite auf Deutsch anzeigen?
     'yes': Ja, auf Deutsch
@@ -497,6 +502,9 @@ guide:
   - - /de/seo-audit-vs-website-audit/
     - SEO-Audit vs. Website-Audit
     - Wann technisches SEO ausreicht und wann zusätzlich UX, Kommunikation, Vertrauen und Conversion geprüft werden müssen.
+  - - /de/website-audit-agentur-tools-oder-sigel/
+    - Agentur, Tools oder SIGEL?
+    - 'Elf Bereiche nebeneinander: was welches Audit abdeckt, was es kostet und wann es passt.'
 home_areas:
   h2:
   - 'Elf Bereiche. Eine Antwort:'
@@ -550,7 +558,7 @@ home_compare:
   - Agentur
   - SIGEL
   cta: Report bestellen
-  cta_href: ''
+  cta_href: /de/website-audit-agentur-tools-oder-sigel/
   legend:
   - abgedeckt
   - teilweise / separat
@@ -626,3 +634,298 @@ home_order:
   - Persönlich geprüfter Output
   - Abrechnung per Rechnung
   - In der Regel innerhalb von 24 Std. nach Zahlung
+compare_url: /de/website-audit-agentur-tools-oder-sigel/
+compare_url: /de/website-audit-agentur-tools-oder-sigel/
+cmp_promo:
+  href: /de/website-audit-agentur-tools-oder-sigel/
+  kicker: Vergleich · 11 Bereiche
+  title: Agentur, kostenlose Tools oder SIGEL?
+  text: Was welches Audit abdeckt, was es kostet und wann es passt. Direkt nebeneinander.
+  cta: Vergleichen →
+pricing:
+  ld: 'Umfassendes Website-Audit für eine URL: Technik, SEO, UX, Barrierefreiheit, Angebotskommunikation, Archetypen und priorisierte Roadmap in einem persönlich geprüften PDF-Report.'
+  crumb: Preise
+  h1: Eine Position auf der Rechnung.
+  lead: Der vollständige Web-Intelligence-Report für eine URL für 199 €. Keine Pakete, Aufpreise oder Monatsgebühren. Öffnen Sie eine beliebige Position des Belegs und sehen Sie, was genau enthalten ist.
+  cta_hero: Report für 199 € bestellen
+  demo: Beispielreport (EN), 21 Seiten
+  promise:
+  - - In der Regel innerhalb von 24 Std.
+    - ' an Werktagen nach Zahlungseingang'
+  - - Persönlich geprüft
+    - ': jeder Report vor dem Versand'
+  - - Rechnung an Ihr Unternehmen
+    - ', nur B2B'
+  receipt_aria: Was enthalten ist
+  rc_sub: Web-Intelligence-Report
+  in_price: inklusive
+  layers:
+  - - Wir messen
+    - - - Technik und Performance
+        - 'Lighthouse für Desktop und Mobil, Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+      - - Sicherheitssignale
+        - HTTPS und Weiterleitungen, TLS-Zertifikat, Sicherheits-HTTP-Header. Passive Prüfung.
+      - - Links und CTAs
+        - Defekte und blockierte Links, Handlungsaufforderungen und verdächtige Elemente.
+      - - Barrierefreiheit
+        - Kontrast, Schriftgröße und Touch-Ziele mit den konkreten Elementen auf Desktop und Mobil.
+      - - KI-Bereitschaft
+        - Strukturierte Daten und Signale für KI-Suche.
+  - - Wir bewerten
+    - - - Gesamtbild
+        - Scores in sechs Bereichen und eine Zusammenfassung von Stärken und Risiken.
+      - - UX und Angebotskommunikation
+        - Klarheit, Konsistenz und Konkretheit der Botschaft, Navigation und Wirkung auf die Conversion.
+      - - Archetyp von Marke und Zielgruppe
+        - Archetypen-Karte, Brand- und Customer-Playbook, Regeln für die Tonalität.
+  - - Sie entscheiden
+    - - - Management Summary
+        - Kurzer Entscheidungsüberblick und geschäftliche Wirkung für die Geschäftsführung.
+      - - Priorisierte Roadmap
+        - Was zuerst, Quick Wins, Wirkung × Aufwand.
+      - - Evidenz-Anhang
+        - Crawl, Robots, Sitemap, Metadaten und Messdaten.
+  review:
+  - Persönliche Prüfung
+  - Jeden Report prüfen wir vor dem Versand persönlich, damit die Prioritäten für Ihre Website Sinn ergeben.
+  total: Gesamt
+  price: 199 €
+  alt: oder 4.980 CZK · für Unternehmen
+  steps_tag: So läuft die Bestellung
+  steps_h2:
+  - Vier Schritte.
+  - Ohne Termine.
+  steps:
+  - - Bestellung
+    - Sie geben die URL und Ihre Firmendaten ein.
+  - - Rechnung
+    - Die Rechnung kommt kurz darauf an die angegebene E-Mail-Adresse.
+  - - Zahlung
+    - Per Überweisung laut Rechnung.
+  - - Report
+    - In der Regel innerhalb von 24 Stunden an Werktagen nach Zahlungseingang, als PDF per E-Mail.
+  note: Die Leistung richtet sich ausschließlich an Unternehmen (B2B). Einzelheiten regeln die <a href="/de/agb.html">AGB</a>.
+  ctx_tag: Der Preis im Kontext
+  ctx_h2:
+  - Was Sie sonst
+  - aus mehreren Aufträgen zusammensetzen.
+  ctx_p: Ein eigenständiges SEO-Audit wird nach Größe der Website kalkuliert und deckt nur einen der Bereiche oben ab. UX, Barrierefreiheit, Sicherheit oder Markenkommunikation sind bei Agenturen meist weitere eigene Aufträge.
+  scale: null
+  not_tag: Für wen es nicht passt
+  not_h2:
+  - Damit Sie vorher wissen,
+  - wann SIGEL keinen Sinn ergibt.
+  not:
+  - - Websites vor dem Launch
+    - Es gibt noch nichts zu messen. Der Report ergibt erst bei einer laufenden Website Sinn.
+  - - Garantierte Rankings oder Umsätze
+    - Der Report ist eine Diagnose und Entscheidungsgrundlage, kein Ergebnisversprechen.
+  - - Tausende Produktseiten
+    - Der Report bewertet die Website als Ganzes, nicht jede URL eines großen Onlineshops einzeln.
+  - - Vor allem Umsetzung
+    - SIGEL sagt, was zu beheben ist und in welcher Reihenfolge. Die Änderungen setzt Ihr Entwickler oder Ihre Agentur um.
+  ag_tag: Agenturen und mehrere Websites
+  ag_h2: Reports für Kunden, regelmäßig.
+  ag_p: Sie brauchen Reports für mehrere Websites oder Kunden? Bestellen Sie den ersten Report oder schreiben Sie an <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a>, und wir vereinbaren Konditionen für die laufende Zusammenarbeit.
+  ag_cta: Ersten Report bestellen
+  ag_links:
+  - Was enthalten ist
+  - Vergleich mit Agentur und Tools
+  - Beispielreport (EN), 21 Seiten
+compare:
+  crumb: Vergleich
+  h1: Wie viele der 11 Bereiche deckt Ihr Audit wirklich ab?
+  lead: Vier Wege, um herauszufinden, was eine Website bremst. Sie unterscheiden sich in Preis und Tempo, vor allem aber darin, wie viele Bereiche sie abdecken und ob Sie am Ende Zahlen oder eine Entscheidung haben.
+  board_aria: Abdeckung der 11 Bereiche nach Audit-Art
+  full: voll
+  part: teilweise
+  of: von 11
+  price: Preis
+  delivery: Lieferung
+  card_cta: Report bestellen
+  board_note: 'Voll, teilweise oder gar nicht: laut Tabelle unten.'
+  board_link: Alle 11 Bereiche anzeigen
+  options:
+  - - Kostenlose Tools
+    - Lighthouse, PageSpeed Insights
+    - 0 €
+    - sofort
+    - Technische Zahlen ohne Kontext. Sie wissen nicht, was Sie verkaufen oder was zuerst zu beheben ist.
+  - - SEO-Audit
+    - SEO-Spezialist oder Agentur
+    - je nach Website-Größe
+    - nach Absprache
+    - Tief in der Auffindbarkeit. UX, Angebot und Marke sind nicht sein Thema.
+  - - Agentur-Audit
+    - SEO, UX, Copywriting, Brand
+    - Summe mehrerer Aufträge
+    - nach Absprache
+    - Kann alles abdecken, setzt sich aber aus mehreren Briefings zusammen, und der Umfang ist je nach Agentur verschieden.
+  - - SIGEL Web Intelligence
+    - ein Report, persönlich geprüft
+    - 199 €
+    - in 24 Std. nach Zahlung
+    - Technik, UX, Sicherheit, Angebot und Marke. Am Ende eine Roadmap, was zuerst zu tun ist.
+  m_tag: Was welches Audit abdeckt
+  m_h2:
+  - Elf Bereiche.
+  - Ein Report.
+  m_p: Ein orientierender Vergleich des Umfangs. Agentur-Audits hängen vom Briefing ab; „separat“ bedeutet, dass der Bereich meist ein anderer Spezialist oder ein anderer Auftrag übernimmt.
+  legend_aria: Legende
+  legend:
+  - abgedeckt
+  - teilweise / je nach Briefing
+  - nicht abgedeckt
+  area: Bereich
+  columns:
+  - Kostenlose Tools
+  - SEO-Audit
+  - Umfassendes Agentur-Audit
+  - SIGEL Web Intelligence
+  groups:
+  - - Technik und Auffindbarkeit
+    - - - 'Performance: Lighthouse Desktop und Mobil, Core Web Vitals'
+        - - - y
+            - ja
+          - - y
+            - ja
+          - - y
+            - ja
+          - - y
+            - ja
+      - - 'Indexierung: robots.txt, Sitemap, Canonical, Metadaten'
+        - - - p
+            - Grundlagen
+          - - y
+            - ja
+          - - y
+            - ja
+          - - y
+            - ja
+      - - Links und Handlungsaufforderungen (CTA)
+        - - - p
+            - nur Links
+          - - p
+            - nur Links
+          - - p
+            - je nach Briefing
+          - - y
+            - ja
+      - - Barrierefreiheit mit konkreten Elementen
+        - - - p
+            - allgemeiner Score
+          - - n
+            - nein
+          - - p
+            - je nach Briefing
+          - - y
+            - ja
+      - - 'Sicherheit: HTTPS, TLS, Sicherheits-Header'
+        - - - p
+            - andere Tools
+          - - n
+            - nein
+          - - p
+            - eigener Auftrag
+          - - y
+            - passive Prüfung
+  - - Nutzer, Angebot und Marke
+    - - - UX und mobile Nutzbarkeit
+        - - - n
+            - nein
+          - - n
+            - nein
+          - - p
+            - UX-Audit separat
+          - - y
+            - ja
+      - - 'Angebotskommunikation: Klarheit, Konsistenz, Konkretheit'
+        - - - n
+            - nein
+          - - n
+            - nein
+          - - p
+            - Copy / Strategie separat
+          - - y
+            - ja
+      - - 'KI-Bereitschaft: strukturierte Daten, Signale für KI'
+        - - - n
+            - nein
+          - - p
+            - manchmal
+          - - p
+            - manchmal
+          - - y
+            - ja
+      - - Archetyp von Marke und Zielgruppe, Kommunikations-Playbook
+        - - - n
+            - nein
+          - - n
+            - nein
+          - - p
+            - Markenstrategie separat
+          - - y
+            - ja
+  - - Ergebnis für Entscheidungen
+    - - - Geschäftliche Wirkung und Roadmap (Wirkung × Aufwand)
+        - - - n
+            - nein
+          - - p
+            - SEO-Empfehlungen
+          - - y
+            - ja
+          - - y
+            - ja
+      - - Evidenz-Anhang mit Messdaten
+        - - - p
+            - Rohdaten
+          - - y
+            - ja
+          - - p
+            - je nach Briefing
+          - - y
+            - ja
+  cover_label: Abdeckung von 11 Bereichen
+  cover_aria: 'Abdeckung: {full} Bereiche voll, {part} teilweise von 11'
+  foot:
+  - - Wer es macht
+    - - Sie selbst
+      - SEO-Spezialist
+      - 'Team: SEO, UX, Copy, Brand'
+      - ein Report, persönlich geprüft
+  - - Preis
+    - - 0 €
+      - je nach Website-Größe
+      - Summe mehrerer Aufträge
+      - 199 €
+  - - Lieferung
+    - - sofort
+      - nach Absprache
+      - nach Absprache
+      - in der Regel in 24 Std. nach Zahlung
+  footnote: 'Bei SEO- und umfassenden Agentur-Audits nennen wir den Umfang, keinen Preis: Er hängt von der Größe der Website, der Zahl der Spezialisten und dem Briefing ab.'
+  d_tag: So entscheiden Sie
+  d_h2:
+  - Jeder Weg ergibt Sinn.
+  - Nur in einer anderen Situation.
+  decide:
+  - - „Uns geht es nur um Geschwindigkeit und technische Fehler, und wir haben einen Entwickler, der sie behebt.“
+    - Kostenlose Tools
+    - Für den ersten Überblick und laufende Technikkontrollen reichen sie. Jemand muss die Zahlen allerdings lesen können.
+  - - „Wir planen langfristiges SEO oder Kampagnen mit einer bestimmten Agentur.“
+    - Audit der Agentur
+    - Ein Audit als Einstieg in die Zusammenarbeit ist sinnvoll. Prüfen Sie vorher, welche Bereiche das Briefing abdeckt.
+  - - „Wir wissen nicht, warum die Website keine Anfragen bringt, und müssen wissen, was zuerst zu beheben ist.“
+    - SIGEL Web Intelligence
+    - Schnelle Entscheidungsgrundlage vor einem Redesign, einer Kampagne oder einer Budgetentscheidung, oder als Briefing für Entwickler und Agentur.
+  o_price: 199 €
+  o_sub: oder 4.980 CZK · eine URL · für Unternehmen (B2B)
+  o_cta: Web-Intelligence-Report bestellen
+  o_list:
+  - 11 Bereiche in einem PDF-Report
+  - Management Summary und priorisierte Roadmap
+  - Persönlich geprüfter Output
+  - In der Regel innerhalb von 24 Std. an Werktagen nach Zahlungseingang
+  o_links:
+  - Was genau enthalten ist
+  - Beispielreport

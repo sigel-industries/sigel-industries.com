@@ -1,0 +1,130 @@
+{#- Comparison page; copy and coverage matrix in i18n `compare`, shared by cs/sk/en/de -#}
+{% extends "base.html" %}
+{% block jsonld %}{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.og_image_alt }}",
+  "inLanguage": "{{ lang }}",
+  "url": "{{ site.origin }}{{ page.url }}",
+  "author": { "@id": "https://sigel-industries.com/#organization" },
+  "publisher": { "@id": "https://sigel-industries.com/#organization" }
+}{% endblock %}
+{% block main %}
+{%- set C = t.compare %}
+{%- set columns = C.columns %}
+{%- set groups = C.groups %}
+{%- set options = C.options %}
+{%- macro coverage(groups, c, compact=False) -%}
+{%- set ns = namespace(full=0, part=0) -%}
+{%- for g, rows in groups %}{% for label, cells in rows %}{% if cells[c][0] == 'y' %}{% set ns.full = ns.full + 1 %}{% elif cells[c][0] == 'p' %}{% set ns.part = ns.part + 1 %}{% endif %}{% endfor %}{% endfor -%}
+<div class="cmp-cover{{ ' cmp-cover-compact' if compact }}" role="img" aria-label="{{ t.compare.cover_aria | replace('{full}', ns.full) | replace('{part}', ns.part) }}">
+<span class="cmp-cover-dots" aria-hidden="true">{% for i in range(ns.full) %}<i class="y"></i>{% endfor %}{% for i in range(ns.part) %}<i class="p"></i>{% endfor %}{% for i in range(11 - ns.full - ns.part) %}<i></i>{% endfor %}</span>
+<span class="cmp-cover-text"><b>{{ ns.full }}</b> {{ t.compare.of }} {{ t.compare.full }}{% if ns.part %}, {{ ns.part }} {{ t.compare.part }}{% endif %}</span>
+</div>
+{%- endmacro %}
+<section class="page-shell cmp-hero">
+<div class="wrap">
+<p class="eyebrow reveal"><a href="{{ t.chrome.home }}">SIGEL</a> / {{ C.crumb }}</p>
+<div class="cmp-hero-head">
+<h1 class="reveal">{{ C.h1 }}</h1>
+<p class="cmp-lead reveal">{{ C.lead }}</p>
+</div>
+<div class="board reveal" role="list" aria-label="{{ C.board_aria }}">
+{%- for name, who, price, delivery, verdict in options %}
+{%- set c = loop.index0 %}
+{%- set ns = namespace(cells=[]) %}
+{%- for g, rows in groups %}{% for label, cells in rows %}{% set ns.cells = ns.cells + [cells[c][0]] %}{% endfor %}{% endfor %}
+{%- set full = ns.cells | select('equalto', 'y') | list | length %}
+{%- set part = ns.cells | select('equalto', 'p') | list | length %}
+<article class="board-col{{ ' board-sigel' if loop.last }}" role="listitem">
+<div class="board-score"><b>{{ full }}</b><span>/ 11 {{ C.full }}{% if part %}<br/>+ {{ part }} {{ C.part }}{% endif %}</span></div>
+<div aria-hidden="true" class="board-bar">{% for i in range(11 - full - part) %}<i></i>{% endfor %}{% for i in range(part) %}<i class="p"></i>{% endfor %}{% for i in range(full) %}<i class="y"></i>{% endfor %}</div>
+<h2>{{ name }}</h2>
+<p class="board-who">{{ who }}</p>
+<dl><div><dt>{{ C.price }}</dt><dd>{{ price }}</dd></div><div><dt>{{ C.delivery }}</dt><dd>{{ delivery }}</dd></div></dl>
+<p class="board-verdict">{{ verdict }}</p>
+{%- if loop.last %}
+<button class="btn btn-primary btn-small" data-order-open="" data-track="compare-card" type="button">{{ C.card_cta }}</button>
+{%- endif %}
+</article>
+{%- endfor %}
+</div>
+<p class="board-note reveal">{{ C.board_note }} <a href="#srovnani">{{ C.board_link }}</a></p>
+</div>
+</section>
+
+<section class="section cmp-matrix-section" id="srovnani">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">{{ C.m_tag }}</p>
+<h2>{{ C.m_h2[0] }} <span class="italic cold-text">{{ C.m_h2[1] }}</span></h2>
+<p>{{ C.m_p }}</p>
+</div>
+<ul aria-label="{{ C.legend_aria }}" class="cmp-legend reveal">
+<li><span aria-hidden="true" class="cmp-dot cmp-y"></span>{{ C.legend[0] }}</li>
+<li><span aria-hidden="true" class="cmp-dot cmp-p"></span>{{ C.legend[1] }}</li>
+<li><span aria-hidden="true" class="cmp-dot cmp-n"></span>{{ C.legend[2] }}</li>
+</ul>
+<div class="cmp-matrix-wrap reveal">
+<table class="cmp-matrix">
+<thead><tr><th scope="col">{{ C.area }}</th>{% for col in columns %}<th class="{{ 'cmp-col-sigel' if loop.last }}" scope="col">{{ col }}</th>{% endfor %}</tr></thead>
+{%- for group, rows in groups %}
+<tbody>
+<tr class="cmp-group"><th colspan="5" scope="rowgroup">{{ group }}</th></tr>
+{%- for label, cells in rows %}
+<tr><th scope="row">{{ label }}</th>{% for state, note in cells %}<td class="cmp-cell cmp-{{ state }}{{ ' cmp-col-sigel' if loop.last }}" data-label="{{ columns[loop.index0] }}"><span aria-hidden="true" class="cmp-dot cmp-{{ state }}"></span><span class="cmp-note">{{ note }}</span></td>{% endfor %}</tr>
+{%- endfor %}
+</tbody>
+{%- endfor %}
+<tfoot>
+<tr class="cmp-cover-row"><th scope="row">{{ C.cover_label }}</th>{% for col in columns %}<td class="{{ 'cmp-col-sigel' if loop.last }}" data-label="{{ col }}">{{ coverage(groups, loop.index0, True) }}</td>{% endfor %}</tr>
+{%- for label, cells in C.foot %}{% set extra = ' cmp-price' if loop.index == 2 else '' %}
+<tr><th scope="row">{{ label }}</th>{% for value in cells %}<td class="{{ ('cmp-col-sigel' ~ extra) if loop.last }}" data-label="{{ columns[loop.index0] }}">{{ value }}</td>{% endfor %}</tr>
+{%- endfor %}
+</tfoot>
+</table>
+</div>
+<p class="cmp-footnote">{{ C.footnote }}</p>
+</div>
+</section>
+
+<section class="section muted-section">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">{{ C.d_tag }}</p>
+<h2>{{ C.d_h2[0] }} <span class="italic warm-text">{{ C.d_h2[1] }}</span></h2>
+</div>
+<div class="cmp-decide">
+{%- for situation, pick, text in C.decide %}
+<article class="cmp-decide-card{{ ' cmp-decide-sigel' if loop.last }} reveal">
+<p class="cmp-situation">{{ situation }}</p>
+<span class="cmp-pick">{{ pick }}</span>
+<p>{{ text }}</p>
+</article>
+{%- endfor %}
+</div>
+</div>
+</section>
+
+<section class="section" id="order">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="order-box order-split reveal">
+<div class="order-main">
+<p class="tag">SIGEL Web Intelligence</p>
+<div class="order-price">{{ C.o_price }}</div>
+<p class="order-sub">{{ C.o_sub }}</p>
+<button class="btn btn-primary" data-order-open="" data-track="compare-bottom" type="button">{{ C.o_cta }}</button>
+</div>
+<ul class="order-list">
+{%- for item in C.o_list %}
+<li>{{ item }}</li>
+{%- endfor %}
+<li><a href="{{ t.chrome.nav_products[0][0] }}">{{ C.o_links[0] }}</a> · <a data-track="compare" href="{{ t.chrome.demo[0] }}" rel="noopener" target="_blank">{{ C.o_links[1] }}</a></li>
+</ul>
+</div>
+</div>
+</section>
+{% endblock %}
