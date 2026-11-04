@@ -619,7 +619,7 @@ home_flow_out:
 home_report_bars: [Výkon, SEO, UX, Prístupnosť, Ponuka, Dôvera]
 home_faq:
   lead: Jedenásť odpovedí v štyroch skupinách. Nenašli ste svoju otázku?
-  contact: Napíšte nám →
+  contact: Napíšte nám
   groups:
   - [Služba, [0, 1, 3]]
   - [Výstup, [4, 5, 7]]
@@ -638,7 +638,7 @@ cmp_promo:
   kicker: Porovnanie · 11 oblastí
   title: Agentúra, nástroje zadarmo, alebo SIGEL?
   text: Čo ktorý audit pokryje, koľko stojí a kedy sa hodí. Prehľadne vedľa seba.
-  cta: Porovnať →
+  cta: Porovnať
 pricing:
   ld: 'Komplexný audit webu pre jednu URL: technika, SEO, UX, prístupnosť, komunikácia ponuky, archetypy a prioritná roadmapa v ručne kontrolovanom PDF reporte.'
   crumb: Cenník

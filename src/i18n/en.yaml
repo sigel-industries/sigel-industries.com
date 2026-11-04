@@ -619,7 +619,7 @@ home_flow_out:
 home_report_bars: [Performance, SEO, UX, Accessibility, Offer, Trust]
 home_faq:
   lead: Eleven answers in four groups. Did not find your question?
-  contact: Write to us →
+  contact: Write to us
   groups:
   - [The service, [0, 1, 3]]
   - [The output, [4, 5, 7]]
@@ -638,7 +638,7 @@ cmp_promo:
   kicker: Comparison · 11 areas
   title: Agency, free tools, or SIGEL?
   text: What each audit covers, what it costs and when it fits. Side by side.
-  cta: Compare →
+  cta: Compare
 pricing:
   ld: 'Comprehensive website audit for one URL: technical health, SEO, UX, accessibility, offer communication, archetypes and a priority roadmap in a human-reviewed PDF report.'
   crumb: Pricing

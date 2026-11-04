@@ -554,7 +554,7 @@ home_compare:
   - SEO audit
   - Agentura
   - SIGEL
-  cta: Celé srovnání →
+  cta: Celé srovnání
   cta_href: /audit-webu-agentura-nastroje-nebo-sigel/
   legend:
   - pokryto
@@ -618,7 +618,7 @@ home_flow_out:
 home_report_bars: [Výkon, SEO, UX, Přístupnost, Nabídka, Důvěra]
 home_faq:
   lead: Jedenáct odpovědí ve čtyřech skupinách. Nenašli jste svou otázku?
-  contact: Napište nám →
+  contact: Napište nám
   groups:
   - [Služba, [0, 1, 3]]
   - [Výstup, [4, 5, 7]]
@@ -637,7 +637,7 @@ cmp_promo:
   kicker: Srovnání · 11 oblastí
   title: Agentura, nástroje zdarma, nebo SIGEL?
   text: Co který audit pokryje, kolik stojí a kdy se hodí. Přehledně vedle sebe.
-  cta: Porovnat →
+  cta: Porovnat
 pricing:
   ld: 'Komplexní audit webu pro jednu URL: technika, SEO, UX, přístupnost, komunikace nabídky, archetypy a prioritní roadmapa v ručně kontrolovaném PDF reportu.'
   crumb: Ceník

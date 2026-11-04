@@ -621,7 +621,7 @@ home_flow_out:
 home_report_bars: [Performance, SEO, UX, Barrierefreiheit, Angebot, Vertrauen]
 home_faq:
   lead: Elf Antworten in vier Gruppen. Ihre Frage ist nicht dabei?
-  contact: Schreiben Sie uns →
+  contact: Schreiben Sie uns
   groups:
   - [Die Leistung, [0, 1, 3]]
   - [Der Output, [4, 5, 7]]
@@ -640,7 +640,7 @@ cmp_promo:
   kicker: Vergleich · 11 Bereiche
   title: Agentur, kostenlose Tools oder SIGEL?
   text: Was welches Audit abdeckt, was es kostet und wann es passt. Direkt nebeneinander.
-  cta: Vergleichen →
+  cta: Vergleichen
 pricing:
   ld: 'Umfassendes Website-Audit für eine URL: Technik, SEO, UX, Barrierefreiheit, Angebotskommunikation, Archetypen und priorisierte Roadmap in einem persönlich geprüften PDF-Report.'
   crumb: Preise

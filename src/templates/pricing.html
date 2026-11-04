@@ -55,7 +55,7 @@
 <div class="wrap">
 <div class="section-head reveal">
 <p class="tag">{{ P.steps_tag }}</p>
-<h2>{{ P.steps_h2[0] }} <span class="italic warm-text">{{ P.steps_h2[1] }}</span></h2>
+<h2>{{ P.steps_h2[0] }} {{ P.steps_h2[1] }}</h2>
 </div>
 <ol class="pr-timeline reveal">
 {%- for h, p in P.steps %}
@@ -71,7 +71,7 @@
 <div class="wrap pr-context">
 <div class="section-head reveal">
 <p class="tag">{{ P.ctx_tag }}</p>
-<h2>{{ P.ctx_h2[0] }} <span class="italic cold-text">{{ P.ctx_h2[1] }}</span></h2>
+<h2>{{ P.ctx_h2[0] }} {{ P.ctx_h2[1] }}</h2>
 <p>{{ P.ctx_p }}</p>
 </div>
 {%- if P.scale %}
@@ -94,7 +94,7 @@
 <div class="wrap">
 <div class="section-head reveal">
 <p class="tag">{{ P.not_tag }}</p>
-<h2>{{ P.not_h2[0] }} <span class="italic warm-text">{{ P.not_h2[1] }}</span></h2>
+<h2>{{ P.not_h2[0] }} {{ P.not_h2[1] }}</h2>
 </div>
 <ul class="pr-not-list reveal">
 {%- for h, p in P.not %}
