@@ -382,7 +382,6 @@
     if (modalGrid) {
       modalGrid.innerHTML = (data.items || []).map(([title, text], index) => `
         <article class="${index === 0 ? 'is-featured' : ''}">
-          <span class="modal-step">${String(index + 1).padStart(2, '0')}</span>
           <strong>${title}</strong>
           <p>${text}</p>
         </article>
