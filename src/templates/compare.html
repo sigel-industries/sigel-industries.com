@@ -36,7 +36,7 @@
 {%- for g, rows in groups %}{% for label, cells in rows %}{% set ns.cells = ns.cells + [cells[c][0]] %}{% endfor %}{% endfor %}
 {%- set full = ns.cells | select('equalto', 'y') | list | length %}
 {%- set part = ns.cells | select('equalto', 'p') | list | length %}
-<article class="board-col{{ ' board-sigel' if loop.last }}" role="listitem">
+<div class="board-col{{ ' board-sigel' if loop.last }}" role="listitem">
 <div class="board-score"><b>{{ full }}</b><span>/ 11 {{ C.full }}{% if part %}<br/>+ {{ part }} {{ C.part }}{% endif %}</span></div>
 <div aria-hidden="true" class="board-bar">{% for i in range(11 - full - part) %}<i></i>{% endfor %}{% for i in range(part) %}<i class="p"></i>{% endfor %}{% for i in range(full) %}<i class="y"></i>{% endfor %}</div>
 <h2>{{ name }}</h2>
@@ -46,7 +46,7 @@
 {%- if loop.last %}
 <button class="btn btn-primary btn-small" data-order-open="" data-track="compare-card" type="button">{{ C.card_cta }}</button>
 {%- endif %}
-</article>
+</div>
 {%- endfor %}
 </div>
 <p class="board-note reveal">{{ C.board_note }} <a href="#srovnani">{{ C.board_link }}</a></p>
