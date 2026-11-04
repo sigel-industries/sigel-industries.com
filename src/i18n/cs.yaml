@@ -706,20 +706,20 @@ pricing:
   ctx_h2:
   - Co byste jinak
   - skládali z více zakázek.
-  ctx_p: Samotný SEO audit se v Česku podle velikosti webu běžně pohybuje zhruba mezi 5 a 50 tisíci Kč (<a href="https://loudavymkrokem.cz/kolik-stoji-seo/" rel="noopener" target="_blank">přehled cen SEO</a>) a pokrývá jen jednu z oblastí výše. UX, přístupnost, bezpečnost nebo komunikace značky se u agentur obvykle řeší jako další samostatné zakázky.
+  ctx_p: Samotný SEO audit se v Česku podle velikosti webu běžně pohybuje zhruba mezi 5 a 60 tisíci Kč (přehledy cen <a href="https://loudavymkrokem.cz/kolik-stoji-seo/" rel="noopener" target="_blank">LK Media</a> a <a href="https://pixlo.cz/blog/kolik-stoji-seo" rel="noopener" target="_blank">Pixlo</a>, 2026) a pokrývá jen jednu z oblastí výše. UX, přístupnost, bezpečnost nebo komunikace značky se u agentur obvykle řeší jako další samostatné zakázky.
   scale:
     aria: Cena SIGEL v porovnání s běžnou cenou SEO auditu
     band_b: SEO audit
-    band: běžně 5–50 tis. Kč, pokrývá jednu oblast
+    band: běžně 5–60 tis. Kč, pokrývá jednu oblast
     mark_b: 4 980 Kč
     mark: SIGEL, 11 oblastí
     axis:
     - '0'
-    - 10 tis.
-    - 20 tis.
-    - 30 tis.
-    - 40 tis.
-    - 50 tis. Kč
+    - 12 tis.
+    - 24 tis.
+    - 36 tis.
+    - 48 tis.
+    - 60 tis. Kč
     caption: UX, přístupnost, bezpečnost a komunikace značky by k SEO auditu přibyly jako další samostatné zakázky.
   not_tag: Pro koho to není
   not_h2:
@@ -763,7 +763,7 @@ compare:
     - Technická čísla bez kontextu. Nevědí, co prodáváte ani co opravit první.
   - - SEO audit
     - SEO specialista nebo agentura
-    - běžně 5–50 tis. Kč¹
+    - běžně 5–60 tis. Kč¹
     - podle dohody
     - Do hloubky v dohledatelnosti. UX, nabídka ani značka nejsou jeho téma.
   - - Agenturní audit
@@ -905,7 +905,7 @@ compare:
       - jeden report, ruční kontrola
   - - Cena
     - - 0 Kč
-      - běžně 5–50 tis. Kč¹
+      - běžně 5–60 tis. Kč¹
       - součet více zakázek
       - 4 980 Kč
   - - Dodání
@@ -913,7 +913,7 @@ compare:
       - podle dohody
       - podle dohody
       - zpravidla do 24 h po platbě
-  footnote: '¹ Podle velikosti webu; zdroj: <a href="https://loudavymkrokem.cz/kolik-stoji-seo/" rel="noopener" target="_blank">přehled cen SEO</a>. U komplexních agenturních auditů uvádíme rozsah, ne cenu: liší se podle počtu specialistů a zadání.'
+  footnote: '¹ Podle velikosti webu; zdroje: přehledy cen <a href="https://loudavymkrokem.cz/kolik-stoji-seo/" rel="noopener" target="_blank">LK Media</a> (5–50 tis. Kč) a <a href="https://pixlo.cz/blog/kolik-stoji-seo" rel="noopener" target="_blank">Pixlo</a> (15–60 tis. Kč), obojí aktualizováno 2026. U komplexních agenturních auditů uvádíme rozsah, ne cenu: liší se podle počtu specialistů a zadání.'
   d_tag: Jak se rozhodnout
   d_h2:
   - Každá cesta má smysl.

@@ -78,8 +78,8 @@
 {%- set sc = P.scale %}
 <figure class="pr-scale reveal" aria-label="{{ sc.aria }}">
 <div class="pr-scale-track">
-<span class="pr-scale-band" style="left:10%;right:0"><span><b>{{ sc.band_b }}</b> {{ sc.band }}</span></span>
-<span class="pr-scale-mark" style="left:9.96%"><b>{{ sc.mark_b }}</b> {{ sc.mark }}</span>
+<span class="pr-scale-band" style="left:8.33%;right:0"><span><b>{{ sc.band_b }}</b> {{ sc.band }}</span></span>
+<span class="pr-scale-mark" style="left:8.3%"><b>{{ sc.mark_b }}</b> {{ sc.mark }}</span>
 </div>
 <div class="pr-scale-axis">{% for v in sc.axis %}<span style="left:{{ loop.index0 * 20 }}%">{{ v }}</span>{% endfor %}</div>
 <figcaption>{{ sc.caption }}</figcaption>
