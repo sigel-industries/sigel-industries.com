@@ -625,3 +625,10 @@ function testWrite() {
   sheet.appendRow(row);
   sendNotification_(normalized);
 }
+/**
+ * Manual test of the ARES lookup. Run it once from the editor: it also triggers the
+ * authorization prompt for UrlFetchApp ("Connect to an external service").
+ */
+function testAres() {
+  Logger.log(JSON.stringify(aresLookup_("17428432")));
+}
