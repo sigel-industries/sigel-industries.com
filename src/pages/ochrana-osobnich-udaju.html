@@ -184,6 +184,9 @@ alternates:
             a bez remarketingu. Právním základem je váš souhlas, který můžete kdykoliv odvolat
             smazáním dat webu ve svém prohlížeči; cookie lišta se vám poté zobrazí znovu.
           </p>
+{% if site.linkedin_partner_id or site.meta_pixel_id %}
+<p>Pokud v cookie liště zvolíte „Přijmout“, načtou se také reklamní měřicí nástroje {{ ['LinkedIn Insight Tag (LinkedIn Ireland Unlimited Company)' if site.linkedin_partner_id else '', 'Meta Pixel (Meta Platforms Ireland Ltd.)' if site.meta_pixel_id else ''] | select | join(', ') }}. Slouží k měření účinnosti našich kampaní a k oslovení návštěvníků webu reklamou. Právním základem je váš souhlas, který můžete kdykoliv odvolat smazáním dat webu v prohlížeči.</p>
+{% endif %}
 <p>
             Písma webu jsou načítána z našeho vlastního serveru, nikoliv ze služby Google Fonts.
           </p>

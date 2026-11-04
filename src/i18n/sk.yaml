@@ -43,6 +43,7 @@ chrome:
     text: Používame analytiku na zlepšovanie webu. Bez reklamných cookies.
     deny: Odmietnuť
     accept: Prijať
+    text_ads: Používame analytiku a reklamné meranie (LinkedIn, Meta) na zlepšovanie webu a kampaní.
   modal:
     close: Zavrieť
     cta: Získať Web Intelligence report
@@ -56,6 +57,10 @@ chrome:
     - Audit pred redizajnom
   - - /sk/seo-audit-vs-komplexny-audit-webu/
     - SEO audit vs. audit webu
+  lang_offer:
+    text: Zobraziť túto stránku po slovensky?
+    'yes': Áno, po slovensky
+    close: Zavrieť
 order:
   eyebrow: SIGEL Web Intelligence
   title: Objednávka Web Intelligence reportu

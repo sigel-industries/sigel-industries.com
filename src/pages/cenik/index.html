@@ -1,0 +1,67 @@
+---
+url: /cenik/
+lang: cs
+title: Ceník auditu webu – 4 980 Kč | SIGEL
+description: Kolik stojí audit webu SIGEL Web Intelligence, co je v ceně, jak probíhá objednávka a platba a pro koho se služba nehodí. 4 980 Kč / 199 € za jednu URL.
+og_type: website
+og_image_alt: Ceník SIGEL Web Intelligence – audit webu za 4 980 Kč
+---
+{% extends "base.html" %}
+{% block jsonld %}{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://sigel-industries.com/cenik/#product",
+  "name": "SIGEL Web Intelligence Report",
+  "description": "Komplexní audit webu pro jednu URL: technika, SEO, UX, přístupnost, komunikace nabídky, archetypy a prioritní roadmapa v ručně kontrolovaném PDF reportu.",
+  "brand": { "@type": "Brand", "name": "SIGEL" },
+  "offers": [
+    { "@type": "Offer", "price": "4980", "priceCurrency": "CZK", "url": "https://sigel-industries.com/cenik/", "availability": "https://schema.org/InStock", "seller": { "@id": "https://sigel-industries.com/#organization" } },
+    { "@type": "Offer", "price": "199", "priceCurrency": "EUR", "url": "https://sigel-industries.com/cenik/", "availability": "https://schema.org/InStock", "seller": { "@id": "https://sigel-industries.com/#organization" } }
+  ]
+}{% endblock %}
+{% block main %}
+<section class="page-shell legal-shell">
+<div class="page-layout">
+<div class="legal-head reveal"><div class="section-heading legal-heading reveal">
+<p class="eyebrow"><a href="/">SIGEL</a> / Ceník</p>
+<h1>Ceník auditu webu</h1>
+<p>Jedna služba, jedna cena: <strong>4 980 Kč</strong> (199 €) za kompletní Web Intelligence report pro jednu URL. Bez skrytých položek a bez měsíčních poplatků.</p>
+<div class="inline-actions"><button class="btn btn-primary" data-order-open="" data-track="pricing-hero" type="button">Objednat report za 4 980 Kč</button></div>
+</div></div>
+<div class="legal-wrap"><article class="legal-content page-card reveal">
+<h2>Co je v ceně</h2>
+<ul>
+<li><strong>Technika a výkon:</strong> desktopové i mobilní Lighthouse metriky, Core Web Vitals, SSL, mixed content, robots a sitemap.</li>
+<li><strong>SEO a objevitelnost:</strong> metadata, nadpisy, canonical, Open Graph, schema.org a signály AI připravenosti.</li>
+<li><strong>UX, CTA a přístupnost:</strong> odkazy a výzvy k akci, mobilní viewport, kontrast, velikost písma a dotykové cíle.</li>
+<li><strong>Komunikace nabídky:</strong> co web nabízí, komu, proč mu věřit a kde návštěvník ztrácí jasnost.</li>
+<li><strong>Archetyp značky a publika</strong> a praktický komunikační playbook.</li>
+<li><strong>Prioritní roadmapa:</strong> co řešit první, co později a co ignorovat, plus evidence appendix s naměřenými daty.</li>
+<li><strong>Ruční kontrola</strong> každého reportu před odesláním.</li>
+</ul>
+<p>Výstupem je vizuální PDF report v češtině/slovenštině, angličtině nebo němčině. Jak vypadá, ukazuje <a data-track="pricing" href="/docs/demo-report.pdf" rel="noopener" target="_blank">ukázkový report (21 stran)</a>.</p>
+<h2>Jak probíhá objednávka</h2>
+<ol>
+<li><strong>Objednávka:</strong> zadáte URL a IČO, údaje firmy doplníme z ARES.</li>
+<li><strong>Faktura:</strong> brzy vám přijde faktura na zadaný e-mail.</li>
+<li><strong>Platba:</strong> převodem podle faktury.</li>
+<li><strong>Report:</strong> zpravidla do 24 hodin v pracovní dny od připsání platby, e-mailem jako PDF.</li>
+</ol>
+<p>Služba je určena firmám a podnikatelům (B2B). Podrobnosti upravují <a href="/obchodni-podminky.html">obchodní podmínky</a>.</p>
+<h2>Cena v kontextu</h2>
+<p>Samostatný SEO audit se v Česku podle velikosti webu běžně pohybuje zhruba mezi 5 a 50 tisíci Kč (<a href="https://loudavymkrokem.cz/kolik-stoji-seo/" rel="noopener" target="_blank">přehled cen SEO</a>) a řeší hlavně dohledatelnost ve vyhledávačích. Nástroje jako Lighthouse nebo PageSpeed Insights jsou zdarma, ale vrátí jen technická čísla bez obchodní interpretace a bez priorit.</p>
+<p>SIGEL Web Intelligence stojí mezi nimi: měřená data jako nástroje, k tomu UX, komunikace nabídky a jasné pořadí, co řešit první. Podrobné srovnání najdete v průvodci <a href="/audit-webu-agentura-nastroje-nebo-sigel/">Agentura, nástroje zdarma, nebo SIGEL?</a></p>
+<h2>Pro koho to není</h2>
+<ul>
+<li><strong>Weby před spuštěním</strong> – není co měřit. Report dává smysl až na běžícím webu.</li>
+<li><strong>Kdo chce garanci pozic nebo tržeb</strong> – report je diagnostika a podklad pro rozhodnutí, ne slib výsledku.</li>
+<li><strong>Velké e-shopy, které potřebují audit tisíců produktových stránek</strong> – report hodnotí web jako celek, ne každou URL zvlášť.</li>
+<li><strong>Kdo potřebuje hlavně implementaci</strong> – SIGEL řekne, co opravit a v jakém pořadí; samotné úpravy dělá váš vývojář nebo agentura.</li>
+</ul>
+<h2>Agentury a více webů</h2>
+<p>Potřebujete reporty pravidelně pro klienty nebo pro více webů najednou? <a data-order-open="" href="/#order">Objednejte první report</a>, nebo nám napište na <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a> a domluvíme podmínky pro opakovanou spolupráci.</p>
+<p class="legal-backlink"><a data-order-open="" data-track="pricing-bottom" href="/#order">Objednat Web Intelligence report za 4 980 Kč →</a></p>
+</article></div>
+</div>
+</section>
+{% endblock %}

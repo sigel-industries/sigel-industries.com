@@ -13,6 +13,7 @@
   // Analytics events; gtag exists only after cookie consent
   function track(name, params = {}) {
     if (typeof window.gtag === 'function') window.gtag('event', name, params);
+    if (name === 'generate_lead' && typeof window.fbq === 'function') window.fbq('track', 'Lead');
   }
 
   // Header, progress and mobile nav
@@ -745,14 +746,22 @@
     track('demo_report_click', { file: a.getAttribute('href'), source: a.dataset.track || a.closest('section, footer')?.id || 'link' });
   }));
 
-  // Cookie consent + GA4 lazy load
+  // Cookie consent: GA4 and (if configured in site.yaml) advertising pixels load only after "accept".
+  // Enabling pixels changes the consent key, so visitors who accepted analytics only are asked again.
   const cookieBar = $('#cookieBar');
-  const consentKey = 'sigel_cookie_consent_v1';
+  const adsEnabled = Boolean(site.linkedinPartnerId || site.metaPixelId);
+  const consentKey = adsEnabled ? 'sigel_cookie_consent_v2_ads' : 'sigel_cookie_consent_v1';
   const gaId = site.gaId || '';
   const storage = {
     get(key) { try { return localStorage.getItem(key); } catch { return null; } },
     set(key, value) { try { localStorage.setItem(key, value); } catch {} }
   };
+  function loadScript(src) {
+    const script = doc.createElement('script');
+    script.async = true;
+    script.src = src;
+    doc.head.appendChild(script);
+  }
 
   function loadGA() {
     if (!gaId || window.__sigelGaLoaded) return;
@@ -762,16 +771,35 @@
     window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', gaId, { anonymize_ip: true });
+    loadScript(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaId)}`);
+  }
 
-    const script = doc.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaId)}`;
-    doc.head.appendChild(script);
+  function loadAdPixels() {
+    if (window.__sigelAdsLoaded) return;
+    window.__sigelAdsLoaded = true;
+    if (site.linkedinPartnerId) {
+      window._linkedin_partner_id = site.linkedinPartnerId;
+      window._linkedin_data_partner_ids = [site.linkedinPartnerId];
+      loadScript('https://snap.licdn.com/li.lms-analytics/insight.min.js');
+    }
+    if (site.metaPixelId) {
+      const fbq = window.fbq = function () { fbq.callMethod ? fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments); };
+      fbq.push = fbq; fbq.loaded = true; fbq.version = '2.0'; fbq.queue = [];
+      window._fbq = fbq;
+      loadScript('https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', site.metaPixelId);
+      fbq('track', 'PageView');
+    }
+  }
+
+  function grantConsent() {
+    loadGA();
+    if (adsEnabled) loadAdPixels();
   }
 
   const savedConsent = storage.get(consentKey);
   if (savedConsent === 'accepted') {
-    loadGA();
+    grantConsent();
   } else if (!savedConsent && cookieBar) {
     cookieBar.hidden = false;
   }
@@ -781,7 +809,38 @@
       const choice = btn.getAttribute('data-cookie-choice');
       storage.set(consentKey, choice === 'accept' ? 'accepted' : 'denied');
       if (cookieBar) cookieBar.hidden = true;
-      if (choice === 'accept') loadGA();
+      if (choice === 'accept') grantConsent();
     });
   });
+
+  // Language offer: if the browser prefers another site language that this page exists in,
+  // show a small dismissible bar. No automatic redirect (bad for SEO and for people who chose a language).
+  const offerKey = 'sigel_lang_offer_dismissed';
+  (function offerLanguage() {
+    if (!site.langOffer || storage.get(offerKey)) return;
+    const preferred = (navigator.languages || [navigator.language || ''])
+      .map((code) => String(code).toLowerCase().split('-')[0])
+      .find((code) => site.langOffer[code]);
+    if (!preferred || preferred === lang) return;
+    const link = $(`.lang-switch a[hreflang="${preferred}"]`);
+    if (!link) return;
+    const copy = site.langOffer[preferred];
+    const bar = doc.createElement('div');
+    bar.className = 'lang-offer';
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', copy.text);
+    bar.lang = preferred;
+    bar.innerHTML = `<span></span><a class="btn btn-primary btn-small"></a><button class="lang-offer-close" type="button">×</button>`;
+    $('span', bar).textContent = copy.text;
+    const yes = $('a', bar);
+    yes.href = link.getAttribute('href');
+    yes.textContent = copy.yes;
+    const close = $('button', bar);
+    close.setAttribute('aria-label', copy.close);
+    const dismiss = () => { storage.set(offerKey, '1'); bar.remove(); };
+    yes.addEventListener('click', () => { storage.set(offerKey, '1'); track('lang_offer_accept', { to: preferred }); });
+    close.addEventListener('click', dismiss);
+    body.appendChild(bar);
+    track('lang_offer_shown', { to: preferred });
+  })();
 })();

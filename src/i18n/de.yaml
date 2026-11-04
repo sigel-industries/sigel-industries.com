@@ -43,6 +43,7 @@ chrome:
     text: Wir verwenden Analytics zur Verbesserung der Website. Keine Werbe-Cookies.
     deny: Ablehnen
     accept: Akzeptieren
+    text_ads: Wir verwenden Analytics und Werbemessung (LinkedIn, Meta), um Website und Kampagnen zu verbessern.
   modal:
     close: Schließen
     cta: Web-Intelligence-Report bestellen
@@ -56,6 +57,10 @@ chrome:
     - Audit vor dem Redesign
   - - /de/seo-audit-vs-website-audit/
     - SEO-Audit vs. Website-Audit
+  lang_offer:
+    text: Diese Seite auf Deutsch anzeigen?
+    'yes': Ja, auf Deutsch
+    close: Schließen
 order:
   eyebrow: SIGEL Web Intelligence
   title: Web-Intelligence-Report bestellen

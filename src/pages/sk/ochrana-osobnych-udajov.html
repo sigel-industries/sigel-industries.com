@@ -67,6 +67,9 @@ Marketingové oznámenia zasielame iba vtedy, ak na to máme zodpovedajúci prá
 <h2>9. Cookies a analytika</h2>
 <p>Web používa úložisko prehliadača (localStorage) na zapamätanie vašej voľby v cookie lište. Toto uloženie je nevyhnutné na rešpektovanie vašej voľby a nevyžaduje súhlas.</p>
 <p>Analytický nástroj Google Analytics 4 (poskytovateľ Google Ireland Limited) sa načíta až potom, čo v cookie lište zvolíte „Prijať“. Slúži na meranie návštevnosti a toho, ako web funguje (napríklad otvorenie objednávkového formulára, odoslanie objednávky alebo stiahnutie ukážkového reportu), a to s anonymizáciou IP adresy, bez reklamných cookies a bez remarketingu. Právnym základom je váš súhlas, ktorý môžete kedykoľvek odvolať vymazaním údajov tohto webu vo svojom prehliadači; cookie lišta sa vám potom zobrazí znova.</p>
+{% if site.linkedin_partner_id or site.meta_pixel_id %}
+<p>Ak v cookie lište zvolíte „Prijať“, načítajú sa aj reklamné meracie nástroje {{ ['LinkedIn Insight Tag (LinkedIn Ireland Unlimited Company)' if site.linkedin_partner_id else '', 'Meta Pixel (Meta Platforms Ireland Ltd.)' if site.meta_pixel_id else ''] | select | join(', ') }}. Slúžia na meranie účinnosti našich kampaní a na oslovenie návštevníkov webu reklamou. Právnym základom je váš súhlas, ktorý môžete kedykoľvek odvolať vymazaním údajov webu v prehliadači.</p>
+{% endif %}
 <p>Písma webu sa načítavajú z nášho vlastného servera, nie zo služby Google Fonts.</p>
 <p>Objednávkový a dopytový formulár odosiela zadané údaje priamo do nášho objednávkového systému (Google Apps Script a Google Sheets). Údaje z formulára neukladáme vo vašom prehliadači.</p>
 <h2>10. Automatizované rozhodovanie</h2>

@@ -109,7 +109,7 @@
 <div class="cookie-bar" hidden="" id="cookieBar">
 <div>
 <strong>Cookies</strong>
-<p>{{ c.cookie.text }} <a href="{{ c.privacy[0] }}">{{ c.privacy[1] }}</a>.</p>
+<p>{{ c.cookie.text_ads if (site.linkedin_partner_id or site.meta_pixel_id) else c.cookie.text }} <a href="{{ c.privacy[0] }}">{{ c.privacy[1] }}</a>.</p>
 </div>
 <div class="cookie-actions">
 <button class="btn btn-ghost btn-small" data-cookie-choice="deny" type="button">{{ c.cookie.deny }}</button>

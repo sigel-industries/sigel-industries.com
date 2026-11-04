@@ -62,6 +62,9 @@ Website: <a href="https://sigel-industries.com/">https://sigel-industries.com/</
 <h2>9. Cookies and analytics</h2>
 <p>The website uses browser storage (localStorage) to remember your choice in the cookie bar. This is necessary to respect your choice and does not require consent.</p>
 <p>The analytics tool Google Analytics 4 (provided by Google Ireland Limited) is loaded only after you select “Accept” in the cookie bar. It measures traffic and how the website works (for example opening the order form, submitting an order or downloading the sample report), with IP anonymisation, without advertising cookies and without remarketing. The legal basis is your consent, which you can withdraw at any time by clearing this website’s data in your browser; the cookie bar will then be shown again.</p>
+{% if site.linkedin_partner_id or site.meta_pixel_id %}
+<p>If you select “Accept” in the cookie bar, advertising measurement tools are also loaded: {{ ['LinkedIn Insight Tag (LinkedIn Ireland Unlimited Company)' if site.linkedin_partner_id else '', 'Meta Pixel (Meta Platforms Ireland Ltd.)' if site.meta_pixel_id else ''] | select | join(', ') }}. They measure the effectiveness of our campaigns and allow us to reach website visitors with advertising. The legal basis is your consent, which you can withdraw at any time by clearing this website’s data in your browser.</p>
+{% endif %}
 <p>The website fonts are served from our own server, not from Google Fonts.</p>
 <p>The order and inquiry forms send the entered data directly to our order system (Google Apps Script and Google Sheets). Form data is not stored in your browser.</p>
 <h2>10. Automated decision-making</h2>

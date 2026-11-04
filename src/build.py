@@ -102,6 +102,9 @@ def main():
             'order': t['order'],
             'modalDefaults': t['chrome']['modal'],
             'contactTopics': t['contact']['topics'],
+            'langOffer': {code: i18n[code]['chrome']['lang_offer'] for code in site['langs']},
+            'linkedinPartnerId': site.get('linkedin_partner_id') or '',
+            'metaPixelId': site.get('meta_pixel_id') or '',
         }
         if 'report-tab' in body:
             client['report'] = t['report']

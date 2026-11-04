@@ -2803,3 +2803,25 @@ section,
 
 /* Contact modal */
 .sigel-contact-dialog .sigel-order-form { margin-top: 26px; }
+
+/* Comparison table (guides) */
+.compare-table-wrap { overflow-x: auto; margin: 18px 0 8px; border: 1px solid var(--line); border-radius: 16px; }
+.compare-table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 14px; }
+.compare-table th, .compare-table td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.compare-table thead th { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
+.compare-table thead th:last-child, .compare-table td:last-child { color: var(--cold); }
+.compare-table tbody th { color: var(--ink-2); font-weight: 600; white-space: nowrap; }
+.compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: 0; }
+.compare-note { font-size: 13px; color: var(--ink-3); }
+
+/* Language offer bar */
+.lang-offer { position: fixed; top: calc(var(--header-h, 70px) + 10px); right: 16px; z-index: 900; display: flex; align-items: center; gap: 12px; max-width: calc(100vw - 32px); padding: 10px 10px 10px 16px; border: 1px solid var(--line); border-radius: 999px; background: rgba(5,6,10,.94); backdrop-filter: blur(16px); box-shadow: 0 12px 40px rgba(0,0,0,.4); font-size: 13.5px; color: var(--ink-2); }
+.lang-offer .btn { white-space: nowrap; }
+.lang-offer-close { width: 30px; height: 30px; border-radius: 50%; background: transparent; color: var(--ink-2); font-size: 18px; cursor: pointer; }
+.lang-offer-close:hover { color: var(--ink); background: rgba(255,255,255,.07); }
+@media (max-width: 600px) {
+  .lang-offer { left: 16px; right: 16px; border-radius: 18px; flex-wrap: wrap; row-gap: 10px; }
+  .lang-offer span { flex: 1 1 100%; }
+  .lang-offer .btn { flex: 1 1 auto; width: auto; }
+  .lang-offer-close { flex: 0 0 30px; }
+}

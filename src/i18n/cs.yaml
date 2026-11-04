@@ -43,6 +43,7 @@ chrome:
     text: Používáme analytiku pro zlepšování webu. Bez reklamních cookies.
     deny: Odmítnout
     accept: Přijmout
+    text_ads: Používáme analytiku a reklamní měření (LinkedIn, Meta) pro zlepšování webu a kampaní.
   modal:
     close: Zavřít
     cta: Získat Web Intelligence report
@@ -56,6 +57,15 @@ chrome:
     - Audit před redesignem
   - - /seo-audit-vs-komplexni-audit-webu/
     - SEO audit vs. audit webu
+  - - /audit-webu-agentura-nastroje-nebo-sigel/
+    - Agentura, nástroje, nebo SIGEL
+  nav_products:
+  - - /cenik/
+    - Ceník
+  lang_offer:
+    text: Zobrazit tuto stránku v češtině?
+    'yes': Ano, česky
+    close: Zavřít
 order:
   eyebrow: SIGEL Web Intelligence
   title: Objednávka Web Intelligence reportu

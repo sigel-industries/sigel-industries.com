@@ -43,6 +43,7 @@ chrome:
     text: We use analytics to improve the website. No advertising cookies.
     deny: Decline
     accept: Accept
+    text_ads: We use analytics and advertising measurement (LinkedIn, Meta) to improve the website and campaigns.
   modal:
     close: Close
     cta: Get the Web Intelligence report
@@ -56,6 +57,10 @@ chrome:
     - Audit before redesign
   - - /en/seo-audit-vs-website-audit/
     - SEO audit vs website audit
+  lang_offer:
+    text: View this page in English?
+    'yes': Yes, English
+    close: Close
 order:
   eyebrow: SIGEL Web Intelligence
   title: Web Intelligence Report Order

@@ -8,3 +8,6 @@ langs: [cs, sk, en, de]
 lang_labels: {cs: CZ, sk: SK, en: EN, de: DE}
 lang_names: {cs: Česky, sk: Slovensky, en: English, de: Deutsch}
 locales: {cs: cs_CZ, sk: sk_SK, en: en_GB, de: de_DE}
+# Advertising pixels: loaded only after cookie consent. Empty = disabled (and not mentioned in cookie bar / privacy).
+linkedin_partner_id: ''
+meta_pixel_id: ''

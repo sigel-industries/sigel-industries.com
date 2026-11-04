@@ -61,6 +61,9 @@ Website: <a href="https://sigel-industries.com/">https://sigel-industries.com/</
 <h2>9. Cookies und Analyse</h2>
 <p>Die Website nutzt den Browserspeicher (localStorage), um Ihre Auswahl in der Cookie-Leiste zu speichern. Dies ist erforderlich, um Ihre Auswahl zu respektieren, und bedarf keiner Einwilligung.</p>
 <p>Das Analysewerkzeug Google Analytics 4 (Anbieter: Google Ireland Limited) wird erst geladen, nachdem Sie in der Cookie-Leiste „Akzeptieren“ gewählt haben. Es misst Besuche und die Nutzung der Website (zum Beispiel das Öffnen des Bestellformulars, das Absenden einer Bestellung oder den Download des Beispielreports) mit IP-Anonymisierung, ohne Werbe-Cookies und ohne Remarketing. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit widerrufen können, indem Sie die Daten dieser Website in Ihrem Browser löschen; die Cookie-Leiste wird dann erneut angezeigt.</p>
+{% if site.linkedin_partner_id or site.meta_pixel_id %}
+<p>Wenn Sie in der Cookie-Leiste „Akzeptieren“ wählen, werden zusätzlich Werbemesswerkzeuge geladen: {{ ['LinkedIn Insight Tag (LinkedIn Ireland Unlimited Company)' if site.linkedin_partner_id else '', 'Meta Pixel (Meta Platforms Ireland Ltd.)' if site.meta_pixel_id else ''] | select | join(', ') }}. Sie messen die Wirksamkeit unserer Kampagnen und ermöglichen es, Besucher der Website mit Werbung anzusprechen. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit durch Löschen der Website-Daten in Ihrem Browser widerrufen können.</p>
+{% endif %}
 <p>Die Schriftarten der Website werden von unserem eigenen Server geladen, nicht von Google Fonts.</p>
 <p>Bestell- und Anfrageformulare senden die eingegebenen Daten direkt an unser Bestellsystem (Google Apps Script und Google Sheets). Formulardaten werden nicht in Ihrem Browser gespeichert.</p>
 <h2>10. Automatisierte Entscheidungsfindung</h2>
