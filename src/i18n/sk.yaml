@@ -946,3 +946,16 @@ about:
   photo_alt: Daniel Hajduk, zakladateľ Sigel s.r.o.
   strip: Každý report pred odoslaním osobne kontrolujem.
   order_note: Váš report pred odoslaním osobne skontroluje Daniel Hajduk.
+home_prio:
+  label: Príklad zistenia
+  hero:
+  - Hlavné CTA sľubuje cenovú ponuku, ale vedie na všeobecný kontakt.
+  - 'Sem prichádza väčšina návštevnosti z reklamy. Náročnosť opravy: nízka.'
+  title: Čo riešiť ako prvé · príklad priorít z reportu
+  items:
+  - - Hlavné CTA vedie na všeobecný kontakt namiesto dopytu.
+    - vysoký dopad · nízka náročnosť
+  - - Na mobile chýba cena aj referencie nad ohybom stránky.
+    - vysoký dopad · stredná náročnosť
+  - - LCP 4,1 s na mobile, brzdí ho nekomprimovaný obrázok v hero.
+    - stredný dopad · nízka náročnosť

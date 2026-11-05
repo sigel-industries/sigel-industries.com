@@ -948,3 +948,16 @@ about:
   photo_alt: Daniel Hajduk, Gründer der Sigel s.r.o.
   strip: Jeden Report prüfe ich vor dem Versand persönlich.
   order_note: Ihren Report prüft Daniel Hajduk vor dem Versand persönlich.
+home_prio:
+  label: Beispielbefund
+  hero:
+  - Der Haupt-CTA verspricht ein Angebot, führt aber zu einem allgemeinen Kontaktformular.
+  - 'Hier landet der Großteil des Werbetraffics. Aufwand: gering.'
+  title: Was zuerst zu tun ist · Beispielprioritäten aus einem Report
+  items:
+  - - Der Haupt-CTA führt zum allgemeinen Kontakt statt zur Angebotsanfrage.
+    - hohe Wirkung · geringer Aufwand
+  - - Auf dem Smartphone fehlen Preis und Referenzen im sichtbaren Bereich.
+    - hohe Wirkung · mittlerer Aufwand
+  - - Mobiler LCP 4,1 s, gebremst durch ein unkomprimiertes Hero-Bild.
+    - mittlere Wirkung · geringer Aufwand

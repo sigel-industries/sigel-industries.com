@@ -946,3 +946,16 @@ about:
   photo_alt: Daniel Hajduk, founder of Sigel s.r.o.
   strip: I personally review every report before it is sent.
   order_note: Daniel Hajduk personally reviews your report before it is sent.
+home_prio:
+  label: Example finding
+  hero:
+  - The main CTA promises a quote but leads to a generic contact form.
+  - 'Most paid traffic lands here. Effort to fix: low.'
+  title: What to fix first · example priorities from a report
+  items:
+  - - The main CTA leads to a generic contact form instead of a quote request.
+    - high impact · low effort
+  - - On mobile, price and references are missing above the fold.
+    - high impact · medium effort
+  - - Mobile LCP 4.1 s, slowed by an uncompressed hero image.
+    - medium impact · low effort

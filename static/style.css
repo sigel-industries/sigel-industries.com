@@ -1384,3 +1384,30 @@ main, section, .wrap, .page-layout, .page-card, .legal-content, .footer-grid, .r
   .about-strip { flex-wrap: wrap; }
   .about-strip .btn { width: 100%; }
 }
+
+/* interpretation over score: the priority is the hero card, the score a small fact */
+.panel-measured { width: 156px; padding: 14px; top: 40%; }
+.panel-measured .panel-score { font-size: 32px; }
+.panel-measured p { font-size: 12px; }
+.panel-priority { right: 0; bottom: 9%; width: 330px; padding: 22px; background: linear-gradient(rgba(14,12,8,.9), rgba(14,12,8,.9)) padding-box, var(--edge-warm) border-box; box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 0 50px rgba(255,190,61,.12); }
+.panel-prio-label { margin-left: 8px; color: var(--ink-3); font-size: 12px; }
+.panel-priority .panel-prio-n { margin: 4px 0 6px; color: var(--warm-2); font: 400 34px/1 "Fraunces", serif; }
+.panel-priority .panel-prio-text { margin: 0; color: var(--ink); font-size: 15px; line-height: 1.45; }
+.panel-priority .panel-prio-why { margin-top: 8px; color: var(--ink-3); font-size: 12.5px; line-height: 1.45; }
+.report-shell { position: relative; }
+.report-body { grid-template-columns: 1fr auto; }
+.report-body .report-score-ring { order: 2; width: 84px; height: 84px; font-size: 28px; }
+.report-prio { margin: 0 36px 24px; padding: 20px 24px; border: 1px solid transparent; border-radius: 18px; background: linear-gradient(rgba(14,12,8,.9), rgba(14,12,8,.9)) padding-box, var(--edge-warm) border-box; }
+.report-prio-title { margin-bottom: 12px; color: var(--warm-2); font-size: 13.5px; font-weight: 600; }
+.report-prio ol { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.report-prio li { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 14px; align-items: baseline; color: var(--ink); font-size: 15.5px; }
+.report-prio li b { color: var(--warm-2); font: 400 24px/1 "Fraunces", serif; }
+.report-prio li em { color: var(--ink-3); font-size: 12.5px; font-style: normal; white-space: nowrap; }
+@media (max-width: 760px) {
+  .report-body { grid-template-columns: 1fr; }
+  .report-body .report-score-ring { order: 0; }
+  .report-prio { margin: 0 18px 20px; padding: 18px; }
+  .report-prio li { grid-template-columns: 30px minmax(0, 1fr); }
+  .report-prio li em { grid-column: 2; white-space: normal; }
+}
+@media (max-width: 1080px) and (min-width: 761px) { .panel-priority { width: 280px; } .panel-measured { top: 14%; left: 0; } }

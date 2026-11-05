@@ -152,7 +152,10 @@ hero_preload: true
 </article>
 <article class="hero-panel panel-priority interactive-card">
 <span class="priority-pill">Top priorita</span>
-<p>Zpřesnit nabídku a hlavní cestu návštěvníka.</p>
+<span class="panel-prio-label">{{ t.home_prio.label }}</span>
+<p class="panel-prio-n">01</p>
+<p class="panel-prio-text">{{ t.home_prio.hero[0] }}</p>
+<p class="panel-prio-why">{{ t.home_prio.hero[1] }}</p>
 </article>
 </div>
 </div>
@@ -356,6 +359,14 @@ hero_preload: true
 <span>Skóre</span><span>Rizika</span><span>Obchodní dopad</span><span>Roadmapa</span>
 </div>
 </div>
+</div>
+<div class="report-prio">
+<p class="report-prio-title">{{ t.home_prio.title }}</p>
+<ol>
+{%- for text, meta in t.home_prio['items'] %}
+<li><b>{{ '%02d' % loop.index }}</b><span>{{ text }}</span><em>{{ meta }}</em></li>
+{%- endfor %}
+</ol>
 </div>
 <div class="report-meters">
 {%- for label in t.home_report_bars %}

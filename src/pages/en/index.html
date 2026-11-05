@@ -152,7 +152,10 @@ hero_preload: true
 </article>
 <article class="hero-panel panel-priority interactive-card">
 <span class="priority-pill">Top priority</span>
-<p>Clarify the offer and the main visitor path.</p>
+<span class="panel-prio-label">{{ t.home_prio.label }}</span>
+<p class="panel-prio-n">01</p>
+<p class="panel-prio-text">{{ t.home_prio.hero[0] }}</p>
+<p class="panel-prio-why">{{ t.home_prio.hero[1] }}</p>
 </article>
 </div>
 </div>
@@ -271,6 +274,14 @@ hero_preload: true
 <div class="report-shell reveal" id="reportWrap">
 <div aria-label="Report sample" class="report-tabs" role="tablist"><button aria-controls="reportPanel" aria-selected="true" class="report-tab active" data-report-tab="dashboard" id="reportTab-dashboard" role="tab" type="button">Dashboard</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="technika" id="reportTab-technika" role="tab" type="button">Technical</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="komunikace" id="reportTab-komunikace" role="tab" type="button">Communication</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="archetypy" id="reportTab-archetypy" role="tab" type="button">Archetypes</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="roadmapa" id="reportTab-roadmapa" role="tab" type="button">Roadmap</button></div>
 <div aria-labelledby="reportTab-dashboard" aria-live="polite" class="report-body" id="reportPanel" role="tabpanel"><div class="report-score-ring" style="--score:{{ t.report.dashboard.score }}"><span id="reportScore">64</span></div><div class="report-copy"><span class="report-kicker" id="reportKicker">Dashboard</span><h3 id="reportTitle">Score, risks and decision direction.</h3><p id="reportText">The first part combines website health, the main risks and business impact into one fast orientation.</p><div class="report-mini-grid"><span>Score</span><span>Risks</span><span>Business impact</span><span>Roadmap</span></div></div></div>
+<div class="report-prio">
+<p class="report-prio-title">{{ t.home_prio.title }}</p>
+<ol>
+{%- for text, meta in t.home_prio['items'] %}
+<li><b>{{ '%02d' % loop.index }}</b><span>{{ text }}</span><em>{{ meta }}</em></li>
+{%- endfor %}
+</ol>
+</div>
 <div class="report-meters">
 {%- for label in t.home_report_bars %}
 <div class="report-meter"><span>{{ label }}<b>{{ t.report.dashboard.bars[loop.index0] }}</b></span><i style="--v:{{ t.report.dashboard.bars[loop.index0] }}%"></i></div>
