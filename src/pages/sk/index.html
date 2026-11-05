@@ -296,7 +296,7 @@ hero_preload: true
 </div>
 <div aria-label="Čo je v reporte reálne zmerané" class="audit-evidence reveal">
 <div class="audit-evidence-head"><p class="tag cold">Dôkazová vrstva</p><h3>Čo je v reporte reálne zmerané</h3></div>
-<div class="audit-evidence-grid"><span>{{ t.home_areas.chip }}</span>
+<div class="audit-evidence-grid"><span>{{ t.home_areas.chip }}</span>{% for c in t.home_areas.chips_extra %}<span>{{ c }}</span>{% endfor %}
 <span>Lighthouse a Core Web Vitals</span><span>Odkazy a CTA</span><span>Mobilný viewport</span><span>Kontrast a dotykové ciele</span><span>Metadáta a schema</span><span>Obsahová extrakcia</span><span>AI pripravenosť</span><span>Evidence dáta</span>
 </div>
 </div>

@@ -141,148 +141,6 @@ order:
   aresLoading: Hľadám firmu v ARES…
   aresFilled: Údaje doplnené z ARES. Skontrolujte ich.
   aresNotFound: Firmu sme v ARES nenašli, vyplňte údaje ručne.
-modal:
-  problem-leads:
-    kicker: Čo to rieši
-    title: Málo dopytov z webu
-    lead: Web môže byť technicky v poriadku a napriek tomu nepresviedčať. SIGEL hľadá miesta, kde návštevník stráca jasnosť, dôveru alebo ďalší krok.
-    items:
-    - - Kedy pomáha
-      - Keď má web návštevnosť, ale málo dopytov, objednávok alebo zmysluplných akcií.
-    - - Čo sa kontroluje
-      - Jasnosť ponuky, CTA, dôvera, mobilná cesta a komunikačné bariéry.
-    - - Typický výstup
-      - Priority oddeľujúce kozmetiku od vecí s reálnym dopadom.
-    cta: Získať Web Intelligence report za 199 €
-  problem-marketing:
-    kicker: Čo to rieši
-    title: Marketing beží, výsledky sú slabé
-    lead: Pred zvýšením rozpočtu sa oplatí overiť, či vstupný web vôbec dokáže podporiť rozhodnutie.
-    items:
-    - - Kedy pomáha
-      - Pred reklamou, pri slabej konverzii alebo keď kampane posielajú návštevnosť bez výsledku.
-    - - Čo sa kontroluje
-      - Landing sekcie, rýchlosť, CTA, dôkazy, dôvera a nesúlad medzi reklamou a webom.
-    - - Typický výstup
-      - Zoznam bariér, ktoré môžu brzdiť výkon ešte pred samotnou kampaňou.
-    cta: Overiť web pred reklamou
-  problem-redesign:
-    kicker: Čo to rieši
-    title: Redizajn bez jasného zadania
-    lead: Redizajn bez diagnostiky často zmení iba vzhľad. SIGEL pomôže určiť, čo má nový web skutočne opraviť.
-    items:
-    - - Kedy pomáha
-      - Pred redizajnom, zadaním pre agentúru alebo rozhodnutím, čo na webe meniť.
-    - - Čo sa kontroluje
-      - Štruktúra, komunikácia ponuky, dôvera, UX, archetyp značky a rozhodovacia cesta.
-    - - Typický výstup
-      - Podklad pre redizajn zameraný na funkciu, nie dekoráciu.
-    cta: Získať podklad pre redizajn
-  problem-offer:
-    kicker: Čo to rieši
-    title: Ponuka je dobrá, ľudia jej nerozumejú
-    lead: Niekedy nie je problém produkt, ale spôsob, akým sa vysvetľuje jeho hodnota.
-    items:
-    - - Kedy pomáha
-      - Keď zákazníci nerozumejú hodnote, cene, rozdielu alebo dôvodu pokračovať.
-    - - Čo sa kontroluje
-      - Jazyk ponuky, dôkazy, archetyp značky a zákaznícke motivácie.
-    - - Typický výstup
-      - Odporúčania na spresnenie ponuky pre rôzne typy zákazníkov.
-    cta: Spresniť komunikáciu webu
-  problem-strategy:
-    kicker: Čo to rieši
-    title: Web už nezodpovedá firme
-    lead: Web často zostane v minulosti, aj keď sa firma posunula. SIGEL overí, či komunikácia, ponuka a cieľové skupiny stále zodpovedajú realite biznisu.
-    items:
-    - - Kedy pomáha
-      - Pri stagnácii, zmene ponuky, novej cieľovke alebo pred zásadnejším obchodným rozhodnutím.
-    - - Čo sa kontroluje
-      - Súlad ponuky, positioning, archetyp, zákaznícke segmenty a prioritné riziká.
-    - - Typický výstup
-      - Roadmapa toho, čo zmeniť ako prvé, aby web znovu podporoval smer firmy.
-    cta: Overiť stratégiu webu
-  problem-agency:
-    kicker: Čo to rieši
-    title: Rýchly podklad pre rozhodnutie
-    lead: Majiteľ, marketingový tím ani agentúra nemusia začínať od dojmov. SIGEL dodá externú diagnostiku ako vstup do konzultácie, redizajnu, kampane alebo stratégie.
-    items:
-    - - Kedy pomáha
-      - Pred konzultáciou, návrhom úprav, kampaňou, redizajnom alebo rozhodnutím o ďalšom rozpočte.
-    - - Čo sa kontroluje
-      - Technika, UX, komunikácia, dôvera, archetypy a priority v jednom podklade.
-    - - Typický výstup
-      - Rýchly report použiteľný ako interný rozhodovací alebo klientsky podklad.
-    cta: Dohodnúť podmienky spolupráce
-    inquiry: agency
-  system-process:
-    kicker: Analytické jadro
-    title: Ako SIGEL skladá Web Intelligence výstup
-    lead: SIGEL Web Intelligence nie je čistý AI text ani bežný checklist. Je to analytický systém, ktorý zbiera signály z webu, vyhodnocuje ich vlastným scoringom, pravidlami, váhami a UX heuristikami
-      a prevádza ich do obchodne použiteľného reportu.
-    items:
-    - - Zber signálov
-      - Technika, SEO, štruktúra, obsah, CTA, dôvera a komunikácia ponuky.
-    - - Vlastná analytická logika
-      - Systém pracuje s pravidlami, váhami, prioritami a scoringom, aby bolo jasné, čo má reálny dopad.
-    - - UX a komunikačné heuristiky
-      - Systém sleduje, kde návštevník chápe ponuku, kde váha a kde môže strácať dôveru.
-    - - Interpretačná vrstva
-      - Nad dátami vzniká interpretácia značky, zákazníckych archetypov a komunikácie pre rôzne typy zákazníkov.
-    - - Ručná kontrola výstupu
-      - Každý report pred odoslaním prechádza osobnou kontrolou, aby mal jasné priority a praktický zmysel.
-    cta: Získať Web Intelligence report za 199 €
-  use-web-audit:
-    kicker: Dostupné
-    title: Web Intelligence Report
-    lead: 'Základný produkt SIGEL: business intelligence pre jeden konkrétny web pred reklamou, redizajnom alebo obchodným rozhodnutím.'
-    items:
-    - - Obsahuje
-      - Desktopové a mobilné Lighthouse metriky, Core Web Vitals, odkazy a CTA, prístupnosť, komunikáciu ponuky, AI pripravenosť, archetypový playbook, roadmapu a evidence dáta.
-    - - Hodí sa pre
-      - Firmy, freelancerov, menšie tímy alebo projekty, ktoré potrebujú jasný diagnostický vstup.
-    - - Výstup
-      - Vizuálny PDF report s prioritami a odporúčaniami.
-    cta: Získať Web Intelligence report
-  use-agency:
-    kicker: Dostupné
-    title: Agentúrny podklad
-    lead: 'Rovnaký Web Intelligence report pre weby vašich klientov: klientská konzultácia, redizajn, SEO alebo obsahová stratégia.'
-    items:
-    - - Obsahuje
-      - Externý pohľad na klientsky web, priority a podklad pre odporúčanie.
-    - - Hodí sa pre
-      - Agentúry, ktoré chcú rýchlejší vstup bez kompletnej ručnej diagnostiky od nuly.
-    - - Výstup
-      - Report alebo interný podklad podľa dohody.
-    cta: Dohodnúť podmienky spolupráce
-    inquiry: agency
-  use-lead-research:
-    kicker: Pilotne
-    title: Lead Research
-    lead: 'Výskumná vrstva: hľadanie relevantných firemných webov a verejných kontaktov v segmente, lokalite alebo vlastnom výbere trhu.'
-    items:
-    - - Obsahuje
-      - Zber URL, filtrovanie, základnú validáciu a prípravu kontaktov pre B2B výskum.
-    - - Hodí sa pre
-      - Obchodnú prípravu, segmentáciu trhu, zoznam potenciálnych klientov alebo nadväzujúcu analýzu.
-    - - Výstup
-      - Štruktúrovaný zoznam webov a kontaktov podľa zadania.
-    cta: Prebrať výber segmentu
-    inquiry: lead-research
-  use-benchmark:
-    kicker: Pripravujeme
-    title: Segmentový benchmark
-    lead: Porovnanie viacerých webov v jednom odvetví, lokalite alebo výbere trhu. Ide o nadväzujúcu vrstvu nad jednotlivými reportmi.
-    items:
-    - - Obsahuje
-      - Porovnanie skóre, opakujúce sa vzorce, rozdiely medzi hráčmi a segmentové signály.
-    - - Hodí sa pre
-      - Prehľad trhu, interné rozhodovanie, obchodný výber alebo prípravu stratégie.
-    - - Výstup
-      - Benchmarková mapa a súhrn hlavných zistení.
-    cta: Opýtať sa na benchmark
-    inquiry: benchmark
 ci:
   url: /sk/financna-analyza-firmy/
   eyebrow: Company Intelligence · pilotná prevádzka
@@ -407,47 +265,6 @@ guide:
   - - /sk/audit-webu-agentura-nastroje-alebo-sigel/
     - Agentúra, nástroje, alebo SIGEL?
     - 'Jedenásť oblastí vedľa seba: čo ktorý audit pokryje, koľko stojí a kedy sa hodí.'
-home_areas:
-  h2:
-  - 'Jedenásť oblastí. Jedna odpoveď:'
-  - čo má zmysel
-  - riešiť ako prvé.
-  aria: Jedenásť oblastí auditu
-  chip: HTTPS, TLS a bezpečnostné hlavičky
-  items:
-  - - Výkon
-    - cold
-    - 'Lighthouse pre desktop aj mobil a Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
-  - - Indexácia a SEO
-    - cold
-    - Robots.txt, sitemap, canonical, metadáta, nadpisy a Open Graph.
-  - - Odkazy a CTA
-    - cold
-    - Nefunkčné a blokované odkazy, výzvy na akciu a podozrivé prvky.
-  - - Prístupnosť
-    - cold
-    - Kontrast, veľkosť písma a dotykové ciele s konkrétnymi prvkami na desktope aj mobile.
-  - - Bezpečnostné signály
-    - cold
-    - HTTPS a presmerovanie, TLS certifikát a bezpečnostné HTTP hlavičky. Pasívna kontrola.
-  - - UX a mobilná použiteľnosť
-    - warm
-    - Viewport, navigácia, orientácia v obsahu a mobilná cesta návštevníka.
-  - - Komunikácia ponuky
-    - warm
-    - Čo web ponúka, komu, ako jasne a konkrétne, a kde stráca dôveru.
-  - - AI pripravenosť
-    - warm
-    - Štruktúrované dáta a signály pre AI vyhľadávanie.
-  - - Archetyp značky a publika
-    - warm
-    - Mapa archetypov, brand a customer playbook, pravidlá tónu komunikácie.
-  - - Obchodný dopad a roadmapa
-    - warm
-    - Manažérske zhrnutie, dopad × náročnosť a akčný plán, čo riešiť ako prvé.
-  - - Dôkazový appendix
-    - warm
-    - Crawl, robots, sitemap, metadáta a namerané dáta na overenie každého nálezu.
 home_compare:
   tag: Porovnanie
   h2:
@@ -543,293 +360,6 @@ cmp_promo:
   title: Agentúra, nástroje zadarmo, alebo SIGEL?
   text: Čo ktorý audit pokryje, koľko stojí a kedy sa hodí. Prehľadne vedľa seba.
   cta: Porovnať
-pricing:
-  ld: 'Komplexný audit webu pre jednu URL: technika, SEO, UX, prístupnosť, komunikácia ponuky, archetypy a prioritná roadmapa v ručne kontrolovanom PDF reporte.'
-  crumb: Cenník
-  h1: Jedna položka na faktúre.
-  lead: Celý Web Intelligence report pre jednu URL za 199 €. Bez balíkov, príplatkov a mesačných poplatkov. Rozkliknite ktorúkoľvek položku dokladu a uvidíte, čo presne obsahuje.
-  cta_hero: Objednať report za 199 €
-  demo: Ukážkový report, 21 strán
-  promise:
-  - - Spravidla do 24 h
-    - ' v pracovné dni po pripísaní platby'
-  - - Ručne kontrolovaný
-    - ' každý report pred odoslaním'
-  - - Faktúra na IČO
-    - ', pri českých firmách doplníme údaje z ARES'
-  receipt_aria: Čo je v cene
-  rc_sub: Web Intelligence report
-  in_price: v cene
-  layers:
-  - - Meriame
-    - - - Technika a výkon
-        - 'Lighthouse pre desktop aj mobil, Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
-      - - Bezpečnostné signály
-        - HTTPS a presmerovania, TLS certifikát, bezpečnostné HTTP hlavičky. Pasívna kontrola.
-      - - Odkazy a CTA
-        - Nefunkčné a blokované odkazy, výzvy na akciu a podozrivé prvky.
-      - - Prístupnosť
-        - Kontrast, veľkosť písma a dotykové ciele s konkrétnymi prvkami na desktope aj mobile.
-      - - AI pripravenosť
-        - Štruktúrované dáta a signály pre AI vyhľadávanie.
-  - - Vyhodnocujeme
-    - - - Celkový obraz
-        - Skóre v šiestich oblastiach a súhrn silných stránok a rizík.
-      - - UX a komunikácia ponuky
-        - Jasnosť, konzistentnosť a konkrétnosť posolstva, navigácia a dopad na konverziu.
-      - - Archetyp značky a publika
-        - Mapa archetypov, brand a customer playbook, pravidlá tónu komunikácie.
-  - - Rozhodujete
-    - - - Manažérske zhrnutie
-        - Krátky rozhodovací prehľad a obchodný dopad pre vedenie.
-      - - Prioritná roadmapa
-        - Čo riešiť ako prvé, rýchle výhry, dopad × náročnosť.
-      - - Dôkazný appendix
-        - Crawl, robots, sitemap, metadáta a namerané dáta.
-  review:
-  - Ručná kontrola
-  - Každý report pred odoslaním osobne prechádzame, aby priority dávali zmysel pre váš web.
-  total: Spolu
-  price: 199 €
-  alt: alebo 4 980 Kč · pre firmy a podnikateľov
-  steps_tag: Ako prebieha objednávka
-  steps_h2:
-  - Štyri kroky.
-  - Bez stretnutí.
-  steps:
-  - - Objednávka
-    - Zadáte URL a IČO, pri českých firmách doplníme údaje z ARES.
-  - - Faktúra
-    - Čoskoro vám príde faktúra na zadaný e-mail.
-  - - Platba
-    - Prevodom podľa faktúry.
-  - - Report
-    - Spravidla do 24 hodín v pracovné dni od pripísania platby, e-mailom ako PDF.
-  note: Služba je určená firmám a podnikateľom (B2B). Podrobnosti upravujú <a href="/sk/obchodne-podmienky.html">obchodné podmienky</a>.
-  ctx_tag: Cena v kontexte
-  ctx_h2:
-  - Čo by ste inak
-  - skladali z viacerých zákaziek.
-  ctx_p: Samostatný SEO audit sa oceňuje podľa veľkosti webu a pokrýva len jednu z oblastí vyššie. UX, prístupnosť, bezpečnosť alebo komunikácia značky sa v agentúrach zvyčajne riešia ako ďalšie samostatné zákazky.
-  scale: null
-  not_tag: Pre koho to nie je
-  not_h2:
-  - Aby ste vedeli vopred,
-  - kedy SIGEL nedáva zmysel.
-  not:
-  - - Weby pred spustením
-    - Nie je čo merať. Report dáva zmysel až na bežiacom webe.
-  - - Záruka pozícií alebo tržieb
-    - Report je diagnostika a podklad na rozhodnutie, nie sľub výsledku.
-  - - Tisíce produktových stránok
-    - Report hodnotí web ako celok, nie každú URL veľkého e-shopu zvlášť.
-  - - Hlavne implementácia
-    - SIGEL povie, čo opraviť a v akom poradí. Samotné úpravy robí váš vývojár alebo agentúra.
-  ag_tag: Agentúry a viac webov
-  ag_h2: Reporty pre klientov, pravidelne.
-  ag_p: Potrebujete reporty pre viac webov alebo klientov? Objednajte prvý report, alebo napíšte na <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a> a dohodneme podmienky opakovanej spolupráce.
-  ag_cta: Objednať prvý report
-  ag_links:
-  - Čo je v cene
-  - Porovnanie s agentúrou a nástrojmi
-  - Ukážkový report, 21 strán
-compare:
-  crumb: Porovnanie
-  h1: Koľko z 11 oblastí váš audit naozaj pokryje?
-  lead: Štyri cesty, ako zistiť, čo web brzdí. Líšia sa cenou a rýchlosťou, ale hlavne tým, koľko oblastí pokryjú a či na konci dostanete čísla, alebo rozhodnutie.
-  board_aria: Pokrytie 11 oblastí podľa typu auditu
-  full: plne
-  part: čiastočne
-  of: z 11
-  price: Cena
-  delivery: Dodanie
-  card_cta: Objednať report
-  board_note: 'Plne, čiastočne alebo vôbec: podľa tabuľky nižšie.'
-  board_link: Zobraziť všetkých 11 oblastí
-  options:
-  - - Nástroje zadarmo
-    - Lighthouse, PageSpeed Insights
-    - 0 €
-    - okamžite
-    - Technické čísla bez kontextu. Nevedia, čo predávate, ani čo opraviť ako prvé.
-  - - SEO audit
-    - SEO špecialista alebo agentúra
-    - podľa rozsahu webu
-    - podľa dohody
-    - Do hĺbky v dohľadateľnosti. UX, ponuka ani značka nie sú jeho téma.
-  - - Agentúrny audit
-    - SEO, UX, copywriting, brand
-    - súčet viacerých zákaziek
-    - podľa dohody
-    - Môže pokryť všetko, ale skladá sa z viacerých zadaní a rozsah sa líši agentúra od agentúry.
-  - - SIGEL Web Intelligence
-    - jeden report, ručná kontrola
-    - 199 €
-    - do 24 h po platbe
-    - Technika, UX, bezpečnosť, ponuka aj značka. Na konci roadmapa, čo riešiť ako prvé.
-  m_tag: Čo ktorý audit pokryje
-  m_h2:
-  - Jedenásť oblastí.
-  - Jeden report.
-  m_p: Orientačné porovnanie rozsahu. Agentúrne audity sa líšia podľa zadania; „zvlášť“ znamená, že oblasť zvyčajne rieši iný špecialista alebo iná objednávka.
-  legend_aria: Legenda
-  legend:
-  - pokryté
-  - čiastočne / podľa zadania
-  - nepokryté
-  area: Oblasť
-  columns:
-  - Nástroje zadarmo
-  - SEO audit
-  - Komplexný agentúrny audit
-  - SIGEL Web Intelligence
-  groups:
-  - - Technika a dohľadateľnosť
-    - - - 'Výkon: Lighthouse desktop aj mobil, Core Web Vitals'
-        - - - y
-            - áno
-          - - y
-            - áno
-          - - y
-            - áno
-          - - y
-            - áno
-      - - 'Indexácia: robots.txt, sitemap, canonical, metadáta'
-        - - - p
-            - základ
-          - - y
-            - áno
-          - - y
-            - áno
-          - - y
-            - áno
-      - - Odkazy a výzvy na akciu (CTA)
-        - - - p
-            - len odkazy
-          - - p
-            - len odkazy
-          - - p
-            - podľa zadania
-          - - y
-            - áno
-      - - Prístupnosť s konkrétnymi prvkami
-        - - - p
-            - všeobecné skóre
-          - - n
-            - nie
-          - - p
-            - podľa zadania
-          - - y
-            - áno
-      - - 'Bezpečnosť: HTTPS, TLS, bezpečnostné hlavičky'
-        - - - p
-            - iné nástroje
-          - - n
-            - nie
-          - - p
-            - samostatná zákazka
-          - - y
-            - pasívna kontrola
-  - - Používateľ, ponuka a značka
-    - - - UX a mobilná použiteľnosť
-        - - - n
-            - nie
-          - - n
-            - nie
-          - - p
-            - UX audit zvlášť
-          - - y
-            - áno
-      - - 'Komunikácia ponuky: jasnosť, konzistentnosť, konkrétnosť'
-        - - - n
-            - nie
-          - - n
-            - nie
-          - - p
-            - copy / stratégia zvlášť
-          - - y
-            - áno
-      - - 'AI pripravenosť: štruktúrované dáta, signály pre AI'
-        - - - n
-            - nie
-          - - p
-            - niekedy
-          - - p
-            - niekedy
-          - - y
-            - áno
-      - - Archetyp značky a publika, komunikačný playbook
-        - - - n
-            - nie
-          - - n
-            - nie
-          - - p
-            - brand stratégia zvlášť
-          - - y
-            - áno
-  - - Výstup pre rozhodnutie
-    - - - Obchodný dopad a roadmapa (dopad × náročnosť)
-        - - - n
-            - nie
-          - - p
-            - SEO odporúčania
-          - - y
-            - áno
-          - - y
-            - áno
-      - - Dôkazný appendix s nameranými dátami
-        - - - p
-            - surové dáta
-          - - y
-            - áno
-          - - p
-            - podľa zadania
-          - - y
-            - áno
-  cover_label: Pokrytie 11 oblastí
-  cover_aria: 'Pokrytie: {full} oblastí plne, {part} čiastočne z 11'
-  foot:
-  - - Kto to robí
-    - - vy sami
-      - SEO špecialista
-      - 'tím: SEO, UX, copy, brand'
-      - jeden report, ručná kontrola
-  - - Cena
-    - - 0 €
-      - podľa rozsahu webu
-      - súčet viacerých zákaziek
-      - 199 €
-  - - Dodanie
-    - - okamžite
-      - podľa dohody
-      - podľa dohody
-      - spravidla do 24 h po platbe
-  footnote: 'Pri SEO a komplexných agentúrnych auditoch uvádzame rozsah, nie cenu: líši sa podľa veľkosti webu, počtu špecialistov a zadania.'
-  d_tag: Ako sa rozhodnúť
-  d_h2:
-  - Každá cesta má zmysel.
-  - Len v inej situácii.
-  decide:
-  - - „Riešime len rýchlosť a technické chyby a máme vývojára, ktorý ich opraví.“
-    - Nástroje zadarmo
-    - Na prvú orientáciu a priebežnú kontrolu techniky stačia. Počítajte s tým, že čísla musí niekto vedieť prečítať.
-  - - „Chystáme dlhodobé SEO alebo kampane s konkrétnou agentúrou.“
-    - Audit od agentúry
-    - Audit ako vstup do spolupráce dáva zmysel. Vopred si overte, ktoré oblasti zadanie pokrýva.
-  - - „Nevieme, prečo web neprináša dopyty, a potrebujeme vedieť, čo opraviť ako prvé.“
-    - SIGEL Web Intelligence
-    - Rýchly podklad pred redizajnom, kampaňou alebo rozhodnutím o rozpočte, prípadne ako zadanie pre vývojára či agentúru.
-  o_price: 199 €
-  o_sub: alebo 4 980 Kč · jedna URL · pre firmy (B2B)
-  o_cta: Získať Web Intelligence report
-  o_list:
-  - 11 oblastí v jednom PDF reporte
-  - Manažérske zhrnutie a prioritná roadmapa
-  - Ručne kontrolovaný výstup
-  - Spravidla do 24 h v pracovné dni od pripísania platby
-  o_links:
-  - Čo presne je v cene
-  - ukážkový report
 about:
   name: Daniel Hajduk
   linkedin: https://www.linkedin.com/in/daniel-hajduk-/
@@ -991,3 +521,477 @@ home_prio:
   hero:
   - Hlavné CTA sľubuje cenovú ponuku, ale vedie na všeobecný kontakt.
   - 'Sem prichádza väčšina návštevnosti z reklamy. Náročnosť opravy: nízka.'
+home_areas:
+  h2:
+  - 'Jedenásť oblastí. Jedna odpoveď:'
+  - čo má zmysel
+  - riešiť ako prvé.
+  aria: Jedenásť oblastí auditu
+  chip: HTTPS, TLS a bezpečnostné hlavičky
+  items:
+  - - Výkon
+    - cold
+    - 'Lighthouse pre desktop aj mobil a Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+  - - Indexácia a SEO
+    - cold
+    - Robots.txt, sitemap, canonical, metadáta, nadpisy a Open Graph.
+  - - Odkazy a CTA
+    - cold
+    - Nefunkčné a blokované odkazy, výzvy na akciu a podozrivé prvky.
+  - - Prístupnosť
+    - cold
+    - Kontrast, veľkosť písma a dotykové ciele s konkrétnymi prvkami na desktope aj mobile.
+  - - Bezpečnostné signály
+    - cold
+    - HTTPS a presmerovania, TLS certifikát, bezpečnostné HTTP hlavičky, ochrana e-mailovej domény (SPF, DKIM, DMARC), cookies a známe zraniteľnosti použitých knižníc (OSV). Pasívna kontrola.
+  - - UX a mobilná použiteľnosť
+    - warm
+    - Viewport, navigácia, orientácia v obsahu a mobilná cesta návštevníka.
+  - - Komunikácia ponuky
+    - warm
+    - Čo web ponúka, komu, ako jasne a konkrétne, a kde stráca dôveru.
+  - - AI pripravenosť
+    - warm
+    - Štruktúrované dáta a signály pre AI vyhľadávanie.
+  - - Archetyp značky a publika
+    - warm
+    - Mapa archetypov, brand a customer playbook, pravidlá tónu komunikácie.
+  - - Obchodný dopad a roadmapa
+    - warm
+    - Manažérske zhrnutie, dopad × náročnosť a akčný plán, čo riešiť ako prvé.
+  - - Dôkazový appendix
+    - warm
+    - Crawl, robots, sitemap, metadáta, doména a infraštruktúra (vek domény, certifikát, hosting), kontakty a sociálne profily a register dôkazov s časom merania.
+  chips_extra:
+  - SPF, DKIM a DMARC
+  - Doména, certifikát a hosting
+  - Cookies
+  - Zraniteľnosti knižníc (OSV)
+pricing:
+  ld: 'Komplexný audit webu pre jednu URL: technika, SEO, UX, prístupnosť, komunikácia ponuky, archetypy a prioritná roadmapa v ručne kontrolovanom PDF reporte.'
+  crumb: Cenník
+  h1: Jedna položka na faktúre.
+  lead: Celý Web Intelligence report pre jednu URL za 199 €. Bez balíkov, príplatkov a mesačných poplatkov. Rozkliknite ktorúkoľvek položku dokladu a uvidíte, čo presne obsahuje.
+  cta_hero: Objednať report za 199 €
+  demo: Ukážkový report, 21 strán
+  promise:
+  - - Spravidla do 24 h
+    - ' v pracovné dni po pripísaní platby'
+  - - Ručne kontrolovaný
+    - ' každý report pred odoslaním'
+  - - Faktúra na IČO
+    - ', pri českých firmách doplníme údaje z ARES'
+  receipt_aria: Čo je v cene
+  rc_sub: Web Intelligence report
+  in_price: v cene
+  layers:
+  - - Meriame
+    - - - Technika a výkon
+        - 'Lighthouse pre desktop aj mobil, Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+      - - Bezpečnostné signály
+        - HTTPS a presmerovania, TLS certifikát, bezpečnostné HTTP hlavičky, ochrana e-mailovej domény (SPF, DKIM, DMARC), cookies a známe zraniteľnosti použitých knižníc (OSV). Pasívna kontrola.
+      - - Odkazy a CTA
+        - Nefunkčné a blokované odkazy, výzvy na akciu a podozrivé prvky.
+      - - Prístupnosť
+        - Kontrast, veľkosť písma a dotykové ciele s konkrétnymi prvkami na desktope aj mobile.
+      - - AI pripravenosť
+        - Štruktúrované dáta a signály pre AI vyhľadávanie.
+  - - Vyhodnocujeme
+    - - - Celkový obraz
+        - Skóre v šiestich oblastiach a súhrn silných stránok a rizík.
+      - - UX a komunikácia ponuky
+        - Jasnosť, konzistentnosť a konkrétnosť posolstva, navigácia a dopad na konverziu.
+      - - Archetyp značky a publika
+        - Mapa archetypov, brand a customer playbook, pravidlá tónu komunikácie.
+  - - Rozhodujete
+    - - - Manažérske zhrnutie
+        - Krátky rozhodovací prehľad a obchodný dopad pre vedenie.
+      - - Prioritná roadmapa
+        - Čo riešiť ako prvé, rýchle výhry, dopad × náročnosť.
+      - - Dôkazný appendix
+        - Crawl, robots, sitemap, metadáta a namerané dáta.
+  review:
+  - Ručná kontrola
+  - Každý report pred odoslaním osobne prechádzame, aby priority dávali zmysel pre váš web.
+  total: Spolu
+  price: 199 €
+  alt: alebo 4 980 Kč · pre firmy a podnikateľov
+  steps_tag: Ako prebieha objednávka
+  steps_h2:
+  - Štyri kroky.
+  - Bez stretnutí.
+  steps:
+  - - Objednávka
+    - Zadáte URL a IČO, pri českých firmách doplníme údaje z ARES.
+  - - Faktúra
+    - Čoskoro vám príde faktúra na zadaný e-mail.
+  - - Platba
+    - Prevodom podľa faktúry.
+  - - Report
+    - Spravidla do 24 hodín v pracovné dni od pripísania platby, e-mailom ako PDF.
+  note: Služba je určená firmám a podnikateľom (B2B). Podrobnosti upravujú <a href="/sk/obchodne-podmienky.html">obchodné podmienky</a>.
+  ctx_tag: Cena v kontexte
+  ctx_h2:
+  - Čo by ste inak
+  - skladali z viacerých zákaziek.
+  ctx_p: Samostatný SEO audit sa oceňuje podľa veľkosti webu a pokrýva len jednu z oblastí vyššie. UX, prístupnosť, bezpečnosť alebo komunikácia značky sa v agentúrach zvyčajne riešia ako ďalšie samostatné zákazky.
+  scale: null
+  not_tag: Pre koho to nie je
+  not_h2:
+  - Aby ste vedeli vopred,
+  - kedy SIGEL nedáva zmysel.
+  not:
+  - - Weby pred spustením
+    - Nie je čo merať. Report dáva zmysel až na bežiacom webe.
+  - - Záruka pozícií alebo tržieb
+    - Report je diagnostika a podklad na rozhodnutie, nie sľub výsledku.
+  - - Tisíce produktových stránok
+    - Report hodnotí web ako celok, nie každú URL veľkého e-shopu zvlášť.
+  - - Hlavne implementácia
+    - SIGEL povie, čo opraviť a v akom poradí. Samotné úpravy robí váš vývojár alebo agentúra.
+  ag_tag: Agentúry a viac webov
+  ag_h2: Reporty pre klientov, pravidelne.
+  ag_p: Potrebujete reporty pre viac webov alebo klientov? Objednajte prvý report, alebo napíšte na <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a> a dohodneme podmienky opakovanej spolupráce.
+  ag_cta: Objednať prvý report
+  ag_links:
+  - Čo je v cene
+  - Porovnanie s agentúrou a nástrojmi
+  - Ukážkový report, 21 strán
+compare:
+  crumb: Porovnanie
+  h1: Koľko z 11 oblastí váš audit naozaj pokryje?
+  lead: Štyri cesty, ako zistiť, čo web brzdí. Líšia sa cenou a rýchlosťou, ale hlavne tým, koľko oblastí pokryjú a či na konci dostanete čísla, alebo rozhodnutie.
+  board_aria: Pokrytie 11 oblastí podľa typu auditu
+  full: plne
+  part: čiastočne
+  of: z 11
+  price: Cena
+  delivery: Dodanie
+  card_cta: Objednať report
+  board_note: 'Plne, čiastočne alebo vôbec: podľa tabuľky nižšie.'
+  board_link: Zobraziť všetkých 11 oblastí
+  options:
+  - - Nástroje zadarmo
+    - Lighthouse, PageSpeed Insights
+    - 0 €
+    - okamžite
+    - Technické čísla bez kontextu. Nevedia, čo predávate, ani čo opraviť ako prvé.
+  - - SEO audit
+    - SEO špecialista alebo agentúra
+    - podľa rozsahu webu
+    - podľa dohody
+    - Do hĺbky v dohľadateľnosti. UX, ponuka ani značka nie sú jeho téma.
+  - - Agentúrny audit
+    - SEO, UX, copywriting, brand
+    - súčet viacerých zákaziek
+    - podľa dohody
+    - Môže pokryť všetko, ale skladá sa z viacerých zadaní a rozsah sa líši agentúra od agentúry.
+  - - SIGEL Web Intelligence
+    - jeden report, ručná kontrola
+    - 199 €
+    - do 24 h po platbe
+    - Technika, UX, bezpečnosť, ponuka aj značka. Na konci roadmapa, čo riešiť ako prvé.
+  m_tag: Čo ktorý audit pokryje
+  m_h2:
+  - Jedenásť oblastí.
+  - Jeden report.
+  m_p: Orientačné porovnanie rozsahu. Agentúrne audity sa líšia podľa zadania; „zvlášť“ znamená, že oblasť zvyčajne rieši iný špecialista alebo iná objednávka.
+  legend_aria: Legenda
+  legend:
+  - pokryté
+  - čiastočne / podľa zadania
+  - nepokryté
+  area: Oblasť
+  columns:
+  - Nástroje zadarmo
+  - SEO audit
+  - Komplexný agentúrny audit
+  - SIGEL Web Intelligence
+  groups:
+  - - Technika a dohľadateľnosť
+    - - - 'Výkon: Lighthouse desktop aj mobil, Core Web Vitals'
+        - - - y
+            - áno
+          - - y
+            - áno
+          - - y
+            - áno
+          - - y
+            - áno
+      - - 'Indexácia: robots.txt, sitemap, canonical, metadáta'
+        - - - p
+            - základ
+          - - y
+            - áno
+          - - y
+            - áno
+          - - y
+            - áno
+      - - Odkazy a výzvy na akciu (CTA)
+        - - - p
+            - len odkazy
+          - - p
+            - len odkazy
+          - - p
+            - podľa zadania
+          - - y
+            - áno
+      - - Prístupnosť s konkrétnymi prvkami
+        - - - p
+            - všeobecné skóre
+          - - n
+            - nie
+          - - p
+            - podľa zadania
+          - - y
+            - áno
+      - - 'Bezpečnosť: HTTPS, TLS, hlavičky, SPF/DKIM/DMARC'
+        - - - p
+            - iné nástroje
+          - - n
+            - nie
+          - - p
+            - samostatná zákazka
+          - - y
+            - pasívna kontrola
+  - - Používateľ, ponuka a značka
+    - - - UX a mobilná použiteľnosť
+        - - - n
+            - nie
+          - - n
+            - nie
+          - - p
+            - UX audit zvlášť
+          - - y
+            - áno
+      - - 'Komunikácia ponuky: jasnosť, konzistentnosť, konkrétnosť'
+        - - - n
+            - nie
+          - - n
+            - nie
+          - - p
+            - copy / stratégia zvlášť
+          - - y
+            - áno
+      - - 'AI pripravenosť: štruktúrované dáta, signály pre AI'
+        - - - n
+            - nie
+          - - p
+            - niekedy
+          - - p
+            - niekedy
+          - - y
+            - áno
+      - - Archetyp značky a publika, komunikačný playbook
+        - - - n
+            - nie
+          - - n
+            - nie
+          - - p
+            - brand stratégia zvlášť
+          - - y
+            - áno
+  - - Výstup pre rozhodnutie
+    - - - Obchodný dopad a roadmapa (dopad × náročnosť)
+        - - - n
+            - nie
+          - - p
+            - SEO odporúčania
+          - - y
+            - áno
+          - - y
+            - áno
+      - - 'Dôkazný appendix: namerané dáta s časom merania'
+        - - - p
+            - surové dáta
+          - - y
+            - áno
+          - - p
+            - podľa zadania
+          - - y
+            - áno
+  cover_label: Pokrytie 11 oblastí
+  cover_aria: 'Pokrytie: {full} oblastí plne, {part} čiastočne z 11'
+  foot:
+  - - Kto to robí
+    - - vy sami
+      - SEO špecialista
+      - 'tím: SEO, UX, copy, brand'
+      - jeden report, ručná kontrola
+  - - Cena
+    - - 0 €
+      - podľa rozsahu webu
+      - súčet viacerých zákaziek
+      - 199 €
+  - - Dodanie
+    - - okamžite
+      - podľa dohody
+      - podľa dohody
+      - spravidla do 24 h po platbe
+  footnote: 'Pri SEO a komplexných agentúrnych auditoch uvádzame rozsah, nie cenu: líši sa podľa veľkosti webu, počtu špecialistov a zadania.'
+  d_tag: Ako sa rozhodnúť
+  d_h2:
+  - Každá cesta má zmysel.
+  - Len v inej situácii.
+  decide:
+  - - „Riešime len rýchlosť a technické chyby a máme vývojára, ktorý ich opraví.“
+    - Nástroje zadarmo
+    - Na prvú orientáciu a priebežnú kontrolu techniky stačia. Počítajte s tým, že čísla musí niekto vedieť prečítať.
+  - - „Chystáme dlhodobé SEO alebo kampane s konkrétnou agentúrou.“
+    - Audit od agentúry
+    - Audit ako vstup do spolupráce dáva zmysel. Vopred si overte, ktoré oblasti zadanie pokrýva.
+  - - „Nevieme, prečo web neprináša dopyty, a potrebujeme vedieť, čo opraviť ako prvé.“
+    - SIGEL Web Intelligence
+    - Rýchly podklad pred redizajnom, kampaňou alebo rozhodnutím o rozpočte, prípadne ako zadanie pre vývojára či agentúru.
+  o_price: 199 €
+  o_sub: alebo 4 980 Kč · jedna URL · pre firmy (B2B)
+  o_cta: Získať Web Intelligence report
+  o_list:
+  - 11 oblastí v jednom PDF reporte
+  - Manažérske zhrnutie a prioritná roadmapa
+  - Ručne kontrolovaný výstup
+  - Spravidla do 24 h v pracovné dni od pripísania platby
+  o_links:
+  - Čo presne je v cene
+  - ukážkový report
+modal:
+  problem-leads:
+    kicker: Čo to rieši
+    title: Málo dopytov z webu
+    lead: Web môže byť technicky v poriadku a napriek tomu nepresviedčať. SIGEL hľadá miesta, kde návštevník stráca jasnosť, dôveru alebo ďalší krok.
+    items:
+    - - Kedy pomáha
+      - Keď má web návštevnosť, ale málo dopytov, objednávok alebo zmysluplných akcií.
+    - - Čo sa kontroluje
+      - Jasnosť ponuky, CTA, dôvera, mobilná cesta a komunikačné bariéry.
+    - - Typický výstup
+      - Priority oddeľujúce kozmetiku od vecí s reálnym dopadom.
+    cta: Získať Web Intelligence report za 199 €
+  problem-marketing:
+    kicker: Čo to rieši
+    title: Marketing beží, výsledky sú slabé
+    lead: Pred zvýšením rozpočtu sa oplatí overiť, či vstupný web vôbec dokáže podporiť rozhodnutie.
+    items:
+    - - Kedy pomáha
+      - Pred reklamou, pri slabej konverzii alebo keď kampane posielajú návštevnosť bez výsledku.
+    - - Čo sa kontroluje
+      - Landing sekcie, rýchlosť, CTA, dôkazy, dôvera a nesúlad medzi reklamou a webom.
+    - - Typický výstup
+      - Zoznam bariér, ktoré môžu brzdiť výkon ešte pred samotnou kampaňou.
+    cta: Overiť web pred reklamou
+  problem-redesign:
+    kicker: Čo to rieši
+    title: Redizajn bez jasného zadania
+    lead: Redizajn bez diagnostiky často zmení iba vzhľad. SIGEL pomôže určiť, čo má nový web skutočne opraviť.
+    items:
+    - - Kedy pomáha
+      - Pred redizajnom, zadaním pre agentúru alebo rozhodnutím, čo na webe meniť.
+    - - Čo sa kontroluje
+      - Štruktúra, komunikácia ponuky, dôvera, UX, archetyp značky a rozhodovacia cesta.
+    - - Typický výstup
+      - Podklad pre redizajn zameraný na funkciu, nie dekoráciu.
+    cta: Získať podklad pre redizajn
+  problem-offer:
+    kicker: Čo to rieši
+    title: Ponuka je dobrá, ľudia jej nerozumejú
+    lead: Niekedy nie je problém produkt, ale spôsob, akým sa vysvetľuje jeho hodnota.
+    items:
+    - - Kedy pomáha
+      - Keď zákazníci nerozumejú hodnote, cene, rozdielu alebo dôvodu pokračovať.
+    - - Čo sa kontroluje
+      - Jazyk ponuky, dôkazy, archetyp značky a zákaznícke motivácie.
+    - - Typický výstup
+      - Odporúčania na spresnenie ponuky pre rôzne typy zákazníkov.
+    cta: Spresniť komunikáciu webu
+  problem-strategy:
+    kicker: Čo to rieši
+    title: Web už nezodpovedá firme
+    lead: Web často zostane v minulosti, aj keď sa firma posunula. SIGEL overí, či komunikácia, ponuka a cieľové skupiny stále zodpovedajú realite biznisu.
+    items:
+    - - Kedy pomáha
+      - Pri stagnácii, zmene ponuky, novej cieľovke alebo pred zásadnejším obchodným rozhodnutím.
+    - - Čo sa kontroluje
+      - Súlad ponuky, positioning, archetyp, zákaznícke segmenty a prioritné riziká.
+    - - Typický výstup
+      - Roadmapa toho, čo zmeniť ako prvé, aby web znovu podporoval smer firmy.
+    cta: Overiť stratégiu webu
+  problem-agency:
+    kicker: Čo to rieši
+    title: Rýchly podklad pre rozhodnutie
+    lead: Majiteľ, marketingový tím ani agentúra nemusia začínať od dojmov. SIGEL dodá externú diagnostiku ako vstup do konzultácie, redizajnu, kampane alebo stratégie.
+    items:
+    - - Kedy pomáha
+      - Pred konzultáciou, návrhom úprav, kampaňou, redizajnom alebo rozhodnutím o ďalšom rozpočte.
+    - - Čo sa kontroluje
+      - Technika, UX, komunikácia, dôvera, archetypy a priority v jednom podklade.
+    - - Typický výstup
+      - Rýchly report použiteľný ako interný rozhodovací alebo klientsky podklad.
+    cta: Dohodnúť podmienky spolupráce
+    inquiry: agency
+  system-process:
+    kicker: Analytické jadro
+    title: Ako SIGEL skladá Web Intelligence výstup
+    lead: SIGEL Web Intelligence nie je čistý AI text ani bežný checklist. Je to analytický systém, ktorý zbiera signály z webu, vyhodnocuje ich vlastným scoringom, pravidlami, váhami a UX heuristikami a prevádza ich do obchodne použiteľného reportu.
+    items:
+    - - Zber signálov
+      - Technika, SEO, štruktúra, obsah, CTA, dôvera a komunikácia ponuky.
+    - - Vlastná analytická logika
+      - Systém pracuje s pravidlami, váhami, prioritami a scoringom, aby bolo jasné, čo má reálny dopad.
+    - - UX a komunikačné heuristiky
+      - Systém sleduje, kde návštevník chápe ponuku, kde váha a kde môže strácať dôveru.
+    - - Interpretačná vrstva
+      - Nad dátami vzniká interpretácia značky, zákazníckych archetypov a komunikácie pre rôzne typy zákazníkov.
+    - - Ručná kontrola výstupu
+      - Každý report pred odoslaním prechádza osobnou kontrolou, aby mal jasné priority a praktický zmysel.
+    cta: Získať Web Intelligence report za 199 €
+  use-web-audit:
+    kicker: Dostupné
+    title: Web Intelligence Report
+    lead: 'Základný produkt SIGEL: business intelligence pre jeden konkrétny web pred reklamou, redizajnom alebo obchodným rozhodnutím.'
+    items:
+    - - Obsahuje
+      - Desktopové a mobilné Lighthouse metriky, Core Web Vitals, odkazy a CTA, prístupnosť, komunikáciu ponuky, AI pripravenosť, archetypový playbook, bezpečnostné signály (HTTPS, TLS, SPF/DKIM/DMARC), roadmapu a evidence dáta.
+    - - Hodí sa pre
+      - Firmy, freelancerov, menšie tímy alebo projekty, ktoré potrebujú jasný diagnostický vstup.
+    - - Výstup
+      - Vizuálny PDF report s prioritami a odporúčaniami.
+    cta: Získať Web Intelligence report
+  use-agency:
+    kicker: Dostupné
+    title: Agentúrny podklad
+    lead: 'Rovnaký Web Intelligence report pre weby vašich klientov: klientská konzultácia, redizajn, SEO alebo obsahová stratégia.'
+    items:
+    - - Obsahuje
+      - Externý pohľad na klientsky web, priority a podklad pre odporúčanie.
+    - - Hodí sa pre
+      - Agentúry, ktoré chcú rýchlejší vstup bez kompletnej ručnej diagnostiky od nuly.
+    - - Výstup
+      - Report alebo interný podklad podľa dohody.
+    cta: Dohodnúť podmienky spolupráce
+    inquiry: agency
+  use-lead-research:
+    kicker: Pilotne
+    title: Lead Research
+    lead: 'Výskumná vrstva: hľadanie relevantných firemných webov a verejných kontaktov v segmente, lokalite alebo vlastnom výbere trhu.'
+    items:
+    - - Obsahuje
+      - Zber URL, filtrovanie, základnú validáciu a prípravu kontaktov pre B2B výskum.
+    - - Hodí sa pre
+      - Obchodnú prípravu, segmentáciu trhu, zoznam potenciálnych klientov alebo nadväzujúcu analýzu.
+    - - Výstup
+      - Štruktúrovaný zoznam webov a kontaktov podľa zadania.
+    cta: Prebrať výber segmentu
+    inquiry: lead-research
+  use-benchmark:
+    kicker: Pripravujeme
+    title: Segmentový benchmark
+    lead: Porovnanie viacerých webov v jednom odvetví, lokalite alebo výbere trhu. Ide o nadväzujúcu vrstvu nad jednotlivými reportmi.
+    items:
+    - - Obsahuje
+      - Porovnanie skóre, opakujúce sa vzorce, rozdiely medzi hráčmi a segmentové signály.
+    - - Hodí sa pre
+      - Prehľad trhu, interné rozhodovanie, obchodný výber alebo prípravu stratégie.
+    - - Výstup
+      - Benchmarková mapa a súhrn hlavných zistení.
+    cta: Opýtať sa na benchmark
+    inquiry: benchmark

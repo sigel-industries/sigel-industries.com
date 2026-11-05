@@ -141,148 +141,6 @@ order:
   aresLoading: Unternehmen wird in ARES gesucht…
   aresFilled: Daten aus ARES übernommen. Bitte prüfen.
   aresNotFound: Unternehmen nicht in ARES gefunden, bitte manuell ausfüllen.
-modal:
-  problem-leads:
-    kicker: Was es löst
-    title: Zu wenige Anfragen über die Website
-    lead: Eine Website kann technisch sauber sein und trotzdem nicht überzeugen. SIGEL sucht Stellen, an denen Besucher Klarheit, Vertrauen oder den nächsten Schritt verlieren.
-    items:
-    - - Wann es hilft
-      - Wenn die Website Traffic hat, aber wenige Anfragen, Bestellungen oder sinnvolle Aktionen erzeugt.
-    - - Was geprüft wird
-      - Angebotsklarheit, CTA, Vertrauen, mobiler Weg und Kommunikationsbarrieren.
-    - - Typischer Output
-      - Prioritäten, die Kosmetik von Punkten mit echter Wirkung trennen.
-    cta: Web-Intelligence-Report für 199 € bestellen
-  problem-marketing:
-    kicker: Was es löst
-    title: Marketing läuft, die Ergebnisse bleiben schwach
-    lead: Bevor das Werbebudget steigt, sollte geprüft werden, ob die Landingpage eine Entscheidung überhaupt unterstützt.
-    items:
-    - - Wann es hilft
-      - Vor Werbung, bei schwacher Conversion oder wenn Kampagnen Traffic ohne Ergebnis bringen.
-    - - Was geprüft wird
-      - Landingpages, Geschwindigkeit, CTA, Belege, Vertrauen und Abweichungen zwischen Werbung und Website.
-    - - Typischer Output
-      - Eine Liste von Barrieren, die die Leistung schon vor der Kampagne blockieren können.
-    cta: Website vor der Kampagne prüfen
-  problem-redesign:
-    kicker: Was es löst
-    title: Redesign ohne klares Briefing
-    lead: Ein Redesign ohne Diagnostik verändert oft nur die Optik. SIGEL definiert, was die neue Website tatsächlich beheben soll.
-    items:
-    - - Wann es hilft
-      - Vor einem Redesign, einem Agenturbriefing oder der Entscheidung, was geändert werden soll.
-    - - Was geprüft wird
-      - Struktur, Angebotskommunikation, Vertrauen, UX, Markenarchetyp und Entscheidungsweg.
-    - - Typischer Output
-      - Eine Redesign-Grundlage mit Fokus auf Funktion statt Dekoration.
-    cta: Grundlage für das Redesign erhalten
-  problem-offer:
-    kicker: Was es löst
-    title: Das Angebot ist gut, wird aber nicht verstanden
-    lead: Manchmal ist nicht das Produkt das Problem, sondern die Erklärung seines Werts.
-    items:
-    - - Wann es hilft
-      - Wenn Kunden Wert, Preis, Unterschied oder den Grund für den nächsten Schritt nicht verstehen.
-    - - Was geprüft wird
-      - Angebotssprache, Belege, Markenarchetyp und Kundenmotive.
-    - - Typischer Output
-      - Empfehlungen zur Präzisierung des Angebots für unterschiedliche Kundentypen.
-    cta: Website-Kommunikation präzisieren
-  problem-strategy:
-    kicker: Was es löst
-    title: Die Website passt nicht mehr zum Unternehmen
-    lead: Websites bleiben oft auf altem Stand, während sich das Unternehmen weiterentwickelt. SIGEL prüft, ob Kommunikation, Angebot und Zielgruppen noch zur Geschäftsrichtung passen.
-    items:
-    - - Wann es hilft
-      - Bei Stagnation, verändertem Angebot, neuer Zielgruppe oder vor einer strategischen Entscheidung.
-    - - Was geprüft wird
-      - Angebotspassung, Positionierung, Archetyp, Kundensegmente und vorrangige Risiken.
-    - - Typischer Output
-      - Eine Roadmap dessen, was zuerst geändert werden sollte.
-    cta: Website-Strategie prüfen
-  problem-agency:
-    kicker: Was es löst
-    title: Schnelle Grundlage für eine Entscheidung
-    lead: Inhaber, Marketingteams und Agenturen müssen nicht mit Meinungen beginnen. SIGEL liefert externe Diagnostik als Input für Beratung, Redesign, Kampagnen oder Strategie.
-    items:
-    - - Wann es hilft
-      - Vor Beratung, Empfehlungen, Kampagnen, Redesign oder der nächsten Budgetentscheidung.
-    - - Was geprüft wird
-      - Technik, UX, Kommunikation, Vertrauen, Archetypen und Prioritäten in einem Input.
-    - - Typischer Output
-      - Ein schneller Report als interne Entscheidungsgrundlage oder Kunden-Input.
-    cta: Konditionen der Zusammenarbeit besprechen
-    inquiry: agency
-  system-process:
-    kicker: Analytischer Kern
-    title: So erstellt SIGEL den Web-Intelligence-Output
-    lead: SIGEL Web Intelligence ist weder reiner KI-Text noch eine generische Checkliste. Das Analysesystem sammelt Website-Signale, bewertet sie mit eigenem Scoring, Regeln, Gewichtungen und UX-Heuristiken
-      und übersetzt sie in einen geschäftlich nutzbaren Report.
-    items:
-    - - Signalerfassung
-      - Technik, SEO, Struktur, Inhalt, CTA, Vertrauen und Angebotskommunikation.
-    - - Eigene Analyselogik
-      - Regeln, Gewichtungen, Prioritäten und Scoring machen sichtbar, was echte Wirkung hat.
-    - - UX- und Kommunikationsheuristiken
-      - Das System prüft, wo Besucher das Angebot verstehen, zögern, Vertrauen verlieren oder den nächsten Schritt nicht finden.
-    - - Interpretationsschicht
-      - Daten werden über Marke, Kundenarchetypen und Kommunikationsmuster interpretiert.
-    - - Persönliche Prüfung
-      - Jeder Report wird vor der Lieferung geprüft, damit Prioritäten klar und praktisch nutzbar sind.
-    cta: Web-Intelligence-Report für 199 € bestellen
-  use-web-audit:
-    kicker: Verfügbar
-    title: Web-Intelligence-Report
-    lead: 'Das Kernprodukt von SIGEL: Business Intelligence für eine konkrete Website vor Werbung, Redesign oder einer Geschäftsentscheidung.'
-    items:
-    - - Enthält
-      - Lighthouse-Metriken für Desktop und Mobilgeräte, Core Web Vitals, Links und CTAs, Barrierefreiheit, Angebotskommunikation, KI-Bereitschaft, Archetypen-Playbook, Roadmap und Evidenzdaten.
-    - - Geeignet für
-      - Unternehmen, Freelancer, kleine Teams oder Projekte, die einen klaren diagnostischen Input benötigen.
-    - - Output
-      - Visueller PDF-Report mit Prioritäten und Empfehlungen.
-    cta: Web-Intelligence-Report bestellen
-  use-agency:
-    kicker: Verfügbar
-    title: Agentur-Input
-    lead: 'Derselbe Web-Intelligence-Report für die Websites Ihrer Kunden: Kundenberatung, Redesign, SEO oder Content-Strategie.'
-    items:
-    - - Enthält
-      - Externe Sicht auf die Kundenwebsite, Prioritäten und Input für Empfehlungen.
-    - - Geeignet für
-      - Agenturen, die einen schnelleren Startpunkt benötigen, ohne die Diagnostik manuell bei null zu beginnen.
-    - - Output
-      - Report oder interner Input nach Absprache.
-    cta: Konditionen der Zusammenarbeit besprechen
-    inquiry: agency
-  use-lead-research:
-    kicker: Pilot
-    title: Lead Research
-    lead: Eine Research-Ebene zur Suche relevanter Unternehmenswebsites und öffentlicher Kontakte nach Segment, Region oder individueller Marktauswahl.
-    items:
-    - - Enthält
-      - URL-Sammlung, Filterung, grundlegende Validierung und Kontaktvorbereitung für B2B-Research.
-    - - Geeignet für
-      - Vertriebsvorbereitung, Marktsegmentierung, Interessentenlisten oder Folgeanalysen.
-    - - Output
-      - Strukturierte Liste von Websites und Kontakten nach Briefing.
-    cta: Segmentauswahl besprechen
-    inquiry: lead-research
-  use-benchmark:
-    kicker: In Vorbereitung
-    title: Segment-Benchmark
-    lead: Vergleich mehrerer Websites in einer Branche, Region oder Marktauswahl. Diese Ebene liegt über einzelnen Reports.
-    items:
-    - - Enthält
-      - Score-Vergleich, wiederkehrende Muster, Unterschiede zwischen Marktteilnehmern und Segmentsignale.
-    - - Geeignet für
-      - Marktüberblick, interne Entscheidungen, Vertriebsselektion oder Strategievorbereitung.
-    - - Output
-      - Benchmark-Karte und Zusammenfassung der wichtigsten Erkenntnisse.
-    cta: Benchmark anfragen
-    inquiry: benchmark
 ci:
   url: /de/finanzanalyse-unternehmen/
   eyebrow: Company Intelligence · Pilotbetrieb
@@ -409,47 +267,6 @@ guide:
   - - /de/website-audit-agentur-tools-oder-sigel/
     - Agentur, Tools oder SIGEL?
     - 'Elf Bereiche nebeneinander: was welches Audit abdeckt, was es kostet und wann es passt.'
-home_areas:
-  h2:
-  - 'Elf Bereiche. Eine Antwort:'
-  - was zuerst
-  - gelöst werden sollte.
-  aria: Elf Audit-Bereiche
-  chip: HTTPS, TLS und Security-Header
-  items:
-  - - Performance
-    - cold
-    - 'Lighthouse für Desktop und Mobil sowie Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
-  - - Indexierung und SEO
-    - cold
-    - Robots.txt, Sitemap, Canonical, Metadaten, Überschriften und Open Graph.
-  - - Links und CTAs
-    - cold
-    - Defekte und blockierte Links, Calls-to-Action und verdächtige Elemente.
-  - - Barrierefreiheit
-    - cold
-    - Kontrast, Schriftgröße und Touch-Ziele mit konkreten Elementen auf Desktop und Mobil.
-  - - Sicherheitssignale
-    - cold
-    - HTTPS und Weiterleitungen, TLS-Zertifikat und HTTP-Security-Header. Passive Prüfung.
-  - - UX und mobile Nutzbarkeit
-    - warm
-    - Viewport, Navigation, Orientierung im Inhalt und mobiler Weg der Besucher.
-  - - Angebotskommunikation
-    - warm
-    - Was die Website anbietet, für wen, wie klar und konkret, und wo Vertrauen verloren geht.
-  - - KI-Bereitschaft
-    - warm
-    - Strukturierte Daten und Signale für KI-Suche.
-  - - Marken- und Zielgruppenarchetyp
-    - warm
-    - Archetypen-Karte, Brand- und Customer-Playbook, Regeln für die Tonalität.
-  - - Geschäftliche Wirkung und Roadmap
-    - warm
-    - Management Summary, Wirkung × Aufwand und ein Aktionsplan dafür, was zuerst zu tun ist.
-  - - Evidenz-Anhang
-    - warm
-    - Crawl, Robots, Sitemap, Metadaten und Messdaten zur Überprüfung jedes Befunds.
 home_compare:
   tag: Vergleich
   h2:
@@ -545,293 +362,6 @@ cmp_promo:
   title: Agentur, kostenlose Tools oder SIGEL?
   text: Was welches Audit abdeckt, was es kostet und wann es passt. Direkt nebeneinander.
   cta: Vergleichen
-pricing:
-  ld: 'Umfassendes Website-Audit für eine URL: Technik, SEO, UX, Barrierefreiheit, Angebotskommunikation, Archetypen und priorisierte Roadmap in einem persönlich geprüften PDF-Report.'
-  crumb: Preise
-  h1: Eine Position auf der Rechnung.
-  lead: Der vollständige Web-Intelligence-Report für eine URL für 199 €. Keine Pakete, Aufpreise oder Monatsgebühren. Öffnen Sie eine beliebige Position des Belegs und sehen Sie, was genau enthalten ist.
-  cta_hero: Report für 199 € bestellen
-  demo: Beispielreport (EN), 21 Seiten
-  promise:
-  - - In der Regel innerhalb von 24 Std.
-    - ' an Werktagen nach Zahlungseingang'
-  - - Persönlich geprüft
-    - ': jeder Report vor dem Versand'
-  - - Rechnung an Ihr Unternehmen
-    - ', nur B2B'
-  receipt_aria: Was enthalten ist
-  rc_sub: Web-Intelligence-Report
-  in_price: inklusive
-  layers:
-  - - Wir messen
-    - - - Technik und Performance
-        - 'Lighthouse für Desktop und Mobil, Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
-      - - Sicherheitssignale
-        - HTTPS und Weiterleitungen, TLS-Zertifikat, HTTP-Security-Header. Passive Prüfung.
-      - - Links und CTAs
-        - Defekte und blockierte Links, Calls-to-Action und verdächtige Elemente.
-      - - Barrierefreiheit
-        - Kontrast, Schriftgröße und Touch-Ziele mit den konkreten Elementen auf Desktop und Mobil.
-      - - KI-Bereitschaft
-        - Strukturierte Daten und Signale für KI-Suche.
-  - - Wir bewerten
-    - - - Gesamtbild
-        - Scores in sechs Bereichen und eine Zusammenfassung von Stärken und Risiken.
-      - - UX und Angebotskommunikation
-        - Klarheit, Konsistenz und Konkretheit der Botschaft, Navigation und Wirkung auf die Conversion.
-      - - Archetyp von Marke und Zielgruppe
-        - Archetypen-Karte, Brand- und Customer-Playbook, Regeln für die Tonalität.
-  - - Sie entscheiden
-    - - - Management Summary
-        - Kurzer Entscheidungsüberblick und geschäftliche Wirkung für die Geschäftsführung.
-      - - Priorisierte Roadmap
-        - Was zuerst, Quick Wins, Wirkung × Aufwand.
-      - - Evidenz-Anhang
-        - Crawl, Robots, Sitemap, Metadaten und Messdaten.
-  review:
-  - Persönliche Prüfung
-  - Jeden Report prüfen wir vor dem Versand persönlich, damit die Prioritäten für Ihre Website Sinn ergeben.
-  total: Gesamt
-  price: 199 €
-  alt: oder 4.980 CZK · für Unternehmen
-  steps_tag: So läuft die Bestellung
-  steps_h2:
-  - Vier Schritte.
-  - Ohne Termine.
-  steps:
-  - - Bestellung
-    - Sie geben die URL und Ihre Firmendaten ein.
-  - - Rechnung
-    - Die Rechnung kommt kurz darauf an die angegebene E-Mail-Adresse.
-  - - Zahlung
-    - Per Überweisung laut Rechnung.
-  - - Report
-    - In der Regel innerhalb von 24 Stunden an Werktagen nach Zahlungseingang, als PDF per E-Mail.
-  note: Die Leistung richtet sich ausschließlich an Unternehmen (B2B). Einzelheiten regeln die <a href="/de/agb.html">AGB</a>.
-  ctx_tag: Der Preis im Kontext
-  ctx_h2:
-  - Was Sie sonst
-  - aus mehreren Aufträgen zusammensetzen.
-  ctx_p: Ein eigenständiges SEO-Audit wird nach Größe der Website kalkuliert und deckt nur einen der Bereiche oben ab. UX, Barrierefreiheit, Sicherheit oder Markenkommunikation sind bei Agenturen meist weitere eigene Aufträge.
-  scale: null
-  not_tag: Für wen es nicht passt
-  not_h2:
-  - Damit Sie vorher wissen,
-  - wann SIGEL keinen Sinn ergibt.
-  not:
-  - - Websites vor dem Launch
-    - Es gibt noch nichts zu messen. Der Report ergibt erst bei einer laufenden Website Sinn.
-  - - Garantierte Rankings oder Umsätze
-    - Der Report ist eine Diagnose und Entscheidungsgrundlage, kein Ergebnisversprechen.
-  - - Tausende Produktseiten
-    - Der Report bewertet die Website als Ganzes, nicht jede URL eines großen Onlineshops einzeln.
-  - - Sie suchen vor allem Umsetzung
-    - SIGEL sagt, was zu beheben ist und in welcher Reihenfolge. Die Änderungen setzt Ihr Entwickler oder Ihre Agentur um.
-  ag_tag: Agenturen und mehrere Websites
-  ag_h2: Reports für Kunden, regelmäßig.
-  ag_p: Sie brauchen Reports für mehrere Websites oder Kunden? Bestellen Sie den ersten Report oder schreiben Sie an <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a>, und wir vereinbaren Konditionen für die laufende Zusammenarbeit.
-  ag_cta: Ersten Report bestellen
-  ag_links:
-  - Was enthalten ist
-  - Vergleich mit Agentur und Tools
-  - Beispielreport (EN), 21 Seiten
-compare:
-  crumb: Vergleich
-  h1: Wie viele der 11 Bereiche deckt Ihr Audit wirklich ab?
-  lead: Vier Wege, um herauszufinden, was eine Website bremst. Sie unterscheiden sich in Preis und Tempo, vor allem aber darin, wie viele Bereiche sie abdecken und ob Sie am Ende Zahlen oder eine Entscheidung haben.
-  board_aria: Abdeckung der 11 Bereiche nach Audit-Art
-  full: voll
-  part: teilweise
-  of: von 11
-  price: Preis
-  delivery: Lieferung
-  card_cta: Report bestellen
-  board_note: 'Voll, teilweise oder gar nicht: laut Tabelle unten.'
-  board_link: Alle 11 Bereiche anzeigen
-  options:
-  - - Kostenlose Tools
-    - Lighthouse, PageSpeed Insights
-    - 0 €
-    - sofort
-    - Technische Zahlen ohne Kontext. Die Tools wissen nicht, was Sie verkaufen oder was zuerst zu beheben ist.
-  - - SEO-Audit
-    - SEO-Spezialist oder Agentur
-    - je nach Website-Größe
-    - nach Absprache
-    - Geht bei der Auffindbarkeit in die Tiefe. UX, Angebot und Marke sind nicht sein Thema.
-  - - Agentur-Audit
-    - SEO, UX, Copywriting, Brand
-    - Summe mehrerer Aufträge
-    - nach Absprache
-    - Kann alles abdecken, setzt sich aber aus mehreren Briefings zusammen, und der Umfang ist je nach Agentur verschieden.
-  - - SIGEL Web Intelligence
-    - ein Report, persönlich geprüft
-    - 199 €
-    - in 24 Std. nach Zahlung
-    - Technik, UX, Sicherheit, Angebot und Marke. Am Ende eine Roadmap, was zuerst zu tun ist.
-  m_tag: Was welches Audit abdeckt
-  m_h2:
-  - Elf Bereiche.
-  - Ein Report.
-  m_p: Ein Vergleich des Umfangs zur Orientierung. Agentur-Audits hängen vom Briefing ab; „separat“ bedeutet, dass meist ein anderer Spezialist oder ein anderer Auftrag diesen Bereich übernimmt.
-  legend_aria: Legende
-  legend:
-  - abgedeckt
-  - teilweise / je nach Briefing
-  - nicht abgedeckt
-  area: Bereich
-  columns:
-  - Kostenlose Tools
-  - SEO-Audit
-  - Umfassendes Agentur-Audit
-  - SIGEL Web Intelligence
-  groups:
-  - - Technik und Auffindbarkeit
-    - - - 'Performance: Lighthouse Desktop und Mobil, Core Web Vitals'
-        - - - y
-            - ja
-          - - y
-            - ja
-          - - y
-            - ja
-          - - y
-            - ja
-      - - 'Indexierung: robots.txt, Sitemap, Canonical, Metadaten'
-        - - - p
-            - Grundlagen
-          - - y
-            - ja
-          - - y
-            - ja
-          - - y
-            - ja
-      - - Links und Handlungsaufforderungen (CTA)
-        - - - p
-            - nur Links
-          - - p
-            - nur Links
-          - - p
-            - je nach Briefing
-          - - y
-            - ja
-      - - Barrierefreiheit mit konkreten Elementen
-        - - - p
-            - allgemeiner Score
-          - - n
-            - nein
-          - - p
-            - je nach Briefing
-          - - y
-            - ja
-      - - 'Sicherheit: HTTPS, TLS, Security-Header'
-        - - - p
-            - andere Tools
-          - - n
-            - nein
-          - - p
-            - eigener Auftrag
-          - - y
-            - passive Prüfung
-  - - Nutzer, Angebot und Marke
-    - - - UX und mobile Nutzbarkeit
-        - - - n
-            - nein
-          - - n
-            - nein
-          - - p
-            - UX-Audit separat
-          - - y
-            - ja
-      - - 'Angebotskommunikation: Klarheit, Konsistenz, Konkretheit'
-        - - - n
-            - nein
-          - - n
-            - nein
-          - - p
-            - Copy / Strategie separat
-          - - y
-            - ja
-      - - 'KI-Bereitschaft: strukturierte Daten, Signale für KI'
-        - - - n
-            - nein
-          - - p
-            - manchmal
-          - - p
-            - manchmal
-          - - y
-            - ja
-      - - Archetyp von Marke und Zielgruppe, Kommunikations-Playbook
-        - - - n
-            - nein
-          - - n
-            - nein
-          - - p
-            - Markenstrategie separat
-          - - y
-            - ja
-  - - Ergebnis für Entscheidungen
-    - - - Geschäftliche Wirkung und Roadmap (Wirkung × Aufwand)
-        - - - n
-            - nein
-          - - p
-            - SEO-Empfehlungen
-          - - y
-            - ja
-          - - y
-            - ja
-      - - Evidenz-Anhang mit Messdaten
-        - - - p
-            - Rohdaten
-          - - y
-            - ja
-          - - p
-            - je nach Briefing
-          - - y
-            - ja
-  cover_label: Abdeckung von 11 Bereichen
-  cover_aria: 'Abdeckung: {full} Bereiche voll, {part} teilweise von 11'
-  foot:
-  - - Wer es macht
-    - - Sie selbst
-      - SEO-Spezialist
-      - 'Team: SEO, UX, Copy, Brand'
-      - ein Report, persönlich geprüft
-  - - Preis
-    - - 0 €
-      - je nach Website-Größe
-      - Summe mehrerer Aufträge
-      - 199 €
-  - - Lieferung
-    - - sofort
-      - nach Absprache
-      - nach Absprache
-      - in der Regel in 24 Std. nach Zahlung
-  footnote: 'Bei SEO- und umfassenden Agentur-Audits nennen wir den Umfang, keinen Preis: Er hängt von der Größe der Website, der Zahl der Spezialisten und dem Briefing ab.'
-  d_tag: So entscheiden Sie
-  d_h2:
-  - Jeder Weg ergibt Sinn.
-  - Nur in einer anderen Situation.
-  decide:
-  - - „Uns geht es nur um Geschwindigkeit und technische Fehler, und wir haben einen Entwickler, der sie behebt.“
-    - Kostenlose Tools
-    - Für den ersten Überblick und laufende Technikkontrollen reichen sie. Jemand muss die Zahlen allerdings lesen können.
-  - - „Wir planen langfristiges SEO oder Kampagnen mit einer bestimmten Agentur.“
-    - Agentur-Audit
-    - Ein Audit als Einstieg in die Zusammenarbeit ist sinnvoll. Prüfen Sie vorher, welche Bereiche das Briefing abdeckt.
-  - - „Wir wissen nicht, warum die Website keine Anfragen bringt, und müssen wissen, was zuerst zu beheben ist.“
-    - SIGEL Web Intelligence
-    - Schnelle Entscheidungsgrundlage vor einem Redesign, einer Kampagne oder einer Budgetentscheidung, oder als Briefing für Entwickler und Agentur.
-  o_price: 199 €
-  o_sub: oder 4.980 CZK · eine URL · für Unternehmen (B2B)
-  o_cta: Web-Intelligence-Report bestellen
-  o_list:
-  - 11 Bereiche in einem PDF-Report
-  - Management Summary und priorisierte Roadmap
-  - Persönlich geprüfter Output
-  - In der Regel innerhalb von 24 Std. an Werktagen nach Zahlungseingang
-  o_links:
-  - Was genau enthalten ist
-  - Beispielreport
 about:
   name: Daniel Hajduk
   linkedin: https://www.linkedin.com/in/daniel-hajduk-/
@@ -993,3 +523,477 @@ home_prio:
   hero:
   - Der Haupt-CTA verspricht ein Angebot, führt aber zu einem allgemeinen Kontaktformular.
   - 'Hier landet der Großteil des Werbetraffics. Aufwand: gering.'
+home_areas:
+  h2:
+  - 'Elf Bereiche. Eine Antwort:'
+  - was zuerst
+  - gelöst werden sollte.
+  aria: Elf Audit-Bereiche
+  chip: HTTPS, TLS und Security-Header
+  items:
+  - - Performance
+    - cold
+    - 'Lighthouse für Desktop und Mobil sowie Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+  - - Indexierung und SEO
+    - cold
+    - Robots.txt, Sitemap, Canonical, Metadaten, Überschriften und Open Graph.
+  - - Links und CTAs
+    - cold
+    - Defekte und blockierte Links, Calls-to-Action und verdächtige Elemente.
+  - - Barrierefreiheit
+    - cold
+    - Kontrast, Schriftgröße und Touch-Ziele mit konkreten Elementen auf Desktop und Mobil.
+  - - Sicherheitssignale
+    - cold
+    - HTTPS und Weiterleitungen, TLS-Zertifikat, HTTP-Security-Header, Schutz der E-Mail-Domain (SPF, DKIM, DMARC), Cookies und bekannte Schwachstellen verwendeter Bibliotheken (OSV). Passive Prüfung.
+  - - UX und mobile Nutzbarkeit
+    - warm
+    - Viewport, Navigation, Orientierung im Inhalt und mobiler Weg der Besucher.
+  - - Angebotskommunikation
+    - warm
+    - Was die Website anbietet, für wen, wie klar und konkret, und wo Vertrauen verloren geht.
+  - - KI-Bereitschaft
+    - warm
+    - Strukturierte Daten und Signale für KI-Suche.
+  - - Marken- und Zielgruppenarchetyp
+    - warm
+    - Archetypen-Karte, Brand- und Customer-Playbook, Regeln für die Tonalität.
+  - - Geschäftliche Wirkung und Roadmap
+    - warm
+    - Management Summary, Wirkung × Aufwand und ein Aktionsplan dafür, was zuerst zu tun ist.
+  - - Evidenz-Anhang
+    - warm
+    - Crawl, Robots, Sitemap, Metadaten, Domain und Infrastruktur (Domain-Alter, Zertifikat, Hosting), Kontakte und Social-Media-Profile sowie ein Evidenzregister mit Messzeitpunkt.
+  chips_extra:
+  - SPF, DKIM und DMARC
+  - Domain, Zertifikat und Hosting
+  - Cookies
+  - Schwachstellen in Bibliotheken (OSV)
+pricing:
+  ld: 'Umfassendes Website-Audit für eine URL: Technik, SEO, UX, Barrierefreiheit, Angebotskommunikation, Archetypen und priorisierte Roadmap in einem persönlich geprüften PDF-Report.'
+  crumb: Preise
+  h1: Eine Position auf der Rechnung.
+  lead: Der vollständige Web-Intelligence-Report für eine URL für 199 €. Keine Pakete, Aufpreise oder Monatsgebühren. Öffnen Sie eine beliebige Position des Belegs und sehen Sie, was genau enthalten ist.
+  cta_hero: Report für 199 € bestellen
+  demo: Beispielreport (EN), 21 Seiten
+  promise:
+  - - In der Regel innerhalb von 24 Std.
+    - ' an Werktagen nach Zahlungseingang'
+  - - Persönlich geprüft
+    - ': jeder Report vor dem Versand'
+  - - Rechnung an Ihr Unternehmen
+    - ', nur B2B'
+  receipt_aria: Was enthalten ist
+  rc_sub: Web-Intelligence-Report
+  in_price: inklusive
+  layers:
+  - - Wir messen
+    - - - Technik und Performance
+        - 'Lighthouse für Desktop und Mobil, Core Web Vitals: LCP, FCP, CLS, TBT, Speed Index, TTI.'
+      - - Sicherheitssignale
+        - HTTPS und Weiterleitungen, TLS-Zertifikat, HTTP-Security-Header, Schutz der E-Mail-Domain (SPF, DKIM, DMARC), Cookies und bekannte Schwachstellen verwendeter Bibliotheken (OSV). Passive Prüfung.
+      - - Links und CTAs
+        - Defekte und blockierte Links, Calls-to-Action und verdächtige Elemente.
+      - - Barrierefreiheit
+        - Kontrast, Schriftgröße und Touch-Ziele mit den konkreten Elementen auf Desktop und Mobil.
+      - - KI-Bereitschaft
+        - Strukturierte Daten und Signale für KI-Suche.
+  - - Wir bewerten
+    - - - Gesamtbild
+        - Scores in sechs Bereichen und eine Zusammenfassung von Stärken und Risiken.
+      - - UX und Angebotskommunikation
+        - Klarheit, Konsistenz und Konkretheit der Botschaft, Navigation und Wirkung auf die Conversion.
+      - - Archetyp von Marke und Zielgruppe
+        - Archetypen-Karte, Brand- und Customer-Playbook, Regeln für die Tonalität.
+  - - Sie entscheiden
+    - - - Management Summary
+        - Kurzer Entscheidungsüberblick und geschäftliche Wirkung für die Geschäftsführung.
+      - - Priorisierte Roadmap
+        - Was zuerst, Quick Wins, Wirkung × Aufwand.
+      - - Evidenz-Anhang
+        - Crawl, Robots, Sitemap, Metadaten, Domain und Infrastruktur (Domain-Alter, Zertifikat, Hosting), Kontakte und Social-Media-Profile sowie ein Evidenzregister mit Messzeitpunkt.
+  review:
+  - Persönliche Prüfung
+  - Jeden Report prüfen wir vor dem Versand persönlich, damit die Prioritäten für Ihre Website Sinn ergeben.
+  total: Gesamt
+  price: 199 €
+  alt: oder 4.980 CZK · für Unternehmen
+  steps_tag: So läuft die Bestellung
+  steps_h2:
+  - Vier Schritte.
+  - Ohne Termine.
+  steps:
+  - - Bestellung
+    - Sie geben die URL und Ihre Firmendaten ein.
+  - - Rechnung
+    - Die Rechnung kommt kurz darauf an die angegebene E-Mail-Adresse.
+  - - Zahlung
+    - Per Überweisung laut Rechnung.
+  - - Report
+    - In der Regel innerhalb von 24 Stunden an Werktagen nach Zahlungseingang, als PDF per E-Mail.
+  note: Die Leistung richtet sich ausschließlich an Unternehmen (B2B). Einzelheiten regeln die <a href="/de/agb.html">AGB</a>.
+  ctx_tag: Der Preis im Kontext
+  ctx_h2:
+  - Was Sie sonst
+  - aus mehreren Aufträgen zusammensetzen.
+  ctx_p: Ein eigenständiges SEO-Audit wird nach Größe der Website kalkuliert und deckt nur einen der Bereiche oben ab. UX, Barrierefreiheit, Sicherheit oder Markenkommunikation sind bei Agenturen meist weitere eigene Aufträge.
+  scale: null
+  not_tag: Für wen es nicht passt
+  not_h2:
+  - Damit Sie vorher wissen,
+  - wann SIGEL keinen Sinn ergibt.
+  not:
+  - - Websites vor dem Launch
+    - Es gibt noch nichts zu messen. Der Report ergibt erst bei einer laufenden Website Sinn.
+  - - Garantierte Rankings oder Umsätze
+    - Der Report ist eine Diagnose und Entscheidungsgrundlage, kein Ergebnisversprechen.
+  - - Tausende Produktseiten
+    - Der Report bewertet die Website als Ganzes, nicht jede URL eines großen Onlineshops einzeln.
+  - - Sie suchen vor allem Umsetzung
+    - SIGEL sagt, was zu beheben ist und in welcher Reihenfolge. Die Änderungen setzt Ihr Entwickler oder Ihre Agentur um.
+  ag_tag: Agenturen und mehrere Websites
+  ag_h2: Reports für Kunden, regelmäßig.
+  ag_p: Sie brauchen Reports für mehrere Websites oder Kunden? Bestellen Sie den ersten Report oder schreiben Sie an <a href="mailto:info@sigel-industries.com">info@sigel-industries.com</a>, und wir vereinbaren Konditionen für die laufende Zusammenarbeit.
+  ag_cta: Ersten Report bestellen
+  ag_links:
+  - Was enthalten ist
+  - Vergleich mit Agentur und Tools
+  - Beispielreport (EN), 21 Seiten
+compare:
+  crumb: Vergleich
+  h1: Wie viele der 11 Bereiche deckt Ihr Audit wirklich ab?
+  lead: Vier Wege, um herauszufinden, was eine Website bremst. Sie unterscheiden sich in Preis und Tempo, vor allem aber darin, wie viele Bereiche sie abdecken und ob Sie am Ende Zahlen oder eine Entscheidung haben.
+  board_aria: Abdeckung der 11 Bereiche nach Audit-Art
+  full: voll
+  part: teilweise
+  of: von 11
+  price: Preis
+  delivery: Lieferung
+  card_cta: Report bestellen
+  board_note: 'Voll, teilweise oder gar nicht: laut Tabelle unten.'
+  board_link: Alle 11 Bereiche anzeigen
+  options:
+  - - Kostenlose Tools
+    - Lighthouse, PageSpeed Insights
+    - 0 €
+    - sofort
+    - Technische Zahlen ohne Kontext. Die Tools wissen nicht, was Sie verkaufen oder was zuerst zu beheben ist.
+  - - SEO-Audit
+    - SEO-Spezialist oder Agentur
+    - je nach Website-Größe
+    - nach Absprache
+    - Geht bei der Auffindbarkeit in die Tiefe. UX, Angebot und Marke sind nicht sein Thema.
+  - - Agentur-Audit
+    - SEO, UX, Copywriting, Brand
+    - Summe mehrerer Aufträge
+    - nach Absprache
+    - Kann alles abdecken, setzt sich aber aus mehreren Briefings zusammen, und der Umfang ist je nach Agentur verschieden.
+  - - SIGEL Web Intelligence
+    - ein Report, persönlich geprüft
+    - 199 €
+    - in 24 Std. nach Zahlung
+    - Technik, UX, Sicherheit, Angebot und Marke. Am Ende eine Roadmap, was zuerst zu tun ist.
+  m_tag: Was welches Audit abdeckt
+  m_h2:
+  - Elf Bereiche.
+  - Ein Report.
+  m_p: Ein Vergleich des Umfangs zur Orientierung. Agentur-Audits hängen vom Briefing ab; „separat“ bedeutet, dass meist ein anderer Spezialist oder ein anderer Auftrag diesen Bereich übernimmt.
+  legend_aria: Legende
+  legend:
+  - abgedeckt
+  - teilweise / je nach Briefing
+  - nicht abgedeckt
+  area: Bereich
+  columns:
+  - Kostenlose Tools
+  - SEO-Audit
+  - Umfassendes Agentur-Audit
+  - SIGEL Web Intelligence
+  groups:
+  - - Technik und Auffindbarkeit
+    - - - 'Performance: Lighthouse Desktop und Mobil, Core Web Vitals'
+        - - - y
+            - ja
+          - - y
+            - ja
+          - - y
+            - ja
+          - - y
+            - ja
+      - - 'Indexierung: robots.txt, Sitemap, Canonical, Metadaten'
+        - - - p
+            - Grundlagen
+          - - y
+            - ja
+          - - y
+            - ja
+          - - y
+            - ja
+      - - Links und Handlungsaufforderungen (CTA)
+        - - - p
+            - nur Links
+          - - p
+            - nur Links
+          - - p
+            - je nach Briefing
+          - - y
+            - ja
+      - - Barrierefreiheit mit konkreten Elementen
+        - - - p
+            - allgemeiner Score
+          - - n
+            - nein
+          - - p
+            - je nach Briefing
+          - - y
+            - ja
+      - - 'Sicherheit: HTTPS, TLS, Header, SPF/DKIM/DMARC'
+        - - - p
+            - andere Tools
+          - - n
+            - nein
+          - - p
+            - eigener Auftrag
+          - - y
+            - passive Prüfung
+  - - Nutzer, Angebot und Marke
+    - - - UX und mobile Nutzbarkeit
+        - - - n
+            - nein
+          - - n
+            - nein
+          - - p
+            - UX-Audit separat
+          - - y
+            - ja
+      - - 'Angebotskommunikation: Klarheit, Konsistenz, Konkretheit'
+        - - - n
+            - nein
+          - - n
+            - nein
+          - - p
+            - Copy / Strategie separat
+          - - y
+            - ja
+      - - 'KI-Bereitschaft: strukturierte Daten, Signale für KI'
+        - - - n
+            - nein
+          - - p
+            - manchmal
+          - - p
+            - manchmal
+          - - y
+            - ja
+      - - Archetyp von Marke und Zielgruppe, Kommunikations-Playbook
+        - - - n
+            - nein
+          - - n
+            - nein
+          - - p
+            - Markenstrategie separat
+          - - y
+            - ja
+  - - Ergebnis für Entscheidungen
+    - - - Geschäftliche Wirkung und Roadmap (Wirkung × Aufwand)
+        - - - n
+            - nein
+          - - p
+            - SEO-Empfehlungen
+          - - y
+            - ja
+          - - y
+            - ja
+      - - 'Evidenz-Anhang: Messdaten mit Messzeitpunkt'
+        - - - p
+            - Rohdaten
+          - - y
+            - ja
+          - - p
+            - je nach Briefing
+          - - y
+            - ja
+  cover_label: Abdeckung von 11 Bereichen
+  cover_aria: 'Abdeckung: {full} Bereiche voll, {part} teilweise von 11'
+  foot:
+  - - Wer es macht
+    - - Sie selbst
+      - SEO-Spezialist
+      - 'Team: SEO, UX, Copy, Brand'
+      - ein Report, persönlich geprüft
+  - - Preis
+    - - 0 €
+      - je nach Website-Größe
+      - Summe mehrerer Aufträge
+      - 199 €
+  - - Lieferung
+    - - sofort
+      - nach Absprache
+      - nach Absprache
+      - in der Regel in 24 Std. nach Zahlung
+  footnote: 'Bei SEO- und umfassenden Agentur-Audits nennen wir den Umfang, keinen Preis: Er hängt von der Größe der Website, der Zahl der Spezialisten und dem Briefing ab.'
+  d_tag: So entscheiden Sie
+  d_h2:
+  - Jeder Weg ergibt Sinn.
+  - Nur in einer anderen Situation.
+  decide:
+  - - „Uns geht es nur um Geschwindigkeit und technische Fehler, und wir haben einen Entwickler, der sie behebt.“
+    - Kostenlose Tools
+    - Für den ersten Überblick und laufende Technikkontrollen reichen sie. Jemand muss die Zahlen allerdings lesen können.
+  - - „Wir planen langfristiges SEO oder Kampagnen mit einer bestimmten Agentur.“
+    - Agentur-Audit
+    - Ein Audit als Einstieg in die Zusammenarbeit ist sinnvoll. Prüfen Sie vorher, welche Bereiche das Briefing abdeckt.
+  - - „Wir wissen nicht, warum die Website keine Anfragen bringt, und müssen wissen, was zuerst zu beheben ist.“
+    - SIGEL Web Intelligence
+    - Schnelle Entscheidungsgrundlage vor einem Redesign, einer Kampagne oder einer Budgetentscheidung, oder als Briefing für Entwickler und Agentur.
+  o_price: 199 €
+  o_sub: oder 4.980 CZK · eine URL · für Unternehmen (B2B)
+  o_cta: Web-Intelligence-Report bestellen
+  o_list:
+  - 11 Bereiche in einem PDF-Report
+  - Management Summary und priorisierte Roadmap
+  - Persönlich geprüfter Output
+  - In der Regel innerhalb von 24 Std. an Werktagen nach Zahlungseingang
+  o_links:
+  - Was genau enthalten ist
+  - Beispielreport
+modal:
+  problem-leads:
+    kicker: Was es löst
+    title: Zu wenige Anfragen über die Website
+    lead: Eine Website kann technisch sauber sein und trotzdem nicht überzeugen. SIGEL sucht Stellen, an denen Besucher Klarheit, Vertrauen oder den nächsten Schritt verlieren.
+    items:
+    - - Wann es hilft
+      - Wenn die Website Traffic hat, aber wenige Anfragen, Bestellungen oder sinnvolle Aktionen erzeugt.
+    - - Was geprüft wird
+      - Angebotsklarheit, CTA, Vertrauen, mobiler Weg und Kommunikationsbarrieren.
+    - - Typischer Output
+      - Prioritäten, die Kosmetik von Punkten mit echter Wirkung trennen.
+    cta: Web-Intelligence-Report für 199 € bestellen
+  problem-marketing:
+    kicker: Was es löst
+    title: Marketing läuft, die Ergebnisse bleiben schwach
+    lead: Bevor das Werbebudget steigt, sollte geprüft werden, ob die Landingpage eine Entscheidung überhaupt unterstützt.
+    items:
+    - - Wann es hilft
+      - Vor Werbung, bei schwacher Conversion oder wenn Kampagnen Traffic ohne Ergebnis bringen.
+    - - Was geprüft wird
+      - Landingpages, Geschwindigkeit, CTA, Belege, Vertrauen und Abweichungen zwischen Werbung und Website.
+    - - Typischer Output
+      - Eine Liste von Barrieren, die die Leistung schon vor der Kampagne blockieren können.
+    cta: Website vor der Kampagne prüfen
+  problem-redesign:
+    kicker: Was es löst
+    title: Redesign ohne klares Briefing
+    lead: Ein Redesign ohne Diagnostik verändert oft nur die Optik. SIGEL definiert, was die neue Website tatsächlich beheben soll.
+    items:
+    - - Wann es hilft
+      - Vor einem Redesign, einem Agenturbriefing oder der Entscheidung, was geändert werden soll.
+    - - Was geprüft wird
+      - Struktur, Angebotskommunikation, Vertrauen, UX, Markenarchetyp und Entscheidungsweg.
+    - - Typischer Output
+      - Eine Redesign-Grundlage mit Fokus auf Funktion statt Dekoration.
+    cta: Grundlage für das Redesign erhalten
+  problem-offer:
+    kicker: Was es löst
+    title: Das Angebot ist gut, wird aber nicht verstanden
+    lead: Manchmal ist nicht das Produkt das Problem, sondern die Erklärung seines Werts.
+    items:
+    - - Wann es hilft
+      - Wenn Kunden Wert, Preis, Unterschied oder den Grund für den nächsten Schritt nicht verstehen.
+    - - Was geprüft wird
+      - Angebotssprache, Belege, Markenarchetyp und Kundenmotive.
+    - - Typischer Output
+      - Empfehlungen zur Präzisierung des Angebots für unterschiedliche Kundentypen.
+    cta: Website-Kommunikation präzisieren
+  problem-strategy:
+    kicker: Was es löst
+    title: Die Website passt nicht mehr zum Unternehmen
+    lead: Websites bleiben oft auf altem Stand, während sich das Unternehmen weiterentwickelt. SIGEL prüft, ob Kommunikation, Angebot und Zielgruppen noch zur Geschäftsrichtung passen.
+    items:
+    - - Wann es hilft
+      - Bei Stagnation, verändertem Angebot, neuer Zielgruppe oder vor einer strategischen Entscheidung.
+    - - Was geprüft wird
+      - Angebotspassung, Positionierung, Archetyp, Kundensegmente und vorrangige Risiken.
+    - - Typischer Output
+      - Eine Roadmap dessen, was zuerst geändert werden sollte.
+    cta: Website-Strategie prüfen
+  problem-agency:
+    kicker: Was es löst
+    title: Schnelle Grundlage für eine Entscheidung
+    lead: Inhaber, Marketingteams und Agenturen müssen nicht mit Meinungen beginnen. SIGEL liefert externe Diagnostik als Input für Beratung, Redesign, Kampagnen oder Strategie.
+    items:
+    - - Wann es hilft
+      - Vor Beratung, Empfehlungen, Kampagnen, Redesign oder der nächsten Budgetentscheidung.
+    - - Was geprüft wird
+      - Technik, UX, Kommunikation, Vertrauen, Archetypen und Prioritäten in einem Input.
+    - - Typischer Output
+      - Ein schneller Report als interne Entscheidungsgrundlage oder Kunden-Input.
+    cta: Konditionen der Zusammenarbeit besprechen
+    inquiry: agency
+  system-process:
+    kicker: Analytischer Kern
+    title: So erstellt SIGEL den Web-Intelligence-Output
+    lead: SIGEL Web Intelligence ist weder reiner KI-Text noch eine generische Checkliste. Das Analysesystem sammelt Website-Signale, bewertet sie mit eigenem Scoring, Regeln, Gewichtungen und UX-Heuristiken und übersetzt sie in einen geschäftlich nutzbaren Report.
+    items:
+    - - Signalerfassung
+      - Technik, SEO, Struktur, Inhalt, CTA, Vertrauen und Angebotskommunikation.
+    - - Eigene Analyselogik
+      - Regeln, Gewichtungen, Prioritäten und Scoring machen sichtbar, was echte Wirkung hat.
+    - - UX- und Kommunikationsheuristiken
+      - Das System prüft, wo Besucher das Angebot verstehen, zögern, Vertrauen verlieren oder den nächsten Schritt nicht finden.
+    - - Interpretationsschicht
+      - Daten werden über Marke, Kundenarchetypen und Kommunikationsmuster interpretiert.
+    - - Persönliche Prüfung
+      - Jeder Report wird vor der Lieferung geprüft, damit Prioritäten klar und praktisch nutzbar sind.
+    cta: Web-Intelligence-Report für 199 € bestellen
+  use-web-audit:
+    kicker: Verfügbar
+    title: Web-Intelligence-Report
+    lead: 'Das Kernprodukt von SIGEL: Business Intelligence für eine konkrete Website vor Werbung, Redesign oder einer Geschäftsentscheidung.'
+    items:
+    - - Enthält
+      - Lighthouse-Metriken für Desktop und Mobilgeräte, Core Web Vitals, Links und CTAs, Barrierefreiheit, Angebotskommunikation, KI-Bereitschaft, Archetypen-Playbook, Sicherheitssignale (HTTPS, TLS, SPF/DKIM/DMARC), Roadmap und Evidenzdaten.
+    - - Geeignet für
+      - Unternehmen, Freelancer, kleine Teams oder Projekte, die einen klaren diagnostischen Input benötigen.
+    - - Output
+      - Visueller PDF-Report mit Prioritäten und Empfehlungen.
+    cta: Web-Intelligence-Report bestellen
+  use-agency:
+    kicker: Verfügbar
+    title: Agentur-Input
+    lead: 'Derselbe Web-Intelligence-Report für die Websites Ihrer Kunden: Kundenberatung, Redesign, SEO oder Content-Strategie.'
+    items:
+    - - Enthält
+      - Externe Sicht auf die Kundenwebsite, Prioritäten und Input für Empfehlungen.
+    - - Geeignet für
+      - Agenturen, die einen schnelleren Startpunkt benötigen, ohne die Diagnostik manuell bei null zu beginnen.
+    - - Output
+      - Report oder interner Input nach Absprache.
+    cta: Konditionen der Zusammenarbeit besprechen
+    inquiry: agency
+  use-lead-research:
+    kicker: Pilot
+    title: Lead Research
+    lead: Eine Research-Ebene zur Suche relevanter Unternehmenswebsites und öffentlicher Kontakte nach Segment, Region oder individueller Marktauswahl.
+    items:
+    - - Enthält
+      - URL-Sammlung, Filterung, grundlegende Validierung und Kontaktvorbereitung für B2B-Research.
+    - - Geeignet für
+      - Vertriebsvorbereitung, Marktsegmentierung, Interessentenlisten oder Folgeanalysen.
+    - - Output
+      - Strukturierte Liste von Websites und Kontakten nach Briefing.
+    cta: Segmentauswahl besprechen
+    inquiry: lead-research
+  use-benchmark:
+    kicker: In Vorbereitung
+    title: Segment-Benchmark
+    lead: Vergleich mehrerer Websites in einer Branche, Region oder Marktauswahl. Diese Ebene liegt über einzelnen Reports.
+    items:
+    - - Enthält
+      - Score-Vergleich, wiederkehrende Muster, Unterschiede zwischen Marktteilnehmern und Segmentsignale.
+    - - Geeignet für
+      - Marktüberblick, interne Entscheidungen, Vertriebsselektion oder Strategievorbereitung.
+    - - Output
+      - Benchmark-Karte und Zusammenfassung der wichtigsten Erkenntnisse.
+    cta: Benchmark anfragen
+    inquiry: benchmark

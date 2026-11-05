@@ -247,7 +247,7 @@ hero_preload: true
 </div>
 <div aria-label="Was im Report tatsächlich gemessen wird" class="audit-evidence reveal">
 <div class="audit-evidence-head"><p class="tag cold">Evidenzebene</p><h3>Was im Report tatsächlich gemessen wird</h3></div>
-<div class="audit-evidence-grid"><span>{{ t.home_areas.chip }}</span>
+<div class="audit-evidence-grid"><span>{{ t.home_areas.chip }}</span>{% for c in t.home_areas.chips_extra %}<span>{{ c }}</span>{% endfor %}
 <span>Lighthouse und Core Web Vitals</span><span>Links und CTAs</span><span>Mobiler Viewport</span><span>Kontrast und Touch-Ziele</span><span>Metadaten und Schema</span><span>Inhaltsextraktion</span><span>KI-Bereitschaft</span><span>Evidenzdaten</span>
 </div>
 </div>
