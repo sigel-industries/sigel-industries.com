@@ -33,6 +33,22 @@ FRONT_MATTER_KEYS = {
 
 
 H2_RE = re.compile(r'<h2>(.*?)</h2>', re.S)
+FAQ_RE = re.compile(r'<details>\s*<summary>(.*?)</summary>(.*?)</details>', re.S)
+TAG_RE = re.compile(r'<[^>]+>')
+
+
+def faq_schema(html):
+    """FAQPage JSON-LD from the visible FAQ (details inside .faq-list), so the schema can never drift from the page."""
+    start = html.find('class="faq-list')
+    if start == -1:
+        return html
+    text = lambda frag: re.sub(r'\s+', ' ', TAG_RE.sub(' ', frag)).replace(' +', '').strip()
+    items = [{'@type': 'Question', 'name': text(q), 'acceptedAnswer': {'@type': 'Answer', 'text': text(a)}}
+             for q, a in FAQ_RE.findall(html[start:])]
+    if not items:
+        return html
+    data = json.dumps({'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': items}, ensure_ascii=False)
+    return html.replace('</head>', f'<script type="application/ld+json">{data}</script>\n</head>', 1)
 
 
 def slugify(text):
@@ -139,7 +155,7 @@ def main():
         if 'data-modal-target' in body:
             client['modal'] = t['modal']
         page = {key: meta.get(key) for key in FRONT_MATTER_KEYS}
-        html = env.from_string(body).render(page=page, lang=lang, t=t, client_data=client)
+        html = faq_schema(env.from_string(body).render(page=page, lang=lang, t=t, client_data=client))
         dest = out_path(meta['url'])
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(html, encoding='utf-8')
