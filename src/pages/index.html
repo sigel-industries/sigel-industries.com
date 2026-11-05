@@ -360,10 +360,10 @@ hero_preload: true
 </div>
 </div>
 </div>
-<div class="report-prio">
-<p class="report-prio-title">{{ t.home_prio.title }}</p>
-<ol>
-{%- for text, meta in t.home_prio['items'] %}
+<div aria-live="polite" class="report-prio" id="reportPrio">
+<p class="report-prio-title" id="reportPrioTitle">{{ t.report.dashboard.prio_title }}</p>
+<ol id="reportPrioList">
+{%- for text, meta in t.report.dashboard.prio %}
 <li><b>{{ '%02d' % loop.index }}</b><span>{{ text }}</span><em>{{ meta }}</em></li>
 {%- endfor %}
 </ol>

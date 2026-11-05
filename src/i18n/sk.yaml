@@ -141,102 +141,6 @@ order:
   aresLoading: Hľadám firmu v ARES…
   aresFilled: Údaje doplnené z ARES. Skontrolujte ich.
   aresNotFound: Firmu sme v ARES nenašli, vyplňte údaje ručne.
-report:
-  dashboard:
-    score: '64'
-    kicker: Dashboard
-    title: Skóre, riziká a smer rozhodovania.
-    text: Prvá časť spája stav webu, hlavné riziká a obchodný dopad do jednej rýchlej orientácie.
-    items:
-    - Skóre
-    - Riziká
-    - Obchodný dopad
-    - Roadmapa
-    bars:
-    - 45
-    - 70
-    - 52
-    - 90
-    - 75
-    - 95
-    - 62
-    - 82
-  technika:
-    score: '78'
-    kicker: Technika
-    title: Výkon, indexácia a technické limity.
-    text: 'Tvrdá kontrola základov: rýchlosť, technické zdravie, metadáta, sitemap, robots a mobilná použiteľnosť.'
-    items:
-    - Rýchlosť
-    - Indexácia
-    - Metadáta
-    - Mobil
-    bars:
-    - 86
-    - 98
-    - 76
-    - 92
-    - 70
-    - 88
-    - 54
-    - 78
-  komunikace:
-    score: '49'
-    kicker: Komunikácia
-    title: Jasnosť ponuky a dôvera.
-    text: Vyhodnotenie toho, či návštevník rýchlo chápe ponuku, dôvody na nákup a ďalší krok.
-    items:
-    - Ponuka
-    - Dôvera
-    - CTA
-    - Dôkazy
-    bars:
-    - 52
-    - 74
-    - 45
-    - 82
-    - 64
-    - 58
-    - 88
-    - 70
-  archetypy:
-    score: '57'
-    kicker: Archetypy
-    title: Značka a zákaznícke motivácie.
-    text: 'Interpretácia archetypu značky a zákazníckych archetypov: kto potrebuje dôkaz, jasnosť alebo víziu.'
-    items:
-    - Značka
-    - Motivácie
-    - Obavy
-    - Tón
-    bars:
-    - 62
-    - 78
-    - 88
-    - 56
-    - 92
-    - 66
-    - 80
-    - 72
-  roadmapa:
-    score: '64'
-    kicker: Roadmapa
-    title: Čo riešiť ako prvé, druhé a neskôr.
-    text: Prioritný plán oddeľujúci kozmetiku od vecí s reálnym obchodným dopadom.
-    items:
-    - Priorita
-    - Dopad
-    - Rýchlosť
-    - Ďalší krok
-    bars:
-    - 92
-    - 64
-    - 80
-    - 70
-    - 88
-    - 76
-    - 58
-    - 95
 modal:
   problem-leads:
     kicker: Čo to rieši
@@ -946,16 +850,144 @@ about:
   photo_alt: Daniel Hajduk, zakladateľ Sigel s.r.o.
   strip: Každý report pred odoslaním osobne kontrolujem.
   order_note: Váš report pred odoslaním osobne skontroluje Daniel Hajduk.
+report:
+  dashboard:
+    score: '64'
+    kicker: Dashboard
+    title: Skóre, riziká a smer rozhodovania.
+    text: Prvá časť spája stav webu, hlavné riziká a obchodný dopad do jednej rýchlej orientácie.
+    items:
+    - Skóre
+    - Riziká
+    - Obchodný dopad
+    - Roadmapa
+    bars:
+    - 45
+    - 70
+    - 52
+    - 90
+    - 75
+    - 95
+    - 62
+    - 82
+    prio_title: Čo riešiť ako prvé · príklad priorít z reportu
+    prio:
+    - - Hlavné CTA vedie na všeobecný kontakt namiesto dopytu.
+      - vysoký dopad · nízka náročnosť
+    - - Na mobile chýba cena aj referencie nad ohybom stránky.
+      - vysoký dopad · stredná náročnosť
+    - - LCP 4,1 s na mobile, brzdí ho nekomprimovaný obrázok v hero.
+      - stredný dopad · nízka náročnosť
+  technika:
+    score: '78'
+    kicker: Technika
+    title: Výkon, indexácia a technické limity.
+    text: 'Tvrdá kontrola základov: rýchlosť, technické zdravie, metadáta, sitemap, robots a mobilná použiteľnosť.'
+    items:
+    - Rýchlosť
+    - Indexácia
+    - Metadáta
+    - Mobil
+    bars:
+    - 86
+    - 98
+    - 76
+    - 92
+    - 70
+    - 88
+    - 54
+    - 78
+    prio_title: Technické priority · príklad
+    prio:
+    - - 'LCP 4,1 s na mobile: hero obrázok má 2,3 MB a nemá moderný formát.'
+      - vysoký dopad · nízka náročnosť
+    - - 12 odkazov vedie na stránky s chybou 404, z toho 3 z hlavnej navigácie.
+      - stredný dopad · nízka náročnosť
+    - - Chýba hlavička Content-Security-Policy, HTTPS a TLS sú v poriadku.
+      - nízky dopad · nízka náročnosť
+  komunikace:
+    score: '49'
+    kicker: Komunikácia
+    title: Jasnosť ponuky a dôvera.
+    text: Vyhodnotenie toho, či návštevník rýchlo chápe ponuku, dôvody na nákup a ďalší krok.
+    items:
+    - Ponuka
+    - Dôvera
+    - CTA
+    - Dôkazy
+    bars:
+    - 52
+    - 74
+    - 45
+    - 82
+    - 64
+    - 58
+    - 88
+    - 70
+    prio_title: Komunikácia ponuky · príklad
+    prio:
+    - - Prvá obrazovka nehovorí, pre koho je služba. Návštevník musí scrollovať.
+      - vysoký dopad · nízka náročnosť
+    - - Tri rovnocenné tlačidlá súperia o pozornosť, žiadne nie je hlavné.
+      - vysoký dopad · nízka náročnosť
+    - - Referencie sú až v pätičke, pri mieste rozhodnutia chýba dôkaz.
+      - stredný dopad · nízka náročnosť
+  archetypy:
+    score: '57'
+    kicker: Archetypy
+    title: Značka a zákaznícke motivácie.
+    text: 'Interpretácia archetypu značky a zákazníckych archetypov: kto potrebuje dôkaz, jasnosť alebo víziu.'
+    items:
+    - Značka
+    - Motivácie
+    - Obavy
+    - Tón
+    bars:
+    - 62
+    - 78
+    - 88
+    - 56
+    - 92
+    - 66
+    - 80
+    - 72
+    prio_title: Značka a publikum · príklad
+    prio:
+    - - 'Web hovorí ako Opatrovateľ, ale publikum hľadá Experta: menej emócií, viac čísel.'
+      - vysoký dopad · stredná náročnosť
+    - - 'Tón sa mení medzi stránkami: homepage formálne, cenník familiárne.'
+      - stredný dopad · nízka náročnosť
+    - - Vizuál sľubuje prémiovú službu, texty ju neobhája konkrétnymi dôkazmi.
+      - stredný dopad · stredná náročnosť
+  roadmapa:
+    score: '64'
+    kicker: Roadmapa
+    title: Čo riešiť ako prvé, druhé a neskôr.
+    text: Prioritný plán oddeľujúci kozmetiku od vecí s reálnym obchodným dopadom.
+    items:
+    - Priorita
+    - Dopad
+    - Rýchlosť
+    - Ďalší krok
+    bars:
+    - 92
+    - 64
+    - 80
+    - 70
+    - 88
+    - 76
+    - 58
+    - 95
+    prio_title: Plán krokov · príklad
+    prio:
+    - - 'Teraz: presmerovať hlavné CTA na dopyt a doplniť cenu na mobil.'
+      - do 1 týždňa
+    - - 'Do 30 dní: skomprimovať obrázky, opraviť 404 a zjednotiť tón textov.'
+      - do 30 dní
+    - - 'Neskôr: prestavať stránku služieb podľa archetypu publika.'
+      - 1 až 3 mesiace
 home_prio:
   label: Príklad zistenia
   hero:
   - Hlavné CTA sľubuje cenovú ponuku, ale vedie na všeobecný kontakt.
   - 'Sem prichádza väčšina návštevnosti z reklamy. Náročnosť opravy: nízka.'
-  title: Čo riešiť ako prvé · príklad priorít z reportu
-  items:
-  - - Hlavné CTA vedie na všeobecný kontakt namiesto dopytu.
-    - vysoký dopad · nízka náročnosť
-  - - Na mobile chýba cena aj referencie nad ohybom stránky.
-    - vysoký dopad · stredná náročnosť
-  - - LCP 4,1 s na mobile, brzdí ho nekomprimovaný obrázok v hero.
-    - stredný dopad · nízka náročnosť

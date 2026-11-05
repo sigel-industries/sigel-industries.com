@@ -160,6 +160,19 @@
       if (reportText) reportText.textContent = data.text;
       if (reportItems && data.items) reportItems.innerHTML = data.items.map((item) => `<span>${item}</span>`).join('');
       if (reportRing) reportRing.style.setProperty('--score', data.score);
+      const prioTitle = $('#reportPrioTitle');
+      const prioList = $('#reportPrioList');
+      if (prioTitle && data.prio_title) prioTitle.textContent = data.prio_title;
+      if (prioList && data.prio) {
+        prioList.replaceChildren(...data.prio.map(([text, meta], i) => {
+          const li = doc.createElement('li');
+          const n = doc.createElement('b'); n.textContent = String(i + 1).padStart(2, '0');
+          const t = doc.createElement('span'); t.textContent = text;
+          const m = doc.createElement('em'); m.textContent = meta;
+          li.append(n, t, m);
+          return li;
+        }));
+      }
       if (data.bars) {
         reportMeters.forEach((meter, i) => {
           const value = data.bars[i] ?? 0;

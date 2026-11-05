@@ -279,10 +279,10 @@ hero_preload: true
 <div class="report-shell reveal" id="reportWrap">
 <div aria-label="Beispielreport" class="report-tabs" role="tablist"><button aria-controls="reportPanel" aria-selected="true" class="report-tab active" data-report-tab="dashboard" id="reportTab-dashboard" role="tab" type="button">Dashboard</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="technika" id="reportTab-technika" role="tab" type="button">Technik</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="komunikace" id="reportTab-komunikace" role="tab" type="button">Kommunikation</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="archetypy" id="reportTab-archetypy" role="tab" type="button">Archetypen</button><button aria-controls="reportPanel" aria-selected="false" class="report-tab" data-report-tab="roadmapa" id="reportTab-roadmapa" role="tab" type="button">Roadmap</button></div>
 <div aria-labelledby="reportTab-dashboard" aria-live="polite" class="report-body" id="reportPanel" role="tabpanel"><div class="report-score-ring" style="--score:{{ t.report.dashboard.score }}"><span id="reportScore">64</span></div><div class="report-copy"><span class="report-kicker" id="reportKicker">Dashboard</span><h3 id="reportTitle">Score, Risiken und Entscheidungsrichtung.</h3><p id="reportText">Der erste Teil verbindet Website-Zustand, Hauptrisiken und geschäftliche Wirkung zu einer schnellen Orientierung.</p><div class="report-mini-grid"><span>Score</span><span>Risiken</span><span>Geschäftliche Wirkung</span><span>Roadmap</span></div></div></div>
-<div class="report-prio">
-<p class="report-prio-title">{{ t.home_prio.title }}</p>
-<ol>
-{%- for text, meta in t.home_prio['items'] %}
+<div aria-live="polite" class="report-prio" id="reportPrio">
+<p class="report-prio-title" id="reportPrioTitle">{{ t.report.dashboard.prio_title }}</p>
+<ol id="reportPrioList">
+{%- for text, meta in t.report.dashboard.prio %}
 <li><b>{{ '%02d' % loop.index }}</b><span>{{ text }}</span><em>{{ meta }}</em></li>
 {%- endfor %}
 </ol>

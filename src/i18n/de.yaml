@@ -141,102 +141,6 @@ order:
   aresLoading: Unternehmen wird in ARES gesucht…
   aresFilled: Daten aus ARES übernommen. Bitte prüfen.
   aresNotFound: Unternehmen nicht in ARES gefunden, bitte manuell ausfüllen.
-report:
-  dashboard:
-    score: '64'
-    kicker: Dashboard
-    title: Score, Risiken und Entscheidungsrichtung.
-    text: Der erste Teil verbindet Website-Zustand, Hauptrisiken und geschäftliche Wirkung zu einer schnellen Orientierung.
-    items:
-    - Score
-    - Risiken
-    - Geschäftliche Wirkung
-    - Roadmap
-    bars:
-    - 45
-    - 70
-    - 52
-    - 90
-    - 75
-    - 95
-    - 62
-    - 82
-  technika:
-    score: '78'
-    kicker: Technik
-    title: Performance, Indexierbarkeit und technische Grenzen.
-    text: 'Harte Prüfung der Grundlagen: Geschwindigkeit, technischer Zustand, Metadaten, Sitemap, robots.txt und mobile Nutzbarkeit.'
-    items:
-    - Geschwindigkeit
-    - Indexierung
-    - Metadaten
-    - Mobil
-    bars:
-    - 86
-    - 98
-    - 76
-    - 92
-    - 70
-    - 88
-    - 54
-    - 78
-  komunikace:
-    score: '49'
-    kicker: Kommunikation
-    title: Angebotsklarheit und Vertrauen.
-    text: Bewertung, ob Besucher das Angebot, die Kaufgründe und den nächsten Schritt schnell verstehen.
-    items:
-    - Angebot
-    - Vertrauen
-    - CTA
-    - Belege
-    bars:
-    - 52
-    - 74
-    - 45
-    - 82
-    - 64
-    - 58
-    - 88
-    - 70
-  archetypy:
-    score: '57'
-    kicker: Archetypen
-    title: Marke und Kundenmotive.
-    text: 'Interpretation von Marken- und Kundenarchetypen: wer Belege, Klarheit oder Vision benötigt.'
-    items:
-    - Marke
-    - Motive
-    - Einwände
-    - Ton
-    bars:
-    - 62
-    - 78
-    - 88
-    - 56
-    - 92
-    - 66
-    - 80
-    - 72
-  roadmapa:
-    score: '64'
-    kicker: Roadmap
-    title: Was zuerst, danach und später zu lösen ist.
-    text: Ein priorisierter Plan, der kosmetische Änderungen von Punkten mit echter geschäftlicher Wirkung trennt.
-    items:
-    - Priorität
-    - Wirkung
-    - Tempo
-    - Nächster Schritt
-    bars:
-    - 92
-    - 64
-    - 80
-    - 70
-    - 88
-    - 76
-    - 58
-    - 95
 modal:
   problem-leads:
     kicker: Was es löst
@@ -948,16 +852,144 @@ about:
   photo_alt: Daniel Hajduk, Gründer der Sigel s.r.o.
   strip: Jeden Report prüfe ich vor dem Versand persönlich.
   order_note: Ihren Report prüft Daniel Hajduk vor dem Versand persönlich.
+report:
+  dashboard:
+    score: '64'
+    kicker: Dashboard
+    title: Score, Risiken und Entscheidungsrichtung.
+    text: Der erste Teil verbindet Website-Zustand, Hauptrisiken und geschäftliche Wirkung zu einer schnellen Orientierung.
+    items:
+    - Score
+    - Risiken
+    - Geschäftliche Wirkung
+    - Roadmap
+    bars:
+    - 45
+    - 70
+    - 52
+    - 90
+    - 75
+    - 95
+    - 62
+    - 82
+    prio_title: Was zuerst zu tun ist · Beispielprioritäten aus einem Report
+    prio:
+    - - Der Haupt-CTA führt zum allgemeinen Kontakt statt zur Angebotsanfrage.
+      - hohe Wirkung · geringer Aufwand
+    - - Auf dem Smartphone fehlen Preis und Referenzen im sichtbaren Bereich.
+      - hohe Wirkung · mittlerer Aufwand
+    - - Mobiler LCP 4,1 s, gebremst durch ein unkomprimiertes Hero-Bild.
+      - mittlere Wirkung · geringer Aufwand
+  technika:
+    score: '78'
+    kicker: Technik
+    title: Performance, Indexierbarkeit und technische Grenzen.
+    text: 'Harte Prüfung der Grundlagen: Geschwindigkeit, technischer Zustand, Metadaten, Sitemap, robots.txt und mobile Nutzbarkeit.'
+    items:
+    - Geschwindigkeit
+    - Indexierung
+    - Metadaten
+    - Mobil
+    bars:
+    - 86
+    - 98
+    - 76
+    - 92
+    - 70
+    - 88
+    - 54
+    - 78
+    prio_title: Technische Prioritäten · Beispiel
+    prio:
+    - - 'Mobiler LCP 4,1 s: Das Hero-Bild hat 2,3 MB und kein modernes Format.'
+      - hohe Wirkung · geringer Aufwand
+    - - 12 Links führen auf 404-Seiten, 3 davon aus der Hauptnavigation.
+      - mittlere Wirkung · geringer Aufwand
+    - - Header Content-Security-Policy fehlt; HTTPS und TLS sind in Ordnung.
+      - geringe Wirkung · geringer Aufwand
+  komunikace:
+    score: '49'
+    kicker: Kommunikation
+    title: Angebotsklarheit und Vertrauen.
+    text: Bewertung, ob Besucher das Angebot, die Kaufgründe und den nächsten Schritt schnell verstehen.
+    items:
+    - Angebot
+    - Vertrauen
+    - CTA
+    - Belege
+    bars:
+    - 52
+    - 74
+    - 45
+    - 82
+    - 64
+    - 58
+    - 88
+    - 70
+    prio_title: Angebotskommunikation · Beispiel
+    prio:
+    - - Der erste Bildschirm sagt nicht, für wen die Leistung ist; Besucher müssen scrollen.
+      - hohe Wirkung · geringer Aufwand
+    - - Drei gleichrangige Buttons konkurrieren um Aufmerksamkeit, keiner ist der Haupt-CTA.
+      - hohe Wirkung · geringer Aufwand
+    - - Referenzen stehen erst im Footer; am Entscheidungspunkt fehlt ein Beleg.
+      - mittlere Wirkung · geringer Aufwand
+  archetypy:
+    score: '57'
+    kicker: Archetypen
+    title: Marke und Kundenmotive.
+    text: 'Interpretation von Marken- und Kundenarchetypen: wer Belege, Klarheit oder Vision benötigt.'
+    items:
+    - Marke
+    - Motive
+    - Einwände
+    - Ton
+    bars:
+    - 62
+    - 78
+    - 88
+    - 56
+    - 92
+    - 66
+    - 80
+    - 72
+    prio_title: Marke und Zielgruppe · Beispiel
+    prio:
+    - - 'Die Website spricht als Fürsorger, die Zielgruppe sucht einen Experten: weniger Emotion, mehr Zahlen.'
+      - hohe Wirkung · mittlerer Aufwand
+    - - 'Die Tonalität wechselt zwischen den Seiten: Startseite formell, Preise locker.'
+      - mittlere Wirkung · geringer Aufwand
+    - - Das Design verspricht Premium, die Texte belegen es nicht.
+      - mittlere Wirkung · mittlerer Aufwand
+  roadmapa:
+    score: '64'
+    kicker: Roadmap
+    title: Was zuerst, danach und später zu lösen ist.
+    text: Ein priorisierter Plan, der kosmetische Änderungen von Punkten mit echter geschäftlicher Wirkung trennt.
+    items:
+    - Priorität
+    - Wirkung
+    - Tempo
+    - Nächster Schritt
+    bars:
+    - 92
+    - 64
+    - 80
+    - 70
+    - 88
+    - 76
+    - 58
+    - 95
+    prio_title: Maßnahmenplan · Beispiel
+    prio:
+    - - 'Jetzt: Haupt-CTA auf die Angebotsanfrage lenken, Preis auf Mobil ergänzen.'
+      - innerhalb 1 Woche
+    - - 'In 30 Tagen: Bilder komprimieren, 404 beheben, Tonalität vereinheitlichen.'
+      - innerhalb 30 Tagen
+    - - 'Später: Leistungsseite nach dem Archetyp der Zielgruppe neu aufbauen.'
+      - 1 bis 3 Monate
 home_prio:
   label: Beispielbefund
   hero:
   - Der Haupt-CTA verspricht ein Angebot, führt aber zu einem allgemeinen Kontaktformular.
   - 'Hier landet der Großteil des Werbetraffics. Aufwand: gering.'
-  title: Was zuerst zu tun ist · Beispielprioritäten aus einem Report
-  items:
-  - - Der Haupt-CTA führt zum allgemeinen Kontakt statt zur Angebotsanfrage.
-    - hohe Wirkung · geringer Aufwand
-  - - Auf dem Smartphone fehlen Preis und Referenzen im sichtbaren Bereich.
-    - hohe Wirkung · mittlerer Aufwand
-  - - Mobiler LCP 4,1 s, gebremst durch ein unkomprimiertes Hero-Bild.
-    - mittlere Wirkung · geringer Aufwand

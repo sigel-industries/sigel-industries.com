@@ -141,102 +141,6 @@ order:
   aresLoading: Looking up the company in ARES…
   aresFilled: Details filled in from ARES. Please check them.
   aresNotFound: Company not found in ARES, please fill in the details.
-report:
-  dashboard:
-    score: '64'
-    kicker: Dashboard
-    title: Score, risks and decision direction.
-    text: The first part combines website health, the main risks and business impact into one fast orientation.
-    items:
-    - Score
-    - Risks
-    - Business impact
-    - Roadmap
-    bars:
-    - 45
-    - 70
-    - 52
-    - 90
-    - 75
-    - 95
-    - 62
-    - 82
-  technika:
-    score: '78'
-    kicker: Technical
-    title: Performance, indexability and technical limits.
-    text: 'A hard check of the foundations: speed, technical health, metadata, sitemap, robots and mobile usability.'
-    items:
-    - Speed
-    - Indexing
-    - Metadata
-    - Mobile
-    bars:
-    - 86
-    - 98
-    - 76
-    - 92
-    - 70
-    - 88
-    - 54
-    - 78
-  komunikace:
-    score: '49'
-    kicker: Communication
-    title: Offer clarity and trust.
-    text: Evaluation of whether visitors quickly understand the offer, the reasons to buy and the next step.
-    items:
-    - Offer
-    - Trust
-    - CTA
-    - Proof
-    bars:
-    - 52
-    - 74
-    - 45
-    - 82
-    - 64
-    - 58
-    - 88
-    - 70
-  archetypy:
-    score: '57'
-    kicker: Archetypes
-    title: Brand and customer motivations.
-    text: 'Interpretation of the brand archetype and customer archetypes: who needs proof, clarity or vision.'
-    items:
-    - Brand
-    - Motives
-    - Objections
-    - Tone
-    bars:
-    - 62
-    - 78
-    - 88
-    - 56
-    - 92
-    - 66
-    - 80
-    - 72
-  roadmapa:
-    score: '64'
-    kicker: Roadmap
-    title: What to solve first, second and later.
-    text: A priority plan separating cosmetic changes from things with real business impact.
-    items:
-    - Priority
-    - Impact
-    - Speed
-    - Next step
-    bars:
-    - 92
-    - 64
-    - 80
-    - 70
-    - 88
-    - 76
-    - 58
-    - 95
 modal:
   problem-leads:
     kicker: What it solves
@@ -946,16 +850,144 @@ about:
   photo_alt: Daniel Hajduk, founder of Sigel s.r.o.
   strip: I personally review every report before it is sent.
   order_note: Daniel Hajduk personally reviews your report before it is sent.
+report:
+  dashboard:
+    score: '64'
+    kicker: Dashboard
+    title: Score, risks and decision direction.
+    text: The first part combines website health, the main risks and business impact into one fast orientation.
+    items:
+    - Score
+    - Risks
+    - Business impact
+    - Roadmap
+    bars:
+    - 45
+    - 70
+    - 52
+    - 90
+    - 75
+    - 95
+    - 62
+    - 82
+    prio_title: What to fix first · example priorities from a report
+    prio:
+    - - The main CTA leads to a generic contact form instead of a quote request.
+      - high impact · low effort
+    - - On mobile, price and references are missing above the fold.
+      - high impact · medium effort
+    - - Mobile LCP 4.1 s, slowed by an uncompressed hero image.
+      - medium impact · low effort
+  technika:
+    score: '78'
+    kicker: Technical
+    title: Performance, indexability and technical limits.
+    text: 'A hard check of the foundations: speed, technical health, metadata, sitemap, robots and mobile usability.'
+    items:
+    - Speed
+    - Indexing
+    - Metadata
+    - Mobile
+    bars:
+    - 86
+    - 98
+    - 76
+    - 92
+    - 70
+    - 88
+    - 54
+    - 78
+    prio_title: Technical priorities · example
+    prio:
+    - - 'Mobile LCP 4.1 s: the hero image is 2.3 MB and not in a modern format.'
+      - high impact · low effort
+    - - 12 links return 404, 3 of them from the main navigation.
+      - medium impact · low effort
+    - - Content-Security-Policy header missing; HTTPS and TLS are fine.
+      - low impact · low effort
+  komunikace:
+    score: '49'
+    kicker: Communication
+    title: Offer clarity and trust.
+    text: Evaluation of whether visitors quickly understand the offer, the reasons to buy and the next step.
+    items:
+    - Offer
+    - Trust
+    - CTA
+    - Proof
+    bars:
+    - 52
+    - 74
+    - 45
+    - 82
+    - 64
+    - 58
+    - 88
+    - 70
+    prio_title: Offer communication · example
+    prio:
+    - - The first screen does not say who the service is for; visitors have to scroll.
+      - high impact · low effort
+    - - Three equal buttons compete for attention; none is primary.
+      - high impact · low effort
+    - - References sit in the footer; there is no proof at the decision point.
+      - medium impact · low effort
+  archetypy:
+    score: '57'
+    kicker: Archetypes
+    title: Brand and customer motivations.
+    text: 'Interpretation of the brand archetype and customer archetypes: who needs proof, clarity or vision.'
+    items:
+    - Brand
+    - Motives
+    - Objections
+    - Tone
+    bars:
+    - 62
+    - 78
+    - 88
+    - 56
+    - 92
+    - 66
+    - 80
+    - 72
+    prio_title: Brand and audience · example
+    prio:
+    - - 'The site speaks as a Caregiver, the audience looks for an Expert: fewer emotions, more numbers.'
+      - high impact · medium effort
+    - - 'Tone shifts between pages: formal homepage, casual pricing.'
+      - medium impact · low effort
+    - - The visuals promise a premium service the copy does not back with proof.
+      - medium impact · medium effort
+  roadmapa:
+    score: '64'
+    kicker: Roadmap
+    title: What to solve first, second and later.
+    text: A priority plan separating cosmetic changes from things with real business impact.
+    items:
+    - Priority
+    - Impact
+    - Speed
+    - Next step
+    bars:
+    - 92
+    - 64
+    - 80
+    - 70
+    - 88
+    - 76
+    - 58
+    - 95
+    prio_title: Action plan · example
+    prio:
+    - - 'Now: point the main CTA to a quote request and add the price on mobile.'
+      - within 1 week
+    - - 'Within 30 days: compress images, fix 404s and align the tone of copy.'
+      - within 30 days
+    - - 'Later: rebuild the services page around the audience archetype.'
+      - 1 to 3 months
 home_prio:
   label: Example finding
   hero:
   - The main CTA promises a quote but leads to a generic contact form.
   - 'Most paid traffic lands here. Effort to fix: low.'
-  title: What to fix first · example priorities from a report
-  items:
-  - - The main CTA leads to a generic contact form instead of a quote request.
-    - high impact · low effort
-  - - On mobile, price and references are missing above the fold.
-    - high impact · medium effort
-  - - Mobile LCP 4.1 s, slowed by an uncompressed hero image.
-    - medium impact · low effort
