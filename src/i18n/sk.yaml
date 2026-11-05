@@ -995,3 +995,123 @@ modal:
       - Benchmarková mapa a súhrn hlavných zistení.
     cta: Opýtať sa na benchmark
     inquiry: benchmark
+home_problems:
+  tag: Problémy, ktoré report hľadá
+  h2: Čo vás na webe stojí peniaze. A čo o ňom neviete.
+  lead: 'Časť problémov cítite v číslach: málo dopytov, drahé kampane, redizajn bez zadania. Časť nevidí nikto, kým sa nestane: podvrhnutý e-mail, expirovaný certifikát, zabudnutá subdoména. Report hľadá oboje a každý nález doloží.'
+  seen:
+  - '01'
+  - Čo vidíte v číslach
+  - Obchodné situácie, kvôli ktorým firmy report objednávajú.
+  hidden:
+  - '02'
+  - Čo nevidíte, kým sa to nestane
+  - Bezpečnostná hygiena webu a domény z pohľadu firmy, nie IT oddelenia.
+  looks: Report hľadá
+  example: Modelový nález
+  more: Čo to rieši
+  level_label: Kritickosť
+  levels:
+    high: Vysoká
+    mid: Stredná
+  boundary:
+  - Pasívne. Ako bežný návštevník.
+  - Report nič neháda, neskúša heslá, neskenuje porty a nezaťažuje server. Nepotrebuje prístupy ani súčinnosť. Preto to nie je penetračný test. Čo zvonku overiť nejde, report napíše rovno.
+  cards:
+  - id: problem-leads
+    tone: cold
+    tag: Konverzie & UX
+    title: Web má návštevnosť, ale málo dopytov
+    text: Ľudia prídu, rozhliadnu sa a odídu. Problém býva v ponuke, dôvere alebo ďalšom kroku, nie v počte návštev.
+    checks:
+    - Jasnosť ponuky v prvých sekundách
+    - CTA a cesta k dopytu
+    - 'Dôvera: referencie, firma, kontakty'
+    finding: Hlavné CTA vedie na všeobecný kontakt. Cena ani ďalší krok nie sú vidieť.
+  - id: problem-marketing
+    tone: cold
+    tag: Výkon
+    title: Marketing beží, výsledky slabé
+    text: Kým pridáte rozpočet, overte, či stránka, kam kampaň vedie, dokáže návštevníka vôbec presvedčiť.
+    checks:
+    - Rýchlosť vstupných stránok na mobile
+    - Zhoda reklamy a stránky
+    - Meranie, cookies a súhlas
+    finding: Mobilné načítanie 4,8 s na stránke, kam mieri väčšina kampaní.
+  - id: problem-redesign
+    tone: warm
+    tag: Redizajn
+    title: Redizajn bez jasného zadania
+    text: Nový web podľa vkusu prenesie staré chyby do nového kabáta. Diagnostika povie, čo má redizajn naozaj zlepšiť.
+    checks:
+    - Čo dnes funguje a nesmie sa stratiť
+    - Štruktúra, obsah a SEO základ
+    - Priority podľa dopadu
+    finding: Polovica indexovaných stránok nemá vlastný titulok. Redizajn by to preniesol ďalej.
+  - id: problem-offer
+    tone: warm
+    tag: Archetyp
+    title: Ponuka je dobrá, ľudia ju nechápu
+    text: Web hovorí jazykom firmy, nie zákazníka. Report ukáže, koho web oslovuje, ako pôsobí a čo komu chýba.
+    checks:
+    - Komu web hovorí a komu nie
+    - Tón a archetyp značky
+    - Argumenty pre rôznych zákazníkov
+    finding: Web hovorí k technikom, rozhoduje však majiteľ. Chýba mu cena, termín a riziko.
+  - id: problem-strategy
+    tone: warm
+    tag: Stratégia
+    title: Web už nezodpovedá firme
+    text: Firma sa posunula, web zostal. Ponuka, referencie aj dojem patria firme, ktorá už neexistuje.
+    checks:
+    - Ponuka na webe vs. dnešné služby
+    - Zastarané informácie a referencie
+    - Ako firma pôsobí
+    finding: Dve zo šiestich služieb už firma neponúka. Nová hlavná služba je až v tretej úrovni menu.
+  - id: problem-agency
+    tone: cold
+    tag: Tímy & agentúry
+    title: Rýchly podklad pre rozhodnutie
+    text: Pred konzultáciou, ponukou alebo kampaňou mať stav webu čierne na bielom, s dôkazmi, nie z prvého dojmu.
+    checks:
+    - Stav webu pred ponukou klientovi
+    - Dôkazy s časom merania
+    - Roadmapa, ktorú možno rovno naceniť
+    finding: Klient chce kampaň. Bez opravy formulára ju však nemá zmysel spúšťať.
+  risks:
+  - level: high
+    title: Niekto môže posielať e-maily vaším menom
+    why: Bez prísnej politiky DMARC dorazí podvodná faktúra z vašej domény ako pravá.
+    checks: SPF · DKIM · DMARC
+  - level: high
+    title: Certifikát alebo doména expiruje
+    why: Web cez noc ukáže varovanie prehliadača, s doménou môže prestať fungovať aj e-mail.
+    checks: Platnosť TLS · expirácia a zámok domény
+  - level: high
+    title: Technológie bez podpory
+    why: Stará verzia CMS alebo knižnice so známou zraniteľnosťou je najlacnejší vstup pre útočníka.
+    checks: Verzie · koniec podpory · zraniteľnosti OSV
+  - level: high
+    title: Cudzie skripty, ktoré nikto nestráži
+    why: Skript tretej strany beží na vašej stránke s plnými právami, aj na formulári.
+    checks: Tretie strany · SRI · meracie kódy
+  - level: high
+    title: Zabudnuté subdomény
+    why: Stará testovacia verzia alebo visiaci DNS záznam môže skončiť v cudzích rukách.
+    checks: Logy certifikátov · DNS záznamy
+  - level: high
+    title: Kľúče a tokeny vo verejnom kóde
+    why: Čo je vo verejnom JavaScripte, si môže prečítať ktokoľvek. Vrátane API kľúčov.
+    checks: Verejný JS · source mapy
+  - level: high
+    title: Prihlásenie, platby, nahrávanie súborov
+    why: 'Kde web zbiera dáta, rozhoduje aj drobnosť: cudzí skript alebo slabé cookies.'
+    checks: Formuláre · cookies · skripty na citlivých stránkach
+  - level: mid
+    title: Doména na čiernej listine
+    why: E-maily padajú do spamu a prehliadač môže pred webom varovať.
+    checks: Safe Browsing · DNSBL
+  - level: mid
+    title: Hlavičky a cookies
+    why: Chýbajúce ochrany nie sú katastrofa, ale ukazujú, ako starostlivo je web spravovaný.
+    checks: HSTS · CSP · framing · atribúty cookies

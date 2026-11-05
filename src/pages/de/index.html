@@ -201,23 +201,7 @@ hero_preload: true
 </div>
 </section>
 {% include "partials/home_compare.html" %}
-<section class="section" id="solutions">
-<div class="section-divider"></div>
-<div class="wrap">
-<div class="section-head reveal">
-<p class="tag">Wann sich Web Intelligence lohnt</p>
-<h2>Sechs Situationen, eine Diagnostik für bessere Entscheidungen.</h2>
-</div>
-<div class="problem-grid">
-<article class="problem-card cold reveal"><span class="problem-tag">Conversion &amp; UX</span><h3>Traffic kommt, Anfragen bleiben aus</h3><p>SIGEL zeigt, wo Angebotsklarheit, Vertrauen, CTA oder der zentrale Besucherweg versagen.</p><button class="card-more" data-modal-target="problem-leads" type="button">Was es löst →</button></article>
-<article class="problem-card cold reveal"><span class="problem-tag">Performance</span><h3>Marketing läuft, die Ergebnisse bleiben schwach</h3><p>Bevor das Budget steigt, sollte geprüft werden, ob die Website Besucher überhaupt überzeugen kann.</p><button class="card-more" data-modal-target="problem-marketing" type="button">Was es löst →</button></article>
-<article class="problem-card warm reveal"><span class="problem-tag">Redesign</span><h3>Redesign ohne klares Briefing</h3><p>Die Diagnostik definiert, was die neue Website tatsächlich verbessern soll: nicht nur die Optik, sondern Struktur, Vertrauen und Kommunikation.</p><button class="card-more" data-modal-target="problem-redesign" type="button">Was es löst →</button></article>
-<article class="problem-card warm reveal"><span class="problem-tag">Archetyp</span><h3>Das Angebot ist gut, wird aber nicht verstanden</h3><p>SIGEL klärt, wie das Unternehmen wahrgenommen wird, wen es anspricht und wie das Angebot formuliert werden sollte.</p><button class="card-more" data-modal-target="problem-offer" type="button">Was es löst →</button></article>
-<article class="problem-card warm reveal"><span class="problem-tag">Strategie</span><h3>Die Website passt nicht mehr zum Unternehmen</h3><p>SIGEL prüft, ob die Website noch dazu passt, was das Unternehmen verkauft, wen es anspricht und wie es wahrgenommen werden möchte.</p><button class="card-more" data-modal-target="problem-strategy" type="button">Was es löst →</button></article>
-<article class="problem-card cold reveal"><span class="problem-tag">Teams &amp; Agenturen</span><h3>Schnelle Grundlage für eine Entscheidung</h3><p>Eine externe Diagnostik verhindert, dass Beratung, Redesign, Kampagnen oder strategische Entscheidungen bei null beginnen.</p><button class="card-more" data-modal-target="problem-agency" type="button">Was es löst →</button></article>
-</div>
-</div>
-</section>
+{% with section_id = "solutions" %}{% include "partials/home_problems.html" %}{% endwith %}
 <section class="section flow-section" id="method">
 <div class="section-divider"></div>
 <div class="wrap">

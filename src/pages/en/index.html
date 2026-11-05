@@ -196,23 +196,7 @@ hero_preload: true
 </div>
 </section>
 {% include "partials/home_compare.html" %}
-<section class="section" id="solutions">
-<div class="section-divider"></div>
-<div class="wrap">
-<div class="section-head reveal">
-<p class="tag">When Web Intelligence pays off</p>
-<h2>Six situations, one diagnostic for better decisions.</h2>
-</div>
-<div class="problem-grid">
-<article class="problem-card cold reveal"><span class="problem-tag">Conversion &amp; UX</span><h3>Traffic arrives, enquiries do not</h3><p>SIGEL shows where offer clarity, trust, CTA or the main visitor path breaks down.</p><button class="card-more" data-modal-target="problem-leads" type="button">What it solves →</button></article>
-<article class="problem-card cold reveal"><span class="problem-tag">Performance</span><h3>Marketing is running, results are weak</h3><p>Before increasing spend, it makes sense to check whether the website can persuade visitors at all.</p><button class="card-more" data-modal-target="problem-marketing" type="button">What it solves →</button></article>
-<article class="problem-card warm reveal"><span class="problem-tag">Redesign</span><h3>Redesign without a clear brief</h3><p>The diagnostic defines what the new website should actually improve: not just visuals, but structure, trust and messaging.</p><button class="card-more" data-modal-target="problem-redesign" type="button">What it solves →</button></article>
-<article class="problem-card warm reveal"><span class="problem-tag">Archetype</span><h3>The offer is good, people do not get it</h3><p>Sigel clarifies how the company is perceived, who it speaks to and how to formulate the offer.</p><button class="card-more" data-modal-target="problem-offer" type="button">What it solves →</button></article>
-<article class="problem-card warm reveal"><span class="problem-tag">Strategy</span><h3>The website no longer matches the business</h3><p>SIGEL checks whether the website still matches what the company sells, who it sells to and how it wants to be perceived.</p><button class="card-more" data-modal-target="problem-strategy" type="button">What it solves →</button></article>
-<article class="problem-card cold reveal"><span class="problem-tag">Teams &amp; agencies</span><h3>Fast input for a decision</h3><p>External diagnostics help avoid starting from zero before consulting, redesign, campaigns or strategic decisions.</p><button class="card-more" data-modal-target="problem-agency" type="button">What it solves →</button></article>
-</div>
-</div>
-</section>
+{% with section_id = "solutions" %}{% include "partials/home_problems.html" %}{% endwith %}
 <section class="section flow-section" id="method">
 <div class="section-divider"></div>
 <div class="wrap">

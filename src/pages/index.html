@@ -196,53 +196,7 @@ hero_preload: true
 </div>
 </section>
 {% include "partials/home_compare.html" %}
-<section class="section" id="reseni">
-<div class="section-divider"></div>
-<div class="wrap">
-<div class="section-head reveal">
-<p class="tag">Kdy se Web Intelligence vyplatí</p>
-<h2>Šest situací, jedna diagnostika pro rozhodnutí.</h2>
-</div>
-<div class="problem-grid">
-<article class="problem-card cold reveal">
-<span class="problem-tag">Konverze &amp; UX</span>
-<h3>Web má návštěvnost, ale málo poptávek</h3>
-<p>SIGEL ukáže, kde se ztrácí jasnost nabídky, důvěra, CTA nebo hlavní cesta návštěvníka.</p>
-<button class="card-more" data-modal-target="problem-leads" type="button">Co to řeší →</button>
-</article>
-<article class="problem-card cold reveal">
-<span class="problem-tag">Výkon</span>
-<h3>Marketing běží, výsledky slabé</h3>
-<p>Než zvyšovat rozpočet, dává smysl zjistit, jestli web dokáže návštěvníka vůbec přesvědčit.</p>
-<button class="card-more" data-modal-target="problem-marketing" type="button">Co to řeší →</button>
-</article>
-<article class="problem-card warm reveal">
-<span class="problem-tag">Redesign</span>
-<h3>Redesign bez jasného zadání</h3>
-<p>Diagnostika určí, co má nový web skutečně zlepšit: nejen vzhled, ale strukturu, důvěru a komunikaci.</p>
-<button class="card-more" data-modal-target="problem-redesign" type="button">Co to řeší →</button>
-</article>
-<article class="problem-card warm reveal">
-<span class="problem-tag">Archetyp</span>
-<h3>Nabídka je dobrá, lidé ji nechápou</h3>
-<p>SIGEL zpřesní, jak firma působí, koho oslovuje a jak nabídku formulovat k různým zákazníkům.</p>
-<button class="card-more" data-modal-target="problem-offer" type="button">Co to řeší →</button>
-</article>
-<article class="problem-card warm reveal">
-<span class="problem-tag">Strategie</span>
-<h3>Web už neodpovídá firmě</h3>
-<p>SIGEL ověří, jestli web stále odpovídá tomu, co firma nabízí, komu prodává a jak chce působit.</p>
-<button class="card-more" data-modal-target="problem-strategy" type="button">Co to řeší →</button>
-</article>
-<article class="problem-card cold reveal">
-<span class="problem-tag">Týmy &amp; agentury</span>
-<h3>Rychlý podklad pro rozhodnutí</h3>
-<p>Externí diagnostika pomůže nezačínat od nuly před konzultací, redesignem, kampaní nebo strategickým rozhodnutím.</p>
-<button class="card-more" data-modal-target="problem-agency" type="button">Co to řeší →</button>
-</article>
-</div>
-</div>
-</section>
+{% with section_id = "reseni" %}{% include "partials/home_problems.html" %}{% endwith %}
 <section class="section flow-section" id="metoda">
 <div class="section-divider"></div>
 <div class="wrap">

@@ -997,3 +997,123 @@ modal:
       - Benchmark-Karte und Zusammenfassung der wichtigsten Erkenntnisse.
     cta: Benchmark anfragen
     inquiry: benchmark
+home_problems:
+  tag: Probleme, die der Report sucht
+  h2: Was Sie Ihre Website kostet. Und was Sie über sie nicht wissen.
+  lead: 'Manche Probleme zeigen sich in den Zahlen: wenige Anfragen, teure Kampagnen, ein Redesign ohne Briefing. Andere sieht niemand, bis sie passieren: eine gefälschte E-Mail, ein abgelaufenes Zertifikat, eine vergessene Subdomain. Der Report sucht beides und belegt jeden Befund.'
+  seen:
+  - '01'
+  - Was Sie in den Zahlen sehen
+  - Geschäftliche Situationen, in denen Unternehmen den Report bestellen.
+  hidden:
+  - '02'
+  - Was Sie nicht sehen, bis es passiert
+  - Sicherheitshygiene von Website und Domain, aus Sicht des Unternehmens, nicht der IT.
+  looks: Der Report prüft
+  example: Beispielbefund
+  more: Was es löst
+  level_label: Kritikalität
+  levels:
+    high: Hoch
+    mid: Mittel
+  boundary:
+  - Passiv. Wie ein normaler Besucher.
+  - Der Report rät nichts, probiert keine Passwörter, scannt keine Ports und belastet den Server nicht. Er braucht weder Zugänge noch Mitwirkung. Deshalb ist er kein Penetrationstest. Was sich von außen nicht prüfen lässt, sagt der Report offen.
+  cards:
+  - id: problem-leads
+    tone: cold
+    tag: Conversion & UX
+    title: Traffic kommt, Anfragen bleiben aus
+    text: Besucher kommen, schauen sich um und gehen. Meist liegt es am Angebot, am Vertrauen oder am nächsten Schritt, nicht an der Besucherzahl.
+    checks:
+    - Klarheit des Angebots in den ersten Sekunden
+    - CTA und Weg zur Anfrage
+    - 'Vertrauen: Referenzen, Unternehmen, Kontakte'
+    finding: Der Haupt-CTA führt auf ein allgemeines Kontaktformular. Weder Preis noch nächster Schritt sind sichtbar.
+  - id: problem-marketing
+    tone: cold
+    tag: Performance
+    title: Marketing läuft, Ergebnisse schwach
+    text: Bevor Sie das Budget erhöhen, prüfen Sie, ob die Zielseite der Kampagne Besucher überhaupt überzeugen kann.
+    checks:
+    - Ladezeit der Landingpages mobil
+    - Passung von Anzeige und Seite
+    - Tracking, Cookies und Einwilligung
+    finding: 4,8 s mobile Ladezeit auf der Seite, auf die die meisten Kampagnen zielen.
+  - id: problem-redesign
+    tone: warm
+    tag: Redesign
+    title: Redesign ohne klares Briefing
+    text: Eine neue Website nach Geschmack trägt alte Fehler in ein neues Design. Die Diagnostik sagt, was das Redesign verbessern muss.
+    checks:
+    - Was heute funktioniert und nicht verloren gehen darf
+    - Struktur, Inhalt und SEO-Grundlage
+    - Prioritäten nach Wirkung
+    finding: Die Hälfte der indexierten Seiten hat keinen eigenen Titel. Ein Redesign würde das übernehmen.
+  - id: problem-offer
+    tone: warm
+    tag: Archetyp
+    title: Das Angebot ist gut, aber niemand versteht es
+    text: Die Website spricht die Sprache des Unternehmens, nicht die des Kunden. Der Report zeigt, wen sie anspricht, wie sie wirkt und was wem fehlt.
+    checks:
+    - Wen die Website anspricht und wen nicht
+    - Tonalität und Markenarchetyp
+    - Argumente für verschiedene Kunden
+    finding: Die Website spricht Techniker an, entscheidet aber der Inhaber. Ihm fehlen Preis, Termin und Risiko.
+  - id: problem-strategy
+    tone: warm
+    tag: Strategie
+    title: Die Website passt nicht mehr zum Unternehmen
+    text: Das Unternehmen hat sich weiterentwickelt, die Website nicht. Angebot, Referenzen und Wirkung gehören zu einer Firma, die es so nicht mehr gibt.
+    checks:
+    - Angebot auf der Website vs. heutige Leistungen
+    - Veraltete Informationen und Referenzen
+    - Wie das Unternehmen wirkt
+    finding: Zwei von sechs Leistungen werden nicht mehr angeboten. Die neue Hauptleistung liegt in der dritten Menüebene.
+  - id: problem-agency
+    tone: cold
+    tag: Teams & Agenturen
+    title: Schnelle Grundlage für Entscheidungen
+    text: Vor Beratung, Angebot oder Kampagne den Zustand der Website schwarz auf weiß haben, mit Belegen statt erstem Eindruck.
+    checks:
+    - Zustand der Website vor dem Kundenangebot
+    - Belege mit Messzeitpunkt
+    - Roadmap, die sich direkt kalkulieren lässt
+    finding: Der Kunde will eine Kampagne. Ohne vorherige Korrektur des Formulars ergibt sie keinen Sinn.
+  risks:
+  - level: high
+    title: Jemand kann E-Mails in Ihrem Namen versenden
+    why: Ohne strikte DMARC-Richtlinie kommt eine gefälschte Rechnung von Ihrer Domain echt an.
+    checks: SPF · DKIM · DMARC
+  - level: high
+    title: Zertifikat oder Domain laufen ab
+    why: Über Nacht zeigt der Browser eine Warnung, mit der Domain kann auch die E-Mail ausfallen.
+    checks: TLS-Gültigkeit · Ablauf und Sperre der Domain
+  - level: high
+    title: Technik ohne Support
+    why: Eine alte CMS- oder Bibliotheksversion mit bekannter Schwachstelle ist der billigste Weg für Angreifer.
+    checks: Versionen · End of Life · OSV-Schwachstellen
+  - level: high
+    title: Fremde Skripte, die niemand überwacht
+    why: Ein Drittanbieter-Skript läuft auf Ihrer Seite mit vollen Rechten, auch im Formular.
+    checks: Drittanbieter · SRI · Tracking-Codes
+  - level: high
+    title: Vergessene Subdomains
+    why: Eine alte Testversion oder ein verwaister DNS-Eintrag kann in fremde Hände geraten.
+    checks: Zertifikatslogs · DNS-Einträge
+  - level: high
+    title: Schlüssel und Tokens im öffentlichen Code
+    why: Was im öffentlichen JavaScript steht, kann jeder lesen. Auch API-Schlüssel.
+    checks: Öffentliches JS · Source Maps
+  - level: high
+    title: Login, Zahlungen, Datei-Uploads
+    why: 'Wo die Website Daten sammelt, zählen Details: ein fremdes Skript oder schwache Cookies.'
+    checks: Formulare · Cookies · Skripte auf sensiblen Seiten
+  - level: mid
+    title: Domain auf einer Sperrliste
+    why: E-Mails landen im Spam und Browser können vor der Website warnen.
+    checks: Safe Browsing · DNSBL
+  - level: mid
+    title: Header und Cookies
+    why: Fehlende Schutzmechanismen sind keine Katastrophe, zeigen aber, wie sorgfältig die Website gepflegt wird.
+    checks: HSTS · CSP · Framing · Cookie-Attribute

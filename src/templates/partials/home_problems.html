@@ -1,0 +1,35 @@
+{#- Homepage: problems the report looks for. 01 business symptoms (cards), 02 hidden risks (passive security ledger). Copy in i18n home_problems -#}
+{%- set P = t.home_problems -%}
+<section class="section" id="{{ section_id }}">
+<div class="section-divider"></div>
+<div class="wrap">
+<div class="section-head reveal">
+<p class="tag">{{ P.tag }}</p>
+<h2>{{ P.h2 }}</h2>
+<p>{{ P.lead }}</p>
+</div>
+<div class="pb-part reveal"><span class="pb-n">{{ P.seen[0] }}</span><h3>{{ P.seen[1] }}</h3><p>{{ P.seen[2] }}</p></div>
+<div class="problem-grid">
+{%- for c in P.cards %}
+<article class="problem-card {{ c.tone }} reveal">
+<span class="problem-tag">{{ c.tag }}</span>
+<h3>{{ c.title }}</h3>
+<p>{{ c.text }}</p>
+<p class="pb-label">{{ P.looks }}</p>
+<ul class="pb-checks">{% for x in c.checks %}<li>{{ x }}</li>{% endfor %}</ul>
+<div class="pb-finding"><span>{{ P.example }}</span>{{ c.finding }}</div>
+<button class="card-more" data-modal-target="{{ c.id }}" type="button">{{ P.more }} →</button>
+</article>
+{%- endfor %}
+</div>
+<div class="pb-part pb-part-hidden reveal"><span class="pb-n">{{ P.hidden[0] }}</span><h3>{{ P.hidden[1] }}</h3><p>{{ P.hidden[2] }}</p></div>
+<div class="pb-risks reveal">
+<ul aria-label="{{ P.hidden[1] }}" class="pb-risk-list">
+{%- for r in P.risks %}
+<li class="pb-risk pb-{{ r.level }}"><span class="pb-level"><span class="sr-only">{{ P.level_label }}: </span>{{ P.levels[r.level] }}</span><div><strong>{{ r.title }}</strong><p>{{ r.why }}</p><code>{{ r.checks }}</code></div></li>
+{%- endfor %}
+<li class="pb-boundary"><strong>{{ P.boundary[0] }}</strong><p>{{ P.boundary[1] }}</p></li>
+</ul>
+</div>
+</div>
+</section>

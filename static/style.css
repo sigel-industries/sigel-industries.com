@@ -1437,3 +1437,51 @@ main, section, .wrap, .page-layout, .page-card, .legal-content, .footer-grid, .r
   .panel-priority .panel-prio-text { font-size: 14.5px; }
   .hero-panel .priority-pill { font-size: 12px; }
 }
+
+/* homepage problems: 01 business symptoms, 02 hidden risks ledger */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.pb-part { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 18px; align-items: baseline; margin: 0 0 22px; }
+.pb-part-hidden { margin-top: 72px; }
+.pb-n { grid-row: span 2; color: var(--cold); font: 400 34px/1 "Fraunces", serif; }
+.pb-part-hidden .pb-n { color: var(--warm-2); }
+.pb-part h3 { font-size: 22px; }
+.pb-part p { margin-top: 4px; color: var(--ink-3); font-size: 15px; }
+.problem-card > p:not([class]) { margin-bottom: 16px; }
+.problem-card .pb-label { margin: 0 0 8px; color: var(--ink-3); font-family: "JetBrains Mono", monospace; font-size: 12px; }
+.pb-checks { display: grid; gap: 6px; margin: 0 0 16px; padding: 0; list-style: none; }
+.pb-checks li { position: relative; padding-left: 18px; color: var(--ink-2); font-size: 14px; line-height: 1.45; }
+.pb-checks li::before { content: ""; position: absolute; left: 2px; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--cold); box-shadow: 0 0 8px rgba(77,223,200,.5); }
+.problem-card.warm .pb-checks li::before { background: var(--warm-2); box-shadow: 0 0 8px rgba(255,190,61,.45); }
+.pb-finding { margin: 0 0 18px; padding: 12px 14px; border-left: 2px solid var(--warm-2); border-radius: 0 10px 10px 0; background: rgba(255,190,61,.05); color: var(--ink); font: italic 300 15.5px/1.45 "Fraunces", serif; }
+.pb-finding span { display: block; margin-bottom: 4px; color: var(--warm-2); font: 400 12px/1.3 "JetBrains Mono", monospace; font-style: normal; }
+.pb-risks { border: 1px solid transparent; border-radius: 22px; background: linear-gradient(var(--card), var(--card)) padding-box, var(--edge-warm) border-box; overflow: hidden; }
+.pb-risk-list { display: grid; grid-template-columns: 1fr 1fr; margin: 0; padding: 0; list-style: none; }
+.pb-risk-list > li { padding: 22px 26px; border-top: 1px solid var(--line); }
+.pb-risk-list > li:nth-child(-n+2) { border-top: 0; }
+.pb-risk-list > li:nth-child(odd) { border-right: 1px solid var(--line); }
+.pb-risk { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 16px; align-items: start; }
+.pb-level { justify-self: start; margin-top: 2px; padding: 4px 9px; border-radius: 999px; font-family: "JetBrains Mono", monospace; font-size: 12px; line-height: 1.2; }
+.pb-high .pb-level { color: #FFB089; background: rgba(255,140,71,.12); border: 1px solid rgba(255,140,71,.3); }
+.pb-mid .pb-level { color: var(--ink-2); background: rgba(255,255,255,.04); border: 1px solid var(--line-2); }
+.pb-risk strong { display: block; color: var(--ink); font-size: 16.5px; font-weight: 600; line-height: 1.3; }
+.pb-risk p { margin: 6px 0 8px; color: var(--ink-3); font-size: 14.5px; line-height: 1.5; }
+.pb-risk code { color: var(--ink-3); font-family: "JetBrains Mono", monospace; font-size: 12px; }
+.pb-boundary { background: linear-gradient(135deg, rgba(77,223,200,.08), rgba(126,107,255,.06)); }
+.pb-boundary strong { display: block; color: var(--cold); font: 400 20px/1.25 "Fraunces", serif; }
+.pb-boundary p { margin-top: 8px; color: var(--ink-2); font-size: 14.5px; line-height: 1.55; }
+@media (max-width: 760px) {
+  .pb-part { column-gap: 14px; }
+  .pb-part-hidden { margin-top: 48px; }
+  .pb-n { font-size: 28px; }
+  .pb-part h3 { font-size: 19px; }
+  .pb-risk-list { grid-template-columns: 1fr; }
+  .pb-risk-list > li { padding: 18px; border-right: 0 !important; }
+  .pb-risk-list > li:nth-child(2) { border-top: 1px solid var(--line); }
+  .pb-risk { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
+  .pb-risk { row-gap: 0; }
+  .pb-risk > div { display: contents; }
+  .pb-risk strong { grid-column: 1; grid-row: 1; }
+  .pb-level { grid-column: 2; grid-row: 1; margin-top: 0; }
+  .pb-risk p, .pb-risk code { grid-column: 1 / -1; }
+  .pb-risk p { margin: 6px 0 6px; }
+}
