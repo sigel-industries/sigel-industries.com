@@ -1,0 +1,34 @@
+{#- "Who is behind SIGEL", copy in i18n `about` -#}
+{%- set a = t.about -%}
+<section class="section about-section" id="{{ 'o-mne' if lang in ('cs', 'sk') else 'about' }}">
+<div class="section-divider"></div>
+<div class="wrap about">
+<figure class="about-portrait reveal">
+<svg aria-hidden="true" class="about-stroke" preserveAspectRatio="none" viewBox="0 0 400 500">
+<defs>
+<linearGradient id="aboutPaint" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#4DDFC8"/><stop offset=".55" stop-color="#7E6BFF"/><stop offset="1" stop-color="#FF8C47"/></linearGradient>
+<filter height="140%" id="aboutBrush" width="140%" x="-20%" y="-20%"><feTurbulence baseFrequency=".012 .045" numOctaves="3" seed="7" type="fractalNoise"/><feDisplacementMap in="SourceGraphic" scale="46"/></filter>
+</defs>
+<rect fill="url(#aboutPaint)" filter="url(#aboutBrush)" height="440" rx="40" width="330" x="40" y="34"/>
+</svg>
+<img alt="{{ a.photo_alt }}" class="about-photo" decoding="async" height="600" loading="lazy" sizes="(max-width: 760px) 70vw, 340px" src="/assets/about/daniel-hajduk-480.webp" srcset="/assets/about/daniel-hajduk-480.webp 480w, /assets/about/daniel-hajduk-960.webp 960w" width="480"/>
+<figcaption><strong>{{ a.name }}</strong><span>{{ a.role }}</span></figcaption>
+</figure>
+<div class="about-copy reveal">
+<p class="tag">{{ a.tag }}</p>
+<blockquote class="about-quote"><p>{{ a.quote }}</p></blockquote>
+{%- for p in a.paras %}
+<p class="about-text">{{ p }}</p>
+{%- endfor %}
+<dl class="about-facts">
+{%- for value, label in a.facts %}
+<div><dt>{{ value }}</dt><dd>{{ label }}</dd></div>
+{%- endfor %}
+</dl>
+<div class="about-links">
+<a class="btn btn-ghost" data-track="about-linkedin" href="{{ a.linkedin }}" rel="noopener" target="_blank">LinkedIn</a>
+<a class="btn btn-ghost" href="mailto:{{ site.email }}">{{ site.email }}</a>
+</div>
+</div>
+</div>
+</section>

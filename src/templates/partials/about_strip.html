@@ -1,0 +1,7 @@
+{#- Compact founder line (pricing), copy in i18n `about` -#}
+{%- set a = t.about -%}
+<div class="about-strip reveal">
+<img alt="{{ a.photo_alt }}" class="about-avatar" decoding="async" height="64" loading="lazy" src="/assets/about/daniel-hajduk-avatar.webp" width="64"/>
+<p><span>{{ a.strip }}</span><strong>{{ a.name }}</strong>, {{ a.role }}</p>
+<a class="btn btn-ghost btn-small" data-track="about-linkedin" href="{{ a.linkedin }}" rel="noopener" target="_blank">LinkedIn</a>
+</div>

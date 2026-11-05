@@ -938,3 +938,23 @@ compare:
   o_links:
   - Co přesně je v ceně
   - ukázkový report
+about:
+  name: Daniel Hajduk
+  linkedin: https://www.linkedin.com/in/daniel-hajduk-/
+  tag: Kdo stojí za SIGEL
+  quote: Data umím změřit. Jak web působí, musím vidět.
+  role: Zakladatel Sigel s.r.o.
+  paras:
+  - 'Navrhuji a stavím analytické nástroje, které z dat dělají podklad pro rozhodnutí. První z nich je <strong>Web Intelligence</strong>: než šel ven, prošel přes 1&nbsp;700 testovacích auditů.'
+  - Vedle vývoje se dlouhodobě věnuji malbě a sochařství. Proto mé analýzy nekončí u čísel. Stejně důležité je, jak věc působí, co komunikuje a kde ztrácí důvěru.
+  - Každý výstup před odesláním osobně kontroluji. Když v něm něco nedává smysl, píšete přímo mně, ne na podporu.
+  facts:
+  - - 1&nbsp;700+
+    - testovacích auditů
+  - - '1 : 1'
+    - každý výstup kontroluji osobně
+  - - Praha
+    - Sigel s.r.o. · IČO 17428432
+  photo_alt: Daniel Hajduk, zakladatel Sigel s.r.o.
+  strip: Každý report před odesláním osobně kontroluji.
+  order_note: Váš report před odesláním osobně zkontroluje Daniel Hajduk.

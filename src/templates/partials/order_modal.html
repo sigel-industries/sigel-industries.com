@@ -127,6 +127,7 @@
 </div>
 <div aria-live="polite" class="sigel-order-status" id="summaryStatus" role="status"></div>
 <a class="btn btn-ghost sigel-mail-fallback" hidden="" id="orderMailFallback" href="mailto:{{ site.email }}">{{ o.sendEmail }}</a>
+<p class="sigel-order-founder"><img alt="" aria-hidden="true" height="36" loading="lazy" src="/assets/about/daniel-hajduk-avatar.webp" width="36"/><span>{{ t.about.order_note }}</span></p>
 <div class="sigel-order-footer sigel-two-actions">
 <button class="btn btn-ghost" id="backToForm" type="button">{{ o.back }}</button>
 <button class="btn btn-primary" id="confirmOrder" type="button">{{ o.submitOrder | replace('{price}', o.prices[o.defaultCurrency]) }}</button>

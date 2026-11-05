@@ -926,3 +926,23 @@ compare:
   o_links:
   - What exactly is included
   - sample report
+about:
+  name: Daniel Hajduk
+  linkedin: https://www.linkedin.com/in/daniel-hajduk-/
+  tag: Who is behind SIGEL
+  quote: Data I can measure. How a website feels, I have to see.
+  role: Founder, Sigel s.r.o.
+  paras:
+  - 'I design and build analytical tools that turn data into decisions. The first one is <strong>Web Intelligence</strong>: before it went live, it ran more than 1,700 test audits.'
+  - Alongside development, I have long worked as a painter and sculptor. That is why my analyses do not stop at numbers. How something comes across, what it communicates and where it loses trust matter just as much.
+  - I personally review every output before it is sent. If something in it does not make sense, you write to me directly, not to a support desk.
+  facts:
+  - - 1,700+
+    - test audits
+  - - '1 : 1'
+    - every output reviewed personally
+  - - Prague
+    - Sigel s.r.o. · ID 17428432
+  photo_alt: Daniel Hajduk, founder of Sigel s.r.o.
+  strip: I personally review every report before it is sent.
+  order_note: Daniel Hajduk personally reviews your report before it is sent.
